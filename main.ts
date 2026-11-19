@@ -25,6 +25,11 @@
 // behaviour unchanged. This hand-in program did not need to change for it —
 // it still copies the same app/ and screenshots/ and writes the same
 // dossier — but the header grows so the file's own history stays honest.
+//
+// v4 note: the fourth version adds the decision-metadata block (difficulty,
+// time, missables, playthroughs) to the app, rendered from a roadmapMeta
+// object in the data file, and aligns the missable wording with the
+// sources. The app grew; this program did not — same copy, same dossier.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

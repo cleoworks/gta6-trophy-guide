@@ -3,7 +3,9 @@
    one restrained gold brand accent, and grade colours reserved for medals.
    Everything is drawn with CSS gradients and inline SVG — no images, no
    webfonts — so the page stays fully offline and fast. Spacing follows a
-   4/8/12/16/24 scale; radii are 8 (controls), 12 (cards) and 999 (pills). */
+   4/8/12/16/24 scale; radii are 8 (controls), 12 (cards) and 999 (pills).
+   v4 adds one component in the same tokens: the roadmap metadata block —
+   a slim band on the checklist, a full grid at the head of the roadmap. */
 
 :root {
   --bg: #0a0d12;
@@ -491,6 +493,81 @@ main { padding: 0 28px 26px; }
 }
 .spoiler-hidden-note { color: var(--gold-hi); font-weight: 600; margin: 12px 0 0; }
 
+/* ---------- Roadmap metadata: the decision block ---------- */
+.meta-band {
+  grid-column: 1 / -1;
+  background: linear-gradient(180deg, var(--surface), #0e1219);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 16px 12px;
+  margin-bottom: 4px;
+}
+.meta-band-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.meta-title {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-hi);
+}
+.meta-jump {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--gold-hi);
+  white-space: nowrap;
+}
+.meta-jump:hover { text-decoration: underline; }
+.meta-grid { display: grid; gap: 8px 20px; }
+.meta-grid-cover { grid-template-columns: 0.7fr 0.95fr 1.1fr 0.55fr 1.75fr 1.35fr 0.8fr; }
+.meta-grid-cover .meta-label { letter-spacing: 0.07em; }
+.meta-cell { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.meta-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meta-value { font-size: 14.5px; font-weight: 750; line-height: 1.3; }
+.meta-note { font-size: 11px; color: var(--muted); }
+.meta-medals { display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; }
+.meta-medals b { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; margin-right: 6px; }
+.meta-medals b:last-child { margin-right: 0; }
+.meta-full {
+  background: linear-gradient(180deg, var(--surface), #0e1219);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 20px 14px;
+  margin: 16px 0 4px;
+  max-width: 1060px;
+}
+.meta-full-title {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-hi);
+}
+.meta-grid-full { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 24px; }
+.meta-grid-full .meta-cell {
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+.meta-sources { margin: 12px 0 0; font-size: 12px; color: var(--faint); }
+
 /* ---------- Roadmap + missables ---------- */
 .view-roadmap, .view-missables { padding-top: 16px; }
 .roadmap-intro { max-width: 860px; color: var(--muted); margin: 0; }
@@ -575,6 +652,18 @@ main { padding: 0 28px 26px; }
 }
 .colophon p { margin: 6px 0; max-width: 960px; line-height: 1.55; }
 .colophon strong { color: var(--text); }
+.colophon .byline {
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+.colophon .byline strong {
+  color: var(--gold-hi);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 12.5px;
+}
+.colophon .provenance { color: var(--muted); }
 
 @media (max-width: 900px) {
   .masthead { flex-direction: column; align-items: stretch; }

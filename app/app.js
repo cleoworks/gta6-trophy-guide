@@ -22,6 +22,14 @@
 // a guide panel structured with labelled sections, and per-grade medal
 // counts in the header. Behaviour — data, storage keys, filters, the export
 // format — is unchanged from v2.
+//
+// v4 closes the skeleton gap the benchmark against the top guide sites
+// (PowerPyx, PSNProfiles) exposed: those sites lead with a fixed block of
+// decision metadata — difficulty, time, missables, playthroughs — before
+// any prose, and v3 had none. The roadmapMeta object in the data file now
+// renders as a compact band on the checklist and in full at the head of
+// the roadmap. The missable wording also matches the sources now:
+// potentially missable, not confirmed.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -72,7 +80,7 @@ function saveProgress() {
 function pickInitialTrophy() {
   const wanted = Number(new URLSearchParams(location.search).get('trophy'));
   if (byId.has(wanted)) return wanted;
-  return 28; // Positive Mental Attitude: the one missable, a good first guide to show.
+  return 28; // Positive Mental Attitude: the potentially missable one, a good first guide to show.
 }
 
 function isSpoilerHidden(trophy) {
@@ -363,6 +371,77 @@ function renderSaveRules() {
   }
 }
 
+function metaCell(field, useShort) {
+  const cell = document.createElement('div');
+  cell.className = 'meta-cell';
+  const label = document.createElement('span');
+  label.className = 'meta-label';
+  label.textContent = useShort && field.shortLabel ? field.shortLabel : field.label;
+  const value = document.createElement('span');
+  value.className = 'meta-value';
+  value.textContent = field.value;
+  cell.append(label, value);
+  if (field.breakdown) {
+    const medals = document.createElement('span');
+    medals.className = 'meta-medals';
+    for (const [grade, count] of field.breakdown) {
+      const medal = document.createElement('span');
+      medal.className = 'mini-medal ' + grade;
+      medal.title = gradeLabel(grade);
+      const num = document.createElement('b');
+      num.textContent = String(count);
+      medals.append(medal, num);
+    }
+    cell.append(medals);
+  }
+  if (field.note) {
+    const note = document.createElement('span');
+    note.className = 'meta-note';
+    note.textContent = field.note;
+    cell.append(note);
+  }
+  return cell;
+}
+
+function renderRoadmapMeta() {
+  const meta = doc.roadmapMeta;
+  if (!meta) return;
+  // Checklist band: only the highest-value fields, one compact strip above
+  // the list, so the cover still shows rows and the open guide below it.
+  const band = document.getElementById('metaBand');
+  band.replaceChildren();
+  const bandHead = document.createElement('div');
+  bandHead.className = 'meta-band-head';
+  const bandTitle = document.createElement('span');
+  bandTitle.className = 'meta-title';
+  bandTitle.textContent = meta.heading;
+  const jump = document.createElement('button');
+  jump.type = 'button';
+  jump.className = 'meta-jump';
+  jump.textContent = 'Full roadmap →';
+  jump.addEventListener('click', () => setTab('roadmap'));
+  bandHead.append(bandTitle, jump);
+  const bandGrid = document.createElement('div');
+  bandGrid.className = 'meta-grid meta-grid-cover';
+  for (const field of meta.fields.filter((f) => f.cover)) bandGrid.append(metaCell(field, true));
+  band.append(bandHead, bandGrid);
+
+  // Roadmap view: the full block — every field, plus where the figures
+  // come from.
+  const full = document.getElementById('metaFull');
+  full.replaceChildren();
+  const fullTitle = document.createElement('h2');
+  fullTitle.className = 'meta-full-title';
+  fullTitle.textContent = meta.heading;
+  const fullGrid = document.createElement('div');
+  fullGrid.className = 'meta-grid meta-grid-full';
+  for (const field of meta.fields) fullGrid.append(metaCell(field));
+  const sources = document.createElement('p');
+  sources.className = 'meta-sources';
+  sources.textContent = meta.sourcesNote;
+  full.append(fullTitle, fullGrid, sources);
+}
+
 function renderRoadmap() {
   const stageList = document.getElementById('stageList');
   stageList.replaceChildren();
@@ -426,7 +505,7 @@ function renderMissables() {
   }
   const done = document.createElement('p');
   done.className = 'roadmap-intro';
-  done.textContent = 'That is the whole list: 1 confirmed missable and 1 time-sensitive strand race, per Outputlag’s launch-week guide. The other 53 trophies stay open after the credits — the story mission trophies pop as you finish each mission, and the open-world trophies never close.';
+  done.textContent = 'That is the whole list: 1 trophy reported as potentially missable and 1 time-sensitive strand race — PowerPyx, GTABase and Outputlag all name the same single candidate. The other 53 trophies stay open after the credits — the story mission trophies pop as you finish each mission, and the open-world trophies never close.';
   list.append(done);
 }
 
@@ -557,6 +636,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 });
 
 renderSaveRules();
+renderRoadmapMeta();
 renderAll();
 if (location.hash === '#roadmap') setTab('roadmap');
 else if (location.hash === '#missables') setTab('missables');

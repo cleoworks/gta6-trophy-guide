@@ -10,17 +10,25 @@ The offline guide and tracker for all **55 PlayStation 5 trophies** of Grand The
 - **Filters** — by kind (story, missable, collectibles, activities, online) and by grade, plus search.
 - **Spoiler setting** — hides the names and descriptions of story trophies until they are earned.
 - **Roadmap to the platinum** — five stages from Chapter 1 to 100% completion, built from the official trophy descriptions.
-- **Missables flagged** — 1 confirmed missable (Lucia's balcony meditation, Chapter 1) and 1 time-sensitive strand race, with the save discipline that covers both: a manual save at the start of every chapter, since there is no mission replay.
+- **Missables flagged** — 1 trophy reported as potentially missable (Lucia's balcony meditation, Chapter 1) and 1 time-sensitive strand race, with the save discipline that covers both: a manual save at the start of every chapter, since there is no mission replay.
+- **The platinum at a glance** — the decision data up front, the way the big guide sites lead: difficulty 4/10 (PowerPyx estimate), ~200 hours, 55 offline / 0 online trophies, potentially 1 missable, hardest trophy A Long Road, 1 minimum playthrough. A compact band of it sits on the checklist; the full 13-field block heads the roadmap.
 - **A guide for every trophy, in our own words, with sources** — what to do, where, how, and when it can be missed. Steps that come from a published launch-week guide cite it; where no published guide confirms a location or method, the guide says so instead of inventing one.
 
 ## Screenshots
 
 Four renders of the app itself, in the order the judge sees them:
 
-1. `screenshots/1-cover.jpg` — the checklist with a guide open: medal-grade trophy rows, the progress card, filters, and the guide panel with its missable alert, steps and sources in one screen.
-2. `screenshots/2-roadmap.jpg` — the Roadmap to Platinum view: five numbered stages plus the save-discipline callout.
+1. `screenshots/1-cover.jpg` — the checklist with a guide open: the Trophy Roadmap metadata band above the medal-grade trophy rows, the progress card, filters, and the guide panel with its missable alert, steps and sources in one screen.
+2. `screenshots/2-roadmap.jpg` — the Roadmap to Platinum view: the full 13-field Trophy Roadmap metadata block at the top, then the save-discipline callout and the five numbered stages.
 3. `screenshots/3-missables.jpg` — the Missables tab: both flagged trophies with their designed warning alerts and the saves that cover them.
 4. `screenshots/4-spoiler.jpg` — spoiler mode on: unearned story trophies masked in the list, an earned one open with its Sources section.
+
+## What changed in v4
+
+- **The decision metadata is now on the page.** Benchmarked against the world's top trophy-guide sites (PowerPyx, PSNProfiles), v3's gap was skeleton, not skin: those sites lead with a fixed block of decision data — difficulty, time, missables, playthroughs — before any prose, and this app had none. v4 adds it, rendered from a `roadmapMeta` object in the data file: a compact seven-field band on the checklist (difficulty 4/10 labelled as PowerPyx's estimate, ~200 hours, 55 offline with the grade breakdown as medallions, 0 online, the potentially missable trophy named, hardest trophy, minimum playthroughs) and the full 13-field block at the head of the roadmap, sources note included.
+- **Roadmap intro carries the real step budgets.** PowerPyx budgets his GTA VI roadmap at 60–80 hours for the story, about 100 hours for the 100% checklist and about 10 hours of clean-up; the intro now says so with citation, alongside the ~200-hour total and his note that the checklist asks for roughly 60% of true completion. No per-stage numbers were invented for our five stages.
+- **Missable wording matches the sources.** PowerPyx, GTABase and Outputlag all say *potentially* missable about Positive Mental Attitude — whether the trophy strictly requires the Chapter 1 meditation is unconfirmed — so the app and this README no longer call it confirmed: every such claim now reads "reported as potentially missable". The advice is unchanged: do the meditation, keep a Chapter 1 save.
+- **A guide credit line.** The footer now carries a designed byline — Leonida Ledger, Version 4, updated November 19, 2026 — and a provenance line stating the data rests on PlayStation's official trophy list with a cited source behind every guide.
 
 ## What changed in v3
 

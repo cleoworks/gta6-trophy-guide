@@ -2,5 +2,6 @@ out/
 node_modules/
 *.log
 *.bak
+*.tmp
 .DS_Store
 .makefun/

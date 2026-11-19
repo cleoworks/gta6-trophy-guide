@@ -2,7 +2,26 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "edition": "Leonida Ledger v3 (2026-11-19) — professional redesign: new design system, grade medallions and a structured guide panel. Trophy data and guide text unchanged from v2.",
+ "edition": "Leonida Ledger v4 (2026-11-19) — adds the decision-metadata block the top guide sites lead with (difficulty, time, missables, playthroughs), shown on the checklist and in full at the head of the roadmap, and aligns the missable wording with the sources: potentially missable, not confirmed. Trophy names, descriptions and grades unchanged.",
+ "roadmapMeta": {
+  "heading": "Trophy roadmap — the platinum at a glance",
+  "fields": [
+   {"label": "Estimated difficulty", "shortLabel": "Difficulty", "value": "4/10", "note": "PowerPyx estimate", "cover": true},
+   {"label": "Time to platinum", "value": "~200 hours", "cover": true},
+   {"label": "Offline trophies", "value": "55", "breakdown": [["platinum", 1], ["gold", 2], ["silver", 6], ["bronze", 46]], "cover": true},
+   {"label": "Online trophies", "shortLabel": "Online", "value": "0", "cover": true},
+   {"label": "Missable trophies", "shortLabel": "Missable", "value": "Potentially 1 — Positive Mental Attitude", "cover": true},
+   {"label": "Glitched trophies", "value": "0 reported"},
+   {"label": "Difficulty settings", "value": "None — they do not affect trophies"},
+   {"label": "Hardest trophy", "value": "A Long Road (100% completion)", "cover": true},
+   {"label": "Minimum playthroughs", "shortLabel": "Playthroughs", "value": "1", "cover": true},
+   {"label": "Free roam after the story", "value": "Yes — but there is no mission replay"},
+   {"label": "Cheats", "value": "Expected to block saving and trophy progress in the session they are used in"},
+   {"label": "Manual saves", "value": "15 slots + 1 autosave"},
+   {"label": "Release date", "value": "November 19, 2026"}
+  ],
+  "sourcesNote": "Roadmap figures from PowerPyx's GTA 6 Trophy Guide & Roadmap, cross-checked with GTABase and Outputlag (checked 2026-11-19)."
+ },
  "about": "Leonida Ledger — an offline GTA VI trophy guide and tracker. Trophy names, descriptions and grades are PlayStation's official text, as listed by Exophase and PSNProfiles. Every guide below is original writing for this entry. Where a step comes from a published launch-week guide it is cited; where no published guide confirms a location or method, the guide says so instead of inventing one.",
  "sources": [
   {"label": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"},
@@ -23,7 +42,7 @@
  "saveRules": [
   "There is no mission replay and no New Game Plus at launch: once a story mission is done you cannot select it again.",
   "Keep one manual save at the start of every chapter, plus one untouched save from just before the final mission. The game has 15 manual save slots plus one autosave.",
-  "Do Lucia's balcony meditation in Chapter 1 — it is the one confirmed missable and it disappears when the chapter ends.",
+  "Do Lucia's balcony meditation in Chapter 1 — it is the one trophy reported as potentially missable, and it disappears when the chapter ends.",
   "Do Race Against Yago in Chapter 3 as soon as it appears; it carries an hourglass icon and is time-sensitive.",
   "Never test cheats on your trophy save: cheats are expected to switch off trophies and saving."
  ],
@@ -501,9 +520,9 @@
    "missable": true,
    "stage": 1,
    "count": 18,
-   "guide": "Meditate at all 18 spots across Leonida. Meditation spots show as purple icons when you are close. Each outdoor spot should count twice if you meditate there with both characters, so bring your partner every time. THE missable: one spot is Lucia's balcony meditation in Chapter 1 — after Lucia is home, check the kitchen in the morning (a morning after the mission Down to Earth is the usual time), follow her out to the balcony of Jason's house and accept the optional task. It is gone once Chapter 1 ends, and it is not confirmed whether the trophy strictly needs it, so do it anyway and keep a Chapter 1 save until the trophy pops.",
+   "guide": "Meditate at all 18 spots across Leonida. Meditation spots show as purple icons when you are close. Each outdoor spot should count twice if you meditate there with both characters, so bring your partner every time. The potentially missable one: Lucia's balcony meditation in Chapter 1 — after Lucia is home, check the kitchen in the morning (a morning after the mission Down to Earth is the usual time), follow her out to the balcony of Jason's house and accept the optional task. It is gone once Chapter 1 ends, and it is not confirmed whether the trophy strictly needs it, so do it anyway and keep a Chapter 1 save until the trophy pops.",
    "steps": ["In Chapter 1: do Lucia's balcony meditation (morning, after Down to Earth) — do not skip it.", "Meditate at every other spot (18 total), bringing your partner so outdoor spots count twice.", "Keep a Chapter 1 save until the trophy pops."],
-   "missableNote": "MISSABLE — the one confirmed missable in the game. Lucia's balcony meditation in Chapter 1 disappears when the chapter ends. Do it in Chapter 1 and keep a Chapter 1 save until this trophy pops.",
+   "missableNote": "MISSABLE — the one trophy reported as potentially missable. Lucia's balcony meditation in Chapter 1 disappears when the chapter ends. Do it in Chapter 1 and keep a Chapter 1 save until this trophy pops.",
    "sources": [
     {"label": "Exophase — GTA VI trophy list (official name, description, grade)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"},
     {"label": "Outputlag — GTA 6 Trophy List (balcony meditation is Chapter 1 only; purple icons; partner meditations count twice)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"}
