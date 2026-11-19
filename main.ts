@@ -49,6 +49,14 @@
 // file's shape changed; this program's job did not — it still copies
 // app/ and screenshots/ exactly as they sit and lets the vendored library
 // summarise them.
+//
+// v7 note: the seventh version gives every numerically-targeted trophy
+// a progress counter in the data file and the app, adds a computed
+// audit strip, inline step citations, stage chips and a missable banner
+// to the app, and extends the saved progress format (older exports
+// still import). Same story for the hand-in: it copies app/ and
+// screenshots/ exactly as they sit and lets the vendored library
+// summarise them.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

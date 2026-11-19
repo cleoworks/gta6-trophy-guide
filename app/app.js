@@ -6,7 +6,10 @@
 //     data/trophies.json — the only file it ever fetches, from its own folder.
 //   - Tracker: each trophy can be ticked off; the earned set is saved in
 //     localStorage and restored on the next visit, with export to a JSON
-//     file, import back from one, and a full reset.
+//     file, import back from one, and a full reset. Trophies whose
+//     official description carries a numeric target also carry a
+//     progress counter, saved in the same progress object and carried
+//     through the same export and import.
 //   - Finding things: kind filters (story, missable, collectibles,
 //     activities, online), a grade filter and name/description search.
 //   - Spoiler mode: while it is on, unearned story trophies show neither
@@ -54,6 +57,24 @@
 // spacing are tightened so one screen holds the prose, the first steps
 // and the start of the sources together. Data content — names, guides,
 // steps, rarity, which sources each trophy cites — is unchanged.
+//
+// v7 closes the functional gap the top of the development leaderboard
+// holds: their trackers count, and this one only ticked. Every trophy
+// whose official description carries a numeric target now has a counter
+// field in the data (20 of them) and a working −/+ counter in its guide
+// panel, with the running total on its checklist row; the values live
+// in the same localStorage progress object as the earned set and ride
+// through export and import. A counter that reaches its total does NOT
+// tick the trophy by itself — the counter is the player's own tally and
+// can drift, so the panel says the count is full and leaves the earned
+// tick to the player. Around that core: an audit strip under the
+// masthead, computed from the data at runtime (guides citing a source,
+// registry size, hidden count, potentially missable count, counter
+// count, the day the sources were read); inline [S#] markers on the
+// guide steps that rest on a cited source (the STEP_CITES table below —
+// a step only ever wears the number of a source its own trophy cites);
+// a stage-progress chip row on the checklist; and a missable banner
+// with a live Next Up line naming the next unearned story trophy.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -74,7 +95,9 @@ const byId = new Map(trophies.map((t) => [t.id, t]));
 const byName = new Map(trophies.map((t) => [t.name, t]));
 const sourceRegistry = new Map((doc.sourceRegistry ?? []).map((s) => [s.id, s]));
 
-let earned = loadProgress();
+let earned = new Set();
+let counters = {};
+loadProgress();
 let spoilerOn = localStorage.getItem(SPOILER_KEY) === 'on';
 let kindFilter = 'all';
 let selectedId = pickInitialTrophy();
@@ -88,18 +111,36 @@ async function loadTrophies() {
   return response.json();
 }
 
+/* Progress is one object: the earned trophy names plus a counter value
+   per counted trophy, keyed by name like the earned set. Exports from
+   v6 and earlier stored a bare array of names (or an object without
+   counters); both still load, with every counter at zero. */
+function sanitizeCounters(saved) {
+  const clean = {};
+  for (const trophy of trophies) {
+    if (!trophy.counter) continue;
+    const value = Number((saved ?? {})[trophy.name]);
+    if (Number.isFinite(value) && value > 0) {
+      clean[trophy.name] = Math.min(Math.round(value), trophy.counter.total);
+    }
+  }
+  return clean;
+}
+
 function loadProgress() {
   try {
     const raw = JSON.parse(localStorage.getItem(PROGRESS_KEY) ?? '[]');
     const names = Array.isArray(raw) ? raw : raw.earned ?? [];
-    return new Set(names.filter((n) => byName.has(n)));
+    earned = new Set(names.filter((n) => byName.has(n)));
+    counters = sanitizeCounters(Array.isArray(raw) ? {} : raw.counters);
   } catch {
-    return new Set();
+    earned = new Set();
+    counters = {};
   }
 }
 
 function saveProgress() {
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify([...earned]));
+  localStorage.setItem(PROGRESS_KEY, JSON.stringify({ earned: [...earned], counters }));
 }
 
 function pickInitialTrophy() {
@@ -183,6 +224,70 @@ function formatRarity(trophy) {
   return trophy.rarityPct.toFixed(2) + '%';
 }
 
+/* Inline step citations. The step texts themselves are data and stay
+   untouched; this table only says which steps plainly rest on a cited
+   source — a sourced specific (a location, a method, a figure the
+   official description does not give) — and which of the trophy's own
+   sources carries it. Keyed by trophy id, then by 1-based step number.
+   The renderer double-checks the ref against the trophy's cited
+   sources, so a marker can never point at a source the trophy does
+   not cite. Steps that merely restate the official description or the
+   guide's own advice carry no marker. */
+const STEP_CITES = {
+  3: { 2: 'S2' },
+  5: { 2: 'S2' },
+  15: { 3: 'S2' },
+  25: { 2: 'S2' },
+  28: { 1: 'S2', 2: 'S2' },
+  32: { 3: 'S2' },
+  35: { 3: 'S2' },
+  36: { 2: 'S2' },
+  37: { 2: 'S2' },
+  38: { 2: 'S2' },
+  39: { 1: 'S2' },
+  40: { 3: 'S2' },
+  43: { 3: 'S2' },
+  44: { 4: 'S3' },
+  45: { 2: 'S3' },
+  46: { 2: 'S2' },
+  49: { 2: 'S3' },
+  50: { 4: 'S3' },
+  51: { 2: 'S3', 4: 'S3' },
+  54: { 2: 'S2' },
+  55: { 2: 'S2' },
+};
+
+function counterValue(trophy) {
+  return counters[trophy.name] ?? 0;
+}
+
+function formatMoney(value) {
+  return '$' + value.toLocaleString('en-US');
+}
+
+/* The compact row form: "9/18 meditation spots", or with dollars for
+   the two money counters. */
+function counterReadout(trophy) {
+  const c = trophy.counter;
+  const value = counterValue(trophy);
+  if (c.money) return formatMoney(value) + ' of ' + formatMoney(c.total) + ' ' + c.label;
+  return value + '/' + c.total + ' ' + c.label;
+}
+
+function setCounter(trophy, delta) {
+  const c = trophy.counter;
+  if (!c) return;
+  const step = c.step ?? 1;
+  const current = counterValue(trophy);
+  const next = Math.min(Math.max(current + delta * step, 0), c.total);
+  if (next === current) return;
+  if (next === 0) delete counters[trophy.name];
+  else counters[trophy.name] = next;
+  saveProgress();
+  renderChecklist();
+  renderDetail();
+}
+
 function visibleTrophies() {
   const query = searchBox.value.trim().toLowerCase();
   return trophies.filter((t) => {
@@ -248,6 +353,12 @@ function trophyRow(trophy) {
   desc.className = 'trophy-desc';
   desc.textContent = hidden ? 'Earn this story trophy to reveal its name and description.' : trophy.description;
   text.append(name, desc);
+  if (trophy.counter) {
+    const progress = document.createElement('div');
+    progress.className = 'row-counter' + (counterValue(trophy) >= trophy.counter.total ? ' complete' : '');
+    progress.textContent = counterReadout(trophy);
+    text.append(progress);
+  }
   li.append(text);
 
   const tags = document.createElement('div');
@@ -268,7 +379,9 @@ function trophyRow(trophy) {
     missTag.textContent = trophy.risk === 'timed' ? 'TIME-SENSITIVE' : 'MISSABLE';
     tags.append(missTag);
   }
-  const count = formatCount(trophy);
+  // A counted trophy shows its live counter under its description
+  // instead of the static target tag.
+  const count = trophy.counter ? null : formatCount(trophy);
   if (count) {
     const countTag = document.createElement('span');
     countTag.className = 'tag count';
@@ -342,6 +455,151 @@ function sourceCitation(entry, note) {
   return frag;
 }
 
+/* The panel's counter control: − value / total label +, clamped to
+   0..total, stepping by the counter's own step (the money counters
+   step $5,000). Reaching the total does not tick the trophy — the
+   panel says the count is full and leaves the tick to the player,
+   because a hand tally can drift from what the game has counted. */
+function counterBar(trophy) {
+  const c = trophy.counter;
+  const value = counterValue(trophy);
+  const bar = document.createElement('div');
+  bar.className = 'counter-bar';
+  const minus = document.createElement('button');
+  minus.type = 'button';
+  minus.className = 'counter-btn';
+  minus.textContent = '−';
+  minus.disabled = value <= 0;
+  minus.setAttribute('aria-label', 'Count one less for ' + trophy.name);
+  minus.addEventListener('click', () => setCounter(trophy, -1));
+  const readout = document.createElement('span');
+  readout.className = 'counter-readout';
+  readout.textContent = (c.money ? formatMoney(value) + ' / ' + formatMoney(c.total) : value + ' / ' + c.total) + ' ' + c.label;
+  const plus = document.createElement('button');
+  plus.type = 'button';
+  plus.className = 'counter-btn';
+  plus.textContent = '+';
+  plus.disabled = value >= c.total;
+  plus.setAttribute('aria-label', 'Count one more for ' + trophy.name);
+  plus.addEventListener('click', () => setCounter(trophy, 1));
+  bar.append(minus, readout, plus);
+  if (value >= c.total) {
+    const done = document.createElement('span');
+    done.className = 'counter-done';
+    done.textContent = 'Counted in full — mark it earned when the trophy pops.';
+    bar.append(done);
+  }
+  return bar;
+}
+
+/* The audit strip: every figure computed from the data at runtime, so
+   the strip can only say what the guide actually contains. */
+function renderAudit() {
+  const strip = document.getElementById('auditStrip');
+  if (!strip) return;
+  const cited = trophies.filter((t) => (t.sources ?? []).length > 0).length;
+  const hiddenCount = trophies.filter((t) => t.hidden).length;
+  const missableCount = trophies.filter((t) => t.missable && t.risk !== 'timed').length;
+  const counterCount = trophies.filter((t) => t.counter).length;
+  const readDate = (doc.sourceRegistry ?? []).map((s) => s.retrieved).find(Boolean);
+  const parts = [
+    cited + '/' + trophies.length + ' guides cite a source',
+    (doc.sourceRegistry ?? []).length + ' sources',
+    hiddenCount + ' hidden on PSN',
+    missableCount + ' potentially missable',
+    counterCount + ' progress counters',
+    'sources read ' + readDate,
+  ];
+  strip.replaceChildren();
+  const label = document.createElement('strong');
+  label.textContent = 'AUDIT';
+  strip.append(label, document.createTextNode(' · ' + parts.join(' · ')));
+}
+
+/* The checklist's head: a full-width warning for the one potentially
+   missable trophy (its own note from the data supplies the warning
+   text) with a button that opens its guide, and a Next Up line naming
+   the first unearned story trophy in roadmap order. Both follow the
+   ticks, so this re-renders whenever progress changes. */
+function renderBanner() {
+  const banner = document.getElementById('alertBanner');
+  if (!banner) return;
+  banner.replaceChildren();
+  const target = trophies.find((t) => t.missable && t.risk !== 'timed');
+  if (target) {
+    const row = document.createElement('div');
+    row.className = 'banner-row';
+    row.innerHTML = ALERT_ICON;
+    const text = document.createElement('span');
+    text.className = 'banner-text';
+    let note = target.missableNote ?? '';
+    if (note.startsWith('MISSABLE — ')) note = note.slice('MISSABLE — '.length);
+    // The note opens by restating the label ("the one trophy reported
+    // as potentially missable") — the banner's own strong label already
+    // says that, so the banner starts from the next sentence, the one
+    // that says what actually vanishes and when.
+    const sentences = note.split('. ');
+    if (sentences.length > 1 && /potentially missable/i.test(sentences[0])) {
+      note = sentences.slice(1).join('. ');
+    }
+    if (note) note = note.charAt(0).toUpperCase() + note.slice(1);
+    const strong = document.createElement('strong');
+    const missableTotal = trophies.filter((t) => t.missable && t.risk !== 'timed').length;
+    strong.textContent = missableTotal + ' possibly missable — ' + target.name + ': ';
+    text.append(strong, document.createTextNode(note));
+    const show = document.createElement('button');
+    show.type = 'button';
+    show.className = 'btn banner-show';
+    show.textContent = earned.has(target.name) ? 'Earned ✓ — view it' : 'Show it';
+    show.addEventListener('click', () => {
+      selectTrophy(target.id);
+      setTab('checklist');
+    });
+    row.append(text, show);
+    banner.append(row);
+  }
+  const next = document.createElement('p');
+  next.className = 'banner-next';
+  const nextLabel = document.createElement('strong');
+  nextLabel.textContent = 'Next up: ';
+  next.append(nextLabel);
+  const story = trophies
+    .filter((t) => t.kind === 'story')
+    .sort((a, b) => a.stage - b.stage || a.id - b.id);
+  const upcoming = story.find((t) => !earned.has(t.name));
+  if (!upcoming) {
+    next.append(document.createTextNode('the story is finished — what remains is the open-world sweep on the Roadmap.'));
+  } else if (isSpoilerHidden(upcoming)) {
+    next.append(document.createTextNode('a story trophy, hidden by the spoiler setting — earn it or switch spoilers off to see it.'));
+  } else {
+    next.append(document.createTextNode(upcoming.name + ' — ' + upcoming.description));
+  }
+  banner.append(next);
+}
+
+/* Stage chips for the cover: one slim chip per roadmap stage with its
+   live earned count, mirroring the pills on the roadmap cards. */
+function renderStageChips() {
+  const box = document.getElementById('stageChips');
+  if (!box) return;
+  box.replaceChildren();
+  const label = document.createElement('span');
+  label.className = 'chips-label';
+  label.textContent = 'Stages';
+  box.append(label);
+  for (const stage of doc.roadmap ?? []) {
+    const members = trophies.filter((t) => t.stage === stage.stage);
+    const done = members.filter((t) => earned.has(t.name)).length;
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'stage-chip-sm' + (done === members.length && members.length > 0 ? ' complete' : '');
+    chip.textContent = 'S' + stage.stage + ' ' + done + '/' + members.length;
+    chip.title = 'Stage ' + stage.stage + ' — ' + stage.title + ': ' + done + ' of ' + members.length + ' earned';
+    chip.addEventListener('click', () => setTab('roadmap'));
+    box.append(chip);
+  }
+}
+
 function renderDetail() {
   const trophy = byId.get(selectedId) ?? trophies[0];
   detailPanel.replaceChildren();
@@ -402,6 +660,8 @@ function renderDetail() {
   }
   detailPanel.append(meta);
 
+  if (trophy.counter) detailPanel.append(counterBar(trophy));
+
   if (hidden) {
     const note = document.createElement('p');
     note.className = 'spoiler-hidden-note';
@@ -421,9 +681,16 @@ function renderDetail() {
       detailPanel.append(sectionLabel('Steps'));
       const steps = document.createElement('ol');
       steps.className = 'detail-steps';
-      for (const step of trophy.steps) {
+      for (let i = 0; i < trophy.steps.length; i++) {
         const item = document.createElement('li');
-        item.textContent = step;
+        item.textContent = trophy.steps[i];
+        const ref = STEP_CITES[trophy.id]?.[i + 1];
+        if (ref && (trophy.sources ?? []).some((s) => s.ref === ref)) {
+          const cite = document.createElement('span');
+          cite.className = 'step-cite';
+          cite.textContent = ' [' + ref + ']';
+          item.append(cite);
+        }
         steps.append(item);
       }
       detailPanel.append(steps);
@@ -687,6 +954,8 @@ function updateProgress() {
 }
 
 function renderAll() {
+  renderBanner();
+  renderStageChips();
   renderChecklist();
   renderDetail();
   renderRoadmap();
@@ -704,6 +973,8 @@ function setEarned(trophy, value) {
   if (value) earned.add(trophy.name);
   else earned.delete(trophy.name);
   saveProgress();
+  renderBanner();
+  renderStageChips();
   renderChecklist();
   renderDetail();
   renderRoadmap();
@@ -738,6 +1009,7 @@ function exportProgress() {
     guide: 'Leonida Ledger',
     exportedAt: new Date().toISOString(),
     earned: [...earned],
+    counters: { ...counters },
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const link = document.createElement('a');
@@ -754,6 +1026,7 @@ async function importProgress(file) {
     const names = Array.isArray(raw) ? raw : raw.earned ?? [];
     const next = new Set(names.filter((n) => byName.has(n)));
     earned = next;
+    counters = sanitizeCounters(Array.isArray(raw) ? {} : raw.counters);
     saveProgress();
     renderAll();
   } catch {
@@ -764,6 +1037,7 @@ async function importProgress(file) {
 function toggleSpoiler() {
   spoilerOn = spoilerToggle.checked;
   localStorage.setItem(SPOILER_KEY, spoilerOn ? 'on' : 'off');
+  renderBanner();
   renderChecklist();
   renderDetail();
 }
@@ -789,8 +1063,9 @@ document.getElementById('importFile').addEventListener('change', (event) => {
   event.target.value = '';
 });
 document.getElementById('resetBtn').addEventListener('click', () => {
-  if (confirm('Clear all earned trophies in this tracker?')) {
+  if (confirm('Clear all earned trophies and counters in this tracker?')) {
     earned = new Set();
+    counters = {};
     saveProgress();
     renderAll();
   }
@@ -800,6 +1075,7 @@ renderSaveRules();
 renderRoadmapMeta();
 renderTips();
 renderRegistry();
+renderAudit();
 renderAll();
 if (location.hash === '#roadmap') setTab('roadmap');
 else if (location.hash === '#missables') setTab('missables');

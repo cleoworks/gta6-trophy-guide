@@ -23,7 +23,15 @@
      rows by kind under slim headers with a live earned count per group,
      each roadmap stage card shows its own earned count, and the guide
      panel is tightened again so its prose, first steps and the start of
-     its sources share one screen. -->
+     its sources share one screen. v7 makes the tracker actually track:
+     every trophy whose official description carries a numeric target
+     gets a working progress counter, kept in the same saved progress
+     as the earned ticks and carried through export and import; a slim
+     audit strip under the masthead states what the guide contains,
+     computed from the data itself; guide steps carry inline [S#]
+     markers where a step rests on a cited source; and the checklist
+     opens with a stage-progress chip row, a missable banner and a
+     Next Up line that follows the ticks. -->
 <title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -46,6 +54,8 @@
     </div>
   </div>
 </header>
+
+<p class="audit-strip" id="auditStrip" aria-label="Guide contents audit"></p>
 
 <nav class="tabs" id="tabs">
   <button type="button" data-tab="checklist" class="tab active">Checklist</button>
@@ -82,7 +92,9 @@
 
 <main>
   <section class="view view-checklist" id="viewChecklist">
+    <div class="alert-banner" id="alertBanner"></div>
     <section class="meta-band" id="metaBand" aria-label="Trophy roadmap summary"></section>
+    <div class="stage-chips" id="stageChips" aria-label="Progress by roadmap stage"></div>
     <div class="list-col">
       <p class="list-meta" id="listMeta">Showing 55 of 55 trophies</p>
       <ul class="trophy-list" id="trophyList"></ul>
@@ -116,7 +128,7 @@
 </main>
 
 <footer class="colophon">
-  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 6 · Updated November 19, 2026</p>
+  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 7 · Updated November 19, 2026</p>
   <p class="provenance">Built on PlayStation's official trophy list: names, descriptions and grades are Sony's text, as mirrored by Exophase and PSNProfiles. Every guide in this app names its sources in its own panel.</p>
   <p><strong>Rarity.</strong> The percentage on each trophy is the share of Exophase-tracked players who had earned it when the list was read on 19 November 2026 — release day. Treat it as a launch-week snapshot: these figures move fast as more players start the game.</p>
   <p><strong>Sources.</strong> Guide steps that come from a published launch-week guide cite Outputlag's GTA 6 Trophy List (checked 2026-11-19); the roadmap figures up top — difficulty, time, step budgets — come from PowerPyx's Trophy Guide &amp; Roadmap, cross-checked with GTABase. Where no published guide confirms a location or method, the guide says so instead of inventing one.</p>

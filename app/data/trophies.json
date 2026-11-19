@@ -2,7 +2,7 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "edition": "Leonida Ledger v6 (2026-11-19) — every guide's sources now resolve to a numbered source registry (S1–S6, each with its retrieval date) instead of free-text labels; the checklist groups its rows by kind with a live earned count per group; each roadmap stage shows its own earned count; and the guide panel is tightened so one screen holds its prose, its first steps and the start of its sources together. Trophy names, descriptions, grades, guides, steps and rarity figures unchanged.",
+ "edition": "Leonida Ledger v7 (2026-11-19) — the tracker now tracks: every trophy whose official description carries a numeric target has a working progress counter (20 in all), stored with the earned set and carried through export and import, shown in its guide panel and on its checklist row. A computed audit strip under the masthead states what the guide contains (guides citing a source, sources, hidden trophies, the potentially missable count, counters, the day the sources were read); guide steps carry inline [S#] markers where a step rests on a cited source; a stage-progress chip row and a missable banner with a Next Up line head the checklist. Trophy names, descriptions, grades, guides, steps, rarity figures and cited sources unchanged.",
  "rarityNote": "Rarity is the share of Exophase-tracked players who had earned each trophy when the list was read on 19 November 2026 — release day, so every figure is a launch-week snapshot that will move fast. Source: Exophase, Grand Theft Auto VI (PSN) trophy list.",
  "roadmapMeta": {
   "heading": "Trophy roadmap — the platinum at a glance",
@@ -329,6 +329,7 @@
    "missable": false,
    "stage": 4,
    "count": 250,
+   "counter": {"label": "stunts", "total": 250},
    "guide": "Complete 250 stunts. Stunt jumps, flights under bridges, knife-edge flights and base jumps all count, so mix them rather than grinding one kind. The counter runs from the start of the game, so stunts you pull while playing the story already count. Do not stop at 250: the 100% checklist needs 300, so keep going past the pop if you want A Long Road.",
    "steps": ["Pull stunts as you play — jumps, under-bridge flights, knife flights, base jumps.", "Watch the counter; the trophy pops at 250.", "Keep going to 300 for the 100% checklist."],
    "sources": [
@@ -347,6 +348,7 @@
    "missable": false,
    "stage": 4,
    "count": 9,
+   "counter": {"label": "activity types tried", "total": 9},
    "guide": "Try each of the 9 activity types once. This is a sampler, not a grind: one taste of everything the open world offers — a race, a fishing trip, an arcade game, a shooting range session, a drone race, a stunt, a meditation spot, a gym session, a bowling game, whatever the nine turn out to be in your run. It pops as soon as the ninth type is tried, and most players will clear it by accident while chasing the other activity trophies.",
    "steps": ["Play one of each activity type the game offers (9 in total).", "Check what you have tried; fill the gaps with a single quick session each."],
    "sources": [
@@ -366,6 +368,7 @@
    "missable": false,
    "stage": 4,
    "count": 42,
+   "counter": {"label": "shooting-range golds", "total": 42},
    "guide": "Earn a gold medal in all 42 Shooting Range challenges, spread across two shooting ranges. This is a skill trophy, not a grind: each challenge has its own gold threshold, so replay a challenge until the medal turns gold and move on. Bring your best aim and a steady trigger finger; there is no difficulty trophy in the game, so the ranges are the same for everyone.",
    "steps": ["Find a shooting range (there are two).", "Play each challenge and chase the gold medal threshold.", "Replay any challenge that lands silver or bronze until all 42 are gold."],
    "sources": [
@@ -384,6 +387,7 @@
    "missable": false,
    "stage": 4,
    "count": 14,
+   "counter": {"label": "drone races won", "total": 14},
    "guide": "Win a Top Fun Drone Race at all 14 locations. One win per location is enough — you do not need to win every race a location offers, just one at each of the 14. Fly the drone courses cleanly and learn each course's turns; a win at a location you have already won does not advance the counter, so track which locations are left in this tracker.",
    "steps": ["Find the Top Fun Drone Race locations across Leonida (14 in total).", "Win at least one race at each location.", "The trophy pops when the 14th location is won."],
    "sources": [
@@ -402,6 +406,7 @@
    "missable": false,
    "stage": 4,
    "count": 20,
+   "counter": {"label": "different races won", "total": 20},
    "guide": "Win 20 different races. Different is the key word: winning the same race twice counts once, so you need 20 distinct race events across the map — street races, and any other race types the game offers. The Yago street race strand in Chapter 3 counts toward this too, so do the races as they appear rather than leaving them all for the endgame.",
    "steps": ["Enter races across Leonida — street races and any other race types.", "Win 20 different race events (repeats do not count).", "Check the counter after each win; the trophy pops at 20."],
    "sources": [
@@ -511,6 +516,7 @@
    "risk": "timed",
    "stage": 2,
    "count": 8,
+   "counter": {"label": "stranger strands done", "total": 8},
    "guide": "Complete 8 mission strands for strangers across Leonida. Not every optional questline counts: Andy's, Billy's and Tyrone's strands have their own trophies and do not move this counter, so check the trophy's progress counter after each strand you finish to learn which ones count. One strand race is time-sensitive — Race Against Yago in Chapter 3, marked with an hourglass icon — so do it the moment it appears, with a save made first. The other strands stay open after the credits.",
    "steps": ["Take stranger strands as they appear across Leonida.", "Do Race Against Yago in Chapter 3 the moment it appears (save first).", "Check the trophy's progress counter after each strand; finish 8 that count."],
    "missableNote": "TIME-SENSITIVE, not fully missable: the Race Against Yago strand race in Chapter 3 carries an hourglass icon — do it as soon as it appears. The other strands stay open after the credits.",
@@ -566,6 +572,7 @@
    "missable": true,
    "stage": 1,
    "count": 18,
+   "counter": {"label": "meditation spots", "total": 18},
    "guide": "Meditate at all 18 spots across Leonida. Meditation spots show as purple icons when you are close. Each outdoor spot should count twice if you meditate there with both characters, so bring your partner every time. The potentially missable one: Lucia's balcony meditation in Chapter 1 — after Lucia is home, check the kitchen in the morning (a morning after the mission Down to Earth is the usual time), follow her out to the balcony of Jason's house and accept the optional task. It is gone once Chapter 1 ends, and it is not confirmed whether the trophy strictly needs it, so do it anyway and keep a Chapter 1 save until the trophy pops.",
    "steps": ["In Chapter 1: do Lucia's balcony meditation (morning, after Down to Earth) — do not skip it.", "Meditate at every other spot (18 total), bringing your partner so outdoor spots count twice.", "Keep a Chapter 1 save until the trophy pops."],
    "missableNote": "MISSABLE — the one trophy reported as potentially missable. Lucia's balcony meditation in Chapter 1 disappears when the chapter ends. Do it in Chapter 1 and keep a Chapter 1 save until this trophy pops.",
@@ -603,6 +610,7 @@
    "missable": false,
    "stage": 4,
    "count": 3,
+   "counter": {"label": "card sets completed", "total": 3},
    "guide": "Complete 3 Collectible Card sets. Cards are a pure collectible hunt: find them across Leonida and finish three whole sets, card by card. No published launch guide lists the card locations yet, so this guide will not invent them — use the in-game collection screen to see which cards each set still needs, sweep the map methodically, and tick sets off here as you complete them.",
    "steps": ["Find collectible cards across Leonida.", "Open the collection screen to see which cards each set still needs.", "Complete 3 full sets."],
    "sources": [
@@ -622,6 +630,7 @@
    "missable": false,
    "stage": 4,
    "count": 100,
+   "counter": {"label": "WAiNK locations tagged", "total": 100},
    "guide": "Use the WAiNK app at 100 locations. WAiNK is the in-game phone app for scanning and tagging places — open it at landmarks, businesses and viewpoints across Leonida and the location counts. It pairs naturally with the other map-clearing trophies: while you sweep for the 52 areas of The Goodtime State and the 100 vehicles of Whip It Good, WAiNK each spot you pass. One hundred locations is a lot, so fold it into your general map sweep instead of grinding it alone.",
    "steps": ["Open the WAiNK app at a location to tag it.", "WAiNK new locations as you sweep the map for areas and vehicles.", "The trophy pops at 100 locations."],
    "sources": [
@@ -641,6 +650,7 @@
    "missable": false,
    "stage": 4,
    "count": 50,
+   "counter": {"label": "challenges done", "total": 50},
    "guide": "Complete 50 Challenges. Challenges are listed under Progress > Challenges, and many complete on their own while you play — driving, fighting, exploring and collecting all feed them. Do not grind them first: play the rest of the list and check the Challenges screen regularly, then mop up the easiest unfinished ones at the end. The 100% checklist needs 70 of the 80, so keep going past 50 if you want A Long Road.",
    "steps": ["Open Progress > Challenges to see the list.", "Play normally — many complete on their own.", "Mop up the easiest unfinished Challenges until 50 are done; keep going to 70 for 100%."],
    "sources": [
@@ -695,6 +705,7 @@
    "missable": false,
    "stage": 4,
    "count": 100,
+   "counter": {"label": "vehicles discovered", "total": 100},
    "guide": "Discover 100 vehicles. Scanning a vehicle with the WAiNK app counts as discovering it, so scan traffic as you drive instead of only counting cars you steal or buy. Sweep varied districts — city streets, highways, the port, the countryside — because different areas carry different models. The 100% checklist needs 200 of the 277 base models, so keep scanning past 100.",
    "steps": ["Scan vehicles with the WAiNK app as you drive.", "Cover varied districts so you meet different models.", "The trophy pops at 100 discovered; keep going to 200 for 100%."],
    "sources": [
@@ -713,6 +724,7 @@
    "missable": false,
    "stage": 3,
    "count": 5,
+   "counter": {"label": "enemies in one Combat Focus", "total": 5},
    "guide": "Take down 5 enemies during one use of Combat Focus. Combat Focus is the slow-motion aim: press L3 and R3 while aiming. Set it up rather than hoping for it — pick a group of gang enemies, such as the guards at an illegal operation, and use an assault rifle so each shot lands fast. Adrenaline extends Focus, so use it to stretch the window until the fifth enemy drops.",
    "steps": ["Find a group of enemies, such as guards at an illegal operation.", "Aim and press L3 + R3 to trigger Combat Focus.", "Down 5 enemies with an assault rifle before Focus ends; Adrenaline extends it."],
    "sources": [
@@ -785,6 +797,7 @@
    "missable": false,
    "stage": 3,
    "count": 5,
+   "counter": {"label": "bank vaults robbed", "total": 5},
    "guide": "Rob 5 bank vaults and escape. Vaults unlock through That's Where The Money Is, an optional mission near the end of Chapter 4: tail an armored security van to a large bank and get into the vault while the guard has it open. You cannot carry all the bags alone, so bring your partner. Each vault job gives you a 4-star Wanted Level straight away, so escaping one with your partner also earns Hot Together. The 100% checklist needs all eight vaults, so keep going past five.",
    "steps": ["Do That's Where The Money Is near the end of Chapter 4.", "Bring your partner — you cannot carry all the bags alone.", "Tail the armored van, enter the vault, escape; repeat for 5 vaults (8 for 100%)."],
    "sources": [
@@ -821,6 +834,7 @@
    "missable": false,
    "stage": 4,
    "count": 52,
+   "counter": {"label": "areas explored", "total": 52},
    "guide": "Explore all 52 areas of Leonida. This is the map-clearing trophy: drive, fly and walk into every named area until the counter reads 52 of 52. Fold it into your other sweeps — WAiNK spots, vehicle scanning, meditation spots and card hunting all take you to the same corners of the map. The areas you visit during the story already count, so the endgame is just the corners the story never took you to.",
    "steps": ["Visit every named area of Leonida (52 in total).", "Combine the sweep with WAiNK tags, vehicle scans and meditation spots.", "The trophy pops when the last area registers."],
    "sources": [
@@ -840,6 +854,7 @@
    "missable": false,
    "stage": 3,
    "count": 9,
+   "counter": {"label": "gangs hit", "total": 9},
    "guide": "Rob one Illegal Operation belonging to each of the 9 gangs. Illegal operations are the gang-run fronts scattered across Leonida — Kingpin Bowling is one, and the trophy wants one hit per gang, not every operation. The 100% checklist wants all 39 operations, so this pops along the way if you keep robbing them. Guards at an operation also make a good setup for Gunslinger's five kills in one Combat Focus.",
    "steps": ["Find Illegal Operations across Leonida.", "Rob one operation from each of the 9 gangs.", "Keep going to all 39 operations for the 100% checklist."],
    "sources": [
@@ -935,6 +950,7 @@
    "missable": false,
    "stage": 4,
    "count": 500,
+   "counter": {"label": "profile actions", "total": 500},
    "guide": "Make 500 actions that change your Criminal Profile. Robberies and fights feed it, so this fills up without a separate grind — every illegal operation you rob, every fight you win and every shady choice you make adds to the count. Play the rest of the list normally and check the PSN counter; if it is short at the end, a few more robberies and fights will close the gap.",
    "steps": ["Play the list normally — robberies and fights feed the counter.", "Check the PSN progress counter (500 total).", "Top it up with extra robberies and fights if it is short."],
    "sources": [
@@ -1013,6 +1029,7 @@
    "missable": false,
    "stage": 4,
    "count": 250000,
+   "counter": {"label": "laundered", "total": 250000, "step": 5000, "money": true},
    "guide": "Earn $250,000 by laundering Marked Bills through your contacts. Marked bills come from bank and payday loan jobs, and you clean them by selling them to your contacts. The $250,000 total is cumulative, so every vault and payday job adds to it — it builds alongside Maximum Withdrawal and the other robbery trophies. Keep laundering after each job instead of letting bills pile up.",
    "steps": ["Do bank and payday loan jobs to earn Marked Bills.", "Sell the bills to your contacts to launder them.", "Repeat until $250,000 has been laundered in total."],
    "sources": [
@@ -1031,6 +1048,7 @@
    "missable": false,
    "stage": 4,
    "count": 100000,
+   "counter": {"label": "spent in shops", "total": 100000, "step": 5000, "money": true},
    "guide": "Spend $100,000 across all shops. The total is cumulative across every kind of shop — clothes, weapons, food, car parts, anything with a price tag. It builds on its own while you play, especially once you are buying garage properties and kitting out cars. If it is short near the end, buy the most expensive things you still want rather than grinding cash for its own sake.",
    "steps": ["Spend money in shops of every kind as you play.", "The $100,000 total is cumulative across all shops.", "Top it up with big purchases (cars, garages, gear) if it is short."],
    "sources": [
@@ -1049,6 +1067,7 @@
    "missable": false,
    "stage": 4,
    "count": 8,
+   "counter": {"label": "garages bought", "total": 8},
    "guide": "Buy all 8 garage properties. They are bought through the Vice City Real Estate app, which unlocks after the Chapter 2 mission Daily Driver. Together they cost about $160,000 — and garages the story gives you do not count, so you need all eight bought ones. Buy them as your money allows, and remember each registered Scooter Bros vehicle needs a free garage space, so buy garages before you finish On the Spot.",
    "steps": ["Finish the Chapter 2 mission Daily Driver to unlock the Real Estate app.", "Buy the 8 garages (about $160,000 in total).", "Story-given garages do not count — all 8 must be bought."],
    "sources": [
@@ -1067,6 +1086,7 @@
    "missable": false,
    "stage": 4,
    "count": 10,
+   "counter": {"label": "vehicles registered", "total": 10},
    "guide": "Register 10 vehicles to the Scooter Bros app. The Chapter 2 mission Moses opens the app: take a stolen car to Moses, choose Respray, then Register. From Chapter 3 you can also register cars with a standard tracker at Pay 'n' Spray. Each car needs a free garage space, so buy garages first (see Little Boxes) and register cheap cars — ten registrations, not ten keepers.",
    "steps": ["Do the Chapter 2 mission Moses to open the Scooter Bros app.", "Take a stolen car to Moses, choose Respray, then Register (or use Pay 'n' Spray from Chapter 3).", "Keep a free garage space per car; register 10 vehicles."],
    "sources": [

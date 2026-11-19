@@ -8,3 +8,6 @@ node_modules/
 *.rej
 .DS_Store
 .makefun/
+# browser profile and cache leftovers from local screenshot runs
+.cache/
+.playwright/
