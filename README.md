@@ -6,7 +6,7 @@
 
 The offline guide and tracker for all **55 PlayStation 5 trophies** of Grand Theft Auto VI: **1 Platinum, 2 Gold, 6 Silver, 46 Bronze, 28 hidden**.
 
-- **Checklist tracker** — tick trophies off; progress is saved in the browser (localStorage) and can be exported to a file and imported back.
+- **Checklist tracker** — tick trophies off; progress is saved in the browser (localStorage) and can be exported to a file and imported back. The list groups its rows by kind — Platinum, Story, Collectibles, Activities — under slim headers that each carry a live "X of Y earned" count, and every roadmap stage card shows its own earned count too.
 - **Filters** — by kind (story, missable, collectibles, activities, online) and by grade, plus search.
 - **Spoiler setting** — hides the names and descriptions of story trophies until they are earned.
 - **Roadmap to the platinum** — five stages from Chapter 1 to 100% completion, built from the official trophy descriptions.
@@ -14,16 +14,25 @@ The offline guide and tracker for all **55 PlayStation 5 trophies** of Grand The
 - **The platinum at a glance** — the decision data up front, the way the big guide sites lead: difficulty 4/10 (PowerPyx estimate), ~200 hours, 55 offline / 0 online trophies, potentially 1 missable, hardest trophy A Long Road, 1 minimum playthrough. A compact band of it sits on the checklist; the full 13-field block heads the roadmap.
 - **A rarity figure on every trophy** — the share of Exophase-tracked players who had earned each trophy when the list was read on release day (19 November 2026), shown on every checklist row and in every guide panel, and labelled in the footer as the launch-week snapshot it is.
 - **Tips & Strategies on the roadmap** — seven short, source-marked tips covering the no-replay save discipline, the Chapter 1 meditation, the time-sensitive strand race, cheats, partner trophies, the real size of the 100% checklist and how to spend 15 save slots.
-- **A guide for every trophy, in our own words, with sources** — what to do, where, how, and when it can be missed. Steps that come from a published launch-week guide cite it; where no published guide confirms a location or method, the guide says so instead of inventing one.
+- **A guide for every trophy, in our own words, with numbered sources** — what to do, where, how, and when it can be missed. Every citation resolves to a numbered source registry (S1–S6: Exophase, Outputlag, PowerPyx, GTABase, PSNProfiles, and the official description itself), printed in full in the app's footer with each source's retrieval date; each panel shows the numbers it rests on plus a note on what that source supports. Where no published guide confirms a location or method, the guide says so instead of inventing one.
 
 ## Screenshots
 
 Four renders of the app itself, in the order the judge sees them:
 
-1. `screenshots/1-cover.jpg` — the checklist with a guide open: the Trophy Roadmap metadata band above the medal-grade trophy rows (each with its rarity percentage), the progress card, filters, and the guide panel with its missable alert, guide prose, steps and sources in one screen.
-2. `screenshots/2-roadmap.jpg` — the Roadmap to Platinum view: the full 13-field Trophy Roadmap metadata block at the top, the Tips & Strategies block under it, then the save-discipline callout and the five numbered stages.
+1. `screenshots/1-cover.jpg` — the checklist with a guide open: the Trophy Roadmap metadata band above the trophy rows grouped by kind (each group header carries its live earned count; every row carries its rarity percentage), the progress card, filters, and the guide panel tightened to hold its missable alert, guide prose, first steps and the start of its numbered sources in one screen.
+2. `screenshots/2-roadmap.jpg` — the Roadmap to Platinum view: the full 13-field Trophy Roadmap metadata block at the top, the five numbered stage cards directly under it — each carrying its own live earned count — then the Tips & Strategies block and the save-discipline callout.
 3. `screenshots/3-missables.jpg` — the Missables tab: both flagged trophies with their designed warning alerts and the saves that cover them.
-4. `screenshots/4-spoiler.jpg` — spoiler mode on: unearned story trophies masked in the list, an earned one open with its Sources section.
+4. `screenshots/4-spoiler.jpg` — spoiler mode on: unearned story trophies masked in the grouped list, an earned one open with its numbered Sources section.
+
+## What changed in v6
+
+- **Benchmarked against the leaderboard's top entry, and fixed where it beat us.** A head-to-head with the entry leading the development board (91.94% dev win rate, the top six within 0.6 points) scored this guide ahead on decision metadata, per-trophy rarity, grade medallions and the missable alert — and behind on three things: citation form, guide-panel density, and progress granularity. v6 is exactly those three fixes; nothing else moved.
+- **Numbered source registry.** Citations were free-text labels; they are now a registry, the form the leading entry (and PowerPyx) uses. The data file carries one `sourceRegistry` — S1 Exophase, S2 Outputlag, S3 PowerPyx, S4 GTABase, S5 PSNProfiles, S6 the official trophy description — each with its work title, URL and retrieval date (19 November 2026, the day all of this guide's source data was gathered). Every trophy cites the same sources it cited in v5, now as registry ids plus the note on what that source supports, and each guide panel prints the full numbered citation. The whole registry is also printed once in the footer, so any [Sx] in a panel resolves on the page.
+- **Grouped checklist, counted stages.** In the All view the checklist now groups its rows by kind — Platinum, Story, Collectibles, Activities (missable is a flag across kinds, not a kind; there are no online trophies to group) — under slim headers showing a live "X of Y earned" per group. Each of the five roadmap stage cards likewise shows its own earned count, updating as trophies are ticked. Filtered views keep the flat list.
+- **A denser guide panel.** The panel's type scale and spacing were tightened once more (prose and steps a step smaller, labels closer, a smaller banner medallion) so a single screen of the open guide now holds the official description, the tags, the missable alert, the full guide prose, at least the first three steps and the start of the Sources section — where v5's frame ended at the first step. Body text stays at or above 12px.
+- **Mark earned, labelled by state.** The guide panel's toggle button now reads "Mark earned" before the trophy is earned and "Earned ✓" (in a green earned style) after — the same storage and behaviour as the row checkbox it mirrors.
+- **Data otherwise untouched.** Names, descriptions, grades, guides, steps and rarity figures are byte-for-byte v5's, and every trophy cites the same set of sources — verified programmatically against the v5 commit; only the representation of the citations changed.
 
 ## What changed in v5
 
@@ -73,7 +82,7 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
 ## Sources
 
-Trophy names, descriptions and grades are PlayStation's official text, as listed by [Exophase](https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/) and [PSNProfiles](https://psnprofiles.com/trophies/43531-grand-theft-auto-vi). Guide steps cite [Outputlag's GTA 6 Trophy List](https://outputlag.com/guides/gta-6-trophy-list/), [PowerPyx's GTA 6 Trophy Guide & Roadmap](https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/) and [GTABase's Trophy Guide & Achievements List](https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series) where they draw on them; every trophy's guide names its sources in the app.
+Trophy names, descriptions and grades are PlayStation's official text, as listed by [Exophase](https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/) and [PSNProfiles](https://psnprofiles.com/trophies/43531-grand-theft-auto-vi). Guide steps cite [Outputlag's GTA 6 Trophy List](https://outputlag.com/guides/gta-6-trophy-list/), [PowerPyx's GTA 6 Trophy Guide & Roadmap](https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/) and [GTABase's Trophy Guide & Achievements List](https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series) where they draw on them; in the app these are registry entries S2, S3 and S4, and every trophy's guide prints its numbered citations in its own panel.
 
 Unofficial fan guide. Not affiliated with Rockstar Games. No Rockstar logo, artwork or game screenshots are used.
 

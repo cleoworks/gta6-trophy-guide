@@ -16,7 +16,14 @@
      read on release day and labelled as a launch-week snapshot in the
      footer), adds a Tips & Strategies block to the roadmap, and tightens
      the checklist layout so one screen holds the band, the rows and the
-     open guide's prose together. -->
+     open guide's prose together. v6 numbers its sources: the data file
+     carries a source registry (S1–S6, each with a retrieval date), every
+     guide panel prints its citations in that numbered form, and the full
+     registry is printed once in the footer. The checklist groups its
+     rows by kind under slim headers with a live earned count per group,
+     each roadmap stage card shows its own earned count, and the guide
+     panel is tightened again so its prose, first steps and the start of
+     its sources share one screen. -->
 <title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -87,6 +94,7 @@
   <section class="view view-roadmap" id="viewRoadmap" hidden>
     <p class="roadmap-intro">Five stages from the first mission to the platinum, built from the official trophy descriptions. The run takes around <strong>200 hours</strong>, most of it in the 100% completion checklist — which, as PowerPyx notes, asks for only about 60% of true completion. His step budgets shape the stages below: <strong>60–80 hours</strong> of story, about <strong>100 hours</strong> of checklist, about <strong>10 hours</strong> of clean-up (PowerPyx, checked 2026-11-19).</p>
     <div class="meta-full" id="metaFull"></div>
+    <ol class="stage-list" id="stageList"></ol>
     <div class="tips" id="tipsBlock">
       <h2 class="tips-title">Tips &amp; Strategies</h2>
       <ol class="tips-list" id="tipsList"></ol>
@@ -95,7 +103,6 @@
       <h2>Save discipline — read this first</h2>
       <ul id="saveRulesList"></ul>
     </div>
-    <ol class="stage-list" id="stageList"></ol>
   </section>
 
   <section class="view view-missables" id="viewMissables" hidden>
@@ -109,10 +116,12 @@
 </main>
 
 <footer class="colophon">
-  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 5 · Updated November 19, 2026</p>
+  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 6 · Updated November 19, 2026</p>
   <p class="provenance">Built on PlayStation's official trophy list: names, descriptions and grades are Sony's text, as mirrored by Exophase and PSNProfiles. Every guide in this app names its sources in its own panel.</p>
   <p><strong>Rarity.</strong> The percentage on each trophy is the share of Exophase-tracked players who had earned it when the list was read on 19 November 2026 — release day. Treat it as a launch-week snapshot: these figures move fast as more players start the game.</p>
   <p><strong>Sources.</strong> Guide steps that come from a published launch-week guide cite Outputlag's GTA 6 Trophy List (checked 2026-11-19); the roadmap figures up top — difficulty, time, step budgets — come from PowerPyx's Trophy Guide &amp; Roadmap, cross-checked with GTABase. Where no published guide confirms a location or method, the guide says so instead of inventing one.</p>
+  <p><strong>Source registry.</strong> Every citation in this guide resolves to one of these numbered sources; each guide panel prints the numbers it rests on, with a note on what that source supports.</p>
+  <ul class="registry-list" id="sourceRegistry"></ul>
   <p>Unofficial fan guide. Not affiliated with Rockstar Games. No Rockstar logo, artwork or game screenshots are used. Works fully offline — it loads only its own files and saves progress in this browser (localStorage).</p>
 </footer>
 

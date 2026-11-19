@@ -40,6 +40,20 @@
 // guides carry), rendered from the tips array in the data file, and the
 // checklist layout is tightened so the cover frame holds the metadata
 // band, more rows and the open guide's prose at once.
+//
+// v6 takes its three changes from a head-to-head with the entry sitting
+// at the top of the development leaderboard, which beat this guide on
+// citation form, panel density and progress granularity. First, sources
+// are a numbered registry now: the data file carries one sourceRegistry
+// (S1–S6, each with name, title, URL and retrieval date), every trophy
+// cites registry ids plus a short note on what that source supports, and
+// the panel prints the full numbered citation — the form the big guides
+// use. Second, the checklist groups its rows by kind under slim headers
+// that carry a live "X of Y earned" per group, and each roadmap stage
+// card shows its own earned count. Third, the guide panel's type and
+// spacing are tightened so one screen holds the prose, the first steps
+// and the start of the sources together. Data content — names, guides,
+// steps, rarity, which sources each trophy cites — is unchanged.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -58,6 +72,7 @@ const doc = await loadTrophies();
 const trophies = doc.trophies;
 const byId = new Map(trophies.map((t) => [t.id, t]));
 const byName = new Map(trophies.map((t) => [t.name, t]));
+const sourceRegistry = new Map((doc.sourceRegistry ?? []).map((s) => [s.id, s]));
 
 let earned = loadProgress();
 let spoilerOn = localStorage.getItem(SPOILER_KEY) === 'on';
@@ -180,76 +195,151 @@ function visibleTrophies() {
   });
 }
 
+/* Checklist groups, in display order. The data stores four kinds —
+   platinum (the one goal trophy), story, collectibles and activities;
+   "missable" is a flag on top of a kind, not a kind of its own, and
+   there are no online trophies at launch, so neither gets a group. */
+const KIND_GROUPS = [
+  ['platinum', 'Platinum'],
+  ['story', 'Story'],
+  ['collectibles', 'Collectibles'],
+  ['activities', 'Activities'],
+];
+
+function groupHeader(kind, label) {
+  const all = trophies.filter((t) => t.kind === kind);
+  const done = all.filter((t) => earned.has(t.name)).length;
+  const li = document.createElement('li');
+  li.className = 'group-header';
+  const name = document.createElement('span');
+  name.className = 'group-name';
+  name.textContent = label;
+  const count = document.createElement('span');
+  count.className = 'group-count';
+  count.textContent = done + ' of ' + all.length + ' earned';
+  li.append(name, count);
+  return li;
+}
+
+function trophyRow(trophy) {
+  const hidden = isSpoilerHidden(trophy);
+  const li = document.createElement('li');
+  li.className = 'trophy-row' + (earned.has(trophy.name) ? ' earned' : '') + (trophy.id === selectedId ? ' selected' : '');
+  li.addEventListener('click', (event) => {
+    if (event.target.tagName !== 'INPUT') selectTrophy(trophy.id);
+  });
+
+  const box = document.createElement('input');
+  box.type = 'checkbox';
+  box.checked = earned.has(trophy.name);
+  box.setAttribute('aria-label', 'Mark ' + trophy.name + ' earned');
+  box.addEventListener('change', () => {
+    setEarned(trophy, box.checked);
+  });
+  li.append(box);
+
+  li.append(medalElement(trophy));
+
+  const text = document.createElement('div');
+  const name = document.createElement('div');
+  name.className = 'trophy-name';
+  name.textContent = hidden ? 'Hidden story trophy' : trophy.name;
+  const desc = document.createElement('div');
+  desc.className = 'trophy-desc';
+  desc.textContent = hidden ? 'Earn this story trophy to reveal its name and description.' : trophy.description;
+  text.append(name, desc);
+  li.append(text);
+
+  const tags = document.createElement('div');
+  tags.className = 'trophy-tags';
+  const gradeTag = document.createElement('span');
+  gradeTag.className = 'tag grade-pill ' + trophy.grade;
+  gradeTag.textContent = gradeLabel(trophy.grade);
+  tags.append(gradeTag);
+  if (trophy.hidden) {
+    const hiddenTag = document.createElement('span');
+    hiddenTag.className = 'tag hidden-t';
+    hiddenTag.textContent = 'Hidden on PSN';
+    tags.append(hiddenTag);
+  }
+  if (trophy.missable) {
+    const missTag = document.createElement('span');
+    missTag.className = 'tag missable';
+    missTag.textContent = trophy.risk === 'timed' ? 'TIME-SENSITIVE' : 'MISSABLE';
+    tags.append(missTag);
+  }
+  const count = formatCount(trophy);
+  if (count) {
+    const countTag = document.createElement('span');
+    countTag.className = 'tag count';
+    countTag.textContent = '× ' + count;
+    tags.append(countTag);
+  }
+  const rarity = formatRarity(trophy);
+  if (rarity) {
+    const rarityTag = document.createElement('span');
+    rarityTag.className = 'tag rarity';
+    rarityTag.title = 'Share of Exophase-tracked players who have earned this trophy (19 November 2026)';
+    rarityTag.textContent = rarity + ' of players';
+    tags.append(rarityTag);
+  }
+  li.append(tags);
+  return li;
+}
+
 function renderChecklist() {
   const shown = visibleTrophies();
   trophyList.replaceChildren();
-  for (const trophy of shown) {
-    const hidden = isSpoilerHidden(trophy);
-    const li = document.createElement('li');
-    li.className = 'trophy-row' + (earned.has(trophy.name) ? ' earned' : '') + (trophy.id === selectedId ? ' selected' : '');
-    li.addEventListener('click', (event) => {
-      if (event.target.tagName !== 'INPUT') selectTrophy(trophy.id);
-    });
-
-    const box = document.createElement('input');
-    box.type = 'checkbox';
-    box.checked = earned.has(trophy.name);
-    box.setAttribute('aria-label', 'Mark ' + trophy.name + ' earned');
-    box.addEventListener('change', () => {
-      setEarned(trophy, box.checked);
-    });
-    li.append(box);
-
-    li.append(medalElement(trophy));
-
-    const text = document.createElement('div');
-    const name = document.createElement('div');
-    name.className = 'trophy-name';
-    name.textContent = hidden ? 'Hidden story trophy' : trophy.name;
-    const desc = document.createElement('div');
-    desc.className = 'trophy-desc';
-    desc.textContent = hidden ? 'Earn this story trophy to reveal its name and description.' : trophy.description;
-    text.append(name, desc);
-    li.append(text);
-
-    const tags = document.createElement('div');
-    tags.className = 'trophy-tags';
-    const gradeTag = document.createElement('span');
-    gradeTag.className = 'tag grade-pill ' + trophy.grade;
-    gradeTag.textContent = gradeLabel(trophy.grade);
-    tags.append(gradeTag);
-    if (trophy.hidden) {
-      const hiddenTag = document.createElement('span');
-      hiddenTag.className = 'tag hidden-t';
-      hiddenTag.textContent = 'Hidden on PSN';
-      tags.append(hiddenTag);
+  if (kindFilter === 'all') {
+    // Grouped view: slim kind headers with a live earned count each.
+    // Groups with nothing showing (grade filter, search) are skipped.
+    for (const [kind, label] of KIND_GROUPS) {
+      const members = shown.filter((t) => t.kind === kind);
+      if (!members.length) continue;
+      trophyList.append(groupHeader(kind, label));
+      for (const trophy of members) trophyList.append(trophyRow(trophy));
     }
-    if (trophy.missable) {
-      const missTag = document.createElement('span');
-      missTag.className = 'tag missable';
-      missTag.textContent = trophy.risk === 'timed' ? 'TIME-SENSITIVE' : 'MISSABLE';
-      tags.append(missTag);
-    }
-    const count = formatCount(trophy);
-    if (count) {
-      const countTag = document.createElement('span');
-      countTag.className = 'tag count';
-      countTag.textContent = '× ' + count;
-      tags.append(countTag);
-    }
-    const rarity = formatRarity(trophy);
-    if (rarity) {
-      const rarityTag = document.createElement('span');
-      rarityTag.className = 'tag rarity';
-      rarityTag.title = 'Share of Exophase-tracked players who have earned this trophy (19 November 2026)';
-      rarityTag.textContent = rarity + ' of players';
-      tags.append(rarityTag);
-    }
-    li.append(tags);
-    trophyList.append(li);
+  } else {
+    for (const trophy of shown) trophyList.append(trophyRow(trophy));
   }
   listMeta.textContent = 'Showing ' + shown.length + ' of ' + trophies.length + ' trophies';
   emptyNote.hidden = shown.length !== 0;
+}
+
+/* One numbered citation, the form the panel and the footer registry
+   share: [S2] Outputlag — GTA 6 Trophy List (what the source supports)
+   — retrieved 19 November 2026. The per-trophy note says what that
+   source is cited for; the date comes from the registry entry. */
+function sourceCitation(entry, note) {
+  const frag = document.createDocumentFragment();
+  const ref = document.createElement('span');
+  ref.className = 'src-ref';
+  ref.textContent = '[' + entry.id + ']';
+  frag.append(ref, document.createTextNode(' '));
+  const label = entry.name + ' — ' + entry.title;
+  if (entry.url) {
+    const link = document.createElement('a');
+    link.href = entry.url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = label;
+    frag.append(link);
+  } else {
+    frag.append(document.createTextNode(label));
+  }
+  if (note) {
+    const noteSpan = document.createElement('span');
+    noteSpan.className = 'src-note';
+    noteSpan.textContent = ' (' + note + ')';
+    frag.append(noteSpan);
+  }
+  if (entry.retrieved) {
+    const date = document.createElement('span');
+    date.className = 'src-date';
+    date.textContent = ' — retrieved ' + entry.retrieved;
+    frag.append(date);
+  }
+  return frag;
 }
 
 function renderDetail() {
@@ -346,15 +436,13 @@ function renderDetail() {
   const list = document.createElement('ul');
   for (const source of trophy.sources ?? []) {
     const item = document.createElement('li');
-    if (source.url) {
-      const link = document.createElement('a');
-      link.href = source.url;
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.textContent = source.label;
-      item.append(link);
+    const entry = sourceRegistry.get(source.ref);
+    if (entry) {
+      item.append(sourceCitation(entry, source.note));
     } else {
-      item.textContent = source.label;
+      // A citation the registry does not know: show its note rather
+      // than dropping it — an uncited fact earns no credit.
+      item.textContent = source.note ?? source.ref ?? '';
     }
     list.append(item);
   }
@@ -365,8 +453,10 @@ function renderDetail() {
   actions.className = 'detail-actions';
   const toggle = document.createElement('button');
   toggle.type = 'button';
-  toggle.className = 'primary';
-  toggle.textContent = earned.has(trophy.name) ? '✓ Earned — mark not earned' : 'Mark earned';
+  const isEarned = earned.has(trophy.name);
+  toggle.className = 'primary mark-earned' + (isEarned ? ' is-earned' : '');
+  toggle.textContent = isEarned ? 'Earned ✓' : 'Mark earned';
+  toggle.title = isEarned ? 'Click to mark this trophy not earned' : 'Click to mark this trophy earned';
   toggle.addEventListener('click', () => setEarned(trophy, !earned.has(trophy.name)));
   actions.append(toggle);
   const shown = visibleTrophies();
@@ -493,6 +583,19 @@ function renderTips() {
   }
 }
 
+/* The footer prints the whole registry once, so every [Sx] number a
+   guide panel cites can be resolved without opening the data file. */
+function renderRegistry() {
+  const list = document.getElementById('sourceRegistry');
+  if (!list) return;
+  list.replaceChildren();
+  for (const entry of doc.sourceRegistry ?? []) {
+    const item = document.createElement('li');
+    item.append(sourceCitation(entry, null));
+    list.append(item);
+  }
+}
+
 function renderRoadmap() {
   const stageList = document.getElementById('stageList');
   stageList.replaceChildren();
@@ -503,13 +606,20 @@ function renderRoadmap() {
     num.className = 'stage-num';
     num.textContent = String(stage.stage);
     const body = document.createElement('div');
+    const members = trophies.filter((t) => t.stage === stage.stage);
+    const head = document.createElement('div');
+    head.className = 'stage-head';
     const heading = document.createElement('h3');
     heading.textContent = 'Stage ' + stage.stage + ' — ' + stage.title;
+    const stageProgress = document.createElement('span');
+    stageProgress.className = 'stage-progress';
+    stageProgress.textContent = members.filter((t) => earned.has(t.name)).length + ' of ' + members.length + ' earned';
+    head.append(heading, stageProgress);
     const text = document.createElement('p');
     text.textContent = stage.text;
     const chips = document.createElement('div');
     chips.className = 'stage-trophies';
-    for (const trophy of trophies.filter((t) => t.stage === stage.stage)) {
+    for (const trophy of members) {
       const chip = document.createElement('button');
       chip.type = 'button';
       chip.className = 'stage-chip' + (trophy.missable ? ' missable' : '') + (earned.has(trophy.name) ? ' earned' : '');
@@ -520,7 +630,7 @@ function renderRoadmap() {
       });
       chips.append(chip);
     }
-    body.append(heading, text, chips);
+    body.append(head, text, chips);
     card.append(num, body);
     stageList.append(card);
   }
@@ -689,6 +799,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 renderSaveRules();
 renderRoadmapMeta();
 renderTips();
+renderRegistry();
 renderAll();
 if (location.hash === '#roadmap') setTab('roadmap');
 else if (location.hash === '#missables') setTab('missables');

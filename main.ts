@@ -41,6 +41,14 @@
 // the machine restarted before sealing, so the v5 changes were re-written
 // in a later recorded session, content unchanged. This program's behaviour
 // is untouched either way: same copy, same dossier.
+//
+// v6 note: the sixth version turns the app's citations into a numbered
+// source registry in the data file (each trophy now cites registry ids),
+// groups the checklist by kind with live earned counts, adds a per-stage
+// earned count to the roadmap and tightens the guide panel. The data
+// file's shape changed; this program's job did not — it still copies
+// app/ and screenshots/ exactly as they sit and lets the vendored library
+// summarise them.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

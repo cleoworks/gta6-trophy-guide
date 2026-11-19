@@ -5,5 +5,6 @@ node_modules/
 *.tmp
 # patch and repair leftovers
 *.orig
+*.rej
 .DS_Store
 .makefun/
