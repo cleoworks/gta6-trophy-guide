@@ -49,7 +49,18 @@
    the panel's prose, steps and sources step down a size — so the
    frame now holds eight or more full rows and the whole four-source
    block fits the 800px frame. The Missables tab's cards gain a
-   gold progress pill for each flagged trophy's counter. */
+   gold progress pill for each flagged trophy's counter.
+   v10 adds a seventh source to the frame and regroups the list:
+   the audit strip gains a steps-cited number and a disagreement
+   taxonomy, the checklist groups by roadmap stage, the panel's
+   prose and steps step down to 11px so seven cited steps and a
+   five-line sources block plus the rest of the registry still fit
+   the 800px frame, and masked rows gain a small gold Reveal pill.
+   Two boxes stop wasting height: the missable alert and the honesty
+   box set their own line-height, because the body's 1.5 strut was
+   stretching their 12px text to a 22px stride.
+   The Missables cards' guide prose now carries its inline
+   citations, at the card's own text size. */
 
 :root {
   --bg: #0a0d12;
@@ -446,7 +457,7 @@ main { padding: 0 28px 18px; }
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
-  padding: 1px 4px 0;
+  padding: 0 4px;
   border-bottom: 1px solid var(--line);
   margin-bottom: 1px;
 }
@@ -475,7 +486,7 @@ main { padding: 0 28px 18px; }
   padding: 1px 12px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  margin-bottom: 2px;
+  margin-bottom: 1px;
   background: linear-gradient(180deg, var(--surface), #0e1219);
   cursor: pointer;
   transition: border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
@@ -637,15 +648,15 @@ main { padding: 0 28px 18px; }
   text-align: right;
   color: var(--ok);
 }
-.detail-guide { margin: 0; font-size: 11.5px; line-height: 1.12; }
+.detail-guide { margin: 0; font-size: 11px; line-height: 1.08; }
 .detail-steps { list-style: none; counter-reset: step; margin: 0; padding: 0; }
 .detail-steps li {
   counter-increment: step;
   position: relative;
   padding-left: 30px;
   margin-bottom: 0;
-  font-size: 11.5px;
-  line-height: 1.12;
+  font-size: 11px;
+  line-height: 1.08;
 }
 .cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 11px; }
 .detail-steps li::before {
@@ -672,6 +683,10 @@ main { padding: 0 28px 18px; }
   border-radius: var(--radius);
   padding: 2px 9px;
   margin: 4px 0 0;
+  /* The 12px text sets its own line-height on the span, but the box's
+     strut (inherited 1.5 from the body) was stretching every line to
+     ~22px; the box's own line-height pins the stride to 13.8px. */
+  line-height: 1.15;
 }
 .missable-box .alert-icon { flex: none; width: 20px; height: 20px; color: var(--danger-hi); margin-top: 1px; }
 .missable-box .alert-label {
@@ -691,6 +706,9 @@ main { padding: 0 28px 18px; }
   border-radius: var(--radius);
   padding: 2px 9px;
   margin: 4px 0 0;
+  /* Same strut fix as .missable-box: without it the inherited 1.5
+     line-height stretches the 12px text to a ~22px stride. */
+  line-height: 1.15;
 }
 .honesty-box .honesty-label {
   display: block;
@@ -732,6 +750,26 @@ main { padding: 0 28px 18px; }
   box-shadow: none;
 }
 .spoiler-hidden-note { color: var(--gold-hi); font-weight: 600; margin: 12px 0 0; }
+
+/* A masked row or panel can be revealed in place: a small gold pill
+   that switches the spoiler setting off. */
+.reveal-btn {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  border: 1px solid rgba(217, 169, 79, 0.55);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--gold-hi);
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.reveal-btn:hover { background: var(--gold-tint); }
+.panel-reveal { margin: 10px 0 0 0; }
+.registry-extra { margin: 3px 0 0; font-size: 11px; line-height: 1.2; color: var(--muted); }
 
 /* ---------- Roadmap metadata: the decision block ---------- */
 .meta-band {
@@ -912,6 +950,7 @@ main { padding: 0 28px 18px; }
   font-variant-numeric: tabular-nums;
 }
 .missable-card .open-guide { margin-top: 2px; }
+.missable-card .detail-guide { margin: 0 0 11px; font-size: 15px; line-height: 1.55; }
 
 /* ---------- Tips & Strategies (roadmap) ---------- */
 .tips {

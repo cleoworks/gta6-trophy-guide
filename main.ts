@@ -78,6 +78,13 @@
 // progress counter, and the checklist stack tightens a third step so
 // the frame holds eight full rows with the whole four-source panel in
 // it. The hand-in is unchanged.
+//
+// v10 note: the tenth version adds a seventh source (KeenGamer, S7) to
+// the data file's registry and to every trophy's cited sources, adds a
+// disagree flag to four trophies, rewrites Positive Mental Attitude's
+// guide and steps, and regroups the checklist by roadmap stage in the
+// app. The hand-in is unchanged: it copies app/ and screenshots/
+// exactly as they sit and lets the vendored library summarise them.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

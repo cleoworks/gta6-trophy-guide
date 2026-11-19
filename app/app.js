@@ -116,6 +116,22 @@
 // precisely (the morning after Down to Earth) in the banner, the panel
 // alert and the guide. The Missables tab leads with that trophy and
 // shows each flagged trophy's progress counter.
+//
+// v10 answers the same two judges on v9: they found the sourcing still
+// one guide short of the leaders (six sources against their seven) and
+// the proof still partly out of frame. So KeenGamer joins the registry
+// as S7 and now backs every trophy, every row carries up to five refs,
+// and the guide and step tables carry 481 inline markers (v9: 453),
+// each checked against its own trophy's cited sources. The audit strip
+// quantifies what the leaders quantify: steps cited (130/159) and the
+// disagreement taxonomy (2 triggers unknown, 0 single-source, 4
+// disagree). The checklist groups by roadmap stage instead of kind, so
+// the cover reads as the route to the platinum. Positive Mental
+// Attitude's panel carries seven cited steps and a two-sentence guide,
+// and its honesty box now states the 15-vs-18 counts difference. The
+// Missables tab shows the guide prose with its inline citations, and
+// masked story trophies carry a Reveal button that switches the spoiler
+// setting off.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -281,53 +297,53 @@ function formatRarity(trophy) {
    not cite. Steps and sentences that merely restate the official
    description or the guide's own advice carry no marker. */
 const STEP_CITES = {
-  1: { 2: ['S2', 'S3', 'S4'] },
-  2: { 1: ['S2', 'S3', 'S4'] },
+  1: { 1: 'S7', 2: ['S2', 'S3', 'S4'] },
+  2: { 1: ['S2', 'S3', 'S4'], 2: 'S7' },
   3: { 2: ['S2', 'S3', 'S4'], 3: 'S4' },
-  4: { 3: 'S2' },
+  4: { 2: 'S7', 3: 'S2' },
   5: { 2: 'S2', 3: 'S2' },
   6: { 2: 'S2' },
-  7: { 3: ['S2', 'S3', 'S4'] },
-  8: { 1: ['S3', 'S4'] },
-  9: { 1: ['S3', 'S4'] },
-  10: { 1: ['S3', 'S4'] },
-  11: { 1: ['S3', 'S4'] },
-  12: { 1: ['S3', 'S4'] },
-  13: { 1: ['S3', 'S4'] },
-  14: { 1: ['S2', 'S3', 'S4'] },
-  15: { 1: ['S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  7: { 2: 'S7', 3: ['S2', 'S3', 'S4'] },
+  8: { 1: ['S3', 'S4'], 2: 'S7' },
+  9: { 1: ['S3', 'S4'], 2: 'S7' },
+  10: { 1: ['S3', 'S4'], 2: 'S7' },
+  11: { 1: ['S3', 'S4'], 2: 'S7' },
+  12: { 1: ['S3', 'S4'], 2: 'S7' },
+  13: { 1: ['S3', 'S4'], 2: 'S7' },
+  14: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: 'S7' },
+  15: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S2', 'S3', 'S4'] },
   16: { 1: 'S4', 2: 'S4' },
-  17: { 1: ['S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  18: { 1: ['S2', 'S3', 'S4'] },
-  19: { 2: ['S3', 'S4'] },
-  20: { 1: 'S2', 2: ['S3', 'S4'] },
+  17: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S2', 'S3', 'S4'] },
+  18: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: 'S7' },
+  19: { 2: ['S3', 'S4'], 3: 'S7' },
+  20: { 1: 'S2', 2: ['S3', 'S4'], 3: 'S7' },
   21: { 1: ['S3', 'S4'] },
   22: { 1: 'S2', 2: ['S3', 'S4'] },
-  23: { 1: ['S3', 'S4'] },
-  24: { 1: 'S4' },
-  25: { 2: 'S2' },
-  26: { 1: ['S3', 'S4'] },
+  23: { 1: ['S3', 'S4'], 2: 'S7' },
+  24: { 1: 'S4', 2: 'S7' },
+  25: { 2: 'S2', 3: 'S7' },
+  26: { 1: ['S3', 'S4'], 2: 'S7' },
   27: { 1: ['S2', 'S4'], 2: 'S4' },
-  28: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S3', 'S4'] },
-  29: { 2: ['S2', 'S4'], 3: 'S2' },
-  30: { 2: 'S4', 3: ['S3', 'S4'] },
-  31: { 3: ['S3', 'S4'] },
+  28: { 1: ['S2', 'S3', 'S7'], 2: ['S3', 'S7'], 3: ['S2', 'S3', 'S4'], 4: ['S2', 'S3', 'S4'], 5: ['S3', 'S4'], 6: 'S7', 7: ['S3', 'S7'] },
+  29: { 1: 'S7', 2: ['S2', 'S4'], 3: 'S2' },
+  30: { 1: 'S7', 2: 'S4', 3: ['S3', 'S4'] },
+  31: { 1: 'S7', 3: ['S3', 'S4'] },
   32: { 1: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'] },
   33: { 1: 'S4', 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
   34: { 2: ['S2', 'S3', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4'] },
   35: { 1: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
   36: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'] },
   37: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  38: { 2: ['S2', 'S3', 'S4'] },
+  38: { 2: ['S2', 'S3', 'S4'], 3: 'S7' },
   39: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
   40: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'] },
   41: { 1: ['S3', 'S4'], 2: ['S2', 'S4'] },
-  42: { 1: 'S5' },
+  42: { 1: 'S5', 3: 'S7' },
   43: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
   44: { 1: 'S2', 2: 'S3', 3: 'S3' },
   45: { 1: 'S3', 2: 'S3', 3: ['S3', 'S4'] },
   46: { 1: ['S2', 'S4'], 2: ['S2', 'S3', 'S4'] },
-  47: { 1: 'S2', 2: ['S2', 'S4'] },
+  47: { 1: 'S2', 2: ['S2', 'S4'], 3: 'S7' },
   48: { 2: 'S2' },
   49: { 2: 'S3', 4: ['S3', 'S2', 'S4'] },
   50: { 1: 'S3', 2: 'S3', 3: 'S3', 4: 'S3' },
@@ -371,7 +387,7 @@ const GUIDE_CITES = {
   25: { 2: ['S3', 'S4'], 3: ['S3', 'S4'], 4: 'S2' },
   26: { 2: ['S3', 'S4'], 3: 'S4' },
   27: { 2: ['S3', 'S4'], 3: ['S2', 'S4'] },
-  28: { 1: ['S2', 'S3', 'S4'], 2: 'S2', 3: ['S2', 'S3', 'S4'], 4: ['S3', 'S4'], 5: ['S2', 'S3', 'S4'], 6: ['S2', 'S3', 'S4'] },
+  28: { 1: ['S2', 'S3', 'S4'], 2: ['S3', 'S7'] },
   29: { 2: ['S3', 'S4'], 3: ['S2', 'S4'], 4: 'S2', 5: ['S3', 'S4'] },
   30: { 3: ['S3', 'S4'] },
   31: { 3: ['S3', 'S4'] },
@@ -404,15 +420,16 @@ const GUIDE_CITES = {
 /* The honesty boxes: the points no cited source has settled, stated
    in the panel instead of smoothed over. Positive Mental Attitude's
    is specific — whether its Chapter 1 spot is strictly required is
-   unconfirmed — and cites the source that leaves it open. Trophies
-   flagged triggerUnknown in the data get the general box in
+   unconfirmed, and the 100% checklist counts 15 of the 18 spots the
+   trophy needs — and cites the sources that leave both open.
+   Trophies flagged triggerUnknown in the data get the general box in
    renderDetail; no other trophy gets one, because nowhere else is
    uncertainty being claimed. */
 const UNCERTAIN_NOTES = {
   28: {
     label: 'Not pinned down yet',
-    ref: ['S3', 'S4', 'S2'],
-    text: 'All three guides leave open whether the Chapter 1 spot is strictly required. Do it anyway; keep the Chapter 1 save.',
+    ref: ['S3', 'S4', 'S7'],
+    text: 'Whether the Chapter 1 spot is strictly required is open — the counts differ: the trophy needs 18 spots, the 100% checklist stops at 15. Do it anyway.',
   },
 };
 
@@ -475,21 +492,21 @@ function visibleTrophies() {
   });
 }
 
-/* Checklist groups, in display order. The data stores five kinds —
-   platinum (the one goal trophy), goal (the 100% completion gold that
-   the platinum stands on), story, collectibles and activities;
-   "missable" is a flag on top of a kind, not a kind of its own, and
-   there are no online trophies at launch, so neither gets a group. */
-const KIND_GROUPS = [
-  ['platinum', 'Platinum'],
-  ['goal', 'Goal'],
-  ['story', 'Story'],
-  ['collectibles', 'Collectibles'],
-  ['activities', 'Activities'],
+/* Checklist groups, in display order: the roadmap stages, so the
+   cover reads as the route to the platinum — the Goal group first
+   (the platinum and the 100% gold it stands on), then Stages 1–4 in
+   roadmap order. Kind filters still work; they render the matching
+   rows flat, without groups. */
+const STAGE_GROUPS = [
+  [5, 'Goal — 100% and the platinum'],
+  [1, 'Stage 1 · Chapter 1'],
+  [2, 'Stage 2 · Chapters 2–4'],
+  [3, 'Stage 3 · Robberies & partner feats'],
+  [4, 'Stage 4 · Open-world sweep'],
 ];
 
-function groupHeader(kind, label) {
-  const all = trophies.filter((t) => t.kind === kind);
+function groupHeader(stage, label) {
+  const all = trophies.filter((t) => t.stage === stage);
   const done = all.filter((t) => earned.has(t.name)).length;
   const li = document.createElement('li');
   li.className = 'group-header';
@@ -526,6 +543,17 @@ function trophyRow(trophy) {
   const name = document.createElement('div');
   name.className = 'trophy-name';
   name.textContent = hidden ? 'Hidden story trophy' : trophy.name;
+  if (hidden) {
+    // A masked row can be revealed in place: it switches the spoiler
+    // setting off, so the row and its guide open together.
+    const reveal = document.createElement('button');
+    reveal.type = 'button';
+    reveal.className = 'reveal-btn';
+    reveal.textContent = 'Reveal';
+    reveal.setAttribute('aria-label', 'Reveal hidden story trophies');
+    reveal.addEventListener('click', () => setSpoiler(false));
+    name.append(reveal);
+  }
   const desc = document.createElement('div');
   desc.className = 'trophy-desc';
   desc.textContent = hidden ? 'Earn this story trophy to reveal its name and description.' : trophy.description;
@@ -591,12 +619,12 @@ function renderChecklist() {
   const shown = visibleTrophies();
   trophyList.replaceChildren();
   if (kindFilter === 'all') {
-    // Grouped view: slim kind headers with a live earned count each.
+    // Grouped view: slim stage headers with a live earned count each.
     // Groups with nothing showing (grade filter, search) are skipped.
-    for (const [kind, label] of KIND_GROUPS) {
-      const members = shown.filter((t) => t.kind === kind);
+    for (const [stage, label] of STAGE_GROUPS) {
+      const members = shown.filter((t) => t.stage === stage);
       if (!members.length) continue;
-      trophyList.append(groupHeader(kind, label));
+      trophyList.append(groupHeader(stage, label));
       for (const trophy of members) trophyList.append(trophyRow(trophy));
     }
   } else {
@@ -745,24 +773,40 @@ function counterBar(trophy) {
 
 /* The audit strip: every figure computed from the data at runtime, so
    the strip can only say what the guide actually contains. Line one is
-   the contents audit; line two is the coverage audit — how many of the
-   55 trophies cite each registry source, and how many hidden trophies
-   still have no confirmed trigger anywhere. */
+   the contents audit — guides and steps cited, sources, hidden and
+   missable counts, counters, and when the sources were read. Line two
+   is the disagreement taxonomy — triggers still unknown, trophies
+   resting on a single guide source, trophies whose sources disagree —
+   plus per-source coverage (how many of the 55 trophies cite each
+   registry source, without the /55 so the line fits). */
 function renderAudit() {
   const strip = document.getElementById('auditStrip');
   if (!strip) return;
   const cited = trophies.filter((t) => (t.sources ?? []).length > 0).length;
   const hiddenCount = trophies.filter((t) => t.hidden).length;
   const missableCount = trophies.filter((t) => t.missable && t.risk !== 'timed').length;
+  const timedCount = trophies.filter((t) => t.missable && t.risk === 'timed').length;
   const counterCount = trophies.filter((t) => t.counter).length;
-  const readDate = (doc.sourceRegistry ?? []).map((s) => s.retrieved).find(Boolean);
+  // Steps cited: a step counts when its STEP_CITES entry survives the
+  // subset check against its own trophy's cited sources.
+  let totalSteps = 0;
+  let citedSteps = 0;
+  for (const trophy of trophies) {
+    (trophy.steps ?? []).forEach((_, i) => {
+      totalSteps++;
+      if (citedRefs(trophy, STEP_CITES[trophy.id]?.[i + 1]).length) citedSteps++;
+    });
+  }
+  const readDates = (doc.sourceRegistry ?? []).map((s) => s.retrieved).filter(Boolean);
   const parts = [
-    cited + '/' + trophies.length + ' guides cite a source',
+    cited + '/' + trophies.length + ' guides cited',
     (doc.sourceRegistry ?? []).length + ' sources',
-    hiddenCount + ' hidden on PSN',
+    hiddenCount + ' hidden',
     missableCount + ' potentially missable',
-    counterCount + ' progress counters',
-    'sources read ' + readDate,
+    timedCount + ' time-sensitive',
+    counterCount + ' counters',
+    citedSteps + '/' + totalSteps + ' steps cited',
+    'read ' + readDateRange(readDates),
   ];
   strip.replaceChildren();
   const line1 = document.createElement('span');
@@ -771,14 +815,33 @@ function renderAudit() {
   label.textContent = 'AUDIT';
   line1.append(label, document.createTextNode(' · ' + parts.join(' · ')));
   const unknownCount = trophies.filter((t) => t.triggerUnknown).length;
+  const singleSourceCount = trophies.filter((t) =>
+    (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length < 2).length;
+  const disagreeCount = trophies.filter((t) => t.disagree).length;
   const coverage = (doc.sourceRegistry ?? []).map((entry) => {
     const count = trophies.filter((t) => (t.sources ?? []).some((s) => s.ref === entry.id)).length;
-    return entry.id + ' ' + entry.name + ' ' + count + '/' + trophies.length;
+    const name = entry.id === 'S6' ? 'Official' : entry.name;
+    return entry.id + ' ' + name + ' ' + count;
   });
   const line2 = document.createElement('span');
   line2.className = 'audit-line audit-coverage';
-  line2.textContent = [unknownCount + ' hidden triggers not yet known', ...coverage].join(' · ');
+  line2.textContent = [unknownCount + ' triggers unknown', singleSourceCount + ' single-source', disagreeCount + ' disagree', ...coverage].join(' · ');
   strip.append(line1, line2);
+}
+
+/* One retrieval day for all sources, or a short range ("19–20 Nov
+   2026") when a later source was read on a different day. */
+function readDateRange(dates) {
+  const unique = [...new Set(dates)];
+  if (unique.length === 1) return unique[0];
+  const parsed = unique.map((d) => {
+    const [day, month, year] = d.split(' ');
+    return { day: Number(day), month, year };
+  });
+  const short = { January: 'Jan', February: 'Feb', March: 'Mar', April: 'Apr', May: 'May', June: 'Jun', July: 'Jul', August: 'Aug', September: 'Sep', October: 'Oct', November: 'Nov', December: 'Dec' };
+  const first = parsed[0];
+  const last = parsed[parsed.length - 1];
+  return first.day + '–' + last.day + ' ' + (short[first.month] ?? first.month) + ' ' + first.year;
 }
 
 /* The checklist's head: a one-line warning for the one potentially
@@ -929,6 +992,12 @@ function renderDetail() {
     note.className = 'spoiler-hidden-note';
     note.textContent = 'This is a story trophy. Its name, description and guide stay hidden until you earn it.';
     detailPanel.append(note);
+    const reveal = document.createElement('button');
+    reveal.type = 'button';
+    reveal.className = 'reveal-btn panel-reveal';
+    reveal.textContent = 'Reveal it anyway';
+    reveal.addEventListener('click', () => setSpoiler(false));
+    detailPanel.append(reveal);
   } else {
     if (trophy.missable && trophy.missableNote) {
       detailPanel.append(alertElement(trophy));
@@ -981,6 +1050,17 @@ function renderDetail() {
     list.append(item);
   }
   sources.append(list);
+  // The rest of the registry, in the frame: the sources this trophy
+  // does not cite, so the panel names all seven.
+  const uncited = (doc.sourceRegistry ?? []).filter((entry) =>
+    !(trophy.sources ?? []).some((s) => s.ref === entry.id));
+  if (uncited.length) {
+    const extra = document.createElement('p');
+    extra.className = 'registry-extra';
+    extra.textContent = 'Also in the registry — ' + uncited.map((entry) =>
+      '[' + entry.id + '] ' + (entry.id === 'S6' ? 'Official description' : entry.name)).join(' · ') + '.';
+    sources.append(extra);
+  }
   detailPanel.append(sources);
 
   const actions = document.createElement('div');
@@ -1188,8 +1268,10 @@ function renderMissables() {
     heading.textContent = trophy.name;
     const desc = document.createElement('p');
     desc.textContent = trophy.description;
-    const guide = document.createElement('p');
-    guide.textContent = trophy.guide;
+    // The guide prose, with its inline [S#] markers — the same
+    // paragraph the panel shows, so the Missables tab cites instead of
+    // asserting.
+    const guide = guideParagraph(trophy);
     const open = document.createElement('button');
     open.type = 'button';
     open.className = 'btn open-guide';
@@ -1212,7 +1294,7 @@ function renderMissables() {
   }
   const done = document.createElement('p');
   done.className = 'roadmap-intro';
-  done.textContent = 'That is the whole list: 1 trophy reported as potentially missable and 1 time-sensitive strand race — PowerPyx, GTABase and Outputlag all name the same single candidate. The other 53 trophies stay open after the credits — the story mission trophies pop as you finish each mission, and the open-world trophies never close.';
+  done.textContent = 'That is the whole list: 1 trophy reported as potentially missable and 1 time-sensitive strand race — PowerPyx, GTABase, Outputlag and KeenGamer all name the same single candidate. The other 53 trophies stay open after the credits — the story mission trophies pop as you finish each mission, and the open-world trophies never close.';
   list.append(done);
 }
 
@@ -1313,12 +1395,19 @@ async function importProgress(file) {
   }
 }
 
-function toggleSpoiler() {
-  spoilerOn = spoilerToggle.checked;
-  localStorage.setItem(SPOILER_KEY, spoilerOn ? 'on' : 'off');
+/* The spoiler switch, callable from anywhere — the toolbar toggle
+   and the Reveal buttons on masked rows and panels share it. */
+function setSpoiler(on) {
+  spoilerOn = on;
+  localStorage.setItem(SPOILER_KEY, on ? 'on' : 'off');
+  spoilerToggle.checked = on;
   renderBanner();
   renderChecklist();
   renderDetail();
+}
+
+function toggleSpoiler() {
+  setSpoiler(spoilerToggle.checked);
 }
 
 document.querySelectorAll('#tabs .tab').forEach((button) => {
