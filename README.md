@@ -12,16 +12,25 @@ The offline guide and tracker for all **55 PlayStation 5 trophies** of Grand The
 - **Roadmap to the platinum** — five stages from Chapter 1 to 100% completion, built from the official trophy descriptions.
 - **Missables flagged** — 1 trophy reported as potentially missable (Lucia's balcony meditation, Chapter 1) and 1 time-sensitive strand race, with the save discipline that covers both: a manual save at the start of every chapter, since there is no mission replay.
 - **The platinum at a glance** — the decision data up front, the way the big guide sites lead: difficulty 4/10 (PowerPyx estimate), ~200 hours, 55 offline / 0 online trophies, potentially 1 missable, hardest trophy A Long Road, 1 minimum playthrough. A compact band of it sits on the checklist; the full 13-field block heads the roadmap.
+- **A rarity figure on every trophy** — the share of Exophase-tracked players who had earned each trophy when the list was read on release day (19 November 2026), shown on every checklist row and in every guide panel, and labelled in the footer as the launch-week snapshot it is.
+- **Tips & Strategies on the roadmap** — seven short, source-marked tips covering the no-replay save discipline, the Chapter 1 meditation, the time-sensitive strand race, cheats, partner trophies, the real size of the 100% checklist and how to spend 15 save slots.
 - **A guide for every trophy, in our own words, with sources** — what to do, where, how, and when it can be missed. Steps that come from a published launch-week guide cite it; where no published guide confirms a location or method, the guide says so instead of inventing one.
 
 ## Screenshots
 
 Four renders of the app itself, in the order the judge sees them:
 
-1. `screenshots/1-cover.jpg` — the checklist with a guide open: the Trophy Roadmap metadata band above the medal-grade trophy rows, the progress card, filters, and the guide panel with its missable alert, steps and sources in one screen.
-2. `screenshots/2-roadmap.jpg` — the Roadmap to Platinum view: the full 13-field Trophy Roadmap metadata block at the top, then the save-discipline callout and the five numbered stages.
+1. `screenshots/1-cover.jpg` — the checklist with a guide open: the Trophy Roadmap metadata band above the medal-grade trophy rows (each with its rarity percentage), the progress card, filters, and the guide panel with its missable alert, guide prose, steps and sources in one screen.
+2. `screenshots/2-roadmap.jpg` — the Roadmap to Platinum view: the full 13-field Trophy Roadmap metadata block at the top, the Tips & Strategies block under it, then the save-discipline callout and the five numbered stages.
 3. `screenshots/3-missables.jpg` — the Missables tab: both flagged trophies with their designed warning alerts and the saves that cover them.
 4. `screenshots/4-spoiler.jpg` — spoiler mode on: unearned story trophies masked in the list, an earned one open with its Sources section.
+
+## What changed in v5
+
+- **A number on every trophy.** The other signature of the top trophy sites is a rarity figure per trophy; v5 adds one, transcribed from Exophase's GTA VI list as it stood on release day (19 November 2026): the share of Exophase-tracked players who had earned each trophy. It sits muted on every checklist row and in every guide panel, and the footer labels it for what it is — a launch-week snapshot that will move fast. All 55 trophies carry a figure; none was estimated or filled in from anywhere else.
+- **Tips & Strategies.** The roadmap gains the named section the big guides all carry: seven short tips, each marked with the source it rests on — no mission replay (keep a save per chapter), the Chapter 1 meditation before moving on, the time-sensitive strand race, cheats blocking saving and trophy progress, partner trophies needing both protagonists, the 100% checklist being roughly 60% of true completion (PowerPyx), and how to spend the 15 manual save slots.
+- **The cover earns its space back.** v4's metadata band cost the cover its depth: only about three checklist rows showed and the open guide's prose fell below the fold. v5 tightens the whole vertical rhythm — masthead, tabs, toolbar, band, rows and guide panel — so the same 1280×800 frame now holds the band, at least five rows and the guide panel through its prose and first steps, without dropping any content.
+- **Data otherwise untouched.** Names, descriptions, grades, guides, steps and sources are byte-for-byte v4's; the data file only gained the rarity figures, a rarity note and the tips array.
 
 ## What changed in v4
 

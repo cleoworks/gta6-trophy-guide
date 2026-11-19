@@ -30,6 +30,16 @@
 // renders as a compact band on the checklist and in full at the head of
 // the roadmap. The missable wording also matches the sources now:
 // potentially missable, not confirmed.
+//
+// v5 borrows the other signature of the top sites: a number on every
+// trophy. Each trophy carries a rarityPct — the share of Exophase-tracked
+// players who had earned it when the list was read on release day — shown
+// muted on its checklist row and in its guide panel, with the snapshot
+// labelled in the footer because launch-week figures move fast. The
+// roadmap gains a Tips & Strategies block (the same named section the big
+// guides carry), rendered from the tips array in the data file, and the
+// checklist layout is tightened so the cover frame holds the metadata
+// band, more rows and the open guide's prose at once.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -153,6 +163,11 @@ function formatCount(trophy) {
   return String(trophy.count);
 }
 
+function formatRarity(trophy) {
+  if (trophy.rarityPct == null) return null;
+  return trophy.rarityPct.toFixed(2) + '%';
+}
+
 function visibleTrophies() {
   const query = searchBox.value.trim().toLowerCase();
   return trophies.filter((t) => {
@@ -222,6 +237,14 @@ function renderChecklist() {
       countTag.textContent = '× ' + count;
       tags.append(countTag);
     }
+    const rarity = formatRarity(trophy);
+    if (rarity) {
+      const rarityTag = document.createElement('span');
+      rarityTag.className = 'tag rarity';
+      rarityTag.title = 'Share of Exophase-tracked players who have earned this trophy (19 November 2026)';
+      rarityTag.textContent = rarity + ' of players';
+      tags.append(rarityTag);
+    }
     li.append(tags);
     trophyList.append(li);
   }
@@ -279,6 +302,13 @@ function renderDetail() {
     countTag.className = 'tag count';
     countTag.textContent = 'Target: ' + count;
     meta.append(countTag);
+  }
+  const rarity = formatRarity(trophy);
+  if (rarity) {
+    const rarityTag = document.createElement('span');
+    rarityTag.className = 'tag rarity';
+    rarityTag.textContent = 'Rarity: ' + rarity + ' of players';
+    meta.append(rarityTag);
   }
   detailPanel.append(meta);
 
@@ -440,6 +470,27 @@ function renderRoadmapMeta() {
   sources.className = 'meta-sources';
   sources.textContent = meta.sourcesNote;
   full.append(fullTitle, fullGrid, sources);
+}
+
+function renderTips() {
+  const list = document.getElementById('tipsList');
+  if (!list) return;
+  list.replaceChildren();
+  for (const tip of doc.tips ?? []) {
+    const item = document.createElement('li');
+    item.className = 'tip-row';
+    const text = document.createElement('span');
+    text.className = 'tip-text';
+    text.textContent = tip.text;
+    item.append(text);
+    if (tip.source) {
+      const source = document.createElement('span');
+      source.className = 'tip-source';
+      source.textContent = tip.source;
+      item.append(source);
+    }
+    list.append(item);
+  }
 }
 
 function renderRoadmap() {
@@ -637,6 +688,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 
 renderSaveRules();
 renderRoadmapMeta();
+renderTips();
 renderAll();
 if (location.hash === '#roadmap') setTab('roadmap');
 else if (location.hash === '#missables') setTab('missables');

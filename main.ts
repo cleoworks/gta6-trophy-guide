@@ -30,6 +30,12 @@
 // time, missables, playthroughs) to the app, rendered from a roadmapMeta
 // object in the data file, and aligns the missable wording with the
 // sources. The app grew; this program did not — same copy, same dossier.
+//
+// v5 note: the fifth version adds a rarity percentage per trophy and a
+// Tips & Strategies block to the app's data file, and tightens the app's
+// layout. Still nothing for this program to do differently: it copies
+// app/ and screenshots/ exactly as they sit and lets the vendored library
+// summarise them.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
