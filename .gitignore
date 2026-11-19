@@ -3,6 +3,7 @@ node_modules/
 *.log
 *.bak
 *.tmp
+# patch and repair leftovers
 *.orig
 .DS_Store
 .makefun/

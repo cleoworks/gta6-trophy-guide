@@ -36,6 +36,11 @@
 // layout. Still nothing for this program to do differently: it copies
 // app/ and screenshots/ exactly as they sit and lets the vendored library
 // summarise them.
+//
+// Repair note: the session that first wrote v5 lost its recording when
+// the machine restarted before sealing, so the v5 changes were re-written
+// in a later recorded session, content unchanged. This program's behaviour
+// is untouched either way: same copy, same dossier.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

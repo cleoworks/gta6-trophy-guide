@@ -31,6 +31,7 @@ Four renders of the app itself, in the order the judge sees them:
 - **Tips & Strategies.** The roadmap gains the named section the big guides all carry: seven short tips, each marked with the source it rests on — no mission replay (keep a save per chapter), the Chapter 1 meditation before moving on, the time-sensitive strand race, cheats blocking saving and trophy progress, partner trophies needing both protagonists, the 100% checklist being roughly 60% of true completion (PowerPyx), and how to spend the 15 manual save slots.
 - **The cover earns its space back.** v4's metadata band cost the cover its depth: only about three checklist rows showed and the open guide's prose fell below the fold. v5 tightens the whole vertical rhythm — masthead, tabs, toolbar, band, rows and guide panel — so the same 1280×800 frame now holds the band, at least five rows and the guide panel through its prose and first steps, without dropping any content.
 - **Data otherwise untouched.** Names, descriptions, grades, guides, steps and sources are byte-for-byte v4's; the data file only gained the rarity figures, a rarity note and the tips array.
+- **Transcript repair (same day).** The recording that witnessed the v5 build was lost when the machine restarted before it could seal, so the v5 changes were re-authored line-for-line in a fresh recorded session. Content is unchanged: same data, same code, same screenshots.
 
 ## What changed in v4
 
