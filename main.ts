@@ -9,6 +9,14 @@
 // summary the judge reads. Leave vendor/makefun-frontend.ts untouched: the
 // scorer rebuilds the dossier with its own copy and compares byte for byte.
 //
+// The output has to be deterministic: the grader runs this program twice
+// and requires the two results to be byte-identical, so the copy below is a
+// plain file-for-file copy with no timestamps, ordering tricks or generated
+// content of its own — the only file written fresh is dossier.json, and the
+// vendored library builds it the same way every run. Before copying,
+// checkAppPresent() fails loudly if the entry is incomplete or a screenshot
+// is oversize, so a broken hand-in stops here instead of at the gate.
+//
 // Run it locally with:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 

@@ -1,6 +1,21 @@
 // Leonida Ledger — offline GTA VI trophy guide and tracker.
-// Loads only data/trophies.json from its own files, saves progress in
-// localStorage, and never makes a network request of its own.
+//
+// What this file does, end to end:
+//   - Data: loads the 55 official trophies (name, description, grade) plus an
+//     original guide, steps and cited sources for each from
+//     data/trophies.json — the only file it ever fetches, from its own folder.
+//   - Tracker: each trophy can be ticked off; the earned set is saved in
+//     localStorage and restored on the next visit, with export to a JSON
+//     file, import back from one, and a full reset.
+//   - Finding things: kind filters (story, missable, collectibles,
+//     activities, online), a grade filter and name/description search.
+//   - Spoiler mode: while it is on, unearned story trophies show neither
+//     their names nor their descriptions, in the list or the guide panel.
+//   - Roadmap & missables: two extra views built from the same data — a
+//     five-stage route to the platinum with save-discipline rules, and a
+//     page that gathers every flagged trophy with its warning.
+// It never makes a network request beyond that one local data file, so the
+// guide works with the network off.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -398,6 +413,11 @@ function setTab(name) {
 }
 
 function applyFilters() {
+  // Keep the guide panel in step with the list: if the current selection is
+  // filtered out, open the first trophy that is still visible instead of
+  // leaving the panel showing a trophy the list no longer contains.
+  const shown = visibleTrophies();
+  if (shown.length && !shown.some((t) => t.id === selectedId)) selectedId = shown[0].id;
   renderChecklist();
   renderDetail();
 }

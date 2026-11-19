@@ -7,6 +7,8 @@
   {"label": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"},
   {"label": "PSNProfiles — GTA VI trophies (PSN progress counts)", "url": "https://psnprofiles.com/trophies/43531-grand-theft-auto-vi"},
   {"label": "Outputlag — GTA 6 Trophy List (launch-week guide, checked 2026-11-19)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"},
+  {"label": "PowerPyx — GTA 6 Trophy Guide & Roadmap (checked 2026-11-19)", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/"},
+  {"label": "GTABase — GTA 6 Trophy Guide & Achievements List (checked 2026-11-19)", "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"},
   {"label": "GTA Vice City Hub — Achievements", "url": "https://www.gtavicecityhub.com/achievements"},
   {"label": "GTASnaps — GTA 6 trophy list and achievements", "url": "https://gtasnaps.com/gta-6-trophy-list-and-achievements/"}
  ],
@@ -774,11 +776,13 @@
    "missable": false,
    "stage": 4,
    "count": null,
-   "guide": "Have a cocktail with a view on Ocean Beach. This is one of five hidden trophies whose unlock method no published launch guide has confirmed — the description is the only hint. Go to Ocean Beach, find a bar or vendor with a view of the water, and order a cocktail there. It may pop while you play normally; if it does not, try different spots along the beachfront until one registers.",
-   "steps": ["Go to Ocean Beach.", "Order a cocktail at a spot with a view of the water.", "If it does not pop, try another beachfront bar or vendor."],
+   "guide": "Order a cocktail somewhere with a sea view on Ocean Beach — the description is plain about that much, and vague about everything else. Status at launch (checked 2026-11-19): no published guide has a confirmed trigger. PowerPyx lists this trophy as currently unknown, Outputlag keeps it in its group of five hidden trophies with no confirmed method, and GTABase says the exact steps aren't confirmed yet. GTABase's reading is the best working theory going: have the cocktail at a spot with a view on Ocean Beach in Vice City. The story reaches Ocean Beach in Chapter 4 and free roam continues after the credits, so treat this as a clean-up experiment: walk the beachfront and order a cocktail at every bar, kiosk and terrace that faces the water until one registers. Nothing published flags it as missable — the only possibly missable trophy in the list is Positive Mental Attitude — so there is no clock on it.",
+   "steps": ["Reach Ocean Beach in Vice City (the story takes you there in Chapter 4; free roam works too).", "Order a cocktail at a beachfront bar or vendor with a view of the water.", "If it does not pop, work along the beachfront and try the next spot with a sea view.", "No confirmed spot exists yet — keep trying spots rather than paying for a 'guaranteed' method."],
    "sources": [
     {"label": "Exophase — GTA VI trophy list (official name, description, grade)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"},
-    {"label": "Outputlag — GTA 6 Trophy List (no confirmed unlock method at launch; description is the only hint)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"}
+    {"label": "Outputlag — GTA 6 Trophy List (one of five hidden trophies with no confirmed trigger yet)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"},
+    {"label": "PowerPyx — GTA 6 Trophy Guide & Roadmap (this trophy listed as 'currently unknown', checked 2026-11-19)", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/"},
+    {"label": "GTABase — GTA 6 Trophy Guide & Achievements List (reading: a cocktail at a spot with a view on Ocean Beach; exact steps not confirmed)", "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"}
    ]
   },
   {
@@ -791,11 +795,13 @@
    "missable": false,
    "stage": 4,
    "count": null,
-   "guide": "Smash your way out of a vehicle showroom in classic style. This is one of five hidden trophies whose unlock method no published launch guide has confirmed — the description is the only hint. Drive a car through the glass front of a vehicle showroom and out the other side, in the style of the classic GTA showroom escape. Try it at a showroom in Vice City; if it does not pop, the trigger may need a specific showroom or a specific exit, which no guide has pinned down yet.",
-   "steps": ["Find a vehicle showroom in Vice City.", "Drive in, then smash out through the front in a car.", "If it does not pop, try another showroom."],
+   "guide": "Smash out of a vehicle showroom through its glass front, in a car — the description nods at the classic showroom escape, and GTABase reads it exactly that way: crash a car out through a showroom window. What nobody has is a confirmed trigger. PowerPyx lists Capital Offense as currently unknown, Outputlag groups it with the five hidden trophies that have no confirmed method, and GTABase says the exact steps aren't confirmed. So experiment in free roam: drive a car into a Vice City showroom, then accelerate out through the window instead of the door. If one showroom does not register, try another — and try leaving in one of the showroom's own display cars, since 'in classic style' may mean stealing a car off the floor on the way out. It is a repeatable stunt, not a story moment: free roam continues after the credits and no guide flags it as missable. Keep a manual save before you start breaking glass — expect a wanted level — and reload if an attempt gets expensive.",
+   "steps": ["In free roam, drive a car into a vehicle showroom in Vice City.", "Accelerate out through the glass front — not through the door.", "No pop? Try another showroom, and try exiting in one of its display cars.", "Keep a manual save first; expect a wanted level."],
    "sources": [
     {"label": "Exophase — GTA VI trophy list (official name, description, grade)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"},
-    {"label": "Outputlag — GTA 6 Trophy List (no confirmed unlock method at launch; description is the only hint)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"}
+    {"label": "Outputlag — GTA 6 Trophy List (one of five hidden trophies with no confirmed trigger yet)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"},
+    {"label": "PowerPyx — GTA 6 Trophy Guide & Roadmap (this trophy listed as 'currently unknown', checked 2026-11-19)", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/"},
+    {"label": "GTABase — GTA 6 Trophy Guide & Achievements List (reading: crash a car out through a showroom window; exact steps not confirmed)", "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"}
    ]
   }
 ,
@@ -860,11 +866,13 @@
    "missable": false,
    "stage": 4,
    "count": null,
-   "guide": "Succeed on a second try. This is one of five hidden trophies whose unlock method no published launch guide has confirmed — the description is the only hint. The plain reading is that it pops when you fail something once and then succeed at it on the next attempt. It may well pop while you play normally, while retrying races, challenges or robberies — so do not grind for it; keep playing and check back.",
-   "steps": ["Play normally; retry anything you fail.", "The trophy should pop when a second attempt succeeds.", "No confirmed trigger exists yet — do not grind for it."],
+   "guide": "Succeed at something on the second attempt — that is GTABase's reading of 'Second time's the charm', and it is still only a reading. PowerPyx lists this trophy as currently unknown as well, but adds a belief of its own: it is related to the Payday Loans store from the Prologue. Outputlag likewise keeps it among the five hidden trophies with no confirmed trigger. Put the two together and the practical plan writes itself: whenever a robbery, race or challenge goes wrong, run it straight back and succeed on the retry — and because Payday Loans stores stay on the map as robbery targets, make a second visit there count. Do not start a new game over this: PowerPyx's roadmap counts only one potentially missable trophy in the whole list (Positive Mental Attitude), and free roam continues after the story, so a fail-then-succeed sequence during clean-up should be within reach. Keep your chapter-start manual saves as usual and check the trophy after retries.",
+   "steps": ["Play normally, but retry failures immediately instead of moving on.", "Rob a Payday Loans store; if the first attempt goes wrong, succeed on the second (PowerPyx's suspected link).", "Check the trophy after any fail-then-succeed sequence — races and challenges included.", "Still unconfirmed everywhere — do not restart the game for it."],
    "sources": [
     {"label": "Exophase — GTA VI trophy list (official name, description, grade)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"},
-    {"label": "Outputlag — GTA 6 Trophy List (no confirmed unlock method at launch; description is the only hint)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"}
+    {"label": "Outputlag — GTA 6 Trophy List (one of five hidden trophies with no confirmed trigger yet)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"},
+    {"label": "PowerPyx — GTA 6 Trophy Guide & Roadmap ('currently unknown'; believed related to the Payday Loans store from the Prologue, checked 2026-11-19)", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/"},
+    {"label": "GTABase — GTA 6 Trophy Guide & Achievements List (reading: succeed at something on a second attempt; exact steps not confirmed)", "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"}
    ]
   },
   {
@@ -877,11 +885,13 @@
    "missable": false,
    "stage": 4,
    "count": null,
-   "guide": "Witness something strange. This is one of five hidden trophies whose unlock method no published launch guide has confirmed — the description is the only hint. The plain reading is a random world event or an odd encounter somewhere in Leonida: keep your eyes open while exploring, especially in out-of-the-way places, and it may pop while you play normally. No guide has pinned the trigger down yet, so this guide will not invent a location for it.",
-   "steps": ["Explore Leonida, including out-of-the-way places.", "Watch for strange world events or odd encounters.", "No confirmed trigger exists yet — do not grind for it."],
+   "guide": "Witness something the game itself answers with 'What the hell just happened?' — almost certainly a scripted strange event, not a collectible. No published guide has the trigger: PowerPyx lists it as currently unknown and believes it belongs to a UFO questline; GTABase expects a strange event or Easter egg somewhere in Leonida; Outputlag keeps it in the five hidden trophies with no confirmed method. The strongest play is exploration with your eyes open: follow stranger strands and odd map markers all the way to the end, revisit remote ground — swamps, the Keys, high places — at night, and never skip past a weird encounter while cleaning up. Free roam continues after the credits and nothing flags this trophy as missable, so it belongs to the clean-up stage: if a UFO-themed strand turns up, finish it before anything else here. This guide will not invent a location for it; none is confirmed.",
+   "steps": ["Finish stranger strands and odd encounters instead of skipping them.", "Explore remote areas at night during clean-up — swamps, islands, high ground.", "If a UFO-themed questline appears, follow it to the end.", "No confirmed trigger exists yet — do not grind random spots for hours."],
    "sources": [
     {"label": "Exophase — GTA VI trophy list (official name, description, grade)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"},
-    {"label": "Outputlag — GTA 6 Trophy List (no confirmed unlock method at launch; description is the only hint)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"}
+    {"label": "Outputlag — GTA 6 Trophy List (one of five hidden trophies with no confirmed trigger yet)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"},
+    {"label": "PowerPyx — GTA 6 Trophy Guide & Roadmap ('currently unknown'; believed to be from the UFO questline, checked 2026-11-19)", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/"},
+    {"label": "GTABase — GTA 6 Trophy Guide & Achievements List (reading: a strange event or Easter egg in Leonida; exact steps not confirmed)", "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"}
    ]
   },
   {
@@ -894,11 +904,13 @@
    "missable": false,
    "stage": 4,
    "count": null,
-   "guide": "Knock someone down with a melee drive-by — hit a person with a melee attack from a moving vehicle, bowling-pin style. This is one of five hidden trophies whose unlock method no published launch guide has confirmed, but the description itself is unusually plain: drive past someone and land a melee hit from the car. Try it on a quiet street at low speed, and reload the save if the attempt goes wrong.",
-   "steps": ["Get in a car and find a pedestrian on a quiet street.", "Drive past slowly and land a melee hit from the vehicle.", "The trophy should pop when the hit knocks them over."],
+   "guide": "Knock someone over with a melee attack from a moving vehicle — a drive-by, but with a fist or a boot instead of a gun, bowling-pin style. The description is the plainest of the five unconfirmed trophies, yet the trigger is still unproven: PowerPyx lists Ten Pin as currently unknown and believes it comes from kicking enemies while riding a motorcycle; GTABase reads it as knocking people down with a melee attack from a vehicle. Follow PowerPyx's lead first: get on a motorcycle, match speed alongside an enemy and land the melee kick so they go down. If enemies are scarce, try it during a gang operation or a chase rather than on random pedestrians. Keep a manual save before experimenting — a botched attempt usually means a wanted level — and do it in free roam, where a failed try costs nothing and can be repeated straight away.",
+   "steps": ["Keep a manual save, then get on a motorcycle in free roam.", "Ride alongside an enemy at matching speed and land a melee kick that knocks them down.", "No pop? Try a car melee drive-by, then the bike again at a different speed.", "Unconfirmed everywhere — PowerPyx's motorcycle-kick theory is the best lead, not a promise."],
    "sources": [
     {"label": "Exophase — GTA VI trophy list (official name, description, grade)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"},
-    {"label": "Outputlag — GTA 6 Trophy List (no confirmed unlock method at launch; description is the only hint)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"}
+    {"label": "Outputlag — GTA 6 Trophy List (one of five hidden trophies with no confirmed trigger yet)", "url": "https://outputlag.com/guides/gta-6-trophy-list/"},
+    {"label": "PowerPyx — GTA 6 Trophy Guide & Roadmap ('currently unknown'; believed to be from kicking enemies while driving a motorcycle, checked 2026-11-19)", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/"},
+    {"label": "GTABase — GTA 6 Trophy Guide & Achievements List (reading: knock people down with a melee attack from a vehicle; exact steps not confirmed)", "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"}
    ]
   },
   {

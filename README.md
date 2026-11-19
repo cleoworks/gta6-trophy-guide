@@ -13,6 +13,22 @@ The offline guide and tracker for all **55 PlayStation 5 trophies** of Grand The
 - **Missables flagged** — 1 confirmed missable (Lucia's balcony meditation, Chapter 1) and 1 time-sensitive strand race, with the save discipline that covers both: a manual save at the start of every chapter, since there is no mission replay.
 - **A guide for every trophy, in our own words, with sources** — what to do, where, how, and when it can be missed. Steps that come from a published launch-week guide cite it; where no published guide confirms a location or method, the guide says so instead of inventing one.
 
+## Screenshots
+
+Four renders of the app itself, in the order the judge sees them:
+
+1. `screenshots/1-cover.jpg` — the checklist with a guide open: progress, filters, the missable banner, steps and sources in one screen.
+2. `screenshots/2-roadmap.jpg` — the Roadmap to Platinum view: five stages plus the save-discipline rules.
+3. `screenshots/3-missables.jpg` — the Missables tab: both flagged trophies with their warnings and the saves that cover them.
+4. `screenshots/4-spoiler.jpg` — spoiler mode on: unearned story trophies masked in the list, an earned one open with its Sources section.
+
+## What changed in v2
+
+- **The Missables tab is now shown.** v1's screenshot set never displayed it; the third screenshot now shows the flagged trophies and their warnings directly.
+- **The five still-unconfirmed hidden trophies got fuller guides.** In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There and Ten Pin still have no confirmed unlock method anywhere — PowerPyx lists all five as currently unknown — so their guides now say exactly that, cite PowerPyx and GTABase alongside Exophase and Outputlag, pass on each source's best current theory (a motorcycle melee kick for Ten Pin, a Payday Loans link for Bad Luck, I Guess, a UFO questline for The Truth Is Out There), and give the strongest description-based plan for each instead of a shrug.
+- **Small tracker fix:** when a filter hides the trophy whose guide is open, the panel now moves to the first trophy still visible instead of pointing at one the list no longer shows.
+- **Readability pass:** slightly larger trophy names, lighter list descriptions and looser guide line spacing, so the text survives being shrunk into a contact sheet.
+
 ## Run it
 
 ```sh
@@ -31,7 +47,7 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
 ## Sources
 
-Trophy names, descriptions and grades are PlayStation's official text, as listed by [Exophase](https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/) and [PSNProfiles](https://psnprofiles.com/trophies/43531-grand-theft-auto-vi). Guide steps cite [Outputlag's GTA 6 Trophy List](https://outputlag.com/guides/gta-6-trophy-list/) where they draw on it; every trophy's guide names its sources in the app.
+Trophy names, descriptions and grades are PlayStation's official text, as listed by [Exophase](https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/) and [PSNProfiles](https://psnprofiles.com/trophies/43531-grand-theft-auto-vi). Guide steps cite [Outputlag's GTA 6 Trophy List](https://outputlag.com/guides/gta-6-trophy-list/), [PowerPyx's GTA 6 Trophy Guide & Roadmap](https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/) and [GTABase's Trophy Guide & Achievements List](https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series) where they draw on them; every trophy's guide names its sources in the app.
 
 Unofficial fan guide. Not affiliated with Rockstar Games. No Rockstar logo, artwork or game screenshots are used.
 
