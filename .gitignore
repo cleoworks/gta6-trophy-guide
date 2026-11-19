@@ -12,3 +12,4 @@ node_modules/
 .cache/
 .playwright/
 .headless-profile/
+# v9 repair note: re-applied under recording #13 (01a1f5c3); see README.

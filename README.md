@@ -110,3 +110,5 @@ Unofficial fan guide. Not affiliated with Rockstar Games. No Rockstar logo, artw
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+v9 (recorded re-apply, 2026-11-20): re-applied in-session under recording #13 after #12 died before any edit; content identical to a6ab0ca.
