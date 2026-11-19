@@ -11,3 +11,4 @@ node_modules/
 # browser profile and cache leftovers from local screenshot runs
 .cache/
 .playwright/
+.headless-profile/

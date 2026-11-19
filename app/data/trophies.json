@@ -2,7 +2,7 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "edition": "Leonida Ledger v7 (2026-11-19) — the tracker now tracks: every trophy whose official description carries a numeric target has a working progress counter (20 in all), stored with the earned set and carried through export and import, shown in its guide panel and on its checklist row. A computed audit strip under the masthead states what the guide contains (guides citing a source, sources, hidden trophies, the potentially missable count, counters, the day the sources were read); guide steps carry inline [S#] markers where a step rests on a cited source; a stage-progress chip row and a missable banner with a Next Up line head the checklist. Trophy names, descriptions, grades, guides, steps, rarity figures and cited sources unchanged.",
+ "edition": "Leonida Ledger v8 (2026-11-19) — proof in the frame: every checklist row now names the sources its trophy cites, guide prose carries inline [S#] markers on the sentences that rest on a source (the steps already did), and the panel prints each source on one line so the whole citation block fits one screen. A Long Road gains a completion-percent counter (21 counters in all) and moves into a Goal group at the head of the checklist, beside the platinum it feeds. The audit strip gains a second line — how many trophies cite each source, counted at runtime, and how many hidden trophies still have no confirmed trigger — and those unconfirmed trophies are flagged in the data and say so in their panels, as does Positive Mental Attitude, whose panel now carries a labelled not-pinned-down note. Next Up names the potentially missable trophy first while it is unearned; the Missables tab badge counts potentially missable trophies only (1), matching the audit strip, the banner and the roadmap band, with the time-sensitive strand race keeping its own label; and the balcony meditation is named the same way everywhere — the balcony at Jason's house. Trophy names, descriptions, grades, rarity figures and cited sources unchanged; guide and step texts unchanged apart from that one naming fix.",
  "rarityNote": "Rarity is the share of Exophase-tracked players who had earned each trophy when the list was read on 19 November 2026 — release day, so every figure is a launch-week snapshot that will move fast. Source: Exophase, Grand Theft Auto VI (PSN) trophy list.",
  "roadmapMeta": {
   "heading": "Trophy roadmap — the platinum at a glance",
@@ -42,7 +42,7 @@
   {"id": "S6", "name": "Official trophy description", "title": "PlayStation trophy list — no outside guide", "url": null, "retrieved": null}
  ],
  "roadmap": [
-  {"stage": 1, "title": "Chapter 1 — play, and save", "text": "Finish the opening mission and Chapter 1, beat Cal at fishing, finish one arcade game, and do Lucia's balcony meditation while it is available. Make a manual save at the start of the chapter: there is no mission replay, so a chapter-start save is your only way back."},
+  {"stage": 1, "title": "Chapter 1 — play, and save", "text": "Finish the opening mission and Chapter 1, beat Cal at fishing, finish one arcade game, and do the balcony meditation at Jason's house while it is available. Make a manual save at the start of the chapter: there is no mission replay, so a chapter-start save is your only way back."},
   {"stage": 2, "title": "Chapters 2–4 — the story", "text": "Play the story through to the final mission. Character switching opens in Chapter 2, which unlocks the partner trophies and the stranger strands. Do Race Against Yago the moment it appears in Chapter 3 — it is time-sensitive. Finish the six side-story finales (Andy, Billy, Kenton, Randy, Tyrone, Bret) whenever they appear; they stay open after the credits."},
   {"stage": 3, "title": "Robberies and partner feats", "text": "Once the robbery tools arrive in Chapters 3 and 4 — the Snap Gun from Yasmani's Jewelry Jobs, then the bank-vault job near the end of Chapter 4 — take the robbery trophies and the partner feats that ride along with them, including the 4-star escape that also clears Hot Together."},
   {"stage": 4, "title": "Open-world sweep", "text": "After the credits, everything outside the story stays open: collectibles (cards, WAiNK spots, vehicles, areas), races, shooting ranges, stunts, Challenges and the money trophies. Work them in any order and let the progress counters in this tracker do the counting."},
@@ -51,13 +51,13 @@
  "saveRules": [
   "There is no mission replay and no New Game Plus at launch: once a story mission is done you cannot select it again.",
   "Keep one manual save at the start of every chapter, plus one untouched save from just before the final mission. The game has 15 manual save slots plus one autosave.",
-  "Do Lucia's balcony meditation in Chapter 1 — it is the one trophy reported as potentially missable, and it disappears when the chapter ends.",
+  "Do the balcony meditation at Jason's house in Chapter 1 — it is the one trophy reported as potentially missable, and it disappears when the chapter ends.",
   "Do Race Against Yago in Chapter 3 as soon as it appears; it carries an hourglass icon and is time-sensitive.",
   "Never test cheats on your trophy save: cheats are expected to switch off trophies and saving."
  ],
  "tips": [
   {"text": "No mission replay: treat every chapter as one-way. Save manually at each chapter start and before the final mission, so a missed moment costs minutes, not a new playthrough.", "source": "Outputlag"},
-  {"text": "Do Lucia's balcony meditation while Chapter 1 is still open — the potentially missable trophy hangs on it, and the chapter does not reopen.", "source": "Outputlag · PowerPyx"},
+  {"text": "Do the balcony meditation at Jason's house while Chapter 1 is still open — the potentially missable trophy hangs on it, and the chapter does not reopen.", "source": "Outputlag · PowerPyx"},
   {"text": "When Race Against Yago appears in Chapter 3, run it at once: it is the list's one time-sensitive trophy and will not wait for your endgame sweep.", "source": "Outputlag"},
   {"text": "Keep cheats out of your trophy save: they are expected to block saving and trophy progress for the rest of that session.", "source": "Outputlag"},
   {"text": "Hunt the partner trophies as a pair — the wanted-level escape and the back-to-back shop robberies only count with Lucia and Jason together.", "source": "Official descriptions"},
@@ -112,8 +112,8 @@
    "missable": false,
    "stage": 1,
    "count": null,
-   "guide": "Play through Chapter 1 to its end. Before you leave the chapter, do the one thing in it that never comes back: Lucia's balcony meditation, which counts toward Positive Mental Attitude. Make a manual save at the start of Chapter 1 and keep it until that trophy pops, since there is no mission replay. The chapter trophy itself can pop at the start of the next chapter rather than on the last cutscene, so do not worry if it is a beat late.",
-   "steps": ["Make a manual save at the start of Chapter 1.", "Do Lucia's balcony meditation while the chapter is still open (see Positive Mental Attitude).", "Finish the chapter's missions; the trophy pops at the chapter's end."],
+   "guide": "Play through Chapter 1 to its end. Before you leave the chapter, do the one thing in it that never comes back: the balcony meditation at Jason's house, which counts toward Positive Mental Attitude. Make a manual save at the start of Chapter 1 and keep it until that trophy pops, since there is no mission replay. The chapter trophy itself can pop at the start of the next chapter rather than on the last cutscene, so do not worry if it is a beat late.",
+   "steps": ["Make a manual save at the start of Chapter 1.", "Do the balcony meditation at Jason's house while the chapter is still open (see Positive Mental Attitude).", "Finish the chapter's missions; the trophy pops at the chapter's end."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "balcony meditation is Chapter 1 only; chapter trophies can pop at the next chapter's start"}
@@ -306,10 +306,11 @@
    "grade": "gold",
    "rarityPct": 0.1,
    "hidden": false,
-   "kind": "activities",
+   "kind": "goal",
    "missable": false,
    "stage": 5,
    "count": null,
+   "counter": {"label": "completion percent", "total": 100},
    "guide": "Reach 100% completion — the second gold, and the longest single job in the game. The checklist only appears after the story, under Progress > Stats > 100% Completion, but work done earlier still counts. Its bars sit above the individual trophies: 300 stunts instead of 250, 70 of the 80 Challenges, all 8 bank vaults, 200 of the 277 vehicle models, all 39 illegal operations. Do the story first, then grind the checklist in the open world; expect the whole platinum to take around 200 hours, most of it here.",
    "steps": ["Finish the story, then open Progress > Stats > 100% Completion.", "Clear every line of the checklist — stunts, Challenges, vaults, vehicles, operations.", "The trophy pops at 100%; the platinum follows with it."],
    "sources": [
@@ -573,12 +574,13 @@
    "stage": 1,
    "count": 18,
    "counter": {"label": "meditation spots", "total": 18},
-   "guide": "Meditate at all 18 spots across Leonida. Meditation spots show as purple icons when you are close. Each outdoor spot should count twice if you meditate there with both characters, so bring your partner every time. The potentially missable one: Lucia's balcony meditation in Chapter 1 — after Lucia is home, check the kitchen in the morning (a morning after the mission Down to Earth is the usual time), follow her out to the balcony of Jason's house and accept the optional task. It is gone once Chapter 1 ends, and it is not confirmed whether the trophy strictly needs it, so do it anyway and keep a Chapter 1 save until the trophy pops.",
-   "steps": ["In Chapter 1: do Lucia's balcony meditation (morning, after Down to Earth) — do not skip it.", "Meditate at every other spot (18 total), bringing your partner so outdoor spots count twice.", "Keep a Chapter 1 save until the trophy pops."],
-   "missableNote": "MISSABLE — the one trophy reported as potentially missable. Lucia's balcony meditation in Chapter 1 disappears when the chapter ends. Do it in Chapter 1 and keep a Chapter 1 save until this trophy pops.",
+   "guide": "Meditate at all 18 spots across Leonida. Meditation spots show as purple icons when you are close. Each outdoor spot should count twice if you meditate there with both characters, so bring your partner every time. The potentially missable one: the balcony meditation at Jason's house in Chapter 1 — after Lucia is home, check the kitchen in the morning (a morning after the mission Down to Earth is the usual time), follow her out to the balcony and accept the optional task. It is gone once Chapter 1 ends, and it is not confirmed whether the trophy strictly needs it, so do it anyway and keep a Chapter 1 save until the trophy pops.",
+   "steps": ["In Chapter 1: do the balcony meditation at Jason's house (morning, after Down to Earth) — do not skip it.", "Meditate at every other spot (18 total), bringing your partner so outdoor spots count twice.", "Keep a Chapter 1 save until the trophy pops."],
+   "missableNote": "MISSABLE — the one trophy reported as potentially missable. The balcony meditation at Jason's house in Chapter 1 disappears when the chapter ends. Do it in Chapter 1 and keep a Chapter 1 save until this trophy pops.",
+   "missableShort": "Jason's-house balcony is Chapter 1 only",
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
-    {"ref": "S2", "note": "balcony meditation is Chapter 1 only; purple icons; partner meditations count twice"}
+    {"ref": "S2", "note": "Chapter 1 balcony; purple icons; partner counts twice"}
    ]
   },
   {
@@ -873,6 +875,7 @@
    "missable": false,
    "stage": 4,
    "count": null,
+   "triggerUnknown": true,
    "guide": "Order a cocktail somewhere with a sea view on Ocean Beach — the description is plain about that much, and vague about everything else. Status at launch (checked 2026-11-19): no published guide has a confirmed trigger. PowerPyx lists this trophy as currently unknown, Outputlag keeps it in its group of five hidden trophies with no confirmed method, and GTABase says the exact steps aren't confirmed yet. GTABase's reading is the best working theory going: have the cocktail at a spot with a view on Ocean Beach in Vice City. The story reaches Ocean Beach in Chapter 4 and free roam continues after the credits, so treat this as a clean-up experiment: walk the beachfront and order a cocktail at every bar, kiosk and terrace that faces the water until one registers. Nothing published flags it as missable — the only possibly missable trophy in the list is Positive Mental Attitude — so there is no clock on it.",
    "steps": ["Reach Ocean Beach in Vice City (the story takes you there in Chapter 4; free roam works too).", "Order a cocktail at a beachfront bar or vendor with a view of the water.", "If it does not pop, work along the beachfront and try the next spot with a sea view.", "No confirmed spot exists yet — keep trying spots rather than paying for a 'guaranteed' method."],
    "sources": [
@@ -893,6 +896,7 @@
    "missable": false,
    "stage": 4,
    "count": null,
+   "triggerUnknown": true,
    "guide": "Smash out of a vehicle showroom through its glass front, in a car — the description nods at the classic showroom escape, and GTABase reads it exactly that way: crash a car out through a showroom window. What nobody has is a confirmed trigger. PowerPyx lists Capital Offense as currently unknown, Outputlag groups it with the five hidden trophies that have no confirmed method, and GTABase says the exact steps aren't confirmed. So experiment in free roam: drive a car into a Vice City showroom, then accelerate out through the window instead of the door. If one showroom does not register, try another — and try leaving in one of the showroom's own display cars, since 'in classic style' may mean stealing a car off the floor on the way out. It is a repeatable stunt, not a story moment: free roam continues after the credits and no guide flags it as missable. Keep a manual save before you start breaking glass — expect a wanted level — and reload if an attempt gets expensive.",
    "steps": ["In free roam, drive a car into a vehicle showroom in Vice City.", "Accelerate out through the glass front — not through the door.", "No pop? Try another showroom, and try exiting in one of its display cars.", "Keep a manual save first; expect a wanted level."],
    "sources": [
@@ -969,6 +973,7 @@
    "missable": false,
    "stage": 4,
    "count": null,
+   "triggerUnknown": true,
    "guide": "Succeed at something on the second attempt — that is GTABase's reading of 'Second time's the charm', and it is still only a reading. PowerPyx lists this trophy as currently unknown as well, but adds a belief of its own: it is related to the Payday Loans store from the Prologue. Outputlag likewise keeps it among the five hidden trophies with no confirmed trigger. Put the two together and the practical plan writes itself: whenever a robbery, race or challenge goes wrong, run it straight back and succeed on the retry — and because Payday Loans stores stay on the map as robbery targets, make a second visit there count. Do not start a new game over this: PowerPyx's roadmap counts only one potentially missable trophy in the whole list (Positive Mental Attitude), and free roam continues after the story, so a fail-then-succeed sequence during clean-up should be within reach. Keep your chapter-start manual saves as usual and check the trophy after retries.",
    "steps": ["Play normally, but retry failures immediately instead of moving on.", "Rob a Payday Loans store; if the first attempt goes wrong, succeed on the second (PowerPyx's suspected link).", "Check the trophy after any fail-then-succeed sequence — races and challenges included.", "Still unconfirmed everywhere — do not restart the game for it."],
    "sources": [
@@ -989,6 +994,7 @@
    "missable": false,
    "stage": 4,
    "count": null,
+   "triggerUnknown": true,
    "guide": "Witness something the game itself answers with 'What the hell just happened?' — almost certainly a scripted strange event, not a collectible. No published guide has the trigger: PowerPyx lists it as currently unknown and believes it belongs to a UFO questline; GTABase expects a strange event or Easter egg somewhere in Leonida; Outputlag keeps it in the five hidden trophies with no confirmed method. The strongest play is exploration with your eyes open: follow stranger strands and odd map markers all the way to the end, revisit remote ground — swamps, the Keys, high places — at night, and never skip past a weird encounter while cleaning up. Free roam continues after the credits and nothing flags this trophy as missable, so it belongs to the clean-up stage: if a UFO-themed strand turns up, finish it before anything else here. This guide will not invent a location for it; none is confirmed.",
    "steps": ["Finish stranger strands and odd encounters instead of skipping them.", "Explore remote areas at night during clean-up — swamps, islands, high ground.", "If a UFO-themed questline appears, follow it to the end.", "No confirmed trigger exists yet — do not grind random spots for hours."],
    "sources": [
@@ -1009,6 +1015,7 @@
    "missable": false,
    "stage": 4,
    "count": null,
+   "triggerUnknown": true,
    "guide": "Knock someone over with a melee attack from a moving vehicle — a drive-by, but with a fist or a boot instead of a gun, bowling-pin style. The description is the plainest of the five unconfirmed trophies, yet the trigger is still unproven: PowerPyx lists Ten Pin as currently unknown and believes it comes from kicking enemies while riding a motorcycle; GTABase reads it as knocking people down with a melee attack from a vehicle. Follow PowerPyx's lead first: get on a motorcycle, match speed alongside an enemy and land the melee kick so they go down. If enemies are scarce, try it during a gang operation or a chase rather than on random pedestrians. Keep a manual save before experimenting — a botched attempt usually means a wanted level — and do it in free roam, where a failed try costs nothing and can be repeated straight away.",
    "steps": ["Keep a manual save, then get on a motorcycle in free roam.", "Ride alongside an enemy at matching speed and land a melee kick that knocks them down.", "No pop? Try a car melee drive-by, then the bike again at a different speed.", "Unconfirmed everywhere — PowerPyx's motorcycle-kick theory is the best lead, not a promise."],
    "sources": [

@@ -57,6 +57,15 @@
 // still import). Same story for the hand-in: it copies app/ and
 // screenshots/ exactly as they sit and lets the vendored library
 // summarise them.
+//
+// v8 note: the eighth version puts the citation proof in the frame —
+// per-row source refs, markers in the guide prose, one-line panel
+// citations, a coverage line in the audit strip, honesty boxes, a
+// counter and a Goal group for the 100% trophy. The data file gains
+// three small fields (a counter, a triggerUnknown flag, a short banner
+// line) and one trophy changes kind; the hand-in is unchanged: it
+// copies app/ and screenshots/ exactly as they sit and lets the
+// vendored library summarise them.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
