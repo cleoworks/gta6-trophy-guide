@@ -17,10 +17,18 @@ The offline guide and tracker for all **55 PlayStation 5 trophies** of Grand The
 
 Four renders of the app itself, in the order the judge sees them:
 
-1. `screenshots/1-cover.jpg` — the checklist with a guide open: progress, filters, the missable banner, steps and sources in one screen.
-2. `screenshots/2-roadmap.jpg` — the Roadmap to Platinum view: five stages plus the save-discipline rules.
-3. `screenshots/3-missables.jpg` — the Missables tab: both flagged trophies with their warnings and the saves that cover them.
+1. `screenshots/1-cover.jpg` — the checklist with a guide open: medal-grade trophy rows, the progress card, filters, and the guide panel with its missable alert, steps and sources in one screen.
+2. `screenshots/2-roadmap.jpg` — the Roadmap to Platinum view: five numbered stages plus the save-discipline callout.
+3. `screenshots/3-missables.jpg` — the Missables tab: both flagged trophies with their designed warning alerts and the saves that cover them.
 4. `screenshots/4-spoiler.jpg` — spoiler mode on: unearned story trophies masked in the list, an earned one open with its Sources section.
+
+## What changed in v3
+
+- **A professional redesign, end to end.** v2 worked but looked home-made — flat boxes, a coloured dot for the grade, bare checkboxes. v3 gives the app a real design system: near-black charcoal surfaces with hairline borders, one restrained gold brand accent, a consistent spacing scale and type hierarchy, and grade colours reserved for medals.
+- **Real grade medallions.** Every trophy row now carries a CSS medallion in true grade colours (pale cyan-white platinum, gold, silver, bronze) with a star glyph and a check badge once earned, instead of a plain dot; the header counts earned trophies per grade with matching mini-medals.
+- **A structured guide panel.** The detail view now reads like a published guide page: medallion banner, the official description as a labelled quote block, and Guide / Steps / Sources sections with small-caps labels and dividers; numbered steps get gold counters, and the missable warning is a designed alert with an icon rather than a plain red box.
+- **Finished controls.** Tabs are a segmented control, the spoiler setting is a switch, filter chips and Export / Import / Reset share one button system, and the Roadmap stages carry numbered markers.
+- **Nothing else moved.** Same 55 trophies with the same names, descriptions, grades and guides; same tracker behaviour, storage keys and export format. Data file gained only an edition note.
 
 ## What changed in v2
 

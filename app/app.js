@@ -16,6 +16,12 @@
 //     page that gathers every flagged trophy with its warning.
 // It never makes a network request beyond that one local data file, so the
 // guide works with the network off.
+//
+// v3 is a design pass: a proper design system (one restrained gold brand
+// accent, grade colours reserved for CSS medallions instead of plain dots),
+// a guide panel structured with labelled sections, and per-grade medal
+// counts in the header. Behaviour — data, storage keys, filters, the export
+// format — is unchanged from v2.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -26,7 +32,6 @@ const emptyNote = document.getElementById('emptyNote');
 const progressCount = document.getElementById('progressCount');
 const progressPct = document.getElementById('progressPct');
 const progressFill = document.getElementById('progressFill');
-const progressSub = document.getElementById('progressSub');
 const gradeFilter = document.getElementById('gradeFilter');
 const searchBox = document.getElementById('searchBox');
 const spoilerToggle = document.getElementById('spoilerToggle');
@@ -78,6 +83,61 @@ function gradeLabel(grade) {
   return grade.charAt(0).toUpperCase() + grade.slice(1);
 }
 
+/* Design pieces shared by the views: a CSS medallion per grade (star glyph,
+   plus a check badge once earned), small-caps section labels for the guide
+   panel, and the missable alert. All drawn with CSS and inline SVG. */
+const STAR_PATH = 'M12 2.6l2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.8 6 21l1.3-6.7-5-4.7 6.8-.8z';
+const CHECK_PATH = 'M4 12.5l5 5L20 6.5';
+const ALERT_ICON =
+  '<svg class="alert-icon" viewBox="0 0 24 24" aria-hidden="true">' +
+  '<path d="M12 4.2 21 19.5H3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>' +
+  '<path d="M12 10v4.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>' +
+  '<circle cx="12" cy="16.9" r="1.15" fill="currentColor"/></svg>';
+
+function medalElement(trophy, sizeClass) {
+  const medal = document.createElement('span');
+  medal.className = 'medal ' + trophy.grade + (sizeClass ? ' ' + sizeClass : '');
+  medal.title = gradeLabel(trophy.grade) + ' trophy';
+  medal.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + STAR_PATH + '"/></svg>';
+  if (earned.has(trophy.name)) {
+    const badge = document.createElement('span');
+    badge.className = 'earned-badge';
+    badge.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + CHECK_PATH + '"/></svg>';
+    medal.append(badge);
+  }
+  return medal;
+}
+
+function sectionLabel(text) {
+  const label = document.createElement('div');
+  label.className = 'section-label';
+  label.textContent = text;
+  return label;
+}
+
+function alertElement(trophy) {
+  const box = document.createElement('div');
+  box.className = 'missable-box';
+  box.innerHTML = ALERT_ICON;
+  const body = document.createElement('div');
+  const label = document.createElement('span');
+  label.className = 'alert-label';
+  label.textContent = trophy.risk === 'timed' ? 'Time-sensitive' : 'Missable';
+  // The notes open with their own "MISSABLE —" / "TIME-SENSITIVE," prefix,
+  // which the label above now carries — drop it from the body text so the
+  // warning does not say the same word twice.
+  let note = trophy.missableNote ?? '';
+  if (note.startsWith('MISSABLE — ')) note = note.slice('MISSABLE — '.length);
+  if (note.startsWith('TIME-SENSITIVE, ')) note = note.slice('TIME-SENSITIVE, '.length);
+  if (note) note = note.charAt(0).toUpperCase() + note.slice(1);
+  const text = document.createElement('span');
+  text.className = 'alert-text';
+  text.textContent = note;
+  body.append(label, text);
+  box.append(body);
+  return box;
+}
+
 function formatCount(trophy) {
   if (trophy.count == null) return null;
   if (trophy.id === 52) return '$250,000';
@@ -117,10 +177,7 @@ function renderChecklist() {
     });
     li.append(box);
 
-    const dot = document.createElement('span');
-    dot.className = 'grade-dot ' + trophy.grade;
-    dot.title = gradeLabel(trophy.grade);
-    li.append(dot);
+    li.append(medalElement(trophy));
 
     const text = document.createElement('div');
     const name = document.createElement('div');
@@ -135,7 +192,7 @@ function renderChecklist() {
     const tags = document.createElement('div');
     tags.className = 'trophy-tags';
     const gradeTag = document.createElement('span');
-    gradeTag.className = 'tag';
+    gradeTag.className = 'tag grade-pill ' + trophy.grade;
     gradeTag.textContent = gradeLabel(trophy.grade);
     tags.append(gradeTag);
     if (trophy.hidden) {
@@ -169,20 +226,33 @@ function renderDetail() {
   detailPanel.replaceChildren();
   const hidden = isSpoilerHidden(trophy);
 
+  const banner = document.createElement('div');
+  banner.className = 'detail-banner';
+  banner.append(medalElement(trophy, 'medal-lg'));
+  const bannerText = document.createElement('div');
   const grade = document.createElement('div');
   grade.className = 'detail-grade ' + trophy.grade;
-  grade.textContent = gradeLabel(trophy.grade) + ' trophy' + (trophy.hidden ? ' · Hidden on PSN' : '');
-  detailPanel.append(grade);
+  grade.textContent = gradeLabel(trophy.grade) + ' trophy';
+  bannerText.append(grade);
+  if (trophy.hidden) {
+    const hiddenTag = document.createElement('span');
+    hiddenTag.className = 'tag hidden-t';
+    hiddenTag.textContent = 'Hidden on PSN';
+    bannerText.append(hiddenTag);
+  }
+  banner.append(bannerText);
+  detailPanel.append(banner);
 
   const title = document.createElement('h2');
   title.textContent = hidden ? 'Hidden story trophy' : trophy.name;
   detailPanel.append(title);
 
-  const desc = document.createElement('p');
+  detailPanel.append(sectionLabel('Official description'));
+  const desc = document.createElement('blockquote');
   desc.className = 'detail-desc';
   desc.textContent = hidden
     ? 'Spoilers are hidden. Earn this trophy — or switch the spoiler setting off — to see its official description and guide.'
-    : 'Official description: “' + trophy.description + '”';
+    : '“' + trophy.description + '”';
   detailPanel.append(desc);
 
   const meta = document.createElement('div');
@@ -211,22 +281,16 @@ function renderDetail() {
     detailPanel.append(note);
   } else {
     if (trophy.missable && trophy.missableNote) {
-      const box = document.createElement('p');
-      box.className = 'missable-box';
-      const strong = document.createElement('strong');
-      strong.textContent = trophy.risk === 'timed' ? 'TIME-SENSITIVE — ' : 'MISSABLE — ';
-      box.append(strong, document.createTextNode(trophy.missableNote));
-      detailPanel.append(box);
+      detailPanel.append(alertElement(trophy));
     }
+    detailPanel.append(sectionLabel('Guide'));
     const guide = document.createElement('p');
     guide.className = 'detail-guide';
     guide.textContent = trophy.guide;
     detailPanel.append(guide);
 
     if (trophy.steps && trophy.steps.length) {
-      const stepsTitle = document.createElement('strong');
-      stepsTitle.textContent = 'Steps';
-      detailPanel.append(stepsTitle);
+      detailPanel.append(sectionLabel('Steps'));
       const steps = document.createElement('ol');
       steps.className = 'detail-steps';
       for (const step of trophy.steps) {
@@ -238,11 +302,9 @@ function renderDetail() {
     }
   }
 
+  detailPanel.append(sectionLabel('Sources — where each fact comes from'));
   const sources = document.createElement('div');
   sources.className = 'detail-sources';
-  const sourcesTitle = document.createElement('strong');
-  sourcesTitle.textContent = 'Sources — where each fact comes from';
-  sources.append(sourcesTitle);
   const list = document.createElement('ul');
   for (const source of trophy.sources ?? []) {
     const item = document.createElement('li');
@@ -307,6 +369,10 @@ function renderRoadmap() {
   for (const stage of doc.roadmap ?? []) {
     const card = document.createElement('li');
     card.className = 'stage-card';
+    const num = document.createElement('span');
+    num.className = 'stage-num';
+    num.textContent = String(stage.stage);
+    const body = document.createElement('div');
     const heading = document.createElement('h3');
     heading.textContent = 'Stage ' + stage.stage + ' — ' + stage.title;
     const text = document.createElement('p');
@@ -324,7 +390,8 @@ function renderRoadmap() {
       });
       chips.append(chip);
     }
-    card.append(heading, text, chips);
+    body.append(heading, text, chips);
+    card.append(num, body);
     stageList.append(card);
   }
 }
@@ -334,25 +401,27 @@ function renderMissables() {
   list.replaceChildren();
   for (const trophy of trophies.filter((t) => t.missable)) {
     const card = document.createElement('article');
-    card.className = 'stage-card';
+    card.className = 'stage-card missable-card';
+    card.append(medalElement(trophy, 'medal-sm'));
+    const body = document.createElement('div');
     const heading = document.createElement('h3');
-    heading.textContent = (trophy.risk === 'timed' ? 'TIME-SENSITIVE: ' : 'MISSABLE: ') + trophy.name;
+    heading.textContent = trophy.name;
     const desc = document.createElement('p');
     desc.textContent = trophy.description;
-    const note = document.createElement('p');
-    note.className = 'missable-box';
-    note.textContent = trophy.missableNote ?? '';
     const guide = document.createElement('p');
     guide.textContent = trophy.guide;
     const open = document.createElement('button');
     open.type = 'button';
-    open.className = 'chip';
+    open.className = 'btn open-guide';
     open.textContent = 'Open full guide →';
     open.addEventListener('click', () => {
       selectTrophy(trophy.id);
       setTab('checklist');
     });
-    card.append(heading, desc, note, guide, open);
+    body.append(heading, desc);
+    if (trophy.missableNote) body.append(alertElement(trophy));
+    body.append(guide, open);
+    card.append(body);
     list.append(card);
   }
   const done = document.createElement('p');
@@ -371,9 +440,10 @@ function updateProgress() {
   for (const trophy of trophies) {
     if (earned.has(trophy.name)) byGrade[trophy.grade] = (byGrade[trophy.grade] ?? 0) + 1;
   }
-  progressSub.textContent =
-    'Platinum ' + (byGrade.platinum ?? 0) + '/1 · Gold ' + (byGrade.gold ?? 0) + '/2 · Silver ' +
-    (byGrade.silver ?? 0) + '/6 · Bronze ' + (byGrade.bronze ?? 0) + '/46 · 28 hidden';
+  document.getElementById('mcPlatinum').textContent = (byGrade.platinum ?? 0) + '/1';
+  document.getElementById('mcGold').textContent = (byGrade.gold ?? 0) + '/2';
+  document.getElementById('mcSilver').textContent = (byGrade.silver ?? 0) + '/6';
+  document.getElementById('mcBronze').textContent = (byGrade.bronze ?? 0) + '/46';
 }
 
 function renderAll() {

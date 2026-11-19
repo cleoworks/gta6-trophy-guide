@@ -6,20 +6,29 @@
 <meta name="description" content="Leonida Ledger — the offline GTA VI trophy guide and tracker: all 55 PlayStation 5 trophies with cited guides, a platinum roadmap, missable warnings, spoiler mode and exportable progress.">
 <!-- Offline by design: this page loads only its own files (style.css, app.js
      and data/trophies.json) and saves progress in the browser's localStorage,
-     so it works in full with the network switched off. -->
+     so it works in full with the network switched off. The v3 design is also
+     self-contained: system font stacks, CSS gradients and inline SVG only —
+     no webfonts, no images, nothing fetched. -->
 <title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="masthead">
   <div class="masthead-title">
+    <p class="eyebrow">Grand Theft Auto VI · PlayStation 5 · Trophy Guide</p>
     <h1>LEONIDA LEDGER</h1>
     <p class="tagline">The offline GTA VI trophy guide &amp; tracker — all 55 PlayStation 5 trophies, in your own words, with sources.</p>
   </div>
   <div class="masthead-progress" id="progressBox">
     <div class="progress-line"><strong id="progressCount">0 of 55 earned</strong><span id="progressPct">0%</span></div>
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-    <p class="progress-sub" id="progressSub">1 Platinum · 2 Gold · 6 Silver · 46 Bronze · 28 hidden</p>
+    <div class="medal-counts" aria-label="Earned by grade">
+      <span class="mc"><span class="mini-medal platinum"></span>Platinum <b id="mcPlatinum">0/1</b></span>
+      <span class="mc"><span class="mini-medal gold"></span>Gold <b id="mcGold">0/2</b></span>
+      <span class="mc"><span class="mini-medal silver"></span>Silver <b id="mcSilver">0/6</b></span>
+      <span class="mc"><span class="mini-medal bronze"></span>Bronze <b id="mcBronze">0/46</b></span>
+      <span class="mc mc-hidden">28 hidden on PSN</span>
+    </div>
   </div>
 </header>
 
@@ -50,9 +59,9 @@
     </label>
     <label class="search-label">Search <input id="searchBox" type="search" placeholder="Trophy name…"></label>
     <label class="spoiler-toggle"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
-    <button id="exportBtn" type="button">Export progress</button>
-    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
-    <button id="resetBtn" type="button">Reset</button>
+    <button id="exportBtn" type="button" class="btn">Export progress</button>
+    <label class="import-btn btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button" class="btn btn-quiet">Reset</button>
   </div>
 </section>
 

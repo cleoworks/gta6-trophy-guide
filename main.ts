@@ -19,6 +19,12 @@
 //
 // Run it locally with:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+//
+// v3 note: the entry's third version is a professional redesign of the app
+// (design system, grade medallions, structured guide panel) with data and
+// behaviour unchanged. This hand-in program did not need to change for it —
+// it still copies the same app/ and screenshots/ and writes the same
+// dossier — but the header grows so the file's own history stays honest.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
