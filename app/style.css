@@ -40,7 +40,16 @@
    first build held five full rows and the panel's sources ended 38px
    past the fold, so the stack tightens a second step — row and label
    line-heights, paddings and gaps — until six full rows and the whole
-   one-line-per-source block fit the 800px frame.) */
+   one-line-per-source block fit the 800px frame.)
+   v9 tightens the same stack a third step, again after measurement:
+   the tagline drops to one line, the roadmap band's two wrapping
+   values split into value plus note (and its columns rebalance so
+   every value holds one line), the banner's text shortens to one
+   line, rows and group headers lose a pixel of padding each, and
+   the panel's prose, steps and sources step down a size — so the
+   frame now holds eight or more full rows and the whole four-source
+   block fits the 800px frame. The Missables tab's cards gain a
+   gold progress pill for each flagged trophy's counter. */
 
 :root {
   --bg: #0a0d12;
@@ -183,7 +192,7 @@ button { cursor: pointer; }
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 4px 14px 3px;
+  padding: 3px 12px 2px;
   box-shadow: var(--shadow);
 }
 .progress-line { display: flex; justify-content: space-between; align-items: baseline; }
@@ -191,7 +200,7 @@ button { cursor: pointer; }
 #progressPct { color: var(--gold-hi); font-weight: 800; font-variant-numeric: tabular-nums; }
 .progress-track {
   height: 8px;
-  margin-top: 4px;
+  margin-top: 3px;
   background: #0a0d12;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -204,7 +213,7 @@ button { cursor: pointer; }
   background: linear-gradient(90deg, var(--gold-lo), var(--gold) 55%, var(--gold-hi));
   transition: width 0.25s ease;
 }
-.medal-counts { display: flex; flex-wrap: nowrap; gap: 6px 9px; margin-top: 4px; }
+.medal-counts { display: flex; flex-wrap: nowrap; gap: 6px 9px; margin-top: 3px; }
 .mc { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 11.5px; white-space: nowrap; }
 .mc b { color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; }
 .mc-hidden { color: var(--faint); }
@@ -371,7 +380,7 @@ main { padding: 0 28px 18px; }
   background: var(--danger-tint);
   border: 1px solid rgba(229, 83, 75, 0.42);
   border-radius: var(--radius);
-  padding: 1px 12px;
+  padding: 0 12px;
 }
 .banner-row .alert-icon { flex: none; width: 18px; height: 18px; color: var(--danger-hi); }
 .banner-text { font-size: 11.5px; line-height: 1.3; }
@@ -380,11 +389,11 @@ main { padding: 0 28px 18px; }
   font-weight: 800;
   letter-spacing: 0.02em;
 }
-.banner-show { flex: none; margin-left: auto; padding: 3px 10px; font-size: 12.5px; }
+.banner-show { flex: none; margin-left: auto; padding: 2px 8px; font-size: 12.5px; }
 .banner-next {
   margin: 0 2px;
   font-size: 12px;
-  line-height: 1.35;
+  line-height: 1.2;
   color: var(--muted);
 }
 .banner-next strong {
@@ -437,9 +446,9 @@ main { padding: 0 28px 18px; }
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
-  padding: 2px 4px 1px;
+  padding: 1px 4px 0;
   border-bottom: 1px solid var(--line);
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 .group-header:first-child { padding-top: 1px; }
 .group-name {
@@ -463,7 +472,7 @@ main { padding: 0 28px 18px; }
   grid-template-columns: 22px 36px minmax(0, 1fr) auto;
   gap: 12px;
   align-items: center;
-  padding: 2px 12px;
+  padding: 1px 12px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   margin-bottom: 2px;
@@ -513,13 +522,14 @@ main { padding: 0 28px 18px; }
 .row-counter.complete { color: var(--ok); }
 .trophy-tags { display: grid; grid-template-columns: auto auto; gap: 3px; justify-items: end; }
 .tag {
-  padding: 1px 8px;
+  padding: 0 7px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.02);
   color: var(--muted);
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 700;
+  line-height: 1.2;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -568,7 +578,7 @@ main { padding: 0 28px 18px; }
   align-items: center;
   gap: 10px;
   margin: 0;
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.14em;
@@ -596,11 +606,11 @@ main { padding: 0 28px 18px; }
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
-  padding: 1px 8px;
+  padding: 0 8px;
 }
 .counter-btn {
   flex: none;
-  width: 21px; height: 21px;
+  width: 19px; height: 19px;
   border-radius: 50%;
   border: 1px solid rgba(217, 169, 79, 0.55);
   background: var(--gold-tint);
@@ -627,15 +637,15 @@ main { padding: 0 28px 18px; }
   text-align: right;
   color: var(--ok);
 }
-.detail-guide { margin: 0; font-size: 12px; line-height: 1.18; }
+.detail-guide { margin: 0; font-size: 11.5px; line-height: 1.12; }
 .detail-steps { list-style: none; counter-reset: step; margin: 0; padding: 0; }
 .detail-steps li {
   counter-increment: step;
   position: relative;
   padding-left: 30px;
   margin-bottom: 0;
-  font-size: 12px;
-  line-height: 1.18;
+  font-size: 11.5px;
+  line-height: 1.12;
 }
 .cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 11px; }
 .detail-steps li::before {
@@ -660,7 +670,7 @@ main { padding: 0 28px 18px; }
   background: var(--danger-tint);
   border: 1px solid rgba(229, 83, 75, 0.42);
   border-radius: var(--radius);
-  padding: 3px 9px;
+  padding: 2px 9px;
   margin: 4px 0 0;
 }
 .missable-box .alert-icon { flex: none; width: 20px; height: 20px; color: var(--danger-hi); margin-top: 1px; }
@@ -679,7 +689,7 @@ main { padding: 0 28px 18px; }
   background: rgba(217, 169, 79, 0.07);
   border: 1px solid rgba(217, 169, 79, 0.38);
   border-radius: var(--radius);
-  padding: 2px 9px 3px;
+  padding: 2px 9px;
   margin: 4px 0 0;
 }
 .honesty-box .honesty-label {
@@ -692,9 +702,9 @@ main { padding: 0 28px 18px; }
   margin-bottom: 0;
 }
 .honesty-box .honesty-text { font-size: 12px; line-height: 1.15; }
-.detail-sources { font-size: 12px; line-height: 1.3; color: var(--muted); }
+.detail-sources { font-size: 11px; line-height: 1.2; color: var(--muted); }
 .detail-sources ul { margin: 0; padding-left: 17px; }
-.detail-sources li { margin-bottom: 2px; }
+.detail-sources li { margin-bottom: 1px; }
 .src-ref { color: var(--gold-hi); font-weight: 700; }
 .src-note { color: var(--muted); }
 .src-date { color: var(--faint); }
@@ -757,7 +767,7 @@ main { padding: 0 28px 18px; }
 }
 .meta-jump:hover { text-decoration: underline; }
 .meta-grid { display: grid; gap: 6px 14px; }
-.meta-grid-cover { grid-template-columns: 0.76fr 0.94fr 0.94fr 0.56fr 2.12fr 1.50fr 0.94fr; }
+.meta-grid-cover { grid-template-columns: 1.00fr 0.95fr 1.00fr 0.50fr 1.75fr 1.45fr 1.05fr; }
 .meta-grid-cover .meta-label { font-size: 9px; letter-spacing: 0.04em; }
 .meta-cell { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
 .meta-label {
@@ -770,7 +780,7 @@ main { padding: 0 28px 18px; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.meta-value { font-size: 12.5px; font-weight: 750; line-height: 1.12; }
+.meta-value { font-size: 12px; font-weight: 750; line-height: 1.12; }
 .meta-note { font-size: 11px; color: var(--muted); }
 .meta-medals { display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; }
 .meta-medals b { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; margin-right: 6px; }
@@ -889,6 +899,18 @@ main { padding: 0 28px 18px; }
 .missable-card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
 .missable-card-head h3 { margin: 0; }
 .missable-card .missable-box { margin: 0 0 11px; }
+.missable-card .missable-counter {
+  display: inline-block;
+  margin: 0 0 11px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--gold-hi);
+  background: var(--gold-tint);
+  border: 1px solid rgba(217, 169, 79, 0.35);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
 .missable-card .open-guide { margin-top: 2px; }
 
 /* ---------- Tips & Strategies (roadmap) ---------- */

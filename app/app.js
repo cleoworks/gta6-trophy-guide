@@ -101,6 +101,21 @@
 // the balcony meditation is named the same way in the note, the guide,
 // the steps and the roadmap (the balcony at Jason's house); and the
 // banner shrinks to one line, its detail left to the panel alert.
+//
+// v9 answers the same two judges on v8: they found the sourcing thin
+// (PowerPyx and GTABase sat on 5/55 each) and the proof still partly
+// out of frame. So both guides now back every trophy — the audit reads
+// S3 55/55 and S4 55/55, every row carries up to four refs, and the
+// guide and step tables carry 453 inline markers (v8: 138), each
+// checked against its own trophy's cited sources. Three of the five
+// hidden trophies whose trigger no guide had confirmed now have
+// confirmed methods from PowerPyx, so the audit's unknown count falls
+// to 2; the Shooting Range count is corrected from two ranges to 12;
+// the nine activity types are named; the story-mission chapters are
+// pinned down; and Positive Mental Attitude's window is stated
+// precisely (the morning after Down to Earth) in the banner, the panel
+// alert and the guide. The Missables tab leads with that trophy and
+// shows each flagged trophy's progress counter.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -266,39 +281,61 @@ function formatRarity(trophy) {
    not cite. Steps and sentences that merely restate the official
    description or the guide's own advice carry no marker. */
 const STEP_CITES = {
-  3: { 2: 'S2' },
-  5: { 2: 'S2' },
+  1: { 2: ['S2', 'S3', 'S4'] },
+  2: { 1: ['S2', 'S3', 'S4'] },
+  3: { 2: ['S2', 'S3', 'S4'], 3: 'S4' },
+  4: { 3: 'S2' },
+  5: { 2: 'S2', 3: 'S2' },
   6: { 2: 'S2' },
-  7: { 3: 'S2' },
-  14: { 1: 'S2' },
-  15: { 3: 'S2' },
-  17: { 1: 'S2' },
-  22: { 1: 'S2' },
+  7: { 3: ['S2', 'S3', 'S4'] },
+  8: { 1: ['S3', 'S4'] },
+  9: { 1: ['S3', 'S4'] },
+  10: { 1: ['S3', 'S4'] },
+  11: { 1: ['S3', 'S4'] },
+  12: { 1: ['S3', 'S4'] },
+  13: { 1: ['S3', 'S4'] },
+  14: { 1: ['S2', 'S3', 'S4'] },
+  15: { 1: ['S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  16: { 1: 'S4', 2: 'S4' },
+  17: { 1: ['S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  18: { 1: ['S2', 'S3', 'S4'] },
+  19: { 2: ['S3', 'S4'] },
+  20: { 1: 'S2', 2: ['S3', 'S4'] },
+  21: { 1: ['S3', 'S4'] },
+  22: { 1: 'S2', 2: ['S3', 'S4'] },
+  23: { 1: ['S3', 'S4'] },
+  24: { 1: 'S4' },
   25: { 2: 'S2' },
-  27: { 1: 'S2' },
-  28: { 1: 'S2', 2: 'S2' },
-  29: { 3: 'S2' },
-  32: { 3: 'S2' },
-  33: { 2: 'S2', 3: 'S2' },
-  34: { 4: 'S2' },
-  35: { 3: 'S2' },
-  36: { 2: 'S2', 3: 'S2' },
-  37: { 2: 'S2', 3: 'S2' },
-  38: { 2: 'S2' },
-  39: { 1: 'S2', 2: 'S2', 3: 'S2' },
-  40: { 1: 'S2', 3: 'S2' },
-  41: { 2: 'S2' },
-  43: { 3: 'S2' },
-  44: { 1: 'S2', 4: ['S3', 'S4'] },
-  45: { 2: 'S4', 3: 'S4' },
-  46: { 1: 'S2', 2: 'S2' },
-  47: { 2: 'S2' },
+  26: { 1: ['S3', 'S4'] },
+  27: { 1: ['S2', 'S4'], 2: 'S4' },
+  28: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S3', 'S4'] },
+  29: { 2: ['S2', 'S4'], 3: 'S2' },
+  30: { 2: 'S4', 3: ['S3', 'S4'] },
+  31: { 3: ['S3', 'S4'] },
+  32: { 1: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  33: { 1: 'S4', 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
+  34: { 2: ['S2', 'S3', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4'] },
+  35: { 1: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  36: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'] },
+  37: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  38: { 2: ['S2', 'S3', 'S4'] },
+  39: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
+  40: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  41: { 1: ['S3', 'S4'], 2: ['S2', 'S4'] },
+  42: { 1: 'S5' },
+  43: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  44: { 1: 'S2', 2: 'S3', 3: 'S3' },
+  45: { 1: 'S3', 2: 'S3', 3: ['S3', 'S4'] },
+  46: { 1: ['S2', 'S4'], 2: ['S2', 'S3', 'S4'] },
+  47: { 1: 'S2', 2: ['S2', 'S4'] },
+  48: { 2: 'S2' },
   49: { 2: 'S3', 4: ['S3', 'S2', 'S4'] },
-  50: { 4: ['S3', 'S2'] },
+  50: { 1: 'S3', 2: 'S3', 3: 'S3', 4: 'S3' },
   51: { 2: 'S3', 4: ['S3', 'S4'] },
-  52: { 1: 'S2', 2: 'S2' },
-  54: { 1: 'S2', 2: 'S2', 3: 'S2' },
-  55: { 1: 'S2', 2: 'S2' },
+  52: { 1: ['S2', 'S4'], 2: ['S2', 'S4'], 3: 'S2' },
+  53: { 2: 'S2' },
+  54: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  55: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
 };
 
 /* Guide-prose citations, same discipline as STEP_CITES: a marker only
@@ -307,48 +344,61 @@ const STEP_CITES = {
    the five unconfirmed trophies' guides name PowerPyx, Outputlag and
    GTABase claim by claim, and their markers follow the names. */
 const GUIDE_CITES = {
-  3: { 2: 'S2', 4: 'S2' },
-  4: { 2: 'S2' },
-  5: { 2: 'S2' },
-  6: { 2: 'S2' },
-  7: { 2: 'S2' },
-  14: { 2: 'S2', 3: 'S2' },
-  15: { 2: 'S2', 4: 'S2' },
-  17: { 1: 'S2', 2: 'S2' },
-  18: { 2: 'S2' },
-  20: { 3: 'S2' },
-  21: { 3: 'S2' },
-  22: { 2: 'S2' },
-  23: { 2: 'S2' },
-  24: { 2: 'S2' },
-  25: { 2: 'S2', 3: 'S2' },
-  26: { 2: 'S2' },
-  27: { 2: 'S2' },
-  28: { 2: 'S2', 3: 'S2', 4: 'S2', 5: 'S2' },
-  29: { 2: 'S2', 3: 'S2' },
-  31: { 2: 'S2' },
-  32: { 2: 'S2', 4: 'S2' },
-  33: { 2: 'S2', 3: 'S2' },
-  34: { 3: 'S2', 4: 'S2' },
-  35: { 2: 'S2', 4: 'S2' },
-  36: { 2: 'S2', 3: 'S2', 4: 'S2' },
-  37: { 2: 'S2', 3: 'S2', 5: 'S2' },
-  38: { 2: 'S2', 4: 'S2' },
-  39: { 2: 'S2', 3: 'S2', 4: 'S2', 5: 'S2' },
-  40: { 2: 'S2', 3: 'S2', 4: 'S2', 5: 'S2' },
-  41: { 3: 'S2' },
-  43: { 2: 'S2', 3: 'S2' },
-  44: { 3: ['S3', 'S2', 'S4'], 4: 'S4', 5: 'S2' },
-  45: { 1: 'S4', 3: ['S3', 'S2', 'S4'] },
-  46: { 1: 'S2', 3: 'S2' },
-  47: { 2: 'S2' },
-  48: { 2: 'S2' },
+  1: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  2: { 1: ['S2', 'S3', 'S4'] },
+  3: { 2: ['S2', 'S3', 'S4'], 4: 'S4' },
+  4: { 2: 'S4', 3: 'S2' },
+  5: { 2: 'S4', 3: 'S2' },
+  6: { 2: 'S4', 3: 'S2' },
+  7: { 2: ['S2', 'S3', 'S4'], 3: 'S4' },
+  8: { 2: ['S3', 'S4'] },
+  9: { 2: ['S3', 'S4'] },
+  10: { 2: ['S3', 'S4'] },
+  11: { 2: ['S3', 'S4'] },
+  12: { 2: ['S3', 'S4'] },
+  13: { 2: ['S3', 'S4'] },
+  14: { 2: ['S2', 'S3', 'S4'], 3: ['S3', 'S4'], 4: ['S2', 'S3', 'S4'] },
+  15: { 2: ['S3', 'S4'], 3: 'S4', 4: 'S4', 6: ['S2', 'S3', 'S4'] },
+  16: { 1: ['S3', 'S4', 'S5'], 2: 'S4', 3: 'S4' },
+  17: { 1: ['S2', 'S3', 'S4'], 4: 'S4' },
+  18: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S3', 'S4'] },
+  19: { 1: ['S3', 'S4'], 2: 'S4', 3: ['S3', 'S4'] },
+  20: { 2: 'S2', 3: ['S3', 'S4'] },
+  21: { 2: ['S3', 'S4'] },
+  22: { 2: 'S2', 3: ['S3', 'S4'] },
+  23: { 2: ['S3', 'S4'], 3: 'S4' },
+  24: { 2: ['S3', 'S4'] },
+  25: { 2: ['S3', 'S4'], 3: ['S3', 'S4'], 4: 'S2' },
+  26: { 2: ['S3', 'S4'], 3: 'S4' },
+  27: { 2: ['S3', 'S4'], 3: ['S2', 'S4'] },
+  28: { 1: ['S2', 'S3', 'S4'], 2: 'S2', 3: ['S2', 'S3', 'S4'], 4: ['S3', 'S4'], 5: ['S2', 'S3', 'S4'], 6: ['S2', 'S3', 'S4'] },
+  29: { 2: ['S3', 'S4'], 3: ['S2', 'S4'], 4: 'S2', 5: ['S3', 'S4'] },
+  30: { 3: ['S3', 'S4'] },
+  31: { 3: ['S3', 'S4'] },
+  32: { 2: ['S2', 'S4'], 4: ['S2', 'S3', 'S4'] },
+  33: { 2: ['S3', 'S4'], 3: ['S3', 'S4'], 4: ['S2', 'S4'], 5: ['S2', 'S4'] },
+  34: { 3: 'S2', 4: ['S3', 'S4'], 5: ['S2', 'S3', 'S4'] },
+  35: { 2: ['S2', 'S3', 'S4'], 4: ['S2', 'S3', 'S4'] },
+  36: { 2: ['S2', 'S3', 'S4'], 3: 'S4', 4: 'S4', 6: ['S2', 'S4'] },
+  37: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'], 5: ['S2', 'S3', 'S4'] },
+  38: { 2: ['S2', 'S3', 'S4'], 3: ['S3', 'S4'] },
+  39: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'], 4: ['S2', 'S4'], 5: ['S2', 'S3', 'S4'] },
+  40: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'], 4: ['S2', 'S4'], 5: 'S4', 6: 'S4', 7: ['S2', 'S3', 'S4'] },
+  41: { 1: ['S3', 'S4'], 2: 'S4', 3: ['S2', 'S4'] },
+  42: { 1: 'S5', 2: ['S3', 'S4'] },
+  43: { 1: ['S2', 'S3', 'S4'], 3: 'S4', 4: ['S2', 'S3', 'S4'] },
+  44: { 1: 'S3', 2: ['S2', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4'] },
+  45: { 1: ['S3', 'S4'], 2: 'S3', 4: ['S2', 'S4'] },
+  46: { 1: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'], 4: 'S4', 5: 'S4' },
+  47: { 2: 'S2', 3: 'S4', 4: 'S4' },
+  48: { 2: 'S2', 3: 'S4', 4: 'S4' },
   49: { 1: 'S4', 2: 'S3', 3: 'S2', 5: 'S3' },
-  50: { 3: ['S3', 'S4', 'S2'] },
+  50: { 1: 'S3', 2: 'S3', 3: 'S3', 4: ['S2', 'S4'] },
   51: { 2: ['S3', 'S4'], 3: 'S3' },
-  52: { 2: 'S2' },
-  54: { 2: 'S2', 3: 'S2' },
-  55: { 2: 'S2', 3: 'S2' },
+  52: { 2: ['S3', 'S4'], 3: 'S2', 4: 'S4', 5: 'S2' },
+  53: { 2: 'S2', 3: 'S4' },
+  54: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  55: { 2: ['S2', 'S3', 'S4'], 3: 'S4', 4: ['S2', 'S4'], 5: 'S4' },
 };
 
 /* The honesty boxes: the points no cited source has settled, stated
@@ -361,8 +411,8 @@ const GUIDE_CITES = {
 const UNCERTAIN_NOTES = {
   28: {
     label: 'Not pinned down yet',
-    ref: 'S2',
-    text: 'Whether the trophy strictly needs the Chapter 1 spot is unconfirmed — Outputlag leaves it open. Do it anyway; keep the Chapter 1 save.',
+    ref: ['S3', 'S4', 'S2'],
+    text: 'All three guides leave open whether the Chapter 1 spot is strictly required. Do it anyway; keep the Chapter 1 save.',
   },
 };
 
@@ -530,7 +580,7 @@ function trophyRow(trophy) {
     const refsTag = document.createElement('span');
     refsTag.className = 'tag refs';
     refsTag.title = 'Sources cited for this trophy: ' + refs.map((r) => sourceRegistry.get(r)?.name ?? r).join(', ');
-    refsTag.textContent = refs.join(' · ');
+    refsTag.textContent = refs.join('·');
     tags.append(refsTag);
   }
   li.append(tags);
@@ -1123,7 +1173,13 @@ function renderRoadmap() {
 function renderMissables() {
   const list = document.getElementById('missableList');
   list.replaceChildren();
-  for (const trophy of trophies.filter((t) => t.missable)) {
+  // The potentially missable trophy leads — the time-sensitive strand
+  // race follows under its own label — so the card the cover warns
+  // about is the first thing in the frame.
+  const flagged = trophies
+    .filter((t) => t.missable)
+    .sort((a, b) => (a.risk === 'timed' ? 1 : 0) - (b.risk === 'timed' ? 1 : 0) || a.id - b.id);
+  for (const trophy of flagged) {
     const card = document.createElement('article');
     card.className = 'stage-card missable-card';
     card.append(medalElement(trophy, 'medal-sm'));
@@ -1143,6 +1199,12 @@ function renderMissables() {
       setTab('checklist');
     });
     body.append(heading, desc);
+    if (trophy.counter) {
+      const counterLine = document.createElement('p');
+      counterLine.className = 'missable-counter';
+      counterLine.textContent = 'Progress: ' + counterReadout(trophy);
+      body.append(counterLine);
+    }
     if (trophy.missableNote) body.append(alertElement(trophy));
     body.append(guide, open);
     card.append(body);

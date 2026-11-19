@@ -66,6 +66,18 @@
 // line) and one trophy changes kind; the hand-in is unchanged: it
 // copies app/ and screenshots/ exactly as they sit and lets the
 // vendored library summarise them.
+//
+// v9 note: the ninth version deepens the sourcing — PowerPyx and
+// GTABase now back every trophy, so the audit reads S3 55/55 and S4
+// 55/55 and the guide and step tables carry 453 inline markers; three
+// of the five hidden trophies whose trigger no guide had confirmed now
+// have confirmed methods, the Shooting Range count is corrected to 12,
+// the story-mission chapters are pinned down, and Positive Mental
+// Attitude's window is stated as the morning after Down to Earth. The
+// Missables tab leads with that trophy and shows each flagged trophy's
+// progress counter, and the checklist stack tightens a third step so
+// the frame holds eight full rows with the whole four-source panel in
+// it. The hand-in is unchanged.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
