@@ -60,7 +60,13 @@
    box set their own line-height, because the body's 1.5 strut was
    stretching their 12px text to a 22px stride.
    The Missables cards' guide prose now carries its inline
-   citations, at the card's own text size. */
+   citations, at the card's own text size.
+   v13 tightens the same stack a fourth step, again after measurement:
+   rows step down to 14/12px with 30px medals and no vertical padding,
+   the meta band, masthead, tabs and toolbar each lose a pixel or two,
+   the "Showing 55 of 55" count moves into the stage-chips row, and
+   the banner's watch list becomes three lines — so the frame now holds
+   ten full rows with the watch block in place. */
 
 :root {
   --bg: #0a0d12;
@@ -109,7 +115,7 @@ button { cursor: pointer; }
   --m1: var(--bron-1); --m2: var(--bron-2); --m3: var(--bron-3);
   position: relative;
   flex: none;
-  width: 34px; height: 34px;
+  width: 30px; height: 30px;
   border-radius: 50%;
   background:
     radial-gradient(circle at 32% 27%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 44%),
@@ -164,7 +170,7 @@ button { cursor: pointer; }
   justify-content: space-between;
   align-items: center;
   gap: 32px;
-  padding: 1px 28px;
+  padding: 0 28px;
   border-bottom: 1px solid var(--line);
   background:
     radial-gradient(640px 220px at 12% -50%, rgba(217, 169, 79, 0.10), rgba(217, 169, 79, 0) 62%),
@@ -178,7 +184,7 @@ button { cursor: pointer; }
   background: linear-gradient(90deg, rgba(217, 169, 79, 0), rgba(217, 169, 79, 0.65) 30%, rgba(217, 169, 79, 0.65) 70%, rgba(217, 169, 79, 0));
 }
 .eyebrow {
-  margin: 0 0 2px;
+  margin: 0 0 1px;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.28em;
@@ -196,14 +202,14 @@ button { cursor: pointer; }
   background-clip: text;
   color: transparent;
 }
-.tagline { margin: 2px 0 0; color: var(--muted); font-size: 12px; line-height: 1.35; max-width: 540px; }
+.tagline { margin: 1px 0 0; color: var(--muted); font-size: 12px; line-height: 1.35; max-width: 540px; }
 .masthead-progress {
   flex: none;
   width: 496px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 2px 12px 1px;
+  padding: 1px 12px 0;
   box-shadow: var(--shadow);
 }
 .progress-line { display: flex; justify-content: space-between; align-items: baseline; }
@@ -211,7 +217,7 @@ button { cursor: pointer; }
 #progressPct { color: var(--gold-hi); font-weight: 800; font-variant-numeric: tabular-nums; }
 .progress-track {
   height: 8px;
-  margin-top: 3px;
+  margin-top: 2px;
   background: #0a0d12;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -224,7 +230,7 @@ button { cursor: pointer; }
   background: linear-gradient(90deg, var(--gold-lo), var(--gold) 55%, var(--gold-hi));
   transition: width 0.25s ease;
 }
-.medal-counts { display: flex; flex-wrap: nowrap; gap: 6px 9px; margin-top: 3px; }
+.medal-counts { display: flex; flex-wrap: nowrap; gap: 6px 9px; margin-top: 1px; }
 .mc { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 11.5px; white-space: nowrap; }
 .mc b { color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; }
 .mc-hidden { color: var(--faint); }
@@ -255,7 +261,7 @@ button { cursor: pointer; }
   display: flex;
   align-items: center;
   gap: 16px;
-  margin: 1px 28px 0;
+  margin: 0 28px 0;
 }
 .tabs-row .spoiler-toggle {
   display: inline-flex;
@@ -279,7 +285,7 @@ button { cursor: pointer; }
   border: 0;
   background: transparent;
   border-radius: 999px;
-  padding: 1px 15px;
+  padding: 0 15px;
   line-height: 1.3;
   font-weight: 600;
   color: var(--muted);
@@ -314,7 +320,7 @@ button { cursor: pointer; }
   align-items: center;
   justify-content: space-between;
   margin-top: 2px;
-  padding: 1px 28px;
+  padding: 0 28px;
   background: var(--surface);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -324,7 +330,7 @@ button { cursor: pointer; }
   background: transparent;
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 3px 10px;
+  padding: 2px 10px;
   font-weight: 600;
   color: var(--muted);
   transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
@@ -345,12 +351,12 @@ button { cursor: pointer; }
   padding: 4px 8px;
   color: var(--text);
 }
-/* The search box is the toolbar's widest item (265px at its default
-   width) — the v12 Watch chip needs 74px of it, and the toolbar's real
-   content width is 1209px (1265px less its 28px side padding), so the
-   box is capped at 140px: still room for the whole placeholder, and
-   the one-row toolbar keeps 24px of spare. */
-.toolbar-right input[type="search"] { width: 140px; }
+/* The search box is the toolbar's widest item — the v13 To do and
+   Earned chips need 147px of it (61 + 74px chips + 6px gaps), funded by
+   dropping the "Grade" label (~45px) and the "Search" label (~50px) and
+   capping the box at 115px: the placeholder still fits (91px in a 97px
+   content area, measured), and the one-row toolbar keeps ~12px spare. */
+.toolbar-right input[type="search"] { width: 115px; }
 .toolbar-right select:focus, .toolbar-right input[type="search"]:focus {
   outline: 2px solid rgba(217, 169, 79, 0.55);
   outline-offset: 0;
@@ -424,7 +430,7 @@ main { padding: 0 28px 18px; }
 .banner-show { flex: none; margin-left: auto; padding: 0 8px; font-size: 12.5px; }
 .banner-next {
   margin: 0 2px;
-  font-size: 12px;
+  font-size: 11.5px;
   line-height: 1.2;
   color: var(--muted);
 }
@@ -442,7 +448,7 @@ main { padding: 0 28px 18px; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 .chips-label {
   font-size: 10.5px;
@@ -465,12 +471,25 @@ main { padding: 0 28px 18px; }
 .stage-chip-sm:hover { border-color: var(--gold-lo); color: var(--text); }
 .stage-chip-sm.complete { color: #a9e8c8; border-color: rgba(67, 181, 129, 0.55); }
 .list-meta {
+  /* Hidden: its text rides at the right end of the stage-chips row
+     (list-meta-inline) so the checklist starts one row higher. Kept
+     in the DOM so its text stays the single source of truth. */
+  display: none;
   margin: 0;
   color: var(--faint);
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.list-meta-inline {
+  margin-left: auto;
+  color: var(--faint);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 .trophy-list { list-style: none; margin: 0; padding: 0; }
 .group-header {
@@ -482,7 +501,7 @@ main { padding: 0 28px 18px; }
   border-bottom: 1px solid var(--line);
   margin-bottom: 1px;
 }
-.group-header:first-child { padding-top: 1px; }
+.group-header:first-child { padding-top: 0; }
 .group-name {
   font-size: 11px;
   font-weight: 800;
@@ -504,7 +523,7 @@ main { padding: 0 28px 18px; }
   grid-template-columns: 22px 36px minmax(0, 1fr) auto;
   gap: 12px;
   align-items: center;
-  padding: 1px 12px;
+  padding: 0 12px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   margin-bottom: 1px;
@@ -540,12 +559,12 @@ main { padding: 0 28px 18px; }
   font-weight: 900;
   line-height: 1;
 }
-.trophy-name { font-weight: 700; font-size: 15px; letter-spacing: 0.005em; line-height: 1.25; }
+.trophy-name { font-weight: 700; font-size: 14px; letter-spacing: 0.005em; line-height: 1.25; }
 .trophy-row.earned .trophy-name { color: var(--muted); }
-.trophy-desc { color: var(--muted); font-size: 13px; margin-top: 1px; line-height: 1.25; }
+.trophy-desc { color: var(--muted); font-size: 12px; margin-top: 1px; line-height: 1.25; }
 .row-counter {
-  margin-top: 2px;
-  font-size: 11.5px;
+  margin-top: 1px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--gold-hi);
@@ -561,7 +580,7 @@ main { padding: 0 28px 18px; }
   color: var(--muted);
   font-size: 10px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -798,7 +817,7 @@ main { padding: 0 28px 18px; }
   background: linear-gradient(180deg, var(--surface), #0e1219);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 0 14px 1px;
+  padding: 0 14px 0;
   margin-bottom: 1px;
 }
 .meta-band-head {
@@ -806,7 +825,7 @@ main { padding: 0 28px 18px; }
   justify-content: space-between;
   align-items: baseline;
   gap: 16px;
-  margin-bottom: 1px;
+  margin-bottom: 0;
 }
 .meta-title {
   font-size: 11px;
@@ -830,7 +849,7 @@ main { padding: 0 28px 18px; }
 .meta-grid-cover .meta-label { font-size: 9px; letter-spacing: 0.04em; }
 .meta-cell { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
 .meta-label {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -839,8 +858,8 @@ main { padding: 0 28px 18px; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.meta-value { font-size: 12px; font-weight: 750; line-height: 1.12; }
-.meta-note { font-size: 11px; color: var(--muted); }
+.meta-value { font-size: 11px; font-weight: 750; line-height: 1.12; }
+.meta-note { font-size: 10px; color: var(--muted); }
 .meta-medals { display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; }
 .meta-medals b { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; margin-right: 6px; }
 .meta-medals b:last-child { margin-right: 0; }

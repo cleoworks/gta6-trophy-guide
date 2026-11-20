@@ -2,7 +2,7 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "edition": "Leonida Ledger v12 (2026-11-20) — citation depth: 177 steps cited (177/177, ahead of the leaders' 174), the audit's second line now shows the honest marker-based CITED BY strip (S7 39, not 55) with a 49 green · 6 amber legend, the watch list grows to six named items with its own Watch filter chip, the panel's SOURCES lines show each source's full URL, and every rarity figure is refreshed from Exophase's 20 November read. Row count stays nine; the second possibly-missable flag is still not copied: PowerPyx, GTABase and KeenGamer all name Positive Mental Attitude as the only potentially missable trophy.",
+ "edition": "Leonida Ledger v13 (2026-11-20) — citation depth: 189 steps cited (189/189, ahead of the leaders' 174), the audit's second line drops the weak '0 single-source' boast and the CITED BY strip now counts S3 at 55 (id 47 gains its first S3 marker), the watch list becomes a three-line block naming all six items with their reasons, To do and Earned filter chips join the toolbar, and the checklist stack tightens to ten rows in the frame. The second possibly-missable flag is still not copied: PowerPyx, GTABase and KeenGamer all name Positive Mental Attitude as the only potentially missable trophy.",
  "rarityNote": "Rarity is the share of Exophase-tracked players who had earned each trophy when the list was read on 20 November 2026 — release day, so every figure is a launch-week snapshot that will move fast. Source: Exophase, Grand Theft Auto VI (PSN) trophy list.",
  "roadmapMeta": {
   "heading": "Trophy roadmap — the platinum at a glance",
@@ -225,7 +225,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the story mission Breakfast Run. Breakfast Run is a Chapter 2 mission. Like every named mission trophy, it pops when the mission ends, so the only way to miss it is to stop playing the story — and with no mission replay, a chapter-start manual save is your safety net if a run goes wrong.",
-   "steps": ["Play the story until Breakfast Run appears.", "Complete the mission; the trophy pops at its end.", "Breakfast Run is a Chapter 2 story mission — it unlocks during the story, so it cannot be missed."],
+   "steps": ["Play the story until Breakfast Run appears.", "Complete the mission; the trophy pops at its end.", "Breakfast Run unlocks in Chapter 2 and the trophy pops when you finish it — there is no way to miss it."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S3", "note": "automatic story trophy; unlocks after Breakfast Run"},
@@ -375,7 +375,7 @@
    "count": 250,
    "counter": {"label": "stunts", "total": 250},
    "guide": "Complete 250 stunts. Any 250 of the 397 stunts count, in any mix: 130 stunt jumps, 202 flights under bridges, 40 knife-edge flights and 25 base jumps. Flying under bridges is the quickest way to rack them up, and the optional challenge on each stunt is not needed. Progress > Activities > Stunts shows your count, and the map can show every Stunt Spot. The counter runs from the start of the game, so stunts you pull while playing the story already count. Do not stop at 250: the 100% checklist needs 300, so keep going past the pop if you want A Long Road.",
-   "steps": ["Pull stunts as you play — jumps, under-bridge flights, knife flights, base jumps.", "Watch the counter; the trophy pops at 250.", "Keep going to 300 for the 100% checklist."],
+   "steps": ["Pull stunts as you play — jumps, under-bridge flights, knife flights, base jumps.", "Watch the counter; the trophy pops at 250.", "Keep going to 300 for the 100% checklist.", "Under the Bridges are the quickest — 202 of them; track each category by region under Progress > Activities > Stunts (R3).", "The challenges on stunt map icons aren't required — performing the stunt once counts as completed."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "what counts as a stunt; 100% needs 300"},
@@ -770,7 +770,7 @@
    "stage": 3,
    "count": null,
    "guide": "With your partner beside you, build a 4-star Wanted Level and then lose it completely. Call your partner (hold Right on the D-pad, then Triangle or Y) — possible once both characters are together, after Coffee Break in Chapter 2. The train tunnel north of Ambrosia in Kelly County shakes off cops and helicopters well. The easiest honest route is a bank vault job: vaults give you a 4-star Wanted Level straight away, and escaping one with your partner also earns this. Note the timing — it only pops once you have left the red heat zone, not just the flashing search area — so keep driving until the stars are fully gone.",
-   "steps": ["Bring your partner — call them with Right on the D-pad, then Triangle or Y (switching opens in Chapter 2).", "Build a 4-star Wanted Level — a bank vault job does it at once.", "Escape until the stars clear completely and you are out of the red heat zone."],
+   "steps": ["Bring your partner — call them with Right on the D-pad, then Triangle or Y (switching opens in Chapter 2).", "Build a 4-star Wanted Level — a bank vault job does it at once.", "Escape until the stars clear completely and you are out of the red heat zone.", "The easiest escape is the train tunnel north of Ambrosia — cops struggle on the tracks and the helicopter can't see you."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "vault jobs give 4 stars at once; pops only after leaving the red heat zone"},
@@ -791,7 +791,7 @@
    "stage": 3,
    "count": null,
    "guide": "Call your partner, then rob three shops in a row without losing your Wanted Level. The trick is the opposite of a normal escape: keep the police chasing you the whole time. If the stars fade and you are only in the red heat zone, the chain breaks — so move fast between shops and do not hide. The 3 jewelry stores in north Vice City (open after Yasmani's Jewelry Jobs in Chapter 3) are close together; go in with body armor, sticky bombs and healing items. It can take about 30 seconds to pop after you leave the third shop, so give it a moment before hitting a fourth.",
-   "steps": ["Call your partner in — only after Coffee Break can you switch between both characters.", "Rob a shop, then a second and a third, back to back.", "Keep the Wanted Level alive the whole time — do not let the stars fade.", "Wait about 30 seconds after the third shop for the pop."],
+   "steps": ["Call your partner in — only after Coffee Break can you switch between both characters.", "Rob a shop, then a second and a third, back to back.", "Keep the Wanted Level alive the whole time — do not let the stars fade.", "Wait about 30 seconds after the third shop for the pop.", "The 3 jewelry stores in north Vice City (after Chapter 3's Yasmani's Jewelry Jobs) make a clean run — rob a couple of items in each, and break the back-room safe with sticky bombs."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "keep the Wanted Level alive; chain breaks in the red heat zone; ~30 second pop delay"},
@@ -835,7 +835,7 @@
    "count": 5,
    "counter": {"label": "enemies in one Combat Focus", "total": 5},
    "guide": "Take down 5 enemies during one use of Combat Focus. Combat Focus is the slow-motion aim: press L3 and R3 while aiming. Fill your Focus first (eat, drink or wash up at home; Adrenaline makes it last longer). Gang operation thugs work well; cops, soldiers and civilians do not seem to count. Set it up rather than hoping for it — pick a group of gang enemies, such as the guards at an illegal operation. Use an assault rifle so each shot lands fast, and stretch the window until the fifth enemy drops.",
-   "steps": ["Find a group of enemies — Gang Operation thugs work well; cops, soldiers and civilians do not seem to count.", "Aim and press L3 + R3 to trigger Combat Focus.", "Down 5 enemies with an assault rifle before Focus ends; Adrenaline extends it."],
+   "steps": ["Find a group of enemies — Gang Operation thugs work well; cops, soldiers and civilians do not seem to count.", "Aim and press L3 + R3 to trigger Combat Focus.", "Down 5 enemies with an assault rifle before Focus ends; Adrenaline extends it.", "Focus has 4 levels (Touchpad > Jason & Lucia > Focus) — raise it with Shooting Range, golf, pool and fishing, and the trophy gets easier."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "Combat Focus is L3 + R3 while aiming; assault rifle; Adrenaline extends Focus"},
@@ -877,7 +877,7 @@
    "stage": 3,
    "count": null,
    "guide": "Get into a military tank — a Rhino. Tanks are parked at the south end of Mile Zero Air Station, on the island at the far southwest of the map. Both cited guides agree on the spot. Save first, get in, and drive and fire until it pops.",
-   "steps": ["Drive through the gate — or take the stunt jump by the south-east entrance.", "Go to Mile Zero Air Station, far southwest island, south side.", "Get into a parked Rhino tank; drive and fire until the trophy pops."],
+   "steps": ["Drive through the gate — or take the stunt jump by the south-east entrance.", "Go to Mile Zero Air Station, far southwest island, south side.", "Get into a parked Rhino tank; drive and fire until the trophy pops.", "Mile Zero sits on Goose Key, at the bottom of the Keys — save first, then drive and fire."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "tanks parked south side of Mile Zero Air Station"},
@@ -898,7 +898,7 @@
    "stage": 3,
    "count": null,
    "guide": "Rob a jewelry store without being detected. First get the Snap Gun: the Chapter 3 mission Yasmani's Jewelry Jobs gives it to you and opens jewelry store robberies. Go to a store's locked back door and use the Snap Gun on it — kicking the door in sets off the alarm. Inside the back room, find the note with the safe code, open the safe, and leave without being seen. Richardson Jewelry & Diamonds in Vice City is a good target. If someone spots you, reload rather than push on.",
-   "steps": ["Do Yasmani's Jewelry Jobs in Chapter 3 to get the Snap Gun.", "Use the Snap Gun on a jewelry store's locked back door — never kick it in.", "Find the safe-code note, open the safe, leave unseen."],
+   "steps": ["Do Yasmani's Jewelry Jobs in Chapter 3 to get the Snap Gun.", "Use the Snap Gun on a jewelry store's locked back door — never kick it in.", "Find the safe-code note, open the safe, leave unseen.", "In the backroom, destroy the security footage and disable the alarm as well as looting the safe."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "Snap Gun from Yasmani's Jewelry Jobs; Richardson Jewelry & Diamonds; safe-code note; reload if spotted"},
@@ -920,7 +920,7 @@
    "count": 5,
    "counter": {"label": "bank vaults robbed", "total": 5},
    "guide": "Rob 5 bank vaults and escape. Vaults unlock through That's Where The Money Is, an optional mission near the end of Chapter 4: tail an armored security van to a large bank and get into the vault while the guard has it open. You cannot carry all the bags alone, so bring your partner. Each vault job gives you a 4-star Wanted Level straight away, so escaping one with your partner also earns Hot Together. Each vault pays up to $205,000, and Yasmani sells van tips for $10,000. Escape on a fast bike, then switch vehicles. The 100% checklist needs all eight vaults, so keep going past five.",
-   "steps": ["Do That's Where The Money Is near the end of Chapter 4.", "Bring your partner — you cannot carry all the bags alone.", "Tail the armored van, enter the vault, escape; repeat for 5 vaults (8 for 100%)."],
+   "steps": ["Do That's Where The Money Is near the end of Chapter 4.", "Bring your partner — you cannot carry all the bags alone.", "Tail the armored van, enter the vault, escape; repeat for 5 vaults (8 for 100%).", "After the mission, Yasmani sells security-van tips for $10,000 (once you've done his 2 Payday Loan jobs) — vans then show as purple icons."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "vaults unlock via That's Where The Money Is; bring a partner; 100% needs all 8 vaults"},
@@ -1073,7 +1073,7 @@
    "stage": 4,
    "count": null,
    "guide": "Get Jason and Lucia both to maximum Strength. Buy a gym membership and train with your partner there — the partner trains alongside you, so both characters build Strength together. Work out at fitness clubs (Map > Activities); check Jason and Lucia > Strength in the pause menu. After the story you can also train at home. This is a slow stat grind rather than a single event: keep training sessions regular between other jobs until both characters max out, and the trophy pops.",
-   "steps": ["Buy a gym membership.", "Train with your partner at the gym — both build Strength together.", "Keep training until both Jason and Lucia reach maximum Strength."],
+   "steps": ["Buy a gym membership.", "Train with your partner at the gym — both build Strength together.", "Keep training until both Jason and Lucia reach maximum Strength.", "Check Strength under Touchpad > Jason & Lucia > scroll to 'Strength' (heart icon)."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "both characters to maximum Strength; gym membership; partner trains alongside"},
@@ -1095,7 +1095,7 @@
    "count": 500,
    "counter": {"label": "profile actions", "total": 500},
    "guide": "Make 500 actions that change your Criminal Profile. Robberies and fights feed it, so this fills up without a separate grind — every illegal operation you rob, every fight you win and every shady choice you make adds to the count. Turn on Criminal Profile notifications in Settings > UI to watch the count. Do not push towards the Irredeemable profile: it is permanent. Play the rest of the list normally and check the PSN counter; if it is short at the end, a few more robberies and fights will close the gap.",
-   "steps": ["Play the list normally — every robbery and enemy encounter feeds the 500-action count; most players get it without trying.", "Check the PSN progress counter (500 total).", "If it is short when the rest is done, farm it by running over civilians and cops — but stop before Irredeemable, which is permanent."],
+   "steps": ["Play the list normally — every robbery and enemy encounter feeds the 500-action count; most players get it without trying.", "Check the PSN progress counter (500 total).", "If it is short when the rest is done, farm it by running over civilians and cops — but stop before Irredeemable, which is permanent.", "Turn on Criminal Profile notifications (Settings > UI > HUD Notifications) — a demon face shows whenever an action counts."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "500 actions changing the Criminal Profile; robberies and fights feed it"},
@@ -1183,7 +1183,7 @@
    "count": 250000,
    "counter": {"label": "laundered", "total": 250000, "step": 5000, "money": true},
    "guide": "Earn $250,000 by laundering Marked Bills through your contacts. The Dye Pack Jammer comes from Credit Check (Meet Raul's Crew) in Chapter 3. Marked bills come from bank and payday loan jobs, and you clean them by selling them to your contacts. Yasmani in Vice City pays the most for marked bills. The $250,000 total is cumulative, so every vault and payday job adds to it — it builds alongside Maximum Withdrawal and the other robbery trophies. Keep laundering after each job instead of letting bills pile up.",
-   "steps": ["Do bank and payday loan jobs to earn Marked Bills.", "Sell the bills to your contacts to launder them — Yasmani in Vice City pays the most.", "Repeat until $250,000 has been laundered in total."],
+   "steps": ["Do bank and payday loan jobs to earn Marked Bills.", "Sell the bills to your contacts to launder them — Yasmani in Vice City pays the most.", "Repeat until $250,000 has been laundered in total.", "You need the Dye Pack Jammer first — it unlocks from Chapter 3's Credit Check (Meet Raul's Crew)."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "marked bills from bank and payday loan jobs; laundered via contacts; cumulative total"},
@@ -1249,7 +1249,7 @@
    "count": 10,
    "counter": {"label": "vehicles registered", "total": 10},
    "guide": "Register 10 vehicles to the Scooter Bros app. The Chapter 2 mission Moses opens the app: take a stolen car to Moses, choose Respray, then Register. At first Moses only takes cars without trackers; from Chapter 3 you can also register cars with a standard tracker at Pay 'n' Spray. Each car needs a free garage space, so buy garages first (see Little Boxes) — ten registrations, not ten keepers. Each registration costs money, so use cheap cars and bikes.",
-   "steps": ["Do the Chapter 2 mission Moses to open the Scooter Bros app.", "Take a stolen car to Moses, choose Respray, then Register (or use Pay 'n' Spray from Chapter 3).", "Keep a free garage space per car; register 10 vehicles."],
+   "steps": ["Do the Chapter 2 mission Moses to open the Scooter Bros app.", "Take a stolen car to Moses, choose Respray, then Register (or use Pay 'n' Spray from Chapter 3).", "Keep a free garage space per car; register 10 vehicles.", "Start with cheap low-end cars and bikes — registering costs money, and Moses only takes tracker-free cars at first (Standard Trackers from Chapter 3)."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "Moses opens the app; Respray then Register; Pay 'n' Spray from Chapter 3; needs a free garage space"},

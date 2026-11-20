@@ -59,7 +59,16 @@
      into a four-item watch list, collapses the toolbar to one row with
      the spoiler switch moved into the tabs row, tightens the stack so
      the cover holds nine rows, and seeds one story trophy un-earned so
-     a masked row with its Reveal button stands in the frame. -->
+     a masked row with its Reveal button stands in the frame. v12
+     refreshes every rarity figure from Exophase's 20 November read,
+     counts the audit's CITED BY figures from the markers actually
+     rendered, grows the watch list to six named items with its own
+     Watch filter chip, and prints each source's full URL in the
+     panel. v13 cites twelve more steps (189/189), turns the watch
+     list into a three-line block naming all six items with their
+     reasons, adds To do and Earned filter chips, drops the weak "0
+     single-source" boast from the audit, and tightens the stack so
+     the cover holds ten rows with the watch block in place. -->
 <title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -103,10 +112,12 @@
     <button type="button" data-kind="activities" class="chip">Activities</button>
     <button type="button" data-kind="online" class="chip">Online</button>
     <button type="button" data-kind="watch" class="chip">Watch</button>
+    <button type="button" data-kind="todo" class="chip">To do</button>
+    <button type="button" data-kind="earned" class="chip">Earned</button>
   </div>
   <div class="toolbar-right">
-    <label class="grade-label">Grade
-      <select id="gradeFilter">
+    <label class="grade-label">
+      <select id="gradeFilter" aria-label="Grade">
         <option value="all">All grades</option>
         <option value="platinum">Platinum</option>
         <option value="gold">Gold</option>
@@ -114,7 +125,7 @@
         <option value="bronze">Bronze</option>
       </select>
     </label>
-    <label class="search-label">Search <input id="searchBox" type="search" placeholder="Trophy name…"></label>
+    <label class="search-label"><input id="searchBox" type="search" placeholder="Trophy name…" aria-label="Search"></label>
     <button id="exportBtn" type="button" class="btn">Export</button>
     <label class="import-btn btn">Import <input id="importFile" type="file" accept="application/json,.json"></label>
     <button id="resetBtn" type="button" class="btn btn-quiet">Reset</button>
@@ -159,7 +170,7 @@
 </main>
 
 <footer class="colophon">
-  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 11 · Updated November 20, 2026</p>
+  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 13 · Updated November 20, 2026</p>
   <p class="provenance">Built on PlayStation's official trophy list: names, descriptions and grades are Sony's text, as mirrored by Exophase and PSNProfiles. Every guide in this app names its sources in its own panel.</p>
   <p><strong>Rarity.</strong> The percentage on each trophy is the share of Exophase-tracked players who had earned it when the list was read on 20 November 2026 — the day after release. Treat it as a launch-week snapshot: these figures move fast as more players start the game.</p>
   <p><strong>Sources.</strong> Guide prose and steps that come from a published launch-week guide cite Outputlag's GTA 6 Trophy List, PowerPyx's Trophy Guide &amp; Roadmap, GTABase's Trophy Guide &amp; Achievements List and KeenGamer's GTA 6 Trophy Guide &amp; Platinum Roadmap (Outputlag, PowerPyx, GTABase and KeenGamer checked 2026-11-20); the roadmap figures up top — difficulty, time, step budgets — come from PowerPyx's Trophy Guide &amp; Roadmap, cross-checked with GTABase, Outputlag and KeenGamer. Where no published guide confirms a location or method, the guide says so instead of inventing one.</p>

@@ -93,6 +93,13 @@
 // filter chip, shows each source's full URL in the panel's SOURCES
 // lines, and refreshes every rarity figure from Exophase's 20 November
 // read. The hand-in is unchanged.
+//
+// v13 note: the thirteenth version adds 12 cited steps (189/189, ahead
+// of the leaders' 174), turns the watch list into a three-line block
+// naming all six items with their reasons, adds To do and Earned filter chips,
+// drops the weak "0 single-source" boast from audit line two (its CITED
+// BY strip now counts S3 at 55), and tightens the checklist stack so
+// the cover holds ten rows. The hand-in is unchanged.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

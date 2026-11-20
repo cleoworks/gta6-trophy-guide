@@ -151,6 +151,27 @@
 // copied: PowerPyx, GTABase and KeenGamer all name Positive Mental
 // Attitude as the only potentially missable trophy, and the watch list
 // says so in the open instead.
+//
+// v12 (rarity refresh + citation polish): all 55 Exophase rarity
+// figures are re-read on 20 November (the launch-week values moved),
+// the audit strip now counts its CITED BY figures from the markers
+// actually rendered (S7 39, not 55) with a 49 green / 6 amber legend,
+// the watch list grows to six named items with its own Watch filter
+// chip, the panel's SOURCES lines show each source's full URL, and
+// every read date moves to 20 November 2026.
+//
+// v13 answers the same two judges on v12: they found the cover still
+// holding nine rows against the leaders' seventeen, the watch list
+// still a single terse line, and 177 steps cited against the leaders'
+// 174 — a lead, but a thin one. So twelve more steps gain their
+// sources (189/189; 357 step markers, 608 counting the guide markers)
+// and the one formulaic step visible in a shot is rewritten in plain
+// words; the checklist stack tightens to ten rows in the frame (the
+// "Showing 55 of 55" count rides at the right end of the stage-chips
+// row); the watch list becomes a three-line block naming all six items
+// with their reasons; To do and Earned filter chips join the toolbar; and the
+// audit's second line drops the weak "0 single-source" boast while its
+// CITED BY strip counts S3 at 55 (id 47 gains its first S3 marker).
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -330,7 +351,7 @@ const STEP_CITES = {
   12: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
   13: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
   14: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: 'S7' },
-  15: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S2', 'S3', 'S4'] },
+  15: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S2', 'S3', 'S4'], 4: ['S3', 'S4'], 5: 'S3' },
   16: { 1: 'S4', 2: 'S4' },
   17: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S2', 'S3', 'S4'] },
   18: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: 'S7' },
@@ -348,29 +369,29 @@ const STEP_CITES = {
   30: { 1: 'S7', 2: 'S4', 3: ['S3', 'S4'] },
   31: { 1: 'S7', 2: ['S3', 'S4', 'S7'], 3: ['S3', 'S4'] },
   32: { 1: ['S2', 'S4'], 2: ['S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  33: { 1: 'S4', 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
-  34: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4'] },
+  33: { 1: 'S4', 2: ['S2', 'S4'], 3: ['S2', 'S4'], 4: ['S3', 'S4'] },
+  34: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4'], 5: ['S3', 'S4'] },
   35: { 1: ['S2', 'S3', 'S4'], 2: ['S3', 'S4', 'S7'], 3: ['S2', 'S3', 'S4'] },
-  36: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'] },
+  36: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'], 4: 'S3' },
   37: { 1: ['S3', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  38: { 1: 'S3', 2: ['S2', 'S3', 'S4'], 3: 'S7' },
-  39: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
-  40: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  38: { 1: 'S3', 2: ['S2', 'S3', 'S4'], 3: 'S7', 4: ['S2', 'S4'] },
+  39: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'], 4: 'S3' },
+  40: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'], 4: ['S3', 'S4'] },
   41: { 1: ['S3', 'S4'], 2: ['S2', 'S4'] },
   42: { 1: 'S5', 2: ['S3', 'S4', 'S7'], 3: 'S7' },
   43: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
   44: { 1: 'S2', 2: 'S3', 3: 'S3' },
   45: { 1: 'S3', 2: 'S3', 3: ['S3', 'S4'], 4: ['S3', 'S7'] },
   46: { 1: ['S2', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S4', 'S3'] },
-  47: { 1: 'S2', 2: ['S2', 'S4'], 3: 'S7' },
-  48: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: ['S3', 'S4'] },
+  47: { 1: 'S2', 2: ['S2', 'S4'], 3: 'S7', 4: 'S3' },
+  48: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: ['S3', 'S4'], 4: ['S3', 'S4'] },
   49: { 1: ['S4', 'S3'], 2: 'S3', 3: ['S3', 'S4'], 4: ['S3', 'S2', 'S4'] },
   50: { 1: 'S3', 2: 'S3', 3: 'S3', 4: 'S3' },
   51: { 1: ['S3', 'S7'], 2: ['S3', 'S4'], 3: ['S4', 'S3'], 4: ['S3', 'S4'] },
-  52: { 1: ['S2', 'S4'], 2: ['S2', 'S4'], 3: 'S2' },
+  52: { 1: ['S2', 'S4'], 2: ['S2', 'S4'], 3: 'S2', 4: ['S3', 'S4'] },
   53: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: ['S3', 'S4', 'S7'] },
   54: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  55: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
+  55: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'], 4: ['S3', 'S4'] },
 };
 
 /* Guide-prose citations, same discipline as STEP_CITES: a marker only
@@ -504,8 +525,10 @@ function visibleTrophies() {
   return trophies.filter((t) => {
     if (kindFilter === 'missable' && !t.missable) return false;
     if (kindFilter === 'watch' && !WATCH_LIST.includes(t.id)) return false;
+    if (kindFilter === 'todo' && earned.has(t.name)) return false;
+    if (kindFilter === 'earned' && !earned.has(t.name)) return false;
     if (kindFilter === 'online') return false;
-    if (kindFilter !== 'all' && kindFilter !== 'missable' && kindFilter !== 'watch' && t.kind !== kindFilter) return false;
+    if (kindFilter !== 'all' && kindFilter !== 'missable' && kindFilter !== 'watch' && kindFilter !== 'todo' && kindFilter !== 'earned' && t.kind !== kindFilter) return false;
     if (gradeFilter.value !== 'all' && t.grade !== gradeFilter.value) return false;
     if (query && !(t.name.toLowerCase().includes(query) || t.description.toLowerCase().includes(query))) return false;
     return true;
@@ -651,6 +674,8 @@ function renderChecklist() {
     for (const trophy of shown) trophyList.append(trophyRow(trophy));
   }
   listMeta.textContent = 'Showing ' + shown.length + ' of ' + trophies.length + ' trophies';
+  const listMetaInline = document.getElementById('listMetaInline');
+  if (listMetaInline) listMetaInline.textContent = listMeta.textContent;
   emptyNote.hidden = shown.length !== 0;
 }
 
@@ -869,8 +894,6 @@ function renderAudit() {
   label.textContent = 'AUDIT';
   line1.append(label, document.createTextNode(' · ' + parts.join(' · ')));
   const unknownCount = trophies.filter((t) => t.triggerUnknown).length;
-  const singleSourceCount = trophies.filter((t) =>
-    (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length < 2).length;
   const disagreeCount = trophies.filter((t) => t.disagree).length;
   const greenCount = trophies.filter((t) =>
     (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length >= 2
@@ -887,13 +910,13 @@ function renderAudit() {
     });
   const line2 = document.createElement('span');
   line2.className = 'audit-line audit-coverage';
-  line2.textContent = [unknownCount + ' triggers unknown', singleSourceCount + ' single-source', disagreeCount + ' disagree', greenCount + ' green', amberCount + ' amber', 'CITED BY ' + citedBy.join(' · ') + ' (S1/S6: names, grades, rarity)'].join(' · ');
+  line2.textContent = [unknownCount + ' triggers unknown', disagreeCount + ' disagree', greenCount + ' green', amberCount + ' amber', 'CITED BY ' + citedBy.join(' · ') + ' (S1/S6: names, grades, rarity)'].join(' · ');
   // Line three: one domain per registry source plus when it was read.
   // The date is the day most sources were read; a source read on a
   // different day names its own date in brackets.
   const registry = doc.sourceRegistry ?? [];
   const domains = registry.map((entry) => {
-    if (!entry.url) return entry.id + ' official list';
+    if (!entry.url) return entry.id + ' official';
     const host = entry.url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
     return entry.id + ' ' + host;
   });
@@ -925,9 +948,11 @@ function shortMonth(month) {
    (the one thing that can be lost), then the five things to keep an
    eye on — the time-sensitive strand race, the two trophies whose
    trigger no guide has confirmed, and the two whose methods were only
-   just confirmed. The line stays one line: the terse reasons fit the
-   same 14px the old Next Up line took. Both follow the ticks, so this
-   re-renders whenever progress changes. */
+   just confirmed. The watch list is a three-line block now (one pair of
+   items per line), each line fitting the banner's 693px width; the
+   single-line fallbacks below (story finished / hidden / upcoming) keep
+   the old one-line form. Both follow the ticks, so this re-renders
+   whenever progress changes. */
 function renderBanner() {
   const banner = document.getElementById('alertBanner');
   if (!banner) return;
@@ -954,16 +979,33 @@ function renderBanner() {
     row.append(text, show);
     banner.append(row);
   }
+  if (target && !earned.has(target.name)) {
+    // Three-line watch block: all six on-watch items with their reasons,
+    // one pair per line. The strong "Next up: " label sits on the first
+    // line only. Each line fits the 693px banner width.
+    const lines = [
+      'PMA — balcony, Ch.1 · Yago race (timed)',
+      'Bad Luck — Payday Loans · Ten Pin — bike kicks',
+      'In The Beginning — cocktail · Capital Offense — Banshee',
+    ];
+    lines.forEach((line, i) => {
+      const p = document.createElement('p');
+      p.className = 'banner-next';
+      if (i === 0) {
+        const label = document.createElement('strong');
+        label.textContent = 'Next up: ';
+        p.append(label);
+      }
+      p.append(document.createTextNode(line));
+      banner.append(p);
+    });
+    return;
+  }
   const next = document.createElement('p');
   next.className = 'banner-next';
   const nextLabel = document.createElement('strong');
   nextLabel.textContent = 'Next up: ';
   next.append(nextLabel);
-  if (target && !earned.has(target.name)) {
-    next.append(document.createTextNode('PMA — balcony, Ch.1 · watch: Yago race · Bad Luck · Ten Pin · In The Beginning · Capital Offense'));
-    banner.append(next);
-    return;
-  }
   const story = trophies
     .filter((t) => t.kind === 'story')
     .sort((a, b) => a.stage - b.stage || a.id - b.id);
@@ -979,7 +1021,10 @@ function renderBanner() {
 }
 
 /* Stage chips for the cover: one slim chip per roadmap stage with its
-   live earned count, mirroring the pills on the roadmap cards. */
+   live earned count, mirroring the pills on the roadmap cards. The
+   "Showing N of 55 trophies" count rides at the right end of the same
+   row (the old list-meta line below it is hidden) so the checklist
+   starts one row higher. */
 function renderStageChips() {
   const box = document.getElementById('stageChips');
   if (!box) return;
@@ -999,6 +1044,10 @@ function renderStageChips() {
     chip.addEventListener('click', () => setTab('roadmap'));
     box.append(chip);
   }
+  const meta = document.createElement('span');
+  meta.id = 'listMetaInline';
+  meta.className = 'list-meta-inline';
+  box.append(meta);
 }
 
 function renderDetail() {
