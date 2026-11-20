@@ -300,16 +300,22 @@ button { cursor: pointer; }
 .mc-hidden { color: var(--faint); }
 
 /* ---------- Audit strip: what the guide contains, in two quiet lines ---------- */
+/* v23: the strip carries two more segments (sites/pages read)
+   and a longer trigger segment; at 12px the line overflowed its
+   band and the ellipsis sawn off the green/amber tail. The type
+   steps down to 10.5px with tighter stride and narrower gutters
+   so the whole line stands on one line again — it is a caption
+   strip, and every number in it is unchanged. */
 .audit-strip {
   margin: 0;
-  padding: 0 28px;
+  padding: 0 20px;
   background: var(--surface);
   border-bottom: 1px solid var(--line);
   color: var(--muted);
-  font-size: 12px;
+  font-size: 10.5px;
   font-weight: 600;
   line-height: 1.22;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   font-variant-numeric: tabular-nums;
 }
 .audit-line { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

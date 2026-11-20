@@ -449,6 +449,10 @@ function rowDescription(text, clipLimit) {
    sources, so a marker can never point at a source the trophy does
    not cite. Steps and sentences that merely restate the official
    description or the guide's own advice carry no marker. */
+/* v23: sixteen more launch-week lists and guides were read in full (registry
+   S8-S23; reading ledger, 21 November 2026) and are cited only where a
+   trophy's own text uses their fact — the same subset check keeps every
+   marker honest. Trophy 28's steps now name all ten meditation spots. */
 const STEP_CITES = {
   1: { 1: 'S7', 2: ['S2', 'S3', 'S4'], 3: ['S7', 'S3', 'S4'] },
   2: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
@@ -462,49 +466,49 @@ const STEP_CITES = {
   10: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
   11: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
   12: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
-  13: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
-  14: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: 'S7' },
+  13: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4', 'S16'] },
+  14: { 1: ['S2', 'S3', 'S4'], 2: ['S7', 'S23'], 3: 'S7' },
   15: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S2', 'S3', 'S4'], 4: ['S3', 'S4'], 5: 'S3' },
-  16: { 1: 'S4', 2: 'S4' },
-  17: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S2', 'S3', 'S4'] },
+  16: { 1: ['S4', 'S15', 'S17'], 2: ['S4', 'S12'] },
+  17: { 1: ['S3', 'S4', 'S16', 'S17'], 2: 'S7', 3: ['S2', 'S3', 'S4', 'S16', 'S17'] },
   18: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: 'S7' },
   19: { 1: ['S3', 'S4', 'S7'], 2: ['S3', 'S4'], 3: 'S7' },
   20: { 1: 'S2', 2: ['S3', 'S4'], 3: 'S7' },
   21: { 1: ['S3', 'S4'], 2: ['S3', 'S4', 'S7'], 3: ['S3', 'S4'] },
   22: { 1: 'S2', 2: ['S3', 'S4'], 3: ['S3', 'S4'] },
-  23: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
-  24: { 1: 'S4', 2: 'S7', 3: ['S3', 'S4'] },
+  23: { 1: ['S3', 'S4', 'S15'], 2: 'S7', 3: ['S3', 'S4', 'S15'] },
+  24: { 1: ['S4', 'S16'], 2: 'S7', 3: ['S3', 'S4'] },
   25: { 1: ['S3', 'S4', 'S7'], 2: ['S3', 'S4'], 3: ['S3', 'S4'], 4: 'S2', 5: 'S7', 6: 'S7' },
-  26: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
-  27: { 1: ['S2', 'S4'], 2: 'S4', 3: ['S3', 'S4'] },
-  28: { 1: ['S2', 'S3', 'S7'], 2: ['S3', 'S7'], 3: ['S2', 'S3', 'S4'], 4: ['S2', 'S3', 'S4'], 5: ['S3', 'S4'], 6: 'S7', 7: ['S3', 'S7'] },
-  29: { 1: 'S7', 2: ['S2', 'S4'], 3: 'S2' },
+  26: { 1: ['S3', 'S4', 'S15'], 2: 'S7', 3: ['S3', 'S4'] },
+  27: { 1: ['S2', 'S4'], 2: 'S4', 3: ['S3', 'S4', 'S15'] },
+  28: { 1: ['S2', 'S3', 'S7', 'S11'], 2: ['S3', 'S7', 'S10', 'S11'], 3: ['S2', 'S3', 'S4'], 4: ['S3', 'S10', 'S11'], 5: ['S3', 'S10', 'S11'], 6: ['S3', 'S10', 'S11'], 7: ['S3', 'S10', 'S11'], 8: ['S3', 'S10', 'S11'], 9: ['S3', 'S10', 'S11'], 10: ['S3', 'S10', 'S11'], 11: ['S3', 'S10', 'S11'], 12: ['S3', 'S10', 'S11'], 13: ['S3', 'S7'] },
+  29: { 1: ['S7', 'S15'], 2: ['S2', 'S4'], 3: 'S2' },
   30: { 1: 'S7', 2: 'S4', 3: ['S3', 'S4'] },
-  31: { 1: 'S7', 2: ['S3', 'S4', 'S7'], 3: ['S3', 'S4'] },
+  31: { 1: 'S7', 2: ['S3', 'S4', 'S7', 'S16'], 3: ['S3', 'S4'] },
   32: { 1: ['S2', 'S4'], 2: ['S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  33: { 1: 'S4', 2: ['S2', 'S4'], 3: ['S2', 'S4'], 4: ['S3', 'S4'] },
-  34: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4'], 5: ['S3', 'S4'] },
+  33: { 1: 'S4', 2: ['S2', 'S4'], 3: ['S2', 'S4'], 4: ['S3', 'S4', 'S17'] },
+  34: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4', 'S18'], 5: ['S3', 'S4', 'S15', 'S17'] },
   35: { 1: ['S2', 'S3', 'S4'], 2: ['S3', 'S4', 'S7'], 3: ['S2', 'S3', 'S4'] },
   36: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'], 4: 'S3' },
-  37: { 1: ['S3', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  38: { 1: 'S3', 2: ['S2', 'S3', 'S4'], 3: 'S7', 4: ['S2', 'S4'] },
-  39: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'], 4: 'S3' },
-  40: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'], 4: ['S3', 'S4'] },
+  37: { 1: ['S3', 'S4'], 2: ['S2', 'S3', 'S4', 'S17'], 3: ['S2', 'S3', 'S4', 'S17'] },
+  38: { 1: 'S3', 2: ['S2', 'S3', 'S4', 'S15', 'S16'], 3: 'S7', 4: ['S2', 'S4'] },
+  39: { 1: ['S2', 'S3', 'S4', 'S16'], 2: ['S2', 'S4'], 3: ['S2', 'S4'], 4: 'S3' },
+  40: { 1: ['S2', 'S3', 'S4', 'S18'], 2: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'], 4: ['S3', 'S4'] },
   41: { 1: ['S3', 'S4'], 2: ['S2', 'S4'] },
-  42: { 1: 'S5', 2: ['S3', 'S4', 'S7'], 3: 'S7' },
-  43: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  42: { 1: ['S5', 'S12'], 2: ['S3', 'S4', 'S7'], 3: 'S7' },
+  43: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4', 'S12'], 3: ['S2', 'S3', 'S4'] },
   44: { 1: 'S2', 2: 'S3', 3: 'S3' },
   45: { 1: 'S3', 2: 'S3', 3: ['S3', 'S4'], 4: ['S3', 'S7'] },
   46: { 1: ['S2', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S4', 'S3'] },
-  47: { 1: 'S2', 2: ['S2', 'S4'], 3: 'S7', 4: 'S3' },
-  48: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: ['S3', 'S4'], 4: ['S3', 'S4'] },
+  47: { 1: 'S2', 2: ['S2', 'S4', 'S17'], 3: 'S7', 4: 'S3' },
+  48: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S12'], 3: ['S3', 'S4'], 4: ['S3', 'S4'] },
   49: { 1: ['S4', 'S3'], 2: 'S3', 3: ['S3', 'S4'], 4: ['S3', 'S2', 'S4'] },
   50: { 1: 'S3', 2: 'S3', 3: 'S3', 4: 'S3' },
   51: { 1: ['S3', 'S7'], 2: ['S3', 'S4'], 3: ['S4', 'S3'], 4: ['S3', 'S4'] },
   52: { 1: ['S2', 'S4'], 2: ['S2', 'S4'], 3: 'S2', 4: ['S3', 'S4'] },
   53: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: ['S3', 'S4', 'S7'] },
-  54: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  55: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'], 4: ['S3', 'S4'] },
+  54: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S3', 'S4', 'S12', 'S18'], 3: ['S2', 'S3', 'S4', 'S18'] },
+  55: { 1: ['S2', 'S3', 'S4', 'S16'], 2: ['S2', 'S4'], 3: ['S2', 'S4'], 4: ['S3', 'S4'] },
 };
 
 /* Guide-prose citations, same discipline as STEP_CITES: a marker only
@@ -525,49 +529,49 @@ const GUIDE_CITES = {
   10: { 2: ['S3', 'S4'] },
   11: { 2: ['S3', 'S4'] },
   12: { 2: ['S3', 'S4'] },
-  13: { 2: ['S3', 'S4'] },
-  14: { 2: ['S2', 'S3', 'S4'], 3: ['S3', 'S4'], 4: ['S2', 'S3', 'S4'] },
+  13: { 2: ['S3', 'S4', 'S16'] },
+  14: { 2: ['S2', 'S3', 'S4'], 3: ['S3', 'S4', 'S9', 'S23'], 4: ['S2', 'S3', 'S4'] },
   15: { 2: ['S3', 'S4'], 3: 'S4', 4: 'S4', 6: ['S2', 'S3', 'S4'] },
-  16: { 1: ['S3', 'S4', 'S5'], 2: 'S4', 3: 'S4' },
-  17: { 1: ['S2', 'S3', 'S4'], 4: 'S4' },
+  16: { 1: ['S3', 'S4', 'S5'], 2: ['S4', 'S15', 'S17'], 3: 'S4' },
+  17: { 1: ['S2', 'S3', 'S4', 'S16', 'S17'], 4: 'S4' },
   18: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S3', 'S4'] },
   19: { 1: ['S3', 'S4'], 2: 'S4', 3: ['S3', 'S4'] },
   20: { 2: 'S2', 3: ['S3', 'S4'] },
   21: { 2: ['S3', 'S4'] },
   22: { 2: 'S2', 3: ['S3', 'S4'] },
-  23: { 2: ['S3', 'S4'], 3: 'S4' },
-  24: { 2: ['S3', 'S4'] },
+  23: { 2: ['S3', 'S4', 'S15'], 3: ['S4', 'S15'] },
+  24: { 2: ['S3', 'S4', 'S16'] },
   25: { 2: ['S3', 'S4'], 3: ['S3', 'S4'], 4: 'S2' },
-  26: { 2: ['S3', 'S4'], 3: 'S4' },
-  27: { 2: ['S3', 'S4'], 3: ['S2', 'S4'] },
-  28: { 1: ['S2', 'S3', 'S4'], 2: ['S3', 'S7'] },
-  29: { 2: ['S3', 'S4'], 3: ['S2', 'S4'], 4: 'S2', 5: ['S3', 'S4'] },
+  26: { 2: ['S3', 'S4', 'S15'], 3: 'S4' },
+  27: { 2: ['S3', 'S4', 'S15'], 3: ['S2', 'S4', 'S15'] },
+  28: { 1: ['S2', 'S3', 'S4', 'S10', 'S11'], 2: ['S3', 'S7'] },
+  29: { 2: ['S3', 'S4', 'S15'], 3: ['S2', 'S4'], 4: 'S2', 5: ['S3', 'S4', 'S15'] },
   30: { 3: ['S3', 'S4'] },
-  31: { 3: ['S3', 'S4'] },
+  31: { 3: ['S3', 'S4', 'S16'] },
   32: { 2: ['S2', 'S4'], 4: ['S2', 'S3', 'S4'] },
-  33: { 2: ['S3', 'S4'], 3: ['S3', 'S4'], 4: ['S2', 'S4'], 5: ['S2', 'S4'] },
-  34: { 3: 'S2', 4: ['S3', 'S4'], 5: ['S2', 'S3', 'S4'] },
+  33: { 2: ['S3', 'S4'], 3: ['S3', 'S4', 'S17'], 4: ['S2', 'S4'], 5: ['S2', 'S4'] },
+  34: { 3: 'S2', 4: ['S3', 'S4', 'S15', 'S17', 'S18'], 5: ['S2', 'S3', 'S4', 'S18'] },
   35: { 2: ['S2', 'S3', 'S4'], 4: ['S2', 'S3', 'S4'] },
   36: { 2: ['S2', 'S3', 'S4'], 3: 'S4', 4: 'S4', 6: ['S2', 'S4'] },
-  37: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'], 5: ['S2', 'S3', 'S4'] },
-  38: { 2: ['S2', 'S3', 'S4'], 3: ['S3', 'S4'] },
-  39: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'], 4: ['S2', 'S4'], 5: ['S2', 'S3', 'S4'] },
-  40: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'], 4: ['S2', 'S4'], 5: 'S4', 6: 'S4', 7: ['S2', 'S3', 'S4'] },
+  37: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4', 'S17'], 5: ['S2', 'S3', 'S4', 'S17'] },
+  38: { 2: ['S2', 'S3', 'S4', 'S15', 'S16'], 3: ['S3', 'S4'] },
+  39: { 2: ['S2', 'S3', 'S4', 'S16'], 3: ['S2', 'S4', 'S18'], 4: ['S2', 'S4', 'S18'], 5: ['S2', 'S3', 'S4'] },
+  40: { 2: ['S2', 'S3', 'S4', 'S15', 'S18'], 3: ['S2', 'S4'], 4: ['S2', 'S4', 'S15'], 5: 'S4', 6: ['S4', 'S18'], 7: ['S2', 'S3', 'S4'] },
   41: { 1: ['S3', 'S4'], 2: 'S4', 3: ['S2', 'S4'] },
   42: { 1: 'S5', 2: ['S3', 'S4'] },
-  43: { 1: ['S2', 'S3', 'S4'], 3: 'S4', 4: ['S2', 'S3', 'S4'] },
+  43: { 1: ['S2', 'S3', 'S4', 'S12'], 3: 'S4', 4: ['S2', 'S3', 'S4'] },
   44: { 1: 'S3', 2: ['S2', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4'] },
   45: { 1: ['S3', 'S4'], 2: 'S3', 4: ['S2', 'S4'] },
   46: { 1: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'], 4: 'S4', 5: 'S4' },
-  47: { 2: 'S2', 3: 'S4', 4: 'S4' },
+  47: { 2: ['S2', 'S17'], 3: 'S4', 4: 'S4' },
   48: { 2: 'S2', 3: 'S4', 4: 'S4' },
   49: { 1: 'S4', 2: 'S3', 3: 'S2', 5: 'S3' },
   50: { 1: 'S3', 2: 'S3', 3: 'S3', 4: ['S2', 'S4'] },
   51: { 2: ['S3', 'S4'], 3: 'S3' },
   52: { 2: ['S3', 'S4'], 3: 'S2', 4: 'S4', 5: 'S2' },
   53: { 2: 'S2', 3: 'S4' },
-  54: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  55: { 2: ['S2', 'S3', 'S4'], 3: 'S4', 4: ['S2', 'S4'], 5: 'S4' },
+  54: { 2: ['S2', 'S3', 'S4', 'S15'], 3: ['S2', 'S3', 'S4', 'S18'] },
+  55: { 2: ['S2', 'S3', 'S4', 'S16'], 3: 'S4', 4: ['S2', 'S4'], 5: 'S4' },
 };
 
 /* IN SHORT citations, same discipline as the other two tables: the
@@ -604,7 +608,7 @@ const SHORT_CITES = {
   25: ['S3', 'S4'],
   26: ['S3', 'S4'],
   27: ['S2', 'S4'],
-  28: ['S2', 'S3', 'S4'],
+  28: ['S2', 'S3', 'S4', 'S10', 'S11'],
   29: ['S2', 'S3', 'S4'],
   30: ['S3', 'S4'],
   31: ['S2', 'S3', 'S4'],
@@ -618,7 +622,7 @@ const SHORT_CITES = {
   39: ['S2', 'S3', 'S4'],
   40: ['S2', 'S3', 'S4'],
   41: ['S3', 'S4'],
-  42: ['S3', 'S4'],
+  42: ['S3', 'S4', 'S12'],
   43: ['S2', 'S3', 'S4'],
   44: ['S2', 'S3', 'S4'],
   45: ['S2', 'S3', 'S4'],
@@ -717,7 +721,7 @@ function visibleTrophies() {
     if (kindFilter === 'watch' && !WATCH_LIST.includes(t.id)) return false;
     if (kindFilter === 'todo' && earned.has(t.name)) return false;
     if (kindFilter === 'earned' && !earned.has(t.name)) return false;
-    if (kindFilter === 'unconfirmed' && !t.triggerUnknown) return false;
+    if (kindFilter === 'unconfirmed' && !t.triggerUnknown && !t.triggerCandidate) return false;
     if (kindFilter === 'disagree' && !t.disagree) return false;
     if (kindFilter === 'online') return false;
     if (kindFilter !== 'all' && kindFilter !== 'missable' && kindFilter !== 'watch' && kindFilter !== 'todo' && kindFilter !== 'earned' && kindFilter !== 'unconfirmed' && kindFilter !== 'disagree' && t.kind !== kindFilter) return false;
@@ -801,10 +805,17 @@ function trophyRow(trophy) {
      its clip budget (v22: 16 for money counters, else 21).
      v22: two cases print the description WHOLE instead — the
      platinum's row (its line is the guide's goal; no ellipsis
-     there) and every row of a short list (listFullDesc). */
+     there) and every row of a short list (listFullDesc).
+     v23: the whole-print case is the Goal group (stage 5), not
+     just the platinum — A Long Road's line is the other half of
+     the masthead's GOAL line, and at 23 characters it fits its
+     box beside the counter pill whole (the probe asserts no
+     overflow), so the row no longer clips it to 'Attain 100%…'.
+     Only the platinum takes the wrap class; this row stays on
+     one line at the uniform row height. */
   desc.textContent = hidden
     ? 'Earn this trophy to reveal it.'
-    : (listFullDesc || trophy.grade === 'platinum')
+    : (listFullDesc || trophy.stage === 5)
       ? trophy.description
       : rowDescription(trophy.description, trophy.counter ? (trophy.counter.money ? 16 : 21) : 0);
   if (trophy.grade === 'platinum') desc.classList.add('desc-full');
@@ -861,20 +872,22 @@ function trophyRow(trophy) {
   if (rarity) {
     const rarityTag = document.createElement('span');
     rarityTag.className = 'tag rarity';
-    rarityTag.title = 'Share of Exophase-tracked players who have earned this trophy (20 November 2026)';
+    rarityTag.title = 'Share of Exophase-tracked players who have earned this trophy (21 November 2026)';
     // v22: the row tag is the bare figure (the panel's tag keeps
     // 'of players'); the saved width goes to the description.
     rarityTag.textContent = rarity;
     tags.append(rarityTag);
   }
-  // Every row names the sources its trophy cites — the registry refs,
-  // resolvable in the guide panel and the footer registry.
-  const refs = (trophy.sources ?? []).map((s) => s.ref);
-  if (refs.length) {
+  // v23: every row carries the count of sources its own markers
+  // cite — the number varies trophy by trophy because the markers
+  // do; the title names them. (The registry refs themselves are
+  // listed in the guide panel and the footer registry.)
+  const cited = markerRefs(trophy);
+  if (cited.size) {
     const refsTag = document.createElement('span');
     refsTag.className = 'tag refs';
-    refsTag.title = 'Sources cited for this trophy: ' + refs.map((r) => sourceRegistry.get(r)?.name ?? r).join(', ');
-    refsTag.textContent = refs.join('·');
+    refsTag.title = 'Sources cited for this trophy: ' + [...cited].map((r) => sourceRegistry.get(r)?.name ?? r).join(', ');
+    refsTag.textContent = cited.size + (cited.size === 1 ? ' source' : ' sources');
     tags.append(refsTag);
   }
   li.append(tags);
@@ -1167,7 +1180,8 @@ function renderRail() {
     ref.className = 'src-ref';
     ref.textContent = '[' + entry.id + ']';
     let support;
-    if (entry.id === 'S1') support = 'names, grades, rarity';
+    if (entry.support) support = entry.support;
+    else if (entry.id === 'S1') support = 'names, grades, rarity';
     else if (entry.id === 'S6') support = 'names, grades';
     else support = 'cited by ' + trophies.filter((t) => markerRefs(t).has(entry.id)).length + ' of ' + trophies.length;
     const displayName = entry.id === 'S6' ? 'Official list' : entry.name;
@@ -1205,7 +1219,8 @@ function renderRail() {
 }
 
 /* The refs a trophy's inline markers actually show: every step marker
-   plus every guide-sentence marker, each subset-checked against the
+   every guide-sentence marker and the IN SHORT summary's refs,
+   each subset-checked against the
    trophy's own cited sources. This is the honest "cited by" count —
    the registry listing (sources[]) says which sources back the guide,
    the markers say which sources a reader can see doing work. */
@@ -1218,6 +1233,7 @@ function markerRefs(trophy) {
   matches.forEach((_, i) => {
     for (const ref of citedRefs(trophy, GUIDE_CITES[trophy.id]?.[i + 1])) refs.add(ref);
   });
+  for (const ref of citedRefs(trophy, SHORT_CITES[trophy.id])) refs.add(ref);
   return refs;
 }
 
@@ -1254,6 +1270,7 @@ function renderAudit() {
     });
   }
   const unknownCount = trophies.filter((t) => t.triggerUnknown).length;
+  const candidateCount = trophies.filter((t) => t.triggerCandidate).length;
   const disagreeCount = trophies.filter((t) => t.disagree).length;
   // Claims cited (v21): every unit the citation tables mark — a
   // step, a guide sentence (split exactly as guideParagraph
@@ -1282,15 +1299,20 @@ function renderAudit() {
     (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length >= 2
     && !t.disagree && !t.triggerUnknown).length;
   const amberCount = trophies.length - greenCount;
+  // v23: two segments tightened so the longer line still fits
+  // its one-line band whole — 'possibly' is the banner's own word
+  // for the same count, and 'no published method' drops only the
+  // 'with'. No number and no meaning changes.
   const parts = [
     cited + '/' + trophies.length + ' guides cited',
-    (doc.sourceRegistry ?? []).length + ' sources',
+    (doc.sourceRegistry ?? []).length + ' sites read',
+    (doc.pagesRead ?? 0) + ' pages read',
     hiddenCount + ' hidden',
-    missableCount + ' potentially missable',
+    missableCount + ' possibly missable',
     claimsCited + ' claims cited',
     claimsMulti + ' by 2+ sources',
     citedSteps + '/' + totalSteps + ' steps cited',
-    unknownCount + ' triggers unknown',
+    (unknownCount + candidateCount) + ' triggers unconfirmed · ' + unknownCount + ' no published method',
     disagreeCount + ' disagree',
     greenCount + ' green',
     amberCount + ' amber',
@@ -1866,7 +1888,7 @@ function renderMissables() {
   }
   const done = document.createElement('p');
   done.className = 'roadmap-intro';
-  done.textContent = 'That is the whole list: 1 trophy reported as potentially missable and 1 time-sensitive strand race — PowerPyx, GTABase, Outputlag and KeenGamer all name the same single candidate. The other 53 trophies stay open after the credits — the story mission trophies pop as you finish each mission, and the open-world trophies never close.';
+  done.textContent = 'That is the whole list: 1 trophy reported as potentially missable and 1 time-sensitive strand race — PowerPyx, GTABase, Outputlag, KeenGamer, GTASpotter, GTASnaps and EGamers all name the same single candidate. The other 53 trophies stay open after the credits — the story mission trophies pop as you finish each mission, and the open-world trophies never close.';
   list.append(done);
 }
 
@@ -1889,7 +1911,7 @@ function renderChipCounts() {
     watch: WATCH_LIST.length,
     todo: trophies.length - earned.size,
     earned: earned.size,
-    unconfirmed: trophies.filter((t) => t.triggerUnknown).length,
+    unconfirmed: trophies.filter((t) => t.triggerUnknown || t.triggerCandidate).length,
     disagree: trophies.filter((t) => t.disagree).length,
   };
   for (const chip of document.querySelectorAll('#kindFilters .chip')) {

@@ -2,8 +2,9 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "edition": "Leonida Ledger v21 (2026-11-20) — the audit strip now counts claims, not just steps: every cited step, guide sentence and IN SHORT summary that survives the subset check against its own trophy's sources is one cited claim (383), and claims resting on two or more sources are counted separately (262 by 2+ sources), computed at runtime from the citation tables. The strip drops its time-sensitive and single-source segments to stay one line; both figures still live elsewhere in the frame. Trophy data is otherwise unchanged from v19. The second possibly-missable flag is still not copied: PowerPyx, GTABase and KeenGamer all name Positive Mental Attitude as the only potentially missable trophy.",
- "rarityNote": "Rarity is the share of Exophase-tracked players who had earned each trophy when the list was read on 20 November 2026 — release day, so every figure is a launch-week snapshot that will move fast. Source: Exophase, Grand Theft Auto VI (PSN) trophy list.",
+ "edition": "Leonida Ledger v23 (2026-11-21) — the registry grows from 7 sources to 23: sixteen more launch-week lists and guides were read in full on 21 November 2026 and are cited where their facts are used (23 sites and 28 pages read in all, counted from the project’s reading ledger). Positive Mental Attitude’s steps now name all ten meditation spots, from PowerPyx’s locations page, corroborated by Beebom and GameTrek. The audit strip reports the trigger count honestly: five trophies have no confirmed trigger — two with no published method at all, and three resting on a single source’s candidate method. Rarity is refreshed from Exophase, read 21 November 2026. The second possibly-missable flag is still not copied: PowerPyx, GTABase, KeenGamer, GTASpotter, GTASnaps and EGamers all name Positive Mental Attitude as the only potentially missable trophy.",
+ "pagesRead": 28,
+ "rarityNote": "Rarity is the share of Exophase-tracked players who had earned each trophy when the list was read on 21 November 2026, so every figure is a launch-week snapshot that will move fast. Source: Exophase, Grand Theft Auto VI (PSN) trophy list.",
  "roadmapMeta": {
   "heading": "Trophy roadmap — the platinum at a glance",
   "fields": [
@@ -40,7 +41,23 @@
   {"id": "S4", "name": "GTABase", "title": "GTA 6 Trophy Guide & Achievements List", "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series", "retrieved": "20 November 2026"},
   {"id": "S5", "name": "PSNProfiles", "title": "GTA VI trophies", "url": "https://psnprofiles.com/trophies/43531-grand-theft-auto-vi", "retrieved": "20 November 2026"},
   {"id": "S6", "name": "Official trophy description", "title": "PlayStation trophy list — no outside guide", "url": null, "retrieved": null},
-  {"id": "S7", "name": "KeenGamer", "title": "GTA 6 Trophy Guide & Platinum Roadmap", "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/", "retrieved": "20 November 2026"}
+  {"id": "S7", "name": "KeenGamer", "title": "GTA 6 Trophy Guide & Platinum Roadmap", "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/", "retrieved": "20 November 2026"},
+  {"id": "S8", "name": "TrueAchievements", "title": "Grand Theft Auto VI achievements", "url": "https://www.trueachievements.com/game/Grand-Theft-Auto-VI/achievements", "retrieved": "21 November 2026", "support": "names, grades — full list"},
+  {"id": "S9", "name": "GTASpotter", "title": "GTA 6 Trophies and Achievements", "url": "https://gtaspotter.com/en/guides/gta-6-trophies-and-achievements/", "retrieved": "21 November 2026"},
+  {"id": "S10", "name": "Beebom", "title": "GTA 6 Meditation Spots Locations", "url": "https://beebom.com/gta-6-meditation-spots-locations/", "retrieved": "21 November 2026"},
+  {"id": "S11", "name": "GameTrek", "title": "GTA 6 guide", "url": "https://gmtreks.com/gta6/page/01M7QVDV9V6SV9W03RH60W1P4B", "retrieved": "21 November 2026"},
+  {"id": "S12", "name": "OneMoreGame", "title": "Grand Theft Auto VI Trophy List", "url": "https://onemoregame.ph/2026/11/grand-theft-auto-vi-trophy-list/", "retrieved": "21 November 2026"},
+  {"id": "S13", "name": "Press Start", "title": "GTA 6 Trophy List", "url": "https://press-start.com.au/news/2026/11/18/gta-6-trophy-list/", "retrieved": "21 November 2026", "support": "names, grades — full list"},
+  {"id": "S14", "name": "GamerSocialClub", "title": "Grand Theft Auto VI Achievement List", "url": "https://gamersocialclub.ca/2026/11/18/grand-theft-auto-vi-achievement-list/", "retrieved": "21 November 2026", "support": "names, grades — full list"},
+  {"id": "S15", "name": "Sixshore", "title": "GTA 6 Trophies and Achievements", "url": "https://sixshore.com/gta-6/guides/trophies-and-achievements/", "retrieved": "21 November 2026"},
+  {"id": "S16", "name": "GTA Zone", "title": "GTA 6 Trophies and Achievements", "url": "https://gta-zone.com/news/gta-6-trophies-achievements/", "retrieved": "21 November 2026"},
+  {"id": "S17", "name": "GameMapa", "title": "GTA 6 Trophy and Achievement List", "url": "https://gamemapa.com/en/gta-6/guides/gta-6-trophy-achievement-list/", "retrieved": "21 November 2026"},
+  {"id": "S18", "name": "EGamers", "title": "GTA 6 Trophy List — All 55 Trophies and Achievements", "url": "https://egamers.io/gta-6-trophy-list-all-55-trophies-and-achievements-plus-the-hardest-ones/", "retrieved": "21 November 2026"},
+  {"id": "S19", "name": "GTASnaps", "title": "GTA 6 Trophy List and Achievements", "url": "https://gtasnaps.com/gta-6-trophy-list-and-achievements/", "retrieved": "21 November 2026", "support": "difficulty, time, missable consensus"},
+  {"id": "S20", "name": "GamesFuze", "title": "GTA 6 Achievements", "url": "https://gamesfuze.com/gta-6-wiki/achievements/", "retrieved": "21 November 2026", "support": "names, grades — full list"},
+  {"id": "S21", "name": "Insider Gaming", "title": "Complete GTA 6 Trophy List", "url": "https://insider-gaming.com/complete-gta-6-trophy-list-how-to-get-all-trophies-achievements/", "retrieved": "21 November 2026", "support": "names, grades — full list"},
+  {"id": "S22", "name": "Of Zen and Computing", "title": "GTA 6 Trophy List — Trophies and Achievements", "url": "https://www.ofzenandcomputing.com/gta-6-trophy-list-trophies-achievements/", "retrieved": "21 November 2026", "support": "names, grades — full list"},
+  {"id": "S23", "name": "GTA Vice City Hub", "title": "GTA VI Achievements", "url": "https://www.gtavicecityhub.com/achievements", "retrieved": "21 November 2026"}
  ],
  "roadmap": [
   {"stage": 1, "title": "Chapter 1 — play, and save", "text": "Finish the opening mission and Chapter 1, beat Cal at fishing, finish one arcade game, and do the balcony meditation at Jason's house while it is available. Make a manual save at the start of the chapter: there is no mission replay, so a chapter-start save is your only way back."},
@@ -71,7 +88,7 @@
    "name": "Vice Got a Price!",
    "description": "Congratulations! You're a Leonida Legend.",
    "grade": "platinum",
-   "rarityPct": 0.03,
+   "rarityPct": 0.0,
    "hidden": false,
    "kind": "platinum",
    "missable": false,
@@ -93,7 +110,7 @@
    "name": "Just Like Paradise",
    "description": "Complete Gone Fishing.",
    "grade": "bronze",
-   "rarityPct": 99.99,
+   "rarityPct": 100.0,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -115,7 +132,7 @@
    "name": "Paradise Lost",
    "description": "Complete Chapter 1.",
    "grade": "bronze",
-   "rarityPct": 0.73,
+   "rarityPct": 11.1,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -137,7 +154,7 @@
    "name": "T**s Ass Drug Money",
    "description": "Complete Chapter 2.",
    "grade": "bronze",
-   "rarityPct": 0.14,
+   "rarityPct": 1.44,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -159,7 +176,7 @@
    "name": "Vice City, Baby!",
    "description": "Complete Chapter 3.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.03,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -181,7 +198,7 @@
    "name": "Top Of The World, Ma",
    "description": "Complete Chapter 4.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.02,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -203,7 +220,7 @@
    "name": "You Gotta Know When to Get Off",
    "description": "Complete the final mission.",
    "grade": "gold",
-   "rarityPct": 0.06,
+   "rarityPct": 0.02,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -225,7 +242,7 @@
    "name": "Trust",
    "description": "Complete Breakfast Run.",
    "grade": "bronze",
-   "rarityPct": 0.24,
+   "rarityPct": 3.77,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -247,7 +264,7 @@
    "name": "Break the Bank",
    "description": "Complete The Cartel Heist.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.03,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -269,7 +286,7 @@
    "name": "Family Matters",
    "description": "Complete Child's Play.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.02,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -291,7 +308,7 @@
    "name": "DWNFALL",
    "description": "Complete Headliners.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.02,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -313,7 +330,7 @@
    "name": "Hi-Jacked",
    "description": "Complete VCIA Takedown.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.02,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -335,7 +352,7 @@
    "name": "Snow Storm",
    "description": "Complete Operation Savage Glory.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.02,
    "hidden": true,
    "kind": "story",
    "missable": false,
@@ -349,7 +366,8 @@
     {"ref": "S3", "note": "automatic story trophy; unlocks after Operation Savage Glory"},
     {"ref": "S4", "note": "Operation Savage Glory, a Chapter 5 mission"},
     {"ref": "S6", "note": "official description names the mission"},
-    {"ref": "S7", "note": "complete Operation Savage Glory"}
+    {"ref": "S7", "note": "complete Operation Savage Glory"},
+    {"ref": "S16", "note": "Operation Savage Glory is a Chapter 5 mission"}
    ]
   },
   {
@@ -357,7 +375,7 @@
    "name": "A Long Road",
    "description": "Attain 100% Completion.",
    "grade": "gold",
-   "rarityPct": 0.03,
+   "rarityPct": 0.0,
    "hidden": false,
    "kind": "goal",
    "missable": false,
@@ -372,7 +390,9 @@
     {"ref": "S2", "note": "checklist location; 300 stunts, 70 of 80 Challenges, 8 vaults, 200 of 277 vehicles; ~200 hours"},
     {"ref": "S3", "note": "100%: 200/277 vehicles, 100/255 animals, 15/18 meditations"},
     {"ref": "S4", "note": "100%: all robberies, 8 vaults, 39 ops; 70/80 challenges, 300 stunts"},
-    {"ref": "S7", "note": "100% completion via the in-game checklist"}
+    {"ref": "S7", "note": "100% completion via the in-game checklist"},
+    {"ref": "S9", "note": "the 80 challenges, named by group"},
+    {"ref": "S23", "note": "100% checklist table: 39 operations, 8 of 8 vaults, 200 vehicles, 100 animals, 15 meditations"}
    ]
   }
 ,
@@ -381,7 +401,7 @@
    "name": "Cunning Stunts",
    "description": "Complete 250 Stunts.",
    "grade": "silver",
-   "rarityPct": 0.03,
+   "rarityPct": 0.0,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -404,7 +424,7 @@
    "name": "Master of None",
    "description": "Try each type of activity once.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -420,7 +440,10 @@
     {"ref": "S4", "note": "9 types listed; Progress > Activities shows what's left"},
     {"ref": "S5", "note": "PSN count: 9 activity types"},
     {"ref": "S6", "note": "official description states the goal"},
-    {"ref": "S7", "note": "try all nine activity types"}
+    {"ref": "S7", "note": "try all nine activity types"},
+    {"ref": "S12", "note": "progress counter: 0 of 9 activity types"},
+    {"ref": "S15", "note": "the nine activity types, named"},
+    {"ref": "S17", "note": "the nine activity types, named"}
    ]
   },
   {
@@ -428,7 +451,7 @@
    "name": "The Shootist",
    "description": "Earn a gold medal in all Shooting Range challenges.",
    "grade": "silver",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -443,7 +466,9 @@
     {"ref": "S2", "note": "42 gold medals"},
     {"ref": "S3", "note": "42 golds across 12 ranges"},
     {"ref": "S4", "note": "42 golds across 12 ranges"},
-    {"ref": "S7", "note": "all 42 Shooting Range Gold Medals"}
+    {"ref": "S7", "note": "all 42 Shooting Range Gold Medals"},
+    {"ref": "S16", "note": "42 challenges across 12 ranges"},
+    {"ref": "S17", "note": "42 challenges across 12 ranges"}
    ]
   },
   {
@@ -451,7 +476,7 @@
    "name": "Top Fun",
    "description": "Win a Top Fun Drone Race at every location.",
    "grade": "bronze",
-   "rarityPct": 0.03,
+   "rarityPct": 0.0,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -474,7 +499,7 @@
    "name": "Earn Cash, Not Kudos",
    "description": "Win 20 different races.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -497,7 +522,7 @@
    "name": "Baited My Tackle",
    "description": "Beat Cal in a fishing challenge.",
    "grade": "bronze",
-   "rarityPct": 1.89,
+   "rarityPct": 12.76,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -519,7 +544,7 @@
    "name": "Stick Fiddler",
    "description": "Complete an arcade game.",
    "grade": "bronze",
-   "rarityPct": 0.41,
+   "rarityPct": 1.31,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -541,7 +566,7 @@
    "name": "Road to Rehabilitation",
    "description": "Complete the final mission for Andy.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -563,7 +588,7 @@
    "name": "This Was No Boat Accident",
    "description": "Complete the final mission for Kenton.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -577,7 +602,8 @@
     {"ref": "S2", "note": "side-story finales stay open after the credits"},
     {"ref": "S3", "note": "Kenton, 7 shipwrecks"},
     {"ref": "S4", "note": "7 shipwrecks; KR icon Key Lento; metal detector"},
-    {"ref": "S7", "note": "complete Kenton's final mission"}
+    {"ref": "S7", "note": "complete Kenton's final mission"},
+    {"ref": "S15", "note": "KR icon and 7 shipwrecks; the strand returns after Chapter 1"}
    ]
   },
   {
@@ -585,7 +611,7 @@
    "name": "The Lone Rider",
    "description": "Complete the final mission for Billy.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -599,7 +625,8 @@
     {"ref": "S2", "note": "finales stay open after the credits; Billy's strand does not count toward Strangers & Freaks"},
     {"ref": "S3", "note": "Billy, 5 quests"},
     {"ref": "S4", "note": "5 jobs from Thrillbilly Mudclub; Hometown Heroes last"},
-    {"ref": "S7", "note": "complete Billy's final mission"}
+    {"ref": "S7", "note": "complete Billy's final mission"},
+    {"ref": "S16", "note": "five jobs at the Thrillbilly Mudclub"}
    ]
   },
   {
@@ -607,7 +634,7 @@
    "name": "Strangers & Freaks",
    "description": "Complete 8 mission strands for strangers across the state of Leonida.",
    "grade": "silver",
-   "rarityPct": 0.03,
+   "rarityPct": 0.0,
    "hidden": false,
    "kind": "activities",
    "missable": true,
@@ -632,7 +659,7 @@
    "name": "Supply & Demand",
    "description": "Complete the final mission for Randy.",
    "grade": "bronze",
-   "rarityPct": 0.03,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -646,7 +673,8 @@
     {"ref": "S2", "note": "side-story finales stay open after the credits"},
     {"ref": "S3", "note": "Randy's 16-car wishlist"},
     {"ref": "S4", "note": "Wish List: 16 sports cars, RK garage, WAiNK scan"},
-    {"ref": "S7", "note": "complete Randy's final mission"}
+    {"ref": "S7", "note": "complete Randy's final mission"},
+    {"ref": "S15", "note": "the 16-car wish list opens in Chapter 3"}
    ]
   },
   {
@@ -654,7 +682,7 @@
    "name": "Spin On This!",
    "description": "Complete the final mission for Tyrone.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -668,7 +696,8 @@
     {"ref": "S2", "note": "Tyrone's questline is Jason-only; finales stay open after the credits; Tyrone's strand does not count toward Strangers & Freaks"},
     {"ref": "S3", "note": "Tyrone, synthetic labs"},
     {"ref": "S4", "note": "Jason-only; labs after Here, Kitty Kitty (Ch.3)"},
-    {"ref": "S7", "note": "complete Tyrone's final mission"}
+    {"ref": "S7", "note": "complete Tyrone's final mission"},
+    {"ref": "S15", "note": "the synthetic labs; Jason-only from Chapter 3"}
    ]
   },
   {
@@ -676,7 +705,7 @@
    "name": "Positive Mental Attitude",
    "description": "Meditate at every spot across Leonida.",
    "grade": "bronze",
-   "rarityPct": 0.03,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "collectibles",
    "missable": true,
@@ -686,7 +715,7 @@
    "counter": {"label": "meditation spots", "total": 18},
    "guide": "Meditate at all 18 spots across Leonida — they show as purple icons when you are close — and bring your partner every time, since meditating together counts twice. Only 15 of the 18 spots count toward the 100% checklist — the trophy itself needs all 18.",
    "short": "Meditate at all 18 spots, partner alongside — together counts twice. The Chapter 1 balcony meditation at Jason's house, the morning after Down to Earth, is the one spot that can be lost.",
-   "steps": ["In Chapter 1, the morning after Down to Earth, find Lucia in the kitchen at Jason's house and follow her to the balcony.", "Accept the balcony meditation before leaving Chapter 1 — the only currently identified potentially missable interaction.", "Keep a Chapter 1 manual save until the trophy pops.", "Meditate at every other spot (18 total), bringing your partner so outdoor spots count twice.", "The last meditation needs both leads playable, which opens after Coffee Break in Chapter 2.", "Check Progress > Stats > 100% Completion as you go — the checklist counts 15 of the 18 spots.", "Counts differ: the trophy needs all 18 spots, while the 100% checklist stops at 15."],
+   "steps": ["In Chapter 1, the morning after Down to Earth, find Lucia in the kitchen at Jason's house and follow her to the balcony.", "Accept the balcony meditation before leaving Chapter 1 — the only currently identified potentially missable interaction.", "Keep a Chapter 1 manual save until the trophy pops.", "Smooth Sand (meditations 2–3): a small sandbar off the west coast of Capri, in Mariana County.", "Swamp (meditations 4–5): the wooden dock by the lookout tower in Buckskin Swamp, Kelly County.", "Worn Stone (meditations 6–7): the bank of the Emerald River at Camp Moonflower, Kelly County.", "Red Rocks (meditations 8–9): in Manifest Canyon, near the rail line that crosses the highway.", "Water Wheel (meditations 10–11): the waterwheel at the ruined paper mill on the river south of Moreau, Lummox County.", "Jutting Cliff (meditations 12–13): the tower overlooking the mine in Mount Kalaga National Park, Lummox County.", "Waterfall (meditations 14–15): northwest of Tallaloko in Lummox County, facing the waterfall on the east-flowing river.", "Seaside (meditations 16–17): the rocky outcrop on the east beach of Waning Sands, Leonard County.", "Ascent Mountain (meditation 18): the stone circle on the summit of Mount Kalaga — it is only marked on the map once every other meditation is done, and the final meditation needs both characters.", "Meditate with your partner at every outdoor spot — after Coffee Break in Chapter 2 they count twice — and track the set under Progress > Collections > Exploration > Meditations; the 100% checklist only asks for 15 of the 18."],
    "missableNote": "The balcony at Jason's house opens the morning after Down to Earth and closes when Chapter 1 ends — do it in Chapter 1.",
    "missableShort": "Jason's-house balcony, morning after Down to Earth",
    "sources": [
@@ -694,7 +723,12 @@
     {"ref": "S2", "note": "Chapter 1 balcony; purple icons; partner counts twice"},
     {"ref": "S3", "note": "18 spots; both count twice"},
     {"ref": "S4", "note": "18 spots; both count twice"},
-    {"ref": "S7", "note": "18 spots; 15 of 18 for 100%"}
+    {"ref": "S7", "note": "18 spots; 15 of 18 for 100%"},
+    {"ref": "S9", "note": "possibly one missable: this trophy"},
+    {"ref": "S10", "note": "the same ten meditation spots, independently listed"},
+    {"ref": "S11", "note": "meditation spots corroborated; Down to Earth is Chapter 1 mission 20"},
+    {"ref": "S18", "note": "possibly one missable: this trophy"},
+    {"ref": "S19", "note": "only this trophy flagged potentially missable"}
    ]
   },
   {
@@ -702,7 +736,7 @@
    "name": "Fair Game",
    "description": "Hunt a unique animal for Bret.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -716,7 +750,8 @@
     {"ref": "S2", "note": "Bret's hunting questline is Jason-only; target decks; clean head or heart shot"},
     {"ref": "S3", "note": "Bret; which animal triggers it unconfirmed"},
     {"ref": "S4", "note": "Bret's quests after Coffee Break (Ch.2); 15 Target Decks"},
-    {"ref": "S7", "note": "hunt a unique animal for Bret"}
+    {"ref": "S7", "note": "hunt a unique animal for Bret"},
+    {"ref": "S15", "note": "Jason-only from Chapter 2; 15 Target Decks for 100%"}
    ]
   },
   {
@@ -724,7 +759,7 @@
    "name": "Don't Touch My Deck",
    "description": "Complete 3 Collectible Card sets.",
    "grade": "silver",
-   "rarityPct": 0.03,
+   "rarityPct": 0.0,
    "hidden": false,
    "kind": "collectibles",
    "missable": false,
@@ -748,7 +783,7 @@
    "name": "You WAiNKer!",
    "description": "WAiNK It at 100 locations.",
    "grade": "silver",
-   "rarityPct": 0.03,
+   "rarityPct": 0.0,
    "hidden": false,
    "kind": "collectibles",
    "missable": false,
@@ -764,7 +799,8 @@
     {"ref": "S3", "note": "31 landmarks, 35 curiosities, 23 sculptures"},
     {"ref": "S4", "note": "100 spots: hold Up, then R1/RB"},
     {"ref": "S6", "note": "official description states the goal"},
-    {"ref": "S7", "note": "WAiNK app at 100 locations"}
+    {"ref": "S7", "note": "WAiNK app at 100 locations"},
+    {"ref": "S16", "note": "31 landmarks, 35 curiosities, 23 sculptures and the No Flusher tags"}
    ]
   },
   {
@@ -772,7 +808,7 @@
    "name": "One Last Thing",
    "description": "Complete 50 Challenges.",
    "grade": "bronze",
-   "rarityPct": 0.03,
+   "rarityPct": 0.0,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -795,7 +831,7 @@
    "name": "Hot Together",
    "description": "Lose a 4 star Wanted Level with your partner and escape the heat.",
    "grade": "bronze",
-   "rarityPct": 0.09,
+   "rarityPct": 0.27,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -809,7 +845,8 @@
     {"ref": "S2", "note": "vault jobs give 4 stars at once; pops only after leaving the red heat zone"},
     {"ref": "S3", "note": "after Coffee Break; train tunnel method"},
     {"ref": "S4", "note": "call partner (Right, Triangle/Y); train tunnel, Ambrosia"},
-    {"ref": "S7", "note": "escape a four-star Wanted Level with your partner"}
+    {"ref": "S7", "note": "escape a four-star Wanted Level with your partner"},
+    {"ref": "S17", "note": "the train tunnel north of Ambrosia shakes off the heat"}
    ]
   },
   {
@@ -817,7 +854,7 @@
    "name": "Retail Therapy",
    "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
    "grade": "bronze",
-   "rarityPct": 0.05,
+   "rarityPct": 0.03,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -831,7 +868,10 @@
     {"ref": "S2", "note": "keep the Wanted Level alive; chain breaks in the red heat zone; ~30 second pop delay"},
     {"ref": "S3", "note": "3 shops; ~30s delayed pop"},
     {"ref": "S4", "note": "3 jewelry stores, north Vice City (Ch.3)"},
-    {"ref": "S7", "note": "rob three shops consecutively with your partner"}
+    {"ref": "S7", "note": "rob three shops consecutively with your partner"},
+    {"ref": "S15", "note": "the three jewelry stores in north Vice City"},
+    {"ref": "S17", "note": "three jewelry stores close together; the pop follows the third"},
+    {"ref": "S18", "note": "rob a fourth store if the trophy has not popped"}
    ]
   },
   {
@@ -839,7 +879,7 @@
    "name": "Whip It Good",
    "description": "Discover 100 vehicles.",
    "grade": "bronze",
-   "rarityPct": 0.24,
+   "rarityPct": 1.42,
    "hidden": false,
    "kind": "collectibles",
    "missable": false,
@@ -862,7 +902,7 @@
    "name": "Gunslinger",
    "description": "Take down 5 enemies in a single use of Combat Focus.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.07,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -885,7 +925,7 @@
    "name": "Catch Me If You Can",
    "description": "Make an unscheduled departure at VCIA.",
    "grade": "bronze",
-   "rarityPct": 0.14,
+   "rarityPct": 0.22,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -899,7 +939,8 @@
     {"ref": "S2", "note": "boarding-bridge jets only; gates E3 and E4; fly ~1 km out"},
     {"ref": "S3", "note": "big plane at terminal E3/E4, VCIA; fly 1 km"},
     {"ref": "S4", "note": "boarding-bridge jets only; gates E3/E4 easiest"},
-    {"ref": "S7", "note": "steal a departing passenger aircraft at VCIA"}
+    {"ref": "S7", "note": "steal a departing passenger aircraft at VCIA"},
+    {"ref": "S17", "note": "a jet at gates E3 and E4; the trophy pops about 1 km out"}
    ]
   },
   {
@@ -907,7 +948,7 @@
    "name": "Challenging Tank",
    "description": "Kinda hot in these Rhinos.",
    "grade": "bronze",
-   "rarityPct": 0.14,
+   "rarityPct": 0.19,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -921,7 +962,9 @@
     {"ref": "S2", "note": "tanks parked south side of Mile Zero Air Station"},
     {"ref": "S3", "note": "Mile Zero Air Station, southwest island"},
     {"ref": "S4", "note": "tanks at the south end of Mile Zero Air Station"},
-    {"ref": "S7", "note": "steal a Rhino tank and use it in combat"}
+    {"ref": "S7", "note": "steal a Rhino tank and use it in combat"},
+    {"ref": "S15", "note": "Rhino tanks at Mile Zero Air Station"},
+    {"ref": "S16", "note": "Mile Zero Air Station"}
    ]
   },
   {
@@ -929,7 +972,7 @@
    "name": "Sneakthief",
    "description": "Rob a jewelry store without being detected.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.04,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -943,7 +986,9 @@
     {"ref": "S2", "note": "Snap Gun from Yasmani's Jewelry Jobs; Richardson Jewelry & Diamonds; safe-code note; reload if spotted"},
     {"ref": "S3", "note": "Snap Gun after Yasmani's Jewelry Jobs (Ch.3)"},
     {"ref": "S4", "note": "Snap Gun on the back door; safe-code note"},
-    {"ref": "S7", "note": "rob a jewelry store undetected"}
+    {"ref": "S7", "note": "rob a jewelry store undetected"},
+    {"ref": "S16", "note": "the Snap Gun comes from Yasmani's Chapter 3 job"},
+    {"ref": "S18", "note": "the back door and Snap Gun; find the safe code; empty the safe unseen"}
    ]
   },
   {
@@ -951,7 +996,7 @@
    "name": "Maximum Withdrawal",
    "description": "Rob 5 Bank Vaults and escape.",
    "grade": "silver",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -966,7 +1011,9 @@
     {"ref": "S2", "note": "vaults unlock via That's Where The Money Is; bring a partner; 100% needs all 8 vaults"},
     {"ref": "S3", "note": "Ch.4 vault mission; tail a security van; 8 vaults"},
     {"ref": "S4", "note": "vaults via That's Where The Money Is…; $205k max each"},
-    {"ref": "S7", "note": "rob five bank vaults and escape"}
+    {"ref": "S7", "note": "rob five bank vaults and escape"},
+    {"ref": "S15", "note": "vaults open through the Chapter 4 optional mission; a vault means 4 stars"},
+    {"ref": "S18", "note": "the Chapter 4 optional mission opens the vaults; escape on a fast bike"}
    ]
   },
   {
@@ -974,7 +1021,7 @@
    "name": "A Classic Blitz Play",
    "description": "Rob an Armored Truck and escape.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -1012,7 +1059,8 @@
     {"ref": "S4", "note": "unfog the whole map by plane"},
     {"ref": "S5", "note": "PSN count: 52 areas"},
     {"ref": "S6", "note": "official description states the goal"},
-    {"ref": "S7", "note": "explore all of Leonida; full map"}
+    {"ref": "S7", "note": "explore all of Leonida; full map"},
+    {"ref": "S12", "note": "progress counter: 0 of 52 areas"}
    ]
   },
   {
@@ -1020,7 +1068,7 @@
    "name": "Pest Control",
    "description": "Rob an Illegal Operation belonging to each gang.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -1035,7 +1083,8 @@
     {"ref": "S2", "note": "9 gangs; 100% needs all 39 operations"},
     {"ref": "S3", "note": "9 gangs, 39 illegal operations"},
     {"ref": "S4", "note": "yellow map icons; Progress > Gangs counts"},
-    {"ref": "S7", "note": "rob an Illegal Operation of each of the nine gangs"}
+    {"ref": "S7", "note": "rob an Illegal Operation of each of the nine gangs"},
+    {"ref": "S12", "note": "progress counter: 0 of 9 gangs"}
    ]
   },
   {
@@ -1043,13 +1092,14 @@
    "name": "In The Beginning…",
    "description": "Enjoy a cocktail with a view on Ocean Beach.",
    "grade": "bronze",
-   "rarityPct": 0.08,
+   "rarityPct": 0.15,
    "hidden": true,
    "kind": "activities",
    "missable": false,
    "stage": 4,
    "count": null,
    "disagree": true,
+   "triggerCandidate": true,
    "guide": "Go to the Ocean View Rooftop Bar on Ocean Beach, buy an Apple Martini and drink it standing next to the bar — PowerPyx has since confirmed the method. Outputlag still lists this among the five hidden trophies with no confirmed trigger, and GTABase still says the exact steps are not confirmed, but the bar, the drink and the spot are now published. The story reaches Ocean Beach in Chapter 4 and free roam continues after the credits, so treat this as a clean-up job. Nothing published flags it as missable — the only possibly missable trophy in the list is Positive Mental Attitude — so there is no clock on it.",
    "short": "Buy an Apple Martini at the Ocean View Rooftop Bar on Ocean Beach and drink it standing next to the bar. PowerPyx has confirmed the method; two other guides still list the trigger as unconfirmed.",
    "steps": ["Reach Ocean Beach in Vice City (the story takes you there in Chapter 4; free roam works too).", "Go to the Ocean View Rooftop Bar and buy an Apple Martini.", "Drink it standing next to the bar; the trophy pops."],
@@ -1066,13 +1116,14 @@
    "name": "Capital Offense",
    "description": "Smash your way out of a vehicle showroom in classic style.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
    "stage": 4,
    "count": null,
    "disagree": true,
+   "triggerCandidate": true,
    "guide": "Steal the blue Banshee from the showroom in south Vice City — only after you have the Key Cloner from the Chapter 3 mission Clonin' Keys, Makin' Gs — hack in, then drive it straight through the window. PowerPyx has since confirmed the method, and the pop can be delayed, so give it a moment. It is a nod to the classic showroom escape from the older games. Outputlag still lists this among the five hidden trophies with no confirmed trigger, and GTABase still says the exact steps are not confirmed, but the car, the showroom and the key are now published. It is a repeatable stunt, not a story moment: free roam continues after the credits and no guide flags it as missable. Keep a manual save before you start breaking glass — expect a wanted level — and reload if an attempt gets expensive.",
    "short": "Steal the blue Banshee from the showroom in south Vice City and drive it through the window — you need the Key Cloner from Chapter 3 first. PowerPyx has confirmed the method; the pop can be delayed.",
    "steps": ["Get the Key Cloner from the Chapter 3 mission Clonin' Keys, Makin' Gs.", "Steal the blue Banshee from the showroom in south Vice City.", "Drive it straight through the window; the pop can be delayed, so wait a moment.", "Keep a manual save first — with no mission replay, a backup save protects the attempt."],
@@ -1090,7 +1141,7 @@
    "name": "Let’s Go Bowling",
    "description": "Follow-through at the Kolt & Associates' bowling alley.",
    "grade": "bronze",
-   "rarityPct": 0.09,
+   "rarityPct": 1.09,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -1112,7 +1163,7 @@
    "name": "Personal Best",
    "description": "A partnership with mass appeal.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -1126,7 +1177,8 @@
     {"ref": "S2", "note": "both characters to maximum Strength; gym membership; partner trains alongside"},
     {"ref": "S3", "note": "max Strength, both characters"},
     {"ref": "S4", "note": "fitness clubs; training one trains the other"},
-    {"ref": "S7", "note": "maximize Strength for both Jason and Lucia"}
+    {"ref": "S7", "note": "maximize Strength for both Jason and Lucia"},
+    {"ref": "S17", "note": "the partner trains alongside; progress counts for both"}
    ]
   },
   {
@@ -1134,7 +1186,7 @@
    "name": "Actions Speak Louder",
    "description": "Choices made (for better or worse).",
    "grade": "bronze",
-   "rarityPct": 0.05,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -1149,7 +1201,8 @@
     {"ref": "S2", "note": "500 actions changing the Criminal Profile; robberies and fights feed it"},
     {"ref": "S3", "note": "500 criminal-profile actions"},
     {"ref": "S4", "note": "500 actions; Irredeemable profile is permanent"},
-    {"ref": "S7", "note": "500 actions affecting your Criminal Profile"}
+    {"ref": "S7", "note": "500 actions affecting your Criminal Profile"},
+    {"ref": "S12", "note": "progress counter: 0 of 500 actions"}
    ]
   },
   {
@@ -1157,7 +1210,7 @@
    "name": "Bad Luck, I Guess",
    "description": "Second time's the charm.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -1180,13 +1233,14 @@
    "name": "The Truth Is Out There",
    "description": "What the hell just happened?",
    "grade": "bronze",
-   "rarityPct": 0.11,
+   "rarityPct": 0.64,
    "hidden": true,
    "kind": "activities",
    "missable": false,
    "stage": 4,
    "count": null,
    "disagree": true,
+   "triggerCandidate": true,
    "guide": "This is the UFO easter egg, and PowerPyx has since confirmed the method. At night, after 2AM, go alone to the road northwest of the Starlet Motel in Kelly County and watch for a blinking car; follow the path it marks into the woods, where a UFO drops an abducted woman. Talk to her, offer to help, then go back to her car. Outputlag still lists this among the five hidden trophies with no confirmed trigger, and GTABase still expects only a strange event or Easter egg somewhere in Leonida — but the place, the time and the sequence are now published. Free roam continues after the credits and nothing flags this trophy as missable, so it belongs to the clean-up stage.",
    "short": "The UFO easter egg, confirmed by PowerPyx: after 2AM, go alone to the road northwest of the Starlet Motel in Kelly County, follow the blinking car's path into the woods, and help the woman the UFO drops.",
    "steps": ["At night after 2AM, go alone to the road northwest of the Starlet Motel in Kelly County.", "Watch for the blinking car and follow the path into the woods.", "When the UFO drops the abducted woman, talk to her and offer to help.", "Go back to her car to finish the encounter."],
@@ -1203,7 +1257,7 @@
    "name": "Ten Pin",
    "description": "Bowl 'em over with a melee drive-by.",
    "grade": "bronze",
-   "rarityPct": 0.06,
+   "rarityPct": 0.05,
    "hidden": true,
    "kind": "activities",
    "missable": false,
@@ -1226,7 +1280,7 @@
    "name": "Dime on the Dollar",
    "description": "Earn $250,000 laundering Marked Bills through your contacts.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -1249,7 +1303,7 @@
    "name": "Treat Yo Self",
    "description": "Spend $100,000 across all shops.",
    "grade": "bronze",
-   "rarityPct": 0.05,
+   "rarityPct": 0.03,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -1272,7 +1326,7 @@
    "name": "Little Boxes",
    "description": "Purchase all garage properties.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "collectibles",
    "missable": false,
@@ -1287,7 +1341,10 @@
     {"ref": "S2", "note": "8 garages via Real Estate app after Daily Driver; ~$160,000; story garages do not count"},
     {"ref": "S3", "note": "8 garages, $160k; Real Estate app (Ch.2)"},
     {"ref": "S4", "note": "8 garages via Real Estate app; story garages don't count"},
-    {"ref": "S7", "note": "all eight purchasable garage properties"}
+    {"ref": "S7", "note": "all eight purchasable garage properties"},
+    {"ref": "S12", "note": "progress counter: 0 of 8 garages"},
+    {"ref": "S15", "note": "8 garages; the real-estate app arrives in Chapter 2"},
+    {"ref": "S18", "note": "8 garages for about $160,000; story garages do not count"}
    ]
   },
   {
@@ -1295,7 +1352,7 @@
    "name": "On the Spot",
    "description": "Register 10 vehicles to the Scooter Bros app.",
    "grade": "bronze",
-   "rarityPct": 0.04,
+   "rarityPct": 0.01,
    "hidden": false,
    "kind": "activities",
    "missable": false,
@@ -1310,7 +1367,8 @@
     {"ref": "S2", "note": "Moses opens the app; Respray then Register; Pay 'n' Spray from Chapter 3; needs a free garage space"},
     {"ref": "S3", "note": "Scooter Bros app after Moses (Ch.2)"},
     {"ref": "S4", "note": "respray then register; Pay 'n' Spray from Ch.3"},
-    {"ref": "S7", "note": "register 10 vehicles via Scooter Bros"}
+    {"ref": "S7", "note": "register 10 vehicles via Scooter Bros"},
+    {"ref": "S16", "note": "Moses hands over the Scooter Bros app in Chapter 2"}
    ]
   }
  ]
