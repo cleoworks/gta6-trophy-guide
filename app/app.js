@@ -408,29 +408,32 @@ function formatRarity(trophy) {
    descriptions are short, though — none carries a comma or dash
    that far in — so a description with no clause break ends at
    the last word boundary inside the row's visible window
-   (about thirty characters at the row's text size) instead,
-   with an ellipsis of its own: the reader still sees whole
-   words, never a word sawn in half. Short descriptions render
-   untouched.
+   instead, with an ellipsis of its own: the reader still sees
+   whole words, never a word sawn in half. Short descriptions
+   render untouched.
    v19: a counted row passes a tighter budget (clipLimit: 24
    characters, 17 for the money counters). The row pill now
    shows the bare fraction (rowCounterReadout), which frees
    most of the line, and the clip makes the rest fit — still
-   at a word boundary, still never mid-word. */
+   at a word boundary, still never mid-word.
+   v22: the budgets are re-measured for the light theme's row —
+   13.5px text, a ~190px description window beside the trimmed
+   tag stack. An uncounted row's budget is 30 characters (the
+   longest whole lines that fit); counted rows pass 21, money
+   counters 16. The platinum's line and short-list rows bypass
+   this function entirely and print whole (see trophyRow). The
+   clip still lands on a word boundary, never mid-word, and the
+   probe asserts no row's text overflows its box. */
 function rowDescription(text, clipLimit) {
   const rest = text.slice(40);
   const cut = rest.search(/[,—–]|\s-\s/);
   if (cut >= 0) return text.slice(0, 40 + cut).trimEnd();
-  if (clipLimit && text.length > clipLimit) {
-    const clipped = text.slice(0, clipLimit);
+  const budget = clipLimit || 30;
+  if (text.length > budget) {
+    const clipped = text.slice(0, budget - 2);
     const space = clipped.lastIndexOf(' ');
     if (space >= 10) return clipped.slice(0, space) + '…';
     return clipped.trimEnd() + '…';
-  }
-  if (text.length > 34) {
-    const clipped = text.slice(0, 30);
-    const space = clipped.lastIndexOf(' ');
-    if (space >= 18) return clipped.slice(0, space) + '…';
   }
   return text;
 }
@@ -752,6 +755,10 @@ function groupHeader(stage, label) {
   return li;
 }
 
+/* v22: set by renderChecklist — true when the visible list is
+   short enough for its rows to print full descriptions. */
+let listFullDesc = false;
+
 function trophyRow(trophy) {
   const hidden = isSpoilerHidden(trophy);
   const li = document.createElement('li');
@@ -791,10 +798,16 @@ function trophyRow(trophy) {
   /* v19: the masked placeholder is the short form — the full
      sentence could never fit the row's description box, so it
      clipped mid-word on every masked row. A counted row passes
-     its clip budget (17 for money counters, else 24). */
+     its clip budget (v22: 16 for money counters, else 21).
+     v22: two cases print the description WHOLE instead — the
+     platinum's row (its line is the guide's goal; no ellipsis
+     there) and every row of a short list (listFullDesc). */
   desc.textContent = hidden
     ? 'Earn this trophy to reveal it.'
-    : rowDescription(trophy.description, trophy.counter ? (trophy.counter.money ? 17 : 24) : 0);
+    : (listFullDesc || trophy.grade === 'platinum')
+      ? trophy.description
+      : rowDescription(trophy.description, trophy.counter ? (trophy.counter.money ? 16 : 21) : 0);
+  if (trophy.grade === 'platinum') desc.classList.add('desc-full');
   if (trophy.counter) {
     // The live counter rides on the description line as a pill, so a
     // counted row is the same height as every other row (v14 row
@@ -821,13 +834,18 @@ function trophyRow(trophy) {
   if (trophy.hidden) {
     const hiddenTag = document.createElement('span');
     hiddenTag.className = 'tag hidden-t';
-    hiddenTag.textContent = 'Hidden on PSN';
+    // v22: the row tag shortens to 'Hidden' (the panel keeps the
+    // full 'Hidden on PSN') — the saved width goes to the
+    // description window beside the tag stack.
+    hiddenTag.textContent = 'Hidden';
     tags.append(hiddenTag);
   }
   if (trophy.missable) {
     const missTag = document.createElement('span');
     missTag.className = 'tag missable';
-    missTag.textContent = trophy.risk === 'timed' ? 'TIME-SENSITIVE' : 'MISSABLE';
+    // v22: 'TIMED' in the row (the rail's word); the full
+    // 'time-sensitive' stands in the panel and the banner.
+    missTag.textContent = trophy.risk === 'timed' ? 'TIMED' : 'MISSABLE';
     tags.append(missTag);
   }
   // A counted trophy shows its live counter under its description
@@ -844,7 +862,9 @@ function trophyRow(trophy) {
     const rarityTag = document.createElement('span');
     rarityTag.className = 'tag rarity';
     rarityTag.title = 'Share of Exophase-tracked players who have earned this trophy (20 November 2026)';
-    rarityTag.textContent = rarity + ' of players';
+    // v22: the row tag is the bare figure (the panel's tag keeps
+    // 'of players'); the saved width goes to the description.
+    rarityTag.textContent = rarity;
     tags.append(rarityTag);
   }
   // Every row names the sources its trophy cites — the registry refs,
@@ -863,6 +883,11 @@ function trophyRow(trophy) {
 
 function renderChecklist() {
   const shown = visibleTrophies();
+  // v22: a short list (the Watch view's six rows, a narrow filter
+  // result) has the vertical room to print full descriptions, so
+  // its rows stand whole instead of clipped — see trophyRow.
+  listFullDesc = shown.length <= 8;
+  trophyList.classList.toggle('desc-full', listFullDesc);
   trophyList.replaceChildren();
   if (kindFilter === 'all') {
     // Grouped view: slim stage headers with a live earned count each.
@@ -1078,12 +1103,15 @@ const WATCH_ITEMS = [
 /* The right-hand rail (v14): the two blocks the cover used to squeeze
    into the list column and the guide panel, standing in their own
    column — the watch list as six tagged item rows, and the full
-   source registry: every source with its full URL, what it supports
-   (for the guide sources, the marker-based cited-by count — the
-   same honest figures the audit used to carry) and the day the
-   registry was read. Under the Yago race item, the missable
-   adjudication: the second "missable" some lists claim, checked
-   against two named sources and classified more precisely. */
+   source registry: every source with what it supports (for the
+   guide sources, the marker-based cited-by count — the same
+   honest figures the audit used to carry) and the day it was
+   read. v22 drops the registry's full URLs from the rail (they
+   broke mid-word at this width; the footer registry keeps them)
+   for a per-source read-date line. Under the Yago race item, the
+   missable adjudication: the second "missable" some lists claim,
+   checked against two named sources and classified more
+   precisely. */
 function renderRail() {
   const rail = document.getElementById('railCol');
   if (!rail) return;
@@ -1110,27 +1138,25 @@ function renderRail() {
     box.append(nameLine, why);
     rail.append(box);
     if (item.id === 25) {
+      // v22: the short form — the full adjudication stands at
+      // headline size in the banner's SOURCES DIFFER box now;
+      // the rail note keeps the verdict and its citations.
       const note = document.createElement('p');
       note.className = 'rail-note';
-      note.append(document.createTextNode("Flagged 'missable?' by some lists — PowerPyx + GTABase confirm it stays open after the story"));
+      note.append(document.createTextNode('PowerPyx + GTABase: stays open after the story'));
       for (const ref of citedRefs(byId.get(25), ['S3', 'S4'])) note.append(citeSpan(ref));
-      note.append(document.createTextNode('; tracked as time-sensitive.'));
+      note.append(document.createTextNode(' — tracked as time-sensitive.'));
       rail.append(note);
     }
   }
-  // The registry's read date: the day most sources were read, in the
-  // audit strip's short form, upper-cased for the rail head.
+  // v22: each registry entry carries its own read date on a
+  // second line — the day that source was read, in the audit
+  // strip's short form. The full URLs leave the rail (they broke
+  // mid-word at this width); they stand in the footer registry.
   const registry = doc.sourceRegistry ?? [];
-  const dated = registry.filter((s) => s.retrieved).map((s) => {
-    const [day, month, year] = s.retrieved.split(' ');
-    return day + ' ' + shortMonth(month) + ' ' + year;
-  });
-  const counts = {};
-  for (const d of dated) counts[d] = (counts[d] ?? 0) + 1;
-  const readDate = dated.slice().sort((a, b) => (counts[b] ?? 0) - (counts[a] ?? 0))[0] ?? '';
   const srcHead = document.createElement('div');
   srcHead.className = 'rail-head rail-src-head';
-  srcHead.textContent = 'Sources — ' + registry.length + ' in all, read ' + readDate;
+  srcHead.textContent = 'Sources — ' + registry.length + ' in all';
   rail.append(srcHead);
   for (const entry of registry) {
     const box = document.createElement('div');
@@ -1146,10 +1172,15 @@ function renderRail() {
     else support = 'cited by ' + trophies.filter((t) => markerRefs(t).has(entry.id)).length + ' of ' + trophies.length;
     const displayName = entry.id === 'S6' ? 'Official list' : entry.name;
     head.append(ref, document.createTextNode(' ' + displayName + ' · ' + support));
-    const url = document.createElement('div');
-    url.className = 'rail-src-url';
-    url.textContent = entry.url ? bareUrl(entry) : "PlayStation's official trophy list";
-    box.append(head, url);
+    const meta = document.createElement('div');
+    meta.className = 'rail-src-meta';
+    if (entry.retrieved) {
+      const [day, month, year] = entry.retrieved.split(' ');
+      meta.textContent = 'Read ' + day + ' ' + shortMonth(month) + ' ' + year;
+    } else {
+      meta.textContent = "PlayStation's official trophy list";
+    }
+    box.append(head, meta);
     rail.append(box);
   }
   // The green/amber legend (v15, boxed in v16): what the audit
@@ -1279,6 +1310,92 @@ function shortMonth(month) {
   return short[month] ?? month;
 }
 
+/* The SOURCES DIFFER box (v22): where the published lists split
+   on the missable count, the cover shows both versions side by
+   side and then our call — the format the top guides use for a
+   disagreement, carrying the adjudication this app has printed
+   since v10 (banner segment, rail note, Missables tab). Version
+   B's citations resolve through the same subset check as every
+   other marker, against Strangers & Freaks' own cited sources. */
+function differBox() {
+  const box = document.createElement('div');
+  box.className = 'differ-box';
+  const head = document.createElement('div');
+  head.className = 'differ-head';
+  head.textContent = '≠ Sources differ — is Strangers & Freaks missable?';
+  box.append(head);
+  const cols = document.createElement('div');
+  cols.className = 'differ-cols';
+  const colA = document.createElement('div');
+  colA.className = 'differ-col';
+  const verA = document.createElement('span');
+  verA.className = 'differ-ver differ-ver-a';
+  verA.textContent = 'A · Some lists';
+  const pA = document.createElement('p');
+  pA.textContent = 'Flagged “missable?” — counted, that makes 2 in all.';
+  colA.append(verA, pA);
+  const colB = document.createElement('div');
+  colB.className = 'differ-col';
+  const verB = document.createElement('span');
+  verB.className = 'differ-ver differ-ver-b';
+  verB.textContent = 'B · PowerPyx + GTABase';
+  const pB = document.createElement('p');
+  pB.append(document.createTextNode('Its strands stay open after the story'));
+  for (const ref of citedRefs(byId.get(25), ['S3', 'S4'])) pB.append(citeSpan(ref));
+  pB.append(document.createTextNode('.'));
+  colB.append(verB, pB);
+  cols.append(colA, colB);
+  box.append(cols);
+  const call = document.createElement('p');
+  call.className = 'differ-call';
+  const callStrong = document.createElement('strong');
+  callStrong.textContent = 'Our call';
+  call.append(callStrong, document.createTextNode(' — 1 potentially missable. Strangers & Freaks: time-sensitive.'));
+  box.append(call);
+  return box;
+}
+
+/* NEXT UP in roadmap order (v22): the next four trophies the
+   roadmap asks for, in the roadmap's own order — stage first,
+   then the official list's order inside the stage — skipping
+   the ones already earned. It follows the ticks like the
+   banner's Next Up line, and puts the roadmap's sequence on
+   the cover instead of leaving it to the roadmap shot. A
+   spoiler-hidden trophy is named as hidden, as there. */
+function renderNextUp() {
+  const strip = document.getElementById('nextUpStrip');
+  if (!strip) return;
+  strip.replaceChildren();
+  const label = document.createElement('span');
+  label.className = 'nextup-label';
+  label.textContent = 'Next up — in roadmap order';
+  strip.append(label);
+  const items = document.createElement('div');
+  items.className = 'nextup-items';
+  const ordered = trophies
+    .map((t, i) => ({ t, i }))
+    .sort((a, b) => a.t.stage - b.t.stage || a.i - b.i)
+    .map(({ t }) => t)
+    .filter((t) => !earned.has(t.name))
+    .slice(0, 4);
+  if (!ordered.length) {
+    const done = document.createElement('span');
+    done.className = 'nextup-item';
+    done.textContent = 'The roadmap is complete — the platinum is yours.';
+    items.append(done);
+  }
+  for (const trophy of ordered) {
+    const item = document.createElement('span');
+    item.className = 'nextup-item';
+    const stage = document.createElement('span');
+    stage.className = 'nextup-stage';
+    stage.textContent = 'S' + trophy.stage;
+    item.append(stage, document.createTextNode(isSpoilerHidden(trophy) ? 'Hidden story trophy' : trophy.name));
+    items.append(item);
+  }
+  strip.append(items);
+}
+
 /* The checklist's head: a one-line warning for the one potentially
    missable trophy (its short form from the data; the full warning
    lives in its guide panel) with a button that opens its guide. The
@@ -1310,27 +1427,21 @@ function renderBanner() {
       setTab('checklist');
     });
     row.append(text, show);
-    // The second "missable" some lists claim, adjudicated on the
-    // cover itself (v16): Strangers & Freaks, checked against the
-    // two guides that cover it and classified more precisely —
-    // the same finding the rail note and the Missables tab carry,
-    // promoted into the banner bar under the alert, so the 1-vs-2
-    // question is answered where it is asked.
-    const adj = document.createElement('div');
-    adj.className = 'banner-adj';
-    const adjStrong = document.createElement('strong');
-    adjStrong.textContent = 'Strangers & Freaks is NOT missable — ';
-    adj.append(adjStrong, document.createTextNode('strands stay open after the story'));
-    for (const ref of citedRefs(byId.get(25), ['S3', 'S4'])) adj.append(citeSpan(ref));
-    adj.append(document.createTextNode('; its one timed race is tracked as time-sensitive.'));
     const box = document.createElement('div');
     box.className = 'banner-box';
-    box.append(row, adj);
+    box.append(row);
     banner.append(box);
   }
+  // The second "missable" some lists claim, adjudicated on the
+  // cover itself — v16 carried it as a small segment under the
+  // alert; v22 gives it the SOURCES DIFFER box at headline size:
+  // the two versions side by side, then our call. Same finding
+  // the rail note and the Missables tab carry, presented where
+  // the 1-vs-2 question is asked.
+  banner.append(differBox());
   if (target && !earned.has(target.name)) {
     // The watch list stands in the rail beside the list; the banner
-    // is the alert row alone.
+    // is the alert row and the differ box.
     return;
   }
   const next = document.createElement('p');
@@ -1496,17 +1607,17 @@ function renderDetail() {
   }
 
   // The panel's sources in one line (v14): the registry itself —
-  // all seven sources with full URLs, cited-by counts and the read
-  // date — stands in the rail beside the list, so the panel names
-  // this trophy's own sources and points at it. The full numbered
-  // citation form is still printed once in the footer registry.
+  // all seven sources with cited-by counts and read dates —
+  // stands in the rail beside the list, so the panel names this
+  // trophy's own sources and points at the full numbered form,
+  // URLs included, printed once in the footer registry (v22).
   const ownRefs = (trophy.sources ?? []).map((s) => s.ref);
   if (ownRefs.length) {
     const line = document.createElement('p');
     line.className = 'panel-sources-line';
     const lead = document.createElement('strong');
     lead.textContent = 'Sources for this guide: ';
-    line.append(lead, document.createTextNode(ownRefs.join(' · ') + ' — full registry with URLs in the rail →'));
+    line.append(lead, document.createTextNode(ownRefs.join(' · ') + ' — full registry with URLs in the footer ↓'));
     detailPanel.append(line);
   }
 
@@ -1818,6 +1929,7 @@ function updateProgress() {
 
 function renderAll() {
   renderBanner();
+  renderNextUp();
   renderStageChips();
   renderChecklist();
   renderDetail();

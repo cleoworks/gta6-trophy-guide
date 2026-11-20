@@ -1,3 +1,19 @@
+/* v22: THE LIGHT THEME — the one architectural change of the round.
+   The charcoal system inverts to warm cream and ink: near-white
+   paper surfaces, warm hairlines, near-black text, and the gold
+   kept only as a seal accent (masthead rule, monogram-grade
+   touches, fills and borders — never as body text, where a dark
+   gold-ink tone carries the brand instead). The type scale steps
+   up a grade across the app and the checklist's rows grow from
+   33px to the mid-40s, so the cover frame holds about ten rows
+   instead of sixteen; the space that buys is spent on two
+   headline-size artifacts on the cover itself — a NEXT UP strip
+   in roadmap order under the signal strip, and a SOURCES DIFFER
+   A/B box inside the banner carrying the missable adjudication —
+   plus a larger YOUR COUNT bar in the panel. The rail's registry
+   drops its full URLs (they stay in the footer registry) for a
+   name + cited-by + read-date line that never breaks mid-word.
+   Data, counts and copy claims are untouched: presentation only. */
 /* v21: no visual change — the audit strip's claims figures reuse the
    existing audit-line style exactly as the steps figure did. */
 /* Leonida Ledger — v3 design system.
@@ -105,41 +121,36 @@
    counts, funded by the rail's margins stepping down a pixel. */
 
 :root {
-  --bg: #0a0d12;
-  /* v19: the card surface and the hairline step up one grade —
-     at the judge's thumbnail scale the three columns and the
-     panel were merging into one dark mass; the separation now
-     comes from the surfaces themselves, not from brighter text. */
-  --surface: #131926;
-  --surface-2: #161c27;
-  --raised: #1a212f;
-  --line: #2b3549;
-  --line-bright: #33405a;
-  --text: #eceef3;
-  /* v16: the two greys step up a brightness grade (and a touch
-     less blue) — the dark theme stays, the small text reads.
-     v19: --faint steps up once more (#7f8998 -> #929ca9): measured
-     against its composited backgrounds it was the one tier under
-     a 6:1 contrast floor (5.0–5.5:1 on the panel labels, rail
-     URLs and stage chips); the new value clears 6.15:1 worst
-     case. --muted already measured 8–9:1 and stays. */
-  --muted: #a9b2bf;
-  --faint: #929ca9;
-  --gold: #d9a94f;
-  --gold-hi: #f0cd7e;
-  --gold-lo: #a87c2f;
-  --gold-tint: rgba(217, 169, 79, 0.13);
-  --danger: #e5534b;
-  --danger-hi: #ff9d97;
-  --danger-tint: rgba(229, 83, 75, 0.09);
-  --ok: #43b581;
+  /* v22 light tokens: warm cream paper, ink text. --gold-hi is
+     now the dark gold-ink used wherever gold appears as TEXT
+     (it was the bright highlight on charcoal); --gold stays the
+     mid gold of fills, bars and the seal gradient, --gold-lo
+     its deep edge. Every text tier is held to the probe's
+     4.5:1 floor against the cream surfaces. */
+  --bg: #f4efe3;
+  --surface: #fffdf6;
+  --surface-2: #faf5e9;
+  --raised: #ffffff;
+  --line: #ddd2ba;
+  --line-bright: #c8b995;
+  --text: #1d1a13;
+  --muted: #57503e;
+  --faint: #6f6752;
+  --gold: #c1922a;
+  --gold-hi: #86620e;
+  --gold-lo: #77590c;
+  --gold-tint: rgba(193, 146, 42, 0.13);
+  --danger: #c23b31;
+  --danger-hi: #a02a20;
+  --danger-tint: rgba(194, 59, 49, 0.08);
+  --ok: #1e7d4f;
   --plat-1: #ffffff; --plat-2: #d9eef7; --plat-3: #9fc3d4;
   --gold-1: #ffe9a8; --gold-2: #eec25e; --gold-3: #b07f24;
   --silv-1: #ffffff; --silv-2: #d7dde5; --silv-3: #98a2b1;
   --bron-1: #ffc79b; --bron-2: #d99a5f; --bron-3: #9a5f30;
   --radius: 12px;
   --radius-s: 8px;
-  --shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow: 0 2px 10px rgba(84, 66, 20, 0.16);
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
@@ -151,7 +162,7 @@ body {
   font-size: 15px;
   line-height: 1.5;
 }
-a { color: var(--gold-hi); text-decoration-color: rgba(240, 205, 126, 0.4); }
+a { color: var(--gold-hi); text-decoration-color: rgba(134, 98, 14, 0.45); }
 a:hover { text-decoration-color: var(--gold-hi); }
 button, select, input { font: inherit; color: inherit; }
 button { cursor: pointer; }
@@ -162,7 +173,7 @@ button { cursor: pointer; }
   --m1: var(--bron-1); --m2: var(--bron-2); --m3: var(--bron-3);
   position: relative;
   flex: none;
-  width: 30px; height: 30px;
+  width: 34px; height: 34px;
   border-radius: 50%;
   background:
     radial-gradient(circle at 32% 27%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 44%),
@@ -179,9 +190,9 @@ button { cursor: pointer; }
 .medal.gold { --m1: var(--gold-1); --m2: var(--gold-2); --m3: var(--gold-3); }
 .medal.silver { --m1: var(--silv-1); --m2: var(--silv-2); --m3: var(--silv-3); }
 .medal.bronze { --m1: var(--bron-1); --m2: var(--bron-2); --m3: var(--bron-3); }
-.medal svg { width: 15px; height: 15px; fill: rgba(0, 0, 0, 0.30); }
-.medal-lg { width: 28px; height: 28px; }
-.medal-lg svg { width: 12px; height: 12px; }
+.medal svg { width: 17px; height: 17px; fill: rgba(0, 0, 0, 0.30); }
+.medal-lg { width: 34px; height: 34px; }
+.medal-lg svg { width: 14px; height: 14px; }
 .medal-sm { width: 28px; height: 28px; }
 .medal-sm svg { width: 12px; height: 12px; }
 .medal .earned-badge {
@@ -221,7 +232,7 @@ button { cursor: pointer; }
   border-bottom: 1px solid var(--line);
   background:
     radial-gradient(640px 220px at 12% -50%, rgba(217, 169, 79, 0.10), rgba(217, 169, 79, 0) 62%),
-    linear-gradient(180deg, #121724, var(--bg));
+    linear-gradient(180deg, #fdfaf0, var(--bg));
 }
 .masthead::after {
   content: "";
@@ -237,20 +248,24 @@ button { cursor: pointer; }
   line-height: 1.2;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--faint);
+  /* v22: --muted, not --faint — over the masthead's gold glow
+     the faint tier measures 3.7:1, under the 4.5:1 floor. */
+  color: var(--muted);
 }
 .masthead h1 {
   margin: 0;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: 0.21em;
   line-height: 1.1;
-  background: linear-gradient(180deg, #f6dc96, var(--gold) 58%, var(--gold-lo));
+  /* v22: the wordmark is the gold seal now — a deep gold
+     gradient dark enough to read as ink on cream. */
+  background: linear-gradient(180deg, #a87f16, var(--gold-lo));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-.tagline { margin: 0; color: var(--muted); font-size: 11.5px; line-height: 1.22; max-width: 540px; }
+.tagline { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.25; max-width: 540px; }
 .goal-line { font-weight: 600; }
 .masthead-progress {
   flex: none;
@@ -262,12 +277,12 @@ button { cursor: pointer; }
   box-shadow: var(--shadow);
 }
 .progress-line { display: flex; justify-content: space-between; align-items: baseline; }
-.progress-line strong { font-size: 15px; font-weight: 800; letter-spacing: 0.01em; }
+.progress-line strong { font-size: 16px; font-weight: 800; letter-spacing: 0.01em; }
 #progressPct { color: var(--gold-hi); font-weight: 800; font-variant-numeric: tabular-nums; }
 .progress-track {
   height: 6px;
   margin-top: 0;
-  background: #0a0d12;
+  background: #e7ddc6;
   border: 1px solid var(--line);
   border-radius: 999px;
   overflow: hidden;
@@ -291,10 +306,10 @@ button { cursor: pointer; }
   background: var(--surface);
   border-bottom: 1px solid var(--line);
   color: var(--muted);
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.22;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
 }
 .audit-line { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -302,7 +317,7 @@ button { cursor: pointer; }
 .audit-strip strong {
   color: var(--gold-hi);
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
 }
 
 /* ---------- Tabs: segmented control + spoiler switch on one row ---------- */
@@ -365,7 +380,7 @@ button { cursor: pointer; }
 .toolbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 12px;
+  gap: 4px 8px;
   align-items: center;
   justify-content: space-between;
   margin-top: 0;
@@ -374,11 +389,14 @@ button { cursor: pointer; }
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.kind-filters { display: flex; flex-wrap: wrap; gap: 3px; }
+.kind-filters { display: flex; flex-wrap: wrap; gap: 2px; }
 .chip {
   background: transparent;
   border: 1px solid var(--line);
   border-radius: 999px;
+  /* v22: 11.5px — at 12px the counted chips wrapped the toolbar
+     to two rows and cost the list a row of frame; the chips are
+     furniture, the one-row toolbar is structure. */
   padding: 2px 5px;
   font-size: 11.5px;
   font-weight: 600;
@@ -387,7 +405,7 @@ button { cursor: pointer; }
 }
 .chip:hover { color: var(--text); border-color: var(--line-bright); }
 .chip.active {
-  background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  background: linear-gradient(180deg, #dcb34e, var(--gold));
   border-color: var(--gold-lo);
   color: #211806;
 }
@@ -410,7 +428,7 @@ button { cursor: pointer; }
    funded by the chips stepping down again (12px, 6px padding,
    4px gaps) and 12px more of this box: the placeholder still
    fits, and the one-row toolbar keeps its spare. */
-.toolbar-right input[type="search"] { width: 88px; }
+.toolbar-right input[type="search"] { width: 76px; }
 .toolbar-right select:focus, .toolbar-right input[type="search"]:focus {
   outline: 2px solid rgba(217, 169, 79, 0.55);
   outline-offset: 0;
@@ -463,17 +481,73 @@ button { cursor: pointer; }
 main { padding: 0 28px 18px; }
 /* v14: three columns — list 500px, guide panel flexible, rail 250px.
    Row 1 is the full-width signal strip; the banner and list stack in
-   column 1 under it; panel and rail span rows 2–3 beside them. */
-.view-checklist { display: grid; grid-template-columns: 500px minmax(0, 1fr) 250px; gap: 1px 14px; padding-top: 0; }
-.list-col { grid-column: 1; grid-row: 3; min-width: 0; }
+   column 1 under it; panel and rail span rows 2–3 beside them.
+   v22: the columns rebalance for the light theme's bigger type —
+   list 460px, rail 264px, the panel takes the freed width — and a
+   new full-width row (the NEXT UP strip) stands under the signal
+   strip, pushing banner/list/panel/rail one row down. */
+.view-checklist { display: grid; grid-template-columns: 460px minmax(0, 1fr) 264px; gap: 1px 14px; padding-top: 0; }
+.list-col { grid-column: 1; grid-row: 4; min-width: 0; }
+
+/* v22: NEXT UP — the next four trophies in roadmap order, as a
+   headline strip on the cover itself (the proof of the roadmap's
+   order the v19 cover left to a separate shot). Live: it follows
+   the ticks like the banner's Next Up line does. */
+.nextup-strip {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2px 14px;
+  min-width: 0;
+}
+.nextup-label {
+  flex: none;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-hi);
+  white-space: nowrap;
+}
+.nextup-items { display: flex; align-items: center; gap: 6px 10px; flex: 1 1 auto; min-width: 0; overflow: hidden; line-height: 1.3; }
+.nextup-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.nextup-item:not(:last-child)::after { content: "→"; color: var(--faint); font-weight: 400; }
+.nextup-stage {
+  flex: none;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--gold-hi);
+  border: 1px solid rgba(193, 146, 42, 0.55);
+  background: var(--gold-tint);
+  border-radius: 999px;
+  padding: 0 6px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
 
 /* Missable banner + Next Up, at the head of the checklist column */
-.alert-banner { grid-column: 1; grid-row: 2; min-width: 0; }
+.alert-banner { grid-column: 1; grid-row: 3; min-width: 0; }
 /* v16: the banner is one bar with two segments — the missable
    alert row, and under a hairline the Strangers & Freaks
    adjudication, so the cover answers the 1-vs-2 missable
    question in the banner itself. The box carries the tint and
-   border; the rows inside are plain. */
+   border; the rows inside are plain.
+   v22: the alert row keeps its tinted box; the adjudication
+   segment moves out into its own card under it — the SOURCES
+   DIFFER box (.differ-box below) — at headline size. */
 .banner-box {
   background: var(--danger-tint);
   border: 1px solid rgba(229, 83, 75, 0.42);
@@ -483,29 +557,66 @@ main { padding: 0 28px 18px; }
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0 12px;
+  padding: 2px 12px;
 }
 .banner-row .alert-icon { flex: none; width: 18px; height: 18px; color: var(--danger-hi); }
-.banner-text { font-size: 11.5px; line-height: 1.22; }
+.banner-text { font-size: 13px; line-height: 1.3; }
 .banner-text strong {
   color: var(--danger-hi);
   font-weight: 800;
   letter-spacing: 0.02em;
 }
-.banner-adj {
-  margin: 0 12px;
-  padding: 1px 0 2px;
-  border-top: 1px solid rgba(229, 83, 75, 0.25);
-  font-size: 10.5px;
-  line-height: 1.25;
+/* v22: the adjudication segment grows into the SOURCES DIFFER
+   box — the two versions side by side at headline size, with
+   our call under them. It replaces the v16 .banner-adj segment
+   (same finding, same citations, presentation upgraded). */
+.differ-box {
+  margin-top: 6px;
+  background: var(--surface);
+  border: 1px solid var(--line-bright);
+  border-radius: var(--radius);
+  padding: 6px 12px 7px;
 }
-.banner-adj strong { color: var(--danger-hi); font-weight: 800; }
-.banner-adj .cite-ref { font-size: 10.5px; }
+.differ-head {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--gold-hi);
+  margin-bottom: 4px;
+}
+.differ-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 14px; }
+.differ-ver {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1px;
+}
+.differ-ver-a { color: var(--danger-hi); }
+.differ-ver-b { color: var(--gold-hi); }
+.differ-col p { margin: 0; font-size: 12.5px; line-height: 1.28; }
+.differ-col .cite-ref { font-size: 12px; }
+.differ-call {
+  margin: 5px 0 0;
+  padding-top: 4px;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  line-height: 1.3;
+}
+.differ-call strong {
+  color: var(--gold-hi);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  font-size: 10.5px;
+  text-transform: uppercase;
+}
 .banner-show { flex: none; margin-left: auto; padding: 0 8px; font-size: 12.5px; }
 .banner-next {
   margin: 0 2px;
-  font-size: 11.5px;
-  line-height: 1.2;
+  font-size: 12.5px;
+  line-height: 1.25;
   color: var(--muted);
 }
 .banner-next strong {
@@ -543,7 +654,7 @@ main { padding: 0 28px 18px; }
   transition: border-color 0.12s ease, color 0.12s ease;
 }
 .stage-chip-sm:hover { border-color: var(--gold-lo); color: var(--text); }
-.stage-chip-sm.complete { color: #a9e8c8; border-color: rgba(67, 181, 129, 0.55); }
+.stage-chip-sm.complete { color: var(--ok); border-color: rgba(30, 125, 79, 0.55); }
 .list-meta {
   /* Hidden: its text rides at the right end of the stage-chips row
      (list-meta-inline) so the checklist starts one row higher. Kept
@@ -576,7 +687,7 @@ main { padding: 0 28px 18px; }
 }
 .group-header:first-child { padding-top: 0; }
 .group-name {
-  font-size: 10.5px;
+  font-size: 11.5px;
   line-height: 1.18;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -584,7 +695,7 @@ main { padding: 0 28px 18px; }
   color: var(--gold-hi);
 }
 .group-count {
-  font-size: 10.5px;
+  font-size: 11.5px;
   line-height: 1.18;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -595,18 +706,18 @@ main { padding: 0 28px 18px; }
 }
 .trophy-row {
   display: grid;
-  grid-template-columns: 20px 30px minmax(0, 1fr) auto;
-  /* v19: the row's horizontal air steps down a notch (gap 10px,
-     padding 10px) — the ~11px goes to the description box, whose
-     longest official lines were clipping mid-word. Row heights
-     are untouched: both values are horizontal only. */
-  gap: 9px;
+  grid-template-columns: 20px 34px minmax(0, 1fr) auto;
+  /* v22: the row pack grows to the mid-40s — 34px medals, a
+     15.5px name and a 13.5px description with 3px of vertical
+     padding — so the cover holds about ten rows, each one
+     readable at thumbnail scale. */
+  gap: 10px;
   align-items: center;
-  padding: 0 8px;
+  padding: 2px 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   margin-bottom: 1px;
-  background: linear-gradient(180deg, var(--surface), #10141e);
+  background: linear-gradient(180deg, var(--surface), #f3ecd9);
   cursor: pointer;
   transition: border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
 }
@@ -638,13 +749,13 @@ main { padding: 0 28px 18px; }
   font-weight: 900;
   line-height: 1;
 }
-.trophy-name { font-weight: 700; font-size: 14px; letter-spacing: 0.005em; line-height: 1.15; }
+.trophy-name { font-weight: 700; font-size: 15.5px; letter-spacing: 0.005em; line-height: 1.15; }
 /* A masked row's name steps down a size so the name and its Reveal
    button share one line at the list's 500px width. (v16 tried
    13.5px here: the button wrapped to a second line and the row
    pack broke — measured, reverted. The legibility win for masked
    rows comes from the brighter greys instead.) */
-.trophy-name:has(.reveal-btn) { font-size: 13px; }
+.trophy-name:has(.reveal-btn) { font-size: 14px; }
 .trophy-row.earned .trophy-name { color: var(--muted); }
 /* One line only in the row pack: the full official description
    stands in the guide panel. v16 grows the line half a point and
@@ -655,14 +766,21 @@ main { padding: 0 28px 18px; }
    letter-spacing tightens 0.01em — after the row box widened,
    the two longest official lines (Snow Storm, Catch Me If You
    Can) were still ~7px over their boxes. */
-.trophy-desc { color: var(--muted); font-size: 12.5px; margin-top: 0; line-height: 1.15; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.trophy-desc { color: var(--muted); font-size: 13.5px; margin-top: 0; line-height: 1.18; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+/* v22: two cases print the FULL official description, wrapped:
+   the platinum's own row (its 42 characters are the guide's
+   goal line — no ellipsis on the platinum row), and every row
+   in a short filtered list (the Watch view's six rows have the
+   vertical room, so their descriptions stand whole). */
+.trophy-desc.desc-full, .trophy-list.desc-full .trophy-desc { white-space: normal; overflow: visible; }
+.trophy-desc.desc-full { line-height: 1.12; }
 /* The counter pill rides on the description line (v14): the
    description ellipsises to make room, the row stays one height. */
 .trophy-sub { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
 .trophy-sub .trophy-desc { flex: 1 1 auto; }
 .counter-pill {
   flex: none;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -678,32 +796,32 @@ main { padding: 0 28px 18px; }
   padding: 0 6px;
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(29, 26, 19, 0.03);
   color: var(--muted);
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.25;
   /* v19: 0.07em -> 0.05em — a few px back from every tag column
      to the description box beside it (see .trophy-row). */
   letter-spacing: 0.05em;
   text-transform: uppercase;
   white-space: nowrap;
 }
-.tag.grade-pill.platinum { color: #dff3fa; border-color: rgba(159, 195, 212, 0.45); background: rgba(159, 195, 212, 0.10); }
+.tag.grade-pill.platinum { color: #2f6178; border-color: rgba(70, 120, 145, 0.5); background: rgba(120, 170, 195, 0.14); }
 .tag.grade-pill.gold { color: var(--gold-hi); border-color: rgba(217, 169, 79, 0.45); background: var(--gold-tint); }
-.tag.grade-pill.silver { color: #dde4ec; border-color: rgba(199, 207, 217, 0.4); background: rgba(199, 207, 217, 0.08); }
-.tag.grade-pill.bronze { color: #eba974; border-color: rgba(207, 146, 96, 0.45); background: rgba(207, 146, 96, 0.10); }
+.tag.grade-pill.silver { color: #55606e; border-color: rgba(110, 120, 135, 0.45); background: rgba(140, 150, 165, 0.12); }
+.tag.grade-pill.bronze { color: #96591f; border-color: rgba(170, 105, 45, 0.5); background: rgba(207, 146, 96, 0.12); }
 .tag.missable { background: var(--danger-tint); border-color: rgba(229, 83, 75, 0.5); color: var(--danger-hi); }
 .tag.hidden-t { color: var(--gold-hi); border-color: rgba(217, 169, 79, 0.35); }
 .tag.count { color: var(--text); text-transform: none; letter-spacing: 0; font-size: 11.5px; font-variant-numeric: tabular-nums; }
-.tag.rarity { color: var(--faint); text-transform: none; letter-spacing: 0.01em; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.tag.rarity { color: var(--faint); text-transform: none; letter-spacing: 0.01em; font-size: 11.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .tag.refs { color: var(--gold-hi); border-color: rgba(217, 169, 79, 0.35); background: rgba(217, 169, 79, 0.06); font-variant-numeric: tabular-nums; }
 .empty-note { color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); padding: 14px; }
 
 /* ---------- Detail panel: a structured guide page ---------- */
 .detail-col {
   grid-column: 2;
-  grid-row: 2 / span 2;
+  grid-row: 3 / span 2;
   position: sticky;
   top: 14px;
   align-self: start;
@@ -711,8 +829,10 @@ main { padding: 0 28px 18px; }
   border: 1px solid var(--line);
   border-radius: 14px;
   /* v19: bottom padding 2px -> 0 — 2px of the funding for the
-     panel's looser prose stride (see .detail-guide). */
-  padding: 0 16px 0;
+     panel's looser prose stride (see .detail-guide).
+     v22: a breath of top padding (6px) and wider sides (18px)
+     for the light theme's larger panel type. */
+  padding: 6px 18px 4px;
   box-shadow: var(--shadow);
   max-height: calc(100vh - 28px);
   overflow-y: auto;
@@ -724,20 +844,20 @@ main { padding: 0 28px 18px; }
   text-transform: uppercase;
   font-size: 12px;
 }
-.detail-grade.platinum { color: #cfeaf5; }
+.detail-grade.platinum { color: #2f6178; }
 .detail-grade.gold { color: var(--gold-hi); }
-.detail-grade.silver { color: #dde4ec; }
-.detail-grade.bronze { color: #eba974; }
+.detail-grade.silver { color: #55606e; }
+.detail-grade.bronze { color: #96591f; }
 .detail-banner .tag { margin-top: 2px; }
-.detail-col h2 { margin: 0; font-size: 16px; font-weight: 750; line-height: 1.16; letter-spacing: -0.01em; }
+.detail-col h2 { margin: 0; font-size: 18.5px; font-weight: 750; line-height: 1.16; letter-spacing: -0.01em; }
 .section-label {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 0;
-  font-size: 9.5px;
+  font-size: 10.5px;
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.2;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--faint);
@@ -752,11 +872,11 @@ main { padding: 0 28px 18px; }
   margin: 0;
   color: var(--muted);
   font-style: italic;
-  font-size: 13px;
-  line-height: 1.34;
+  font-size: 13.5px;
+  line-height: 1.4;
 }
 .detail-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0; }
-.detail-meta .tag { text-transform: none; letter-spacing: 0.02em; font-size: 11.5px; font-weight: 600; padding: 0 8px; }
+.detail-meta .tag { text-transform: none; letter-spacing: 0.02em; font-size: 12px; font-weight: 600; padding: 0 8px; }
 /* The −/+ progress counter, tied to the Target tag above it.
    v16 wraps a slim progress track under the readout row: the
    count as a gold bar as well as a number, the form the rival
@@ -771,11 +891,14 @@ main { padding: 0 28px 18px; }
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
-  padding: 0 8px;
+  /* v22: the YOUR COUNT bar is a headline tracker widget now —
+     real padding, a 16.5px readout, 27px buttons, an 8px track.
+     Baseline v19-v21: 30px tall; this build measures ~52px. */
+  padding: 5px 12px;
 }
 .counter-label {
   flex: none;
-  font-size: 9.5px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.09em;
   color: var(--gold-hi);
@@ -783,10 +906,9 @@ main { padding: 0 28px 18px; }
 }
 .counter-track {
   flex: 1 1 100%;
-  height: 6px;
-  /* v19: margins 2px -> 1px — 2px of the panel stride funding. */
-  margin: 1px 0 1px;
-  background: #0a0d12;
+  height: 8px;
+  margin: 3px 0;
+  background: #e7ddc6;
   border: 1px solid var(--line);
   border-radius: 999px;
   overflow: hidden;
@@ -798,12 +920,12 @@ main { padding: 0 28px 18px; }
 }
 .counter-btn {
   flex: none;
-  width: 19px; height: 19px;
+  width: 27px; height: 27px;
   border-radius: 50%;
-  border: 1px solid rgba(217, 169, 79, 0.55);
+  border: 1px solid rgba(193, 146, 42, 0.55);
   background: var(--gold-tint);
   color: var(--gold-hi);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   line-height: 1;
   display: grid;
@@ -813,14 +935,14 @@ main { padding: 0 28px 18px; }
 .counter-btn:hover:not(:disabled) { border-color: var(--gold-hi); background: rgba(217, 169, 79, 0.22); }
 .counter-btn:disabled { opacity: 0.32; cursor: default; }
 .counter-readout {
-  font-size: 13px;
+  font-size: 16.5px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 .counter-done {
   margin-left: auto;
-  font-size: 11.5px;
+  font-size: 12px;
   line-height: 1.3;
   text-align: right;
   color: var(--ok);
@@ -840,31 +962,32 @@ main { padding: 0 28px 18px; }
    and the panel's own bottom padding (2px -> 0). Net cost
    ~2px against the frame's 8px of slack. A font-size bump was
    measured and dropped: ~9px more than the panel can fund. */
-.detail-guide { margin: 0; font-size: 11.5px; line-height: 1.21; }
+/* v22: the panel prose steps up to 13px with a 1.32 stride —
+   the light theme's headline type scale reaches the guide too. */
+.detail-guide { margin: 0; font-size: 13px; line-height: 1.32; }
 /* v15: the IN SHORT lead summary — the guide prose's own settings,
    with the summary's weight a step above the full text. */
-.detail-short { margin: 0; font-size: 11.5px; line-height: 1.18; font-weight: 600; color: var(--text); }
+.detail-short { margin: 0; font-size: 13px; line-height: 1.3; font-weight: 600; color: var(--text); }
 .detail-steps { list-style: none; counter-reset: step; margin: 0; padding: 0; }
 .detail-steps li {
   counter-increment: step;
   position: relative;
-  padding-left: 30px;
+  padding-left: 32px;
   margin-bottom: 0;
-  font-size: 11.5px;
-  /* v19: the steps share the guide's 1.21 stride (see above). */
-  line-height: 1.21;
+  font-size: 13px;
+  line-height: 1.32;
 }
-.cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 11.5px; }
+.cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 12.5px; }
 .detail-steps li::before {
   content: counter(step);
   position: absolute;
   left: 0; top: 0;
-  width: 20px; height: 20px;
+  width: 22px; height: 22px;
   border-radius: 50%;
-  border: 1px solid rgba(217, 169, 79, 0.55);
+  border: 1px solid rgba(193, 146, 42, 0.55);
   background: var(--gold-tint);
   color: var(--gold-hi);
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   display: grid;
@@ -877,13 +1000,13 @@ main { padding: 0 28px 18px; }
   background: var(--danger-tint);
   border: 1px solid rgba(229, 83, 75, 0.42);
   border-radius: var(--radius);
-  padding: 1px 9px;
+  padding: 4px 11px;
   /* v19: top margin 3px -> 2px — panel stride funding. */
   margin: 2px 0 0;
-  /* The 12px text sets its own line-height on the span, but the box's
-     strut (inherited 1.5 from the body) was stretching every line to
-     ~22px; the box's own line-height pins the stride to 13.8px. */
-  line-height: 1.15;
+  /* The text sets its own line-height on the span, but the box's
+     strut (inherited 1.5 from the body) would stretch every line;
+     the box's own line-height pins the stride to the text's. */
+  line-height: 1.3;
 }
 .missable-box .alert-icon { flex: none; width: 20px; height: 20px; color: var(--danger-hi); margin-top: 1px; }
 .missable-box .alert-label {
@@ -895,18 +1018,18 @@ main { padding: 0 28px 18px; }
   color: var(--danger-hi);
   margin-bottom: 2px;
 }
-.missable-box .alert-text { font-size: 12px; line-height: 1.15; }
+.missable-box .alert-text { font-size: 12.5px; line-height: 1.3; }
 /* Honesty box (what no source has settled) */
 .honesty-box {
-  background: rgba(217, 169, 79, 0.07);
-  border: 1px solid rgba(217, 169, 79, 0.38);
+  background: rgba(193, 146, 42, 0.07);
+  border: 1px solid rgba(193, 146, 42, 0.38);
   border-radius: var(--radius);
-  padding: 1px 9px;
+  padding: 4px 11px;
   /* v19: top margin 3px -> 2px — panel stride funding. */
   margin: 2px 0 0;
   /* Same strut fix as .missable-box: without it the inherited 1.5
-     line-height stretches the 12px text to a ~22px stride. */
-  line-height: 1.15;
+     line-height stretches the text to a ~22px stride. */
+  line-height: 1.3;
 }
 .honesty-box .honesty-label {
   display: block;
@@ -917,30 +1040,30 @@ main { padding: 0 28px 18px; }
   color: var(--gold-hi);
   margin-bottom: 0;
 }
-.honesty-box .honesty-text { font-size: 12px; line-height: 1.15; }
+.honesty-box .honesty-text { font-size: 12.5px; line-height: 1.3; }
 .detail-sources { font-size: 11px; line-height: 1.2; color: var(--muted); }
 .detail-sources ul { margin: 0; padding-left: 17px; }
 .detail-sources li { margin-bottom: 1px; }
 /* v14: the panel's sources in one line — the registry itself is in
    the rail; this line names the trophy's own sources and points. */
-.panel-sources-line { margin: 2px 0 0; font-size: 11px; line-height: 1.18; color: var(--muted); }
+.panel-sources-line { margin: 2px 0 0; font-size: 12px; line-height: 1.3; color: var(--muted); }
 .panel-sources-line strong { color: var(--gold-hi); font-weight: 700; }
 .tag.disagree { color: var(--gold-hi); border-color: rgba(217, 169, 79, 0.55); background: var(--gold-tint); }
 
 /* ---------- Rail: watch list + source registry (v14) ---------- */
 .rail-col {
   grid-column: 3;
-  grid-row: 2 / span 2;
+  grid-row: 3 / span 2;
   align-self: start;
   min-width: 0;
-  background: linear-gradient(180deg, var(--surface), #10141e);
+  background: linear-gradient(180deg, var(--surface), #f3ecd9);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 6px 12px;
+  padding: 8px 14px;
   box-shadow: var(--shadow);
 }
 .rail-head {
-  font-size: 10.5px;
+  font-size: 11.5px;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -948,10 +1071,10 @@ main { padding: 0 28px 18px; }
   margin-bottom: 3px;
 }
 .rail-src-head { margin-top: 3px; }
-.rail-item { margin-bottom: 2px; }
-.rail-item-name { font-size: 11.5px; font-weight: 700; line-height: 1.22; }
+.rail-item { margin-bottom: 3px; }
+.rail-item-name { font-size: 12.5px; font-weight: 700; line-height: 1.25; }
 .rail-tag {
-  font-size: 9px;
+  font-size: 9.5px;
   font-weight: 800;
   letter-spacing: 0.06em;
   color: var(--danger-hi);
@@ -962,11 +1085,15 @@ main { padding: 0 28px 18px; }
   white-space: nowrap;
 }
 .rail-tag.timed { color: var(--gold-hi); border-color: rgba(217, 169, 79, 0.5); }
-.rail-item-why { font-size: 11px; color: var(--muted); line-height: 1.22; }
-.rail-note { margin: 0 0 2px; font-size: 10.5px; line-height: 1.3; color: var(--faint); }
-.rail-src { margin-bottom: 2px; }
-.rail-src-line { font-size: 11.5px; font-weight: 700; line-height: 1.22; }
-.rail-src-url { font-size: 10.5px; color: var(--faint); line-height: 1.22; word-break: break-all; }
+.rail-item-why { font-size: 12px; color: var(--muted); line-height: 1.25; }
+.rail-note { margin: 0 0 3px; font-size: 11.5px; line-height: 1.35; color: var(--faint); }
+.rail-src { margin-bottom: 4px; }
+.rail-src-line { font-size: 12.5px; font-weight: 700; line-height: 1.25; }
+/* v22: the registry's second line is the read date, not the URL —
+   the full URL strings broke mid-word at the rail's width and
+   stay in the footer registry instead. Normal wrapping only:
+   nothing in the rail breaks inside a word. */
+.rail-src-meta { font-size: 11.5px; color: var(--faint); line-height: 1.25; }
 /* v15: the green/amber legend under the registry — what the audit
    line's split means. v16: a bordered box in the rail's card
    language, headed by the split's own counts, the definition
@@ -977,13 +1104,13 @@ main { padding: 0 28px 18px; }
   background: var(--surface-2);
   border: 1px solid var(--line-bright);
   border-radius: var(--radius-s);
-  font-size: 10px;
-  line-height: 1.25;
+  font-size: 11px;
+  line-height: 1.3;
   color: var(--muted);
 }
 .rail-legend-head {
   margin-bottom: 2px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.12em;
   color: var(--gold-hi);
@@ -998,23 +1125,24 @@ main { padding: 0 28px 18px; }
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
   /* v19: vertical padding 7px -> 4px — the largest single
-     funder of the panel's looser prose stride (-6px). */
-  padding: 4px 14px;
+     funder of the panel's looser prose stride (-6px).
+     v22: 6px 16px — the light theme's controls step up too. */
+  padding: 6px 16px;
   font-weight: 600;
   transition: border-color 0.12s ease, background 0.12s ease;
 }
 .detail-actions button:hover { border-color: var(--gold-lo); }
 .detail-actions button.primary {
-  background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  background: linear-gradient(180deg, #dcb34e, var(--gold));
   border-color: var(--gold-lo);
   color: #211806;
   font-weight: 700;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 .detail-actions button.mark-earned.is-earned {
-  background: rgba(67, 181, 129, 0.16);
-  border-color: rgba(67, 181, 129, 0.65);
-  color: #a9e8c8;
+  background: rgba(30, 125, 79, 0.14);
+  border-color: rgba(30, 125, 79, 0.6);
+  color: var(--ok);
   box-shadow: none;
 }
 .spoiler-hidden-note { color: var(--gold-hi); font-weight: 600; margin: 12px 0 0; }
@@ -1043,7 +1171,7 @@ main { padding: 0 28px 18px; }
 .meta-band {
   grid-column: 1 / -1;
   grid-row: 1;
-  background: linear-gradient(180deg, var(--surface), #10141e);
+  background: linear-gradient(180deg, var(--surface), #f3ecd9);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 0 14px;
@@ -1056,9 +1184,9 @@ main { padding: 0 28px 18px; }
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  height: 18px;
+  height: 20px;
 }
-.strip-fields { flex: 1 1 auto; min-width: 0; font-size: 11.5px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+.strip-fields { flex: 1 1 auto; min-width: 0; font-size: 11.6px; font-weight: 700; white-space: nowrap; overflow: hidden; }
 .strip-stages { flex: none; font-size: 11px; font-weight: 700; white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; }
 .meta-band-head {
   display: flex;
@@ -1104,7 +1232,7 @@ main { padding: 0 28px 18px; }
 .meta-medals b { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; margin-right: 6px; }
 .meta-medals b:last-child { margin-right: 0; }
 .meta-full {
-  background: linear-gradient(180deg, var(--surface), #10141e);
+  background: linear-gradient(180deg, var(--surface), #f3ecd9);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 10px 16px 8px;
@@ -1164,7 +1292,7 @@ main { padding: 0 28px 18px; }
   display: grid;
   grid-template-columns: 36px minmax(0, 1fr);
   gap: 16px;
-  background: linear-gradient(180deg, var(--surface), #10141e);
+  background: linear-gradient(180deg, var(--surface), #f3ecd9);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 16px 20px 16px 16px;
@@ -1254,7 +1382,7 @@ main { padding: 0 28px 18px; }
 
 /* ---------- Tips & Strategies (roadmap) ---------- */
 .tips {
-  background: linear-gradient(180deg, var(--surface), #10141e);
+  background: linear-gradient(180deg, var(--surface), #f3ecd9);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 10px 16px 8px;
@@ -1344,6 +1472,7 @@ main { padding: 0 28px 18px; }
   .medal-counts { flex-wrap: wrap; }
   .view-checklist { grid-template-columns: 1fr; }
   .meta-band { grid-column: auto; grid-row: auto; }
+  .nextup-strip { grid-column: auto; grid-row: auto; flex-wrap: wrap; }
   .alert-banner, .stage-chips { grid-column: auto; grid-row: auto; }
   .list-col, .rail-col { grid-column: auto; grid-row: auto; }
   .signal-strip { flex-wrap: wrap; height: auto; }
