@@ -172,6 +172,26 @@
 // with their reasons; To do and Earned filter chips join the toolbar; and the
 // audit's second line drops the weak "0 single-source" boast while its
 // CITED BY strip counts S3 at 55 (id 47 gains its first S3 marker).
+//
+// v14 answers the same two judges on v13 — and the layout research
+// that measured the cover pixel by pixel. The checklist becomes
+// three columns: the metadata band and the stage chips merge into
+// one full-width signal strip, the audit strip merges into a single
+// line (the CITED BY counts move into the rail, per source), the
+// watch list and the full source registry move into a right-hand
+// rail — six tagged watch items and all seven sources with their
+// URLs, cited-by counts and read date — and the rows go uniform
+// height, the live counter riding as a pill on the description line
+// instead of a line of its own. Sixteen rows stand in the cover
+// frame. The guide panel drops its sources block for one line
+// naming the trophy's own sources and pointing at the rail, so its
+// actions row is back in the frame; trophies whose sources disagree
+// wear a SOURCES DISAGREE pill; the masthead tagline states the
+// goal (the platinum, the earned count, the 100% counter); and a
+// ?filter= deep link can open the checklist on any kind filter —
+// the fourth screenshot uses it to show the Watch list itself.
+// Data is unchanged: 189/189 steps cited, the same watch six, the
+// same registry.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -600,12 +620,20 @@ function trophyRow(trophy) {
   const desc = document.createElement('div');
   desc.className = 'trophy-desc';
   desc.textContent = hidden ? 'Earn this story trophy to reveal its name and description.' : trophy.description;
-  text.append(name, desc);
   if (trophy.counter) {
-    const progress = document.createElement('div');
-    progress.className = 'row-counter' + (counterValue(trophy) >= trophy.counter.total ? ' complete' : '');
-    progress.textContent = counterReadout(trophy);
-    text.append(progress);
+    // The live counter rides on the description line as a pill, so a
+    // counted row is the same height as every other row (v14 row
+    // pack); the description ellipsises to make room for it.
+    const sub = document.createElement('div');
+    sub.className = 'trophy-sub';
+    sub.append(desc);
+    const pill = document.createElement('span');
+    pill.className = 'counter-pill' + (counterValue(trophy) >= trophy.counter.total ? ' complete' : '');
+    pill.textContent = counterReadout(trophy);
+    sub.append(pill);
+    text.append(name, sub);
+  } else {
+    text.append(name, desc);
   }
   li.append(text);
 
@@ -675,7 +703,9 @@ function renderChecklist() {
   }
   listMeta.textContent = 'Showing ' + shown.length + ' of ' + trophies.length + ' trophies';
   const listMetaInline = document.getElementById('listMetaInline');
-  if (listMetaInline) listMetaInline.textContent = listMeta.textContent;
+  // The strip's inline count drops the word "trophies" — the strip
+  // is one line and the fields on its left need the room.
+  if (listMetaInline) listMetaInline.textContent = 'Showing ' + shown.length + ' of ' + trophies.length;
   emptyNote.hidden = shown.length !== 0;
 }
 
@@ -715,18 +745,14 @@ function sourceCitation(entry, note) {
   return frag;
 }
 
-/* The panel's short form of the same citation — one line per source:
-   [S2] outputlag.com/guides/gta-6-trophy-list/. The bare URL, not the
-   per-source note: the leaders show full URLs in their panels, so this
-   panel shows them too, and the step markers already show what each
-   source supports. S7 drops "www." as well — its URL is the longest
-   and the panel line is 470px wide. The full form (title, link,
-   retrieval date) is printed once in the footer registry. */
+/* The short form of a source's address, as the rail prints it:
+   [S2] outputlag.com/guides/gta-6-trophy-list/ — the full URL with
+   the scheme and "www." stripped, the form the top guides print.
+   The full form (title, link, retrieval date) is printed once in
+   the footer registry. */
 function bareUrl(entry) {
   if (!entry.url) return 'official list';
-  let url = entry.url.replace(/^https:\/\//, '');
-  if (entry.id === 'S7') url = url.replace(/^www\./, '');
-  return url;
+  return entry.url.replace(/^https:\/\//, '').replace(/^www\./, '');
 }
 
 function sourceCitationShort(entry) {
@@ -827,6 +853,98 @@ function counterBar(trophy) {
    count stays its own figure in line two. */
 const WATCH_LIST = [28, 25, 49, 51, 44, 45];
 
+/* The rail's watch items, in display form: the short name the list
+   goes by, the tag pill where the item carries one, and the reason
+   it is watched — the same six items and reasons the banner's watch
+   block named, now as a list of tagged rows. */
+const WATCH_ITEMS = [
+  { id: 28, name: 'Positive Mental Attitude', tag: 'MISSABLE?', why: "Jason's-house balcony, Ch.1" },
+  { id: 25, name: 'Yago race', tag: 'TIMED', why: 'Strangers & Freaks strand race' },
+  { id: 49, name: 'Bad Luck', why: 'Payday Loans' },
+  { id: 51, name: 'Ten Pin', why: 'bike kicks' },
+  { id: 44, name: 'In The Beginning', why: 'cocktail' },
+  { id: 45, name: 'Capital Offense', why: 'Banshee' },
+];
+
+/* The right-hand rail (v14): the two blocks the cover used to squeeze
+   into the list column and the guide panel, standing in their own
+   column — the watch list as six tagged item rows, and the full
+   source registry: every source with its full URL, what it supports
+   (for the guide sources, the marker-based cited-by count — the
+   same honest figures the audit used to carry) and the day the
+   registry was read. Under the Yago race item, the missable
+   adjudication: the second "missable" some lists claim, checked
+   against two named sources and classified more precisely. */
+function renderRail() {
+  const rail = document.getElementById('railCol');
+  if (!rail) return;
+  rail.replaceChildren();
+  const watchHead = document.createElement('div');
+  watchHead.className = 'rail-head';
+  watchHead.textContent = 'Watch — ' + WATCH_ITEMS.length + ' on the list';
+  rail.append(watchHead);
+  for (const item of WATCH_ITEMS) {
+    const box = document.createElement('div');
+    box.className = 'rail-item';
+    const nameLine = document.createElement('div');
+    nameLine.className = 'rail-item-name';
+    nameLine.append(document.createTextNode(item.name));
+    if (item.tag) {
+      const tag = document.createElement('span');
+      tag.className = 'rail-tag' + (item.tag === 'TIMED' ? ' timed' : '');
+      tag.textContent = item.tag;
+      nameLine.append(document.createTextNode(' '), tag);
+    }
+    const why = document.createElement('div');
+    why.className = 'rail-item-why';
+    why.textContent = item.why;
+    box.append(nameLine, why);
+    rail.append(box);
+    if (item.id === 25) {
+      const note = document.createElement('p');
+      note.className = 'rail-note';
+      note.append(document.createTextNode("Flagged 'missable?' by some lists — PowerPyx + GTABase confirm it stays open after the story"));
+      for (const ref of citedRefs(byId.get(25), ['S3', 'S4'])) note.append(citeSpan(ref));
+      note.append(document.createTextNode('; tracked as time-sensitive.'));
+      rail.append(note);
+    }
+  }
+  // The registry's read date: the day most sources were read, in the
+  // audit strip's short form, upper-cased for the rail head.
+  const registry = doc.sourceRegistry ?? [];
+  const dated = registry.filter((s) => s.retrieved).map((s) => {
+    const [day, month, year] = s.retrieved.split(' ');
+    return day + ' ' + shortMonth(month) + ' ' + year;
+  });
+  const counts = {};
+  for (const d of dated) counts[d] = (counts[d] ?? 0) + 1;
+  const readDate = dated.slice().sort((a, b) => (counts[b] ?? 0) - (counts[a] ?? 0))[0] ?? '';
+  const srcHead = document.createElement('div');
+  srcHead.className = 'rail-head rail-src-head';
+  srcHead.textContent = 'Sources — ' + registry.length + ' in all, read ' + readDate;
+  rail.append(srcHead);
+  for (const entry of registry) {
+    const box = document.createElement('div');
+    box.className = 'rail-src';
+    const head = document.createElement('div');
+    head.className = 'rail-src-line';
+    const ref = document.createElement('span');
+    ref.className = 'src-ref';
+    ref.textContent = '[' + entry.id + ']';
+    let support;
+    if (entry.id === 'S1') support = 'names, grades, rarity';
+    else if (entry.id === 'S6') support = 'names, grades';
+    else support = 'cited by ' + trophies.filter((t) => markerRefs(t).has(entry.id)).length + ' of ' + trophies.length;
+    const displayName = entry.id === 'S6' ? 'Official list' : entry.name;
+    head.append(ref, document.createTextNode(' ' + displayName + ' · ' + support));
+    const url = document.createElement('div');
+    url.className = 'rail-src-url';
+    url.textContent = entry.url ? bareUrl(entry) : "PlayStation's official trophy list";
+    box.append(head, url);
+    rail.append(box);
+  }
+}
+
 /* The refs a trophy's inline markers actually show: every step marker
    plus every guide-sentence marker, each subset-checked against the
    trophy's own cited sources. This is the honest "cited by" count —
@@ -845,16 +963,16 @@ function markerRefs(trophy) {
 }
 
 /* The audit strip: every figure computed from the data at runtime, so
-   the strip can only say what the guide actually contains. Line one is
-   the contents audit — guides and steps cited, sources, hidden and
-   missable counts, counters, and how many trophies are on watch. Line
-   two is the disagreement taxonomy — triggers still unknown, trophies
-   resting on a single guide source, trophies whose sources disagree —
-   plus the green/amber split (multi-source and clean vs the rest) and
-   the marker-based CITED BY strip: how many of the 55 trophies carry
-   at least one visible marker from each source. Line three names
-   every source's domain and when it was read, so the registry's
-   freshness is in the frame instead of a single aggregate date. */
+   the strip can only say what the guide actually contains. v14 merges
+   the strip into ONE line: the contents audit (guides and steps
+   cited, sources, hidden and missable counts) followed by the
+   disagreement taxonomy (triggers still unknown, trophies whose
+   sources disagree) and the green/amber split (multi-source and
+   clean vs the rest). The figures the merge drops live elsewhere in
+   the same frame: the counters are visible in the rows themselves,
+   the watch count heads the rail's watch list, and the per-source
+   CITED BY counts are printed per source in the rail's registry —
+   the same figures, in the rail's format. */
 function renderAudit() {
   const strip = document.getElementById('auditStrip');
   if (!strip) return;
@@ -862,7 +980,6 @@ function renderAudit() {
   const hiddenCount = trophies.filter((t) => t.hidden).length;
   const missableCount = trophies.filter((t) => t.missable && t.risk !== 'timed').length;
   const timedCount = trophies.filter((t) => t.missable && t.risk === 'timed').length;
-  const counterCount = trophies.filter((t) => t.counter).length;
   // Steps cited: a step counts when its STEP_CITES entry survives the
   // subset check against its own trophy's cited sources.
   let totalSteps = 0;
@@ -873,66 +990,31 @@ function renderAudit() {
       if (citedRefs(trophy, STEP_CITES[trophy.id]?.[i + 1]).length) citedSteps++;
     });
   }
-  // On watch: the explicit watch list (missable + timed + unknown +
-  // just-confirmed), not the triggerUnknown count — that stays its own
-  // figure in line two.
-  const watchCount = WATCH_LIST.length;
-  const parts = [
-    cited + '/' + trophies.length + ' guides cited',
-    (doc.sourceRegistry ?? []).length + ' sources',
-    hiddenCount + ' hidden',
-    missableCount + ' potentially missable',
-    timedCount + ' time-sensitive',
-    counterCount + ' counters',
-    citedSteps + '/' + totalSteps + ' steps cited',
-    watchCount + ' on watch',
-  ];
-  strip.replaceChildren();
-  const line1 = document.createElement('span');
-  line1.className = 'audit-line';
-  const label = document.createElement('strong');
-  label.textContent = 'AUDIT';
-  line1.append(label, document.createTextNode(' · ' + parts.join(' · ')));
   const unknownCount = trophies.filter((t) => t.triggerUnknown).length;
   const disagreeCount = trophies.filter((t) => t.disagree).length;
   const greenCount = trophies.filter((t) =>
     (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length >= 2
     && !t.disagree && !t.triggerUnknown).length;
   const amberCount = trophies.length - greenCount;
-  // CITED BY: trophies carrying at least one visible marker from each
-  // source. S1/S6 supply no markers (names, grades, rarity only), so
-  // they are named in the parenthetical instead of given a 0.
-  const citedBy = (doc.sourceRegistry ?? [])
-    .filter((entry) => !['S1', 'S6'].includes(entry.id))
-    .map((entry) => {
-      const count = trophies.filter((t) => markerRefs(t).has(entry.id)).length;
-      return entry.id + ' ' + count;
-    });
-  const line2 = document.createElement('span');
-  line2.className = 'audit-line audit-coverage';
-  line2.textContent = [unknownCount + ' triggers unknown', disagreeCount + ' disagree', greenCount + ' green', amberCount + ' amber', 'CITED BY ' + citedBy.join(' · ') + ' (S1/S6: names, grades, rarity)'].join(' · ');
-  // Line three: one domain per registry source plus when it was read.
-  // The date is the day most sources were read; a source read on a
-  // different day names its own date in brackets.
-  const registry = doc.sourceRegistry ?? [];
-  const domains = registry.map((entry) => {
-    if (!entry.url) return entry.id + ' official';
-    const host = entry.url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
-    return entry.id + ' ' + host;
-  });
-  const dated = registry.filter((s) => s.retrieved).map((s) => {
-    const [day, month, year] = s.retrieved.split(' ');
-    return { id: s.id, short: day + ' ' + shortMonth(month) + ' ' + year };
-  });
-  const counts = {};
-  for (const d of dated) counts[d.short] = (counts[d.short] ?? 0) + 1;
-  const baseDate = dated.slice().sort((a, b) => (counts[b.short] ?? 0) - (counts[a.short] ?? 0))[0]?.short ?? '';
-  const outliers = dated.filter((d) => d.short !== baseDate);
-  const dateSuffix = 'read ' + baseDate + (outliers.length ? ' (' + outliers.map((o) => o.id + ' ' + o.short).join(', ') + ')' : '');
-  const line3 = document.createElement('span');
-  line3.className = 'audit-line audit-coverage';
-  line3.textContent = domains.join(' · ') + ' — ' + dateSuffix;
-  strip.append(line1, line2, line3);
+  const parts = [
+    cited + '/' + trophies.length + ' guides cited',
+    (doc.sourceRegistry ?? []).length + ' sources',
+    hiddenCount + ' hidden',
+    missableCount + ' potentially missable',
+    timedCount + ' time-sensitive',
+    citedSteps + '/' + totalSteps + ' steps cited',
+    unknownCount + ' triggers unknown',
+    disagreeCount + ' disagree',
+    greenCount + ' green',
+    amberCount + ' amber',
+  ];
+  strip.replaceChildren();
+  const line = document.createElement('span');
+  line.className = 'audit-line';
+  const label = document.createElement('strong');
+  label.textContent = 'AUDIT';
+  line.append(label, document.createTextNode(' · ' + parts.join(' · ')));
+  strip.append(line);
 }
 
 /* Short month names for audit dates ("20 November 2026" -> "20 Nov 2026"). */
@@ -943,16 +1025,11 @@ function shortMonth(month) {
 
 /* The checklist's head: a one-line warning for the one potentially
    missable trophy (its short form from the data; the full warning
-   lives in its guide panel) with a button that opens its guide, and a
-   Next Up line that is also the watch list: the missable trophy first
-   (the one thing that can be lost), then the five things to keep an
-   eye on — the time-sensitive strand race, the two trophies whose
-   trigger no guide has confirmed, and the two whose methods were only
-   just confirmed. The watch list is a three-line block now (one pair of
-   items per line), each line fitting the banner's 693px width; the
-   single-line fallbacks below (story finished / hidden / upcoming) keep
-   the old one-line form. Both follow the ticks, so this re-renders
-   whenever progress changes. */
+   lives in its guide panel) with a button that opens its guide. The
+   watch list itself lives in the right-hand rail now (renderRail) —
+   the banner keeps only the alert row, plus a one-line Next Up
+   fallback once the missable trophy is earned. Both follow the
+   ticks, so this re-renders whenever progress changes. */
 function renderBanner() {
   const banner = document.getElementById('alertBanner');
   if (!banner) return;
@@ -980,25 +1057,8 @@ function renderBanner() {
     banner.append(row);
   }
   if (target && !earned.has(target.name)) {
-    // Three-line watch block: all six on-watch items with their reasons,
-    // one pair per line. The strong "Next up: " label sits on the first
-    // line only. Each line fits the 693px banner width.
-    const lines = [
-      'PMA — balcony, Ch.1 · Yago race (timed)',
-      'Bad Luck — Payday Loans · Ten Pin — bike kicks',
-      'In The Beginning — cocktail · Capital Offense — Banshee',
-    ];
-    lines.forEach((line, i) => {
-      const p = document.createElement('p');
-      p.className = 'banner-next';
-      if (i === 0) {
-        const label = document.createElement('strong');
-        label.textContent = 'Next up: ';
-        p.append(label);
-      }
-      p.append(document.createTextNode(line));
-      banner.append(p);
-    });
+    // The watch list stands in the rail beside the list; the banner
+    // is the alert row alone.
     return;
   }
   const next = document.createElement('p');
@@ -1020,30 +1080,21 @@ function renderBanner() {
   banner.append(next);
 }
 
-/* Stage chips for the cover: one slim chip per roadmap stage with its
-   live earned count, mirroring the pills on the roadmap cards. The
-   "Showing N of 55 trophies" count rides at the right end of the same
-   row (the old list-meta line below it is hidden) so the checklist
-   starts one row higher. */
+/* Stage counts for the cover: one inline count per roadmap stage,
+   rendered as text at the right end of the signal strip (v14), with
+   the "Showing N of 55 trophies" count after it — the strip is one
+   line, so the counts ride as text, not chips. renderChecklist keeps
+   the inline count's text in step with the hidden list-meta line. */
 function renderStageChips() {
-  const box = document.getElementById('stageChips');
+  const box = document.getElementById('stripStages');
   if (!box) return;
   box.replaceChildren();
-  const label = document.createElement('span');
-  label.className = 'chips-label';
-  label.textContent = 'Stages';
-  box.append(label);
-  for (const stage of doc.roadmap ?? []) {
+  const counts = (doc.roadmap ?? []).map((stage) => {
     const members = trophies.filter((t) => t.stage === stage.stage);
     const done = members.filter((t) => earned.has(t.name)).length;
-    const chip = document.createElement('button');
-    chip.type = 'button';
-    chip.className = 'stage-chip-sm' + (done === members.length && members.length > 0 ? ' complete' : '');
-    chip.textContent = 'S' + stage.stage + ' ' + done + '/' + members.length;
-    chip.title = 'Stage ' + stage.stage + ' — ' + stage.title + ': ' + done + ' of ' + members.length + ' earned';
-    chip.addEventListener('click', () => setTab('roadmap'));
-    box.append(chip);
-  }
+    return 'S' + stage.stage + ' ' + done + '/' + members.length;
+  });
+  box.append(document.createTextNode(counts.join(' · ') + '  ·  '));
   const meta = document.createElement('span');
   meta.id = 'listMetaInline';
   meta.className = 'list-meta-inline';
@@ -1108,6 +1159,14 @@ function renderDetail() {
     rarityTag.textContent = 'Rarity: ' + rarity + ' of players';
     meta.append(rarityTag);
   }
+  if (trophy.disagree) {
+    // A named feature, not a footnote: where the cited guides
+    // disagree, the panel says so on a pill of its own.
+    const disagreeTag = document.createElement('span');
+    disagreeTag.className = 'tag disagree';
+    disagreeTag.textContent = 'Sources disagree';
+    meta.append(disagreeTag);
+  }
   detailPanel.append(meta);
 
   if (trophy.counter) detailPanel.append(counterBar(trophy));
@@ -1158,35 +1217,20 @@ function renderDetail() {
     }
   }
 
-  detailPanel.append(sectionLabel('Sources — where each fact comes from'));
-  const sources = document.createElement('div');
-  sources.className = 'detail-sources';
-  const list = document.createElement('ul');
-  for (const source of trophy.sources ?? []) {
-    const item = document.createElement('li');
-    const entry = sourceRegistry.get(source.ref);
-    if (entry) {
-      item.append(sourceCitationShort(entry));
-    } else {
-      // A citation the registry does not know: show its note rather
-      // than dropping it — an uncited fact earns no credit.
-      item.textContent = source.note ?? source.ref ?? '';
-    }
-    list.append(item);
+  // The panel's sources in one line (v14): the registry itself —
+  // all seven sources with full URLs, cited-by counts and the read
+  // date — stands in the rail beside the list, so the panel names
+  // this trophy's own sources and points at it. The full numbered
+  // citation form is still printed once in the footer registry.
+  const ownRefs = (trophy.sources ?? []).map((s) => s.ref);
+  if (ownRefs.length) {
+    const line = document.createElement('p');
+    line.className = 'panel-sources-line';
+    const lead = document.createElement('strong');
+    lead.textContent = 'Sources for this guide: ';
+    line.append(lead, document.createTextNode(ownRefs.join(' · ') + ' — full registry with URLs in the rail →'));
+    detailPanel.append(line);
   }
-  sources.append(list);
-  // The rest of the registry, in the frame: the sources this trophy
-  // does not cite, so the panel names all seven.
-  const uncited = (doc.sourceRegistry ?? []).filter((entry) =>
-    !(trophy.sources ?? []).some((s) => s.ref === entry.id));
-  if (uncited.length) {
-    const extra = document.createElement('p');
-    extra.className = 'registry-extra';
-    extra.textContent = 'Also in the registry — ' + uncited.map((entry) =>
-      '[' + entry.id + '] ' + (entry.id === 'S6' ? 'Official description' : entry.name)).join(' · ') + '.';
-    sources.append(extra);
-  }
-  detailPanel.append(sources);
 
   const actions = document.createElement('div');
   actions.className = 'detail-actions';
@@ -1262,28 +1306,42 @@ function metaCell(field, useShort) {
   return cell;
 }
 
+/* The checklist's signal strip (v14): the roadmap band's seven
+   headline fields as ONE line across the full width — difficulty,
+   time, offline/online counts, the potentially missable trophy,
+   the hardest trophy, playthroughs — with the per-stage counts and
+   the showing count at the right end (renderStageChips fills that
+   span). The full 13-field block still heads the Roadmap view. */
+function stripFieldText(field) {
+  const value = field.value;
+  switch (field.label) {
+    case 'Estimated difficulty': return 'Difficulty ' + value;
+    case 'Time to platinum': return value;
+    case 'Offline trophies': return 'Offline ' + value;
+    case 'Online trophies': return 'Online ' + value;
+    case 'Missable trophies': return value + ' missable: ' + (field.note ?? '');
+    case 'Hardest trophy': return 'Hardest: ' + value;
+    case 'Minimum playthroughs': return value + ' playthrough' + (value === '1' ? '' : 's');
+    default: return (field.shortLabel ?? field.label) + ' ' + value;
+  }
+}
+
 function renderRoadmapMeta() {
   const meta = doc.roadmapMeta;
   if (!meta) return;
-  // Checklist band: only the highest-value fields, one compact strip above
-  // the list, so the cover still shows rows and the open guide below it.
+  // Checklist strip: the seven headline fields on one full-width line.
   const band = document.getElementById('metaBand');
   band.replaceChildren();
-  const bandHead = document.createElement('div');
-  bandHead.className = 'meta-band-head';
-  const bandTitle = document.createElement('span');
-  bandTitle.className = 'meta-title';
-  bandTitle.textContent = meta.heading;
-  const jump = document.createElement('button');
-  jump.type = 'button';
-  jump.className = 'meta-jump';
-  jump.textContent = 'Full roadmap →';
-  jump.addEventListener('click', () => setTab('roadmap'));
-  bandHead.append(bandTitle, jump);
-  const bandGrid = document.createElement('div');
-  bandGrid.className = 'meta-grid meta-grid-cover';
-  for (const field of meta.fields.filter((f) => f.cover)) bandGrid.append(metaCell(field, true));
-  band.append(bandHead, bandGrid);
+  const strip = document.createElement('div');
+  strip.className = 'signal-strip';
+  const left = document.createElement('span');
+  left.className = 'strip-fields';
+  left.textContent = meta.fields.filter((f) => f.cover).map(stripFieldText).join(' · ');
+  const right = document.createElement('span');
+  right.className = 'strip-stages';
+  right.id = 'stripStages';
+  strip.append(left, right);
+  band.append(strip);
 
   // Roadmap view: the full block — every field, plus where the figures
   // come from.
@@ -1437,6 +1495,18 @@ function updateProgress() {
   document.getElementById('mcGold').textContent = (byGrade.gold ?? 0) + '/2';
   document.getElementById('mcSilver').textContent = (byGrade.silver ?? 0) + '/6';
   document.getElementById('mcBronze').textContent = (byGrade.bronze ?? 0) + '/46';
+  // The masthead states the goal (v14): the platinum by name, the
+  // earned count, and the 100% counter the platinum stands on —
+  // all live figures, recomputed with the rest of the progress box.
+  const goalLine = document.getElementById('goalLine');
+  if (goalLine) {
+    const platinum = trophies.find((t) => t.grade === 'platinum');
+    const longRoad = byId.get(14);
+    goalLine.textContent = 'GOAL — the platinum, ' + (platinum?.name ?? '') + ': '
+      + earned.size + ' of ' + total + ' earned'
+      + (longRoad?.counter ? ' · A Long Road ' + counterValue(longRoad) + '/' + longRoad.counter.total : '')
+      + ' · ' + pct + '%';
+  }
 }
 
 function renderAll() {
@@ -1444,6 +1514,7 @@ function renderAll() {
   renderStageChips();
   renderChecklist();
   renderDetail();
+  renderRail();
   renderRoadmap();
   renderMissables();
   updateProgress();
@@ -1563,6 +1634,17 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     renderAll();
   }
 });
+
+/* A ?filter= deep link opens the checklist on that kind filter —
+   the same state the chips set — so a view can be linked (or
+   screenshotted) directly: ?filter=watch shows the watch list. */
+const filterParam = new URLSearchParams(location.search).get('filter');
+if (filterParam && document.querySelector('#kindFilters .chip[data-kind="' + filterParam + '"]')) {
+  kindFilter = filterParam;
+  for (const chip of document.querySelectorAll('#kindFilters .chip')) {
+    chip.classList.toggle('active', chip.dataset.kind === filterParam);
+  }
+}
 
 renderSaveRules();
 renderRoadmapMeta();

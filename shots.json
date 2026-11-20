@@ -1,1 +1,132 @@
-[{"file":"1-cover.jpg","note":"Checklist in the v13 layout, seeded with the spoiler setting ON so the frame itself demonstrates the masking: the computed three-line audit strip under the masthead (line one: 55/55 guides cited, 7 sources, 28 hidden, 1 potentially missable, 1 time-sensitive, 21 counters, 189/189 steps cited, 6 on watch; line two: 2 triggers unknown, 4 disagree, 49 green, 6 amber, and the marker-based CITED BY strip — S2 39, S3 55, S4 55, S5 2, S7 39 (S1/S6: names, grades, rarity); line three: every source’s domain with its read date), the one-line missable banner with its Show it button, the three-line watch block naming all six items with their reasons, the Trophy Roadmap metadata band, the stage-progress chips (S1 4/5, S2 3/18, S3 1/9, S4 4/21, S5 0/2), then the grouped rows — Goal first, then Stage 1, ten rows in frame with the eighth a masked story trophy carrying its gold Reveal button — with the earned ones open and the unearned story ones masked by the spoiler setting, each masked row carrying a Reveal button — every row carrying its rarity and its cited-source refs pill, and the Positive Mental Attitude guide panel open: counter seeded at 9 of 18 meditation spots, the missable alert naming the morning after Down to Earth, the NOT PINNED DOWN YET honesty box stating the 15-vs-18 counts difference, the two-sentence guide and seven steps with inline [S#] markers, and the complete one-line-per-source citation block with each source's full URL (S1–S4, S7) plus the rest of the registry in the same screen","path":"/?trophy=28","seed":{"counters":{"14":23,"15":137,"28":9,"31":42},"earned":[2,3,8,9,20,21,36,44,46,51,53,55],"spoiler":"on"},"viewport":{"height":800,"width":1280}},{"file":"2-roadmap.jpg","note":"Roadmap to the platinum in the v10 design: intro with the ~200-hour total and PowerPyx's step budgets, the full Trophy Roadmap metadata block (all 13 fields with sources note, now naming KeenGamer), then the five numbered stage cards — each carrying its own live earned count (for example 4 of 18 earned) — above the Tips & Strategies block and the save-discipline callout","path":"/#roadmap","seed":{"counters":{"14":23,"15":137,"28":9,"31":42},"earned":[2,3,4,8,9,20,21,36,44,46,51,53,55],"spoiler":"off"},"viewport":{"height":800,"width":1280}},{"file":"3-missables.jpg","note":"The Missables tab in the v10 design (its tab badge counts the 1 potentially missable trophy, matching the audit strip, banner and roadmap band): the potentially missable trophy leads as a medallion card with its designed warning alert naming the morning after Down to Earth, its guide prose with inline [S#] markers, and its progress counter (9/18 meditation spots), followed by the time-sensitive strand race under its own label with its own counter; the save discipline that covers both now sits below the cards","path":"/#missables","seed":{"counters":{"14":23,"15":137,"28":9,"31":42},"earned":[2,3,4,8,9,20,21,36,44,46,51,53,55],"spoiler":"off"},"viewport":{"height":800,"width":1280}},{"file":"4-spoiler.jpg","note":"Spoiler setting ON (the switch in the tabs row): unearned story trophies are masked in the grouped checklist, each masked row carrying a Reveal button — one masked row stands in the frame with its gold Reveal button — while an earned story trophy (Trust) stays open with its guide — its third step now states the unlock in plain words — rarity line and numbered Sources section visible; the audit strip, banner, metadata band and stage chips stay above the list, and the three-line watch block names all six items with their reasons, leading with the potentially missable trophy, which the spoiler setting never masks","path":"/?trophy=8","seed":{"counters":{"14":23,"15":137,"28":9,"31":42},"earned":[2,3,8,9,20,21,36,44,46,51,53,55],"spoiler":"on"},"viewport":{"height":800,"width":1280}}]
+[
+{
+"file": "1-cover.jpg",
+"note": "Checklist in the v14 three-column layout, seeded with the spoiler setting ON so the frame itself demonstrates the masking: the computed one-line audit strip under the masthead (55/55 guides cited, 7 sources, 28 hidden, 1 potentially missable, 1 time-sensitive, 189/189 steps cited, 2 triggers unknown, 4 disagree, 49 green, 6 amber), the full-width signal strip carrying the seven roadmap fields plus the per-stage counts and the showing count, the one-line missable banner, then the grouped rows — Goal first, then Stage 1 — sixteen rows in frame at a uniform height, the counted rows carrying their live counter as a pill on the description line, one masked story trophy carrying its gold Reveal button — beside the Positive Mental Attitude guide panel (counter seeded at 9 of 18 meditation spots, the missable alert naming the morning after Down to Earth, the SOURCES DISAGREE pill, the NOT PINNED DOWN YET honesty box, the two-sentence guide, seven steps with inline [S#] markers, one sources line pointing at the rail, and the actions row back in frame) and the right-hand rail: the watch list as six tagged item rows with the Strangers & Freaks adjudication under the Yago race, and the full source registry — all seven sources with full URLs, per-source cited-by counts and the 20 Nov 2026 read date",
+"path": "/?trophy=28",
+"seed": {
+"counters": {
+"14": 23,
+"15": 137,
+"28": 9,
+"31": 42
+},
+"earned": [
+2,
+3,
+8,
+9,
+20,
+21,
+36,
+44,
+46,
+51,
+53,
+55
+],
+"spoiler": "on"
+},
+"viewport": {
+"height": 800,
+"width": 1280
+}
+},
+{
+"file": "2-roadmap.jpg",
+"note": "Roadmap to the platinum in the v10 design, framed to show the first two stage cards: intro with the ~200-hour total and PowerPyx's step budgets, the full Trophy Roadmap metadata block (all 13 fields with sources note, now naming KeenGamer), then the numbered stage cards — each carrying its own live earned count (for example 4 of 18 earned) — above the Tips & Strategies block and the save-discipline callout",
+"path": "/#roadmap",
+"seed": {
+"counters": {
+"14": 23,
+"15": 137,
+"28": 9,
+"31": 42
+},
+"earned": [
+2,
+3,
+4,
+8,
+9,
+20,
+21,
+36,
+44,
+46,
+51,
+53,
+55
+],
+"spoiler": "off"
+},
+"viewport": {
+"height": 800,
+"width": 1280
+}
+},
+{
+"file": "3-missables.jpg",
+"note": "The Missables tab in the v10 design (its tab badge counts the 1 potentially missable trophy, matching the audit strip, banner and roadmap band): the intro states the count, and the adjudication line under it explains why it is not two — Strangers & Freaks is flagged 'missable?' by some lists, but PowerPyx + GTABase confirm its strands stay open after the story, so its timed race is tracked as time-sensitive [S3] [S4]. The potentially missable trophy leads as a medallion card with its designed warning alert naming the morning after Down to Earth, its guide prose with inline [S#] markers, and its progress counter (9/18 meditation spots), followed by the time-sensitive strand race under its own label with its own counter; the save discipline that covers both now sits below the cards",
+"path": "/#missables",
+"seed": {
+"counters": {
+"14": 23,
+"15": 137,
+"28": 9,
+"31": 42
+},
+"earned": [
+2,
+3,
+4,
+8,
+9,
+20,
+21,
+36,
+44,
+46,
+51,
+53,
+55
+],
+"spoiler": "off"
+},
+"viewport": {
+"height": 800,
+"width": 1280
+}
+},
+{
+"file": "4-watch.jpg",
+"note": "The Watch filter's own view (opened through the ?filter=watch deep link, the Watch chip active): exactly the six watched trophies as full rows — Positive Mental Attitude with its MISSABLE tag and its live 9/18 counter pill, the Strangers & Freaks strand race as TIME-SENSITIVE, the two trophies whose trigger no guide has confirmed (Bad Luck, I Guess and Ten Pin), and the two whose methods were only just confirmed (In The Beginning… and Capital Offense) — every row with its grade, rarity and cited-source refs, the Positive Mental Attitude panel open beside the list, and the rail's watch list and source registry in frame. Spoiler masking and the Reveal buttons are demonstrated on the cover shot instead of repeating it here",
+"path": "/?filter=watch",
+"seed": {
+"counters": {
+"14": 23,
+"15": 137,
+"28": 9,
+"31": 42
+},
+"earned": [
+2,
+3,
+8,
+9,
+20,
+21,
+36,
+44,
+46,
+51,
+53,
+55
+],
+"spoiler": "off"
+},
+"viewport": {
+"height": 800,
+"width": 1280
+}
+}
+]

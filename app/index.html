@@ -68,7 +68,19 @@
      list into a three-line block naming all six items with their
      reasons, adds To do and Earned filter chips, drops the weak "0
      single-source" boast from the audit, and tightens the stack so
-     the cover holds ten rows with the watch block in place. -->
+     the cover holds ten rows with the watch block in place. v14
+     restructures the checklist into three columns: the metadata band
+     and stage chips merge into one full-width signal strip, the audit
+     strip merges into a single line, the watch list and the full
+     source registry move into a right-hand rail as tagged items and
+     per-source entries, and the rows go uniform-height with the live
+     counter riding on the description line — sixteen rows stand in
+     the cover frame. The guide panel drops its sources block for one
+     line pointing at the rail, disagreeing trophies wear a SOURCES
+     DISAGREE pill, the masthead tagline states the goal, the
+     Missables view prints the Strangers & Freaks adjudication, and
+     the fourth screenshot shows the Watch filter's six trophies
+     instead of repeating the cover. -->
 <title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -77,7 +89,7 @@
   <div class="masthead-title">
     <p class="eyebrow">Grand Theft Auto VI · PlayStation 5 · Trophy Guide</p>
     <h1>LEONIDA LEDGER</h1>
-    <p class="tagline">All 55 GTA VI trophies — guides, roadmap and tracker, with sources.</p>
+    <p class="tagline goal-line" id="goalLine">Goal — the platinum: all 55 GTA VI trophies, guided and tracked.</p>
   </div>
   <div class="masthead-progress" id="progressBox">
     <div class="progress-line"><strong id="progressCount">0 of 55 earned</strong><span id="progressPct">0%</span></div>
@@ -134,15 +146,15 @@
 
 <main>
   <section class="view view-checklist" id="viewChecklist">
-    <div class="alert-banner" id="alertBanner"></div>
     <section class="meta-band" id="metaBand" aria-label="Trophy roadmap summary"></section>
-    <div class="stage-chips" id="stageChips" aria-label="Progress by roadmap stage"></div>
+    <div class="alert-banner" id="alertBanner"></div>
     <div class="list-col">
       <p class="list-meta" id="listMeta">Showing 55 of 55 trophies</p>
       <ul class="trophy-list" id="trophyList"></ul>
       <p class="empty-note" id="emptyNote" hidden>No trophies match this filter. There are no online trophies in GTA VI at launch — all 55 are single-player (Outputlag FAQ).</p>
     </div>
     <aside class="detail-col" id="detailPanel" aria-live="polite"></aside>
+    <aside class="rail-col" id="railCol" aria-label="Watch list and source registry"></aside>
   </section>
 
   <section class="view view-roadmap" id="viewRoadmap" hidden>
@@ -161,6 +173,7 @@
 
   <section class="view view-missables" id="viewMissables" hidden>
     <p class="roadmap-intro">Only <strong>1 trophy reported as potentially missable</strong> in the whole list, plus <strong>1 time-sensitive</strong> strand race. Everything else stays open after the credits — but with no mission replay, a manual save at the start of every chapter is still the rule.</p>
+    <p class="roadmap-intro adjudication">Why not two? Strangers &amp; Freaks is flagged “missable?” by some lists, but PowerPyx + GTABase confirm its strands stay open after the story — we track its one timed race as time-sensitive instead.<span class="cite-ref"> [S3]</span><span class="cite-ref"> [S4]</span></p>
     <div class="missable-list" id="missableList"></div>
     <div class="save-rules">
       <h2>Save discipline — read this first</h2>
@@ -170,7 +183,7 @@
 </main>
 
 <footer class="colophon">
-  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 13 · Updated November 20, 2026</p>
+  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 14 · Updated November 20, 2026</p>
   <p class="provenance">Built on PlayStation's official trophy list: names, descriptions and grades are Sony's text, as mirrored by Exophase and PSNProfiles. Every guide in this app names its sources in its own panel.</p>
   <p><strong>Rarity.</strong> The percentage on each trophy is the share of Exophase-tracked players who had earned it when the list was read on 20 November 2026 — the day after release. Treat it as a launch-week snapshot: these figures move fast as more players start the game.</p>
   <p><strong>Sources.</strong> Guide prose and steps that come from a published launch-week guide cite Outputlag's GTA 6 Trophy List, PowerPyx's Trophy Guide &amp; Roadmap, GTABase's Trophy Guide &amp; Achievements List and KeenGamer's GTA 6 Trophy Guide &amp; Platinum Roadmap (Outputlag, PowerPyx, GTABase and KeenGamer checked 2026-11-20); the roadmap figures up top — difficulty, time, step budgets — come from PowerPyx's Trophy Guide &amp; Roadmap, cross-checked with GTABase, Outputlag and KeenGamer. Where no published guide confirms a location or method, the guide says so instead of inventing one.</p>
