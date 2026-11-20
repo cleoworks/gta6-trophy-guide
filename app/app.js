@@ -830,17 +830,24 @@ function trophyRow(trophy) {
      box beside the counter pill whole (the probe asserts no
      overflow), so the row no longer clips it to 'Attain 100%…'.
      Only the platinum takes the wrap class; this row stays on
-     one line at the uniform row height. */
+     one line at the uniform row height.
+     v30: EVERY row now prints the description whole — the
+     de-densification round removes the clip (rowDescription
+     above is retired, kept only as the record of the old
+     budgets) and the CSS clamp with it. The text itself is
+     unchanged: it is the official description, complete; rows
+     whose description needs a second line simply stand taller. */
   desc.textContent = hidden
     ? 'Earn this trophy to reveal it.'
-    : (listFullDesc || trophy.stage === 5)
-      ? trophy.description
-      : rowDescription(trophy.description, trophy.counter ? (trophy.counter.money ? 16 : 21) : 0);
+    : trophy.description;
   if (trophy.grade === 'platinum') desc.classList.add('desc-full');
   if (trophy.counter) {
     // The live counter rides on the description line as a pill, so a
     // counted row is the same height as every other row (v14 row
     // pack); the description ellipsises to make room for it.
+    // v30: the description wraps beside the pill instead (see the
+    // desc note above) — a counted row with a long description
+    // stands taller, like every other whole-print row.
     const sub = document.createElement('div');
     sub.className = 'trophy-sub';
     sub.append(desc);

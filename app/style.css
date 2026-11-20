@@ -441,8 +441,10 @@ button { cursor: pointer; }
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
   /* v28: 1px of vertical padding funds the audit strip's
-     second line (see .audit-strip). */
-  padding: 2px 4px;
+     second line (see .audit-strip).
+     v30: one more px (2px -> 1px) — top-stack funding for the
+     14px steps; the controls' font and width are untouched. */
+  padding: 1px 4px;
   color: var(--text);
 }
 /* The search box is the toolbar's widest item — the v13 To do and
@@ -466,7 +468,10 @@ button { cursor: pointer; }
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
-  padding: 3px 8px;
+  /* v30: vertical padding 3px -> 2px — the toolbar's right
+     block drives the toolbar's height, so this is 2px of
+     top-stack funding for the 14px steps. */
+  padding: 2px 8px;
   font-weight: 600;
   color: var(--text);
   transition: border-color 0.12s ease, background 0.12s ease;
@@ -529,8 +534,10 @@ main { padding: 0 28px 18px; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   /* v28: 1px of vertical padding funds the audit strip's
-     second line (see .audit-strip). */
-  padding: 1px 14px;
+     second line (see .audit-strip).
+     v30: that last 1px goes too — 2px of top-stack funding for
+     the 14px steps and the taller rows. */
+  padding: 0 14px;
   min-width: 0;
 }
 .nextup-label {
@@ -585,7 +592,9 @@ main { padding: 0 28px 18px; }
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 2px 12px;
+  /* v30: vertical padding 2px -> 1px — 2px of list-path
+     funding for the taller whole-description rows. */
+  padding: 1px 12px;
 }
 .banner-row .alert-icon { flex: none; width: 18px; height: 18px; color: var(--danger-hi); }
 .banner-text { font-size: 13px; line-height: 1.3; }
@@ -606,7 +615,9 @@ main { padding: 0 28px 18px; }
   background: var(--surface);
   border: 1px solid var(--line-bright);
   border-radius: var(--radius);
-  padding: 4px 12px 5px;
+  /* v30: vertical padding 4/5px -> 3/4px — 2px more of
+     list-path funding for the taller rows. */
+  padding: 3px 12px 4px;
 }
 .differ-head {
   font-size: 11px;
@@ -614,7 +625,8 @@ main { padding: 0 28px 18px; }
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--gold-hi);
-  margin-bottom: 2px;
+  /* v30: bottom margin 2px -> 1px — list-path funding. */
+  margin-bottom: 1px;
 }
 .differ-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 14px; }
 .differ-ver {
@@ -630,8 +642,10 @@ main { padding: 0 28px 18px; }
 .differ-col p { margin: 0; font-size: 12.5px; line-height: 1.28; }
 .differ-col .cite-ref { font-size: 12px; }
 .differ-call {
-  margin: 3px 0 0;
-  padding-top: 3px;
+  /* v30: top margin and padding 3px -> 2px each — 2px of
+     list-path funding for the taller rows. */
+  margin: 2px 0 0;
+  padding-top: 2px;
   border-top: 1px solid var(--line);
   font-size: 12.5px;
   line-height: 1.3;
@@ -714,7 +728,9 @@ main { padding: 0 28px 18px; }
   gap: 12px;
   padding: 0 4px;
   border-bottom: 1px solid var(--line);
-  margin-bottom: 1px;
+  /* v30: the header's 1px bottom margin is spacing funding
+     for the row type step up (see .trophy-name). */
+  margin-bottom: 0;
 }
 .group-header:first-child { padding-top: 0; }
 .group-name {
@@ -744,10 +760,13 @@ main { padding: 0 28px 18px; }
      readable at thumbnail scale. */
   gap: 10px;
   align-items: center;
-  padding: 2px 10px;
+  /* v30: vertical padding 2px -> 1px and the 1px bottom margin
+     dropped — 3px per row of pure spacing, the first funder of
+     the row type's half-point step up (see .trophy-name). */
+  padding: 1px 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  margin-bottom: 1px;
+  margin-bottom: 0;
   background: linear-gradient(180deg, var(--surface), #f3ecd9);
   cursor: pointer;
   transition: border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
@@ -780,13 +799,18 @@ main { padding: 0 28px 18px; }
   font-weight: 900;
   line-height: 1;
 }
-.trophy-name { font-weight: 700; font-size: 15.5px; letter-spacing: 0.005em; line-height: 1.15; }
+/* v30: row name and description each step up half a point
+   (15.5 -> 16, 13.5 -> 14) — the de-densification round trades
+   a little of the frame's row count for type that survives the
+   contact-sheet shrink. Funded by the row padding/margin trims
+   on .trophy-row below. */
+.trophy-name { font-weight: 700; font-size: 16px; letter-spacing: 0.005em; line-height: 1.15; }
 /* A masked row's name steps down a size so the name and its Reveal
    button share one line at the list's 500px width. (v16 tried
    13.5px here: the button wrapped to a second line and the row
    pack broke — measured, reverted. The legibility win for masked
    rows comes from the brighter greys instead.) */
-.trophy-name:has(.reveal-btn) { font-size: 14px; }
+.trophy-name:has(.reveal-btn) { font-size: 14.5px; }
 .trophy-row.earned .trophy-name { color: var(--muted); }
 /* One line only in the row pack: the full official description
    stands in the guide panel. v16 grows the line half a point and
@@ -797,7 +821,12 @@ main { padding: 0 28px 18px; }
    letter-spacing tightens 0.01em — after the row box widened,
    the two longest official lines (Snow Storm, Catch Me If You
    Can) were still ~7px over their boxes. */
-.trophy-desc { color: var(--muted); font-size: 13.5px; margin-top: 0; line-height: 1.18; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+/* v30: the ellipsis clamp goes — every row prints its FULL
+   official description, wrapped (app.js no longer clips the
+   text either; the words are the official ones, whole). Rows
+   with long descriptions grow a second description line and
+   stand taller; that is the round's measured trade. */
+.trophy-desc { color: var(--muted); font-size: 14px; margin-top: 0; line-height: 1.18; letter-spacing: -0.01em; white-space: normal; overflow: visible; min-width: 0; }
 /* v22: two cases print the FULL official description, wrapped:
    the platinum's own row (its 42 characters are the guide's
    goal line — no ellipsis on the platinum row), and every row
@@ -930,8 +959,10 @@ main { padding: 0 28px 18px; }
   border-radius: var(--radius-s);
   /* v22: the YOUR COUNT bar is a headline tracker widget now —
      real padding, a 16.5px readout, 27px buttons, an 8px track.
-     Baseline v19-v21: 30px tall; this build measures ~52px. */
-  padding: 5px 12px;
+     Baseline v19-v21: 30px tall; this build measures ~52px.
+     v30: vertical padding 5px -> 3px — 4px of panel-internal
+     spacing funding for the 14px steps (see .detail-steps). */
+  padding: 3px 12px;
 }
 .counter-label {
   flex: none;
@@ -944,7 +975,9 @@ main { padding: 0 28px 18px; }
 .counter-track {
   flex: 1 1 100%;
   height: 8px;
-  margin: 3px 0;
+  /* v30: track margins 3px -> 2px — 2px of the panel funding
+     for the 14px steps. */
+  margin: 2px 0;
   background: #e7ddc6;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -1011,7 +1044,12 @@ main { padding: 0 28px 18px; }
   position: relative;
   padding-left: 32px;
   margin-bottom: 0;
-  font-size: 13px;
+  /* v30: the steps step up to 14px — the panel's step type was
+     the smallest among the leading guides (both v28/v29 judge
+     pairs named it). The stride ratio is kept (1.32), so each
+     line costs ~1.3px more; the growth is funded by the spacing
+     trims marked v30 below. */
+  font-size: 14px;
   line-height: 1.32;
 }
 .cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 12.5px; }
