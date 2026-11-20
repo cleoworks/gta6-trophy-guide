@@ -229,6 +229,24 @@
 // where masked rows stood — two masked rows remain, so the
 // Reveal demonstration survives. Data is unchanged again:
 // 189/189 steps cited, the same watch six, the same registry.
+//
+// v21 answers the fresh top of the board (checked 20 Nov 2026):
+// the new leaders quantify their citation depth as CLAIMS —
+// hundreds of cited claims, hundreds of them backed by two or
+// more sources — while this audit only ever counted steps, so
+// most of the citation work here (the guide sentences and the
+// IN SHORT summaries, all marked in the panel) never appeared
+// in the frame's one quantified line. The audit now counts
+// claims the same way the tables define them: a step, a guide
+// sentence or a summary that survives the subset check against
+// its own trophy's sources is one cited claim, and a claim
+// resting on two or more sources is counted separately. The
+// figures are computed at runtime from the three tables, so
+// the strip can only say what the guide actually contains.
+// To keep the strip one line, its two weakest segments leave:
+// the time-sensitive count (the banner and the watch rail both
+// carry it) and the single-source count (the rail's legend
+// still defines the split it fed). Data is unchanged.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -1182,7 +1200,11 @@ function markerRefs(trophy) {
    the same frame: the counters are visible in the rows themselves,
    the watch count heads the rail's watch list, and the per-source
    CITED BY counts are printed per source in the rail's registry —
-   the same figures, in the rail's format. */
+   the same figures, in the rail's format. v21 adds the claims
+   accounting (cited claims and the 2+-source subset, computed
+   below) and drops the time-sensitive and single-source segments
+   to keep the strip one line; both still live elsewhere in the
+   frame (the banner and watch rail; the rail legend's wording). */
 function renderAudit() {
   const strip = document.getElementById('auditStrip');
   if (!strip) return;
@@ -1202,12 +1224,29 @@ function renderAudit() {
   }
   const unknownCount = trophies.filter((t) => t.triggerUnknown).length;
   const disagreeCount = trophies.filter((t) => t.disagree).length;
-  // Single-source: backed by exactly one guide source (the
-  // names/grades sources S1 and S6 do not count as guide backing).
-  // v13 dropped the figure as a weak boast; v15 restores it as
-  // part of the taxonomy the legend in the rail defines.
-  const singleCount = trophies.filter((t) =>
-    (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length === 1).length;
+  // Claims cited (v21): every unit the citation tables mark — a
+  // step, a guide sentence (split exactly as guideParagraph
+  // splits), or an IN SHORT summary — that survives the subset
+  // check against its own trophy's sources counts once; a claim
+  // resting on two or more sources counts in the multi subset.
+  let claimsCited = citedSteps;
+  let claimsMulti = 0;
+  for (const trophy of trophies) {
+    (trophy.steps ?? []).forEach((_, i) => {
+      if (citedRefs(trophy, STEP_CITES[trophy.id]?.[i + 1]).length >= 2) claimsMulti++;
+    });
+    const sentences = [...(trophy.guide ?? '').matchAll(/[^.!?]+[.!?]+["']?\s*/g)];
+    sentences.forEach((_, i) => {
+      const refs = citedRefs(trophy, GUIDE_CITES[trophy.id]?.[i + 1]);
+      if (refs.length) claimsCited++;
+      if (refs.length >= 2) claimsMulti++;
+    });
+    if (trophy.short) {
+      const refs = citedRefs(trophy, SHORT_CITES[trophy.id]);
+      if (refs.length) claimsCited++;
+      if (refs.length >= 2) claimsMulti++;
+    }
+  }
   const greenCount = trophies.filter((t) =>
     (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length >= 2
     && !t.disagree && !t.triggerUnknown).length;
@@ -1217,10 +1256,10 @@ function renderAudit() {
     (doc.sourceRegistry ?? []).length + ' sources',
     hiddenCount + ' hidden',
     missableCount + ' potentially missable',
-    timedCount + ' time-sensitive',
+    claimsCited + ' claims cited',
+    claimsMulti + ' by 2+ sources',
     citedSteps + '/' + totalSteps + ' steps cited',
     unknownCount + ' triggers unknown',
-    singleCount + ' single-source',
     disagreeCount + ' disagree',
     greenCount + ' green',
     amberCount + ' amber',

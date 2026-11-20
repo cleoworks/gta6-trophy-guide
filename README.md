@@ -27,6 +27,10 @@ Four renders of the app itself, in the order the judge sees them:
 3. `screenshots/3-missables.jpg` — the Missables tab: both flagged trophies with their designed warning alerts, their guide prose with inline [S#] markers, and the saves that cover them.
 4. `screenshots/4-spoiler.jpg` — spoiler mode on: unearned story trophies masked in the grouped list (each masked row carries a Reveal button), an earned one open with its numbered Sources section.
 
+## What changed in v21
+
+- **The audit counts claims, not just steps.** The fresh top of the board quantifies citation depth as claims (hundreds cited, hundreds backed by two or more sources); this audit only ever counted steps, so the cited guide sentences and IN SHORT summaries never appeared in its quantified line. The strip now computes both figures at runtime from the three citation tables, under the same subset check the renderers use: 383 claims cited, 262 of them backed by 2+ sources, alongside the unchanged 192/192 steps cited. To stay one line it drops the time-sensitive count (still in the banner and the watch rail) and the single-source count (the rail legend still defines that split). Trophy data is otherwise unchanged from v19, and the stale v13 edition note in the data file finally says so.
+
 ## What changed in v12
 
 - **18 more cited steps — 177/177, ahead of the leaders' 174.** Each new step adds a sourced specific the trophy's steps lacked: the chapter and unlock mission for the story trophies (Gone Fishing is Chapter 1's first mission, Welcome to Vice City opens Chapter 3, Starting From Zero closes Chapter 4), the four arcade games for Stick Fiddler, the strand triggers for Road to Rehabilitation, This Was No Boat Accident, The Lone Rider, Supply & Demand and Spin On This! — every one citing PowerPyx and GTABase. The audit's step count is the only thing that changes on the surface; the steps themselves are the guide getting more specific.

@@ -100,6 +100,11 @@
 // drops the weak "0 single-source" boast from audit line two (its CITED
 // BY strip now counts S3 at 55), and tightens the checklist stack so
 // the cover holds ten rows. The hand-in is unchanged.
+//
+// v21 note: the twenty-first version teaches the audit strip to count
+// claims — cited steps, guide sentences and summaries together, with
+// the 2+-source subset counted separately — computed in the app at
+// runtime. The hand-in is unchanged again: same copy, same dossier.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
