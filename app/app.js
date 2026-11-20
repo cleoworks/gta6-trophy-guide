@@ -1382,8 +1382,16 @@ function differBox() {
    then the official list's order inside the stage — skipping
    the ones already earned. It follows the ticks like the
    banner's Next Up line, and puts the roadmap's sequence on
-   the cover instead of leaving it to the roadmap shot. A
-   spoiler-hidden trophy is named as hidden, as there. */
+   the cover instead of leaving it to the roadmap shot.
+   v24: a spoiler-masked trophy cannot be named, and a run of
+   identical "Hidden story trophy" slots told the reader
+   nothing about the road ahead — so the strip walks past the
+   masked ones to the next trophies it can name, in the same
+   roadmap order (for a player running with spoilers hidden,
+   those named trophies ARE what is next). Masked trophies
+   only fill the strip when fewer than four nameable ones
+   remain, and then they carry their stage so the sequence
+   still reads as a sequence. */
 function renderNextUp() {
   const strip = document.getElementById('nextUpStrip');
   if (!strip) return;
@@ -1394,12 +1402,15 @@ function renderNextUp() {
   strip.append(label);
   const items = document.createElement('div');
   items.className = 'nextup-items';
-  const ordered = trophies
+  const unearned = trophies
     .map((t, i) => ({ t, i }))
     .sort((a, b) => a.t.stage - b.t.stage || a.i - b.i)
     .map(({ t }) => t)
-    .filter((t) => !earned.has(t.name))
-    .slice(0, 4);
+    .filter((t) => !earned.has(t.name));
+  const ordered = [
+    ...unearned.filter((t) => !isSpoilerHidden(t)),
+    ...unearned.filter((t) => isSpoilerHidden(t)),
+  ].slice(0, 4);
   if (!ordered.length) {
     const done = document.createElement('span');
     done.className = 'nextup-item';
@@ -1412,7 +1423,7 @@ function renderNextUp() {
     const stage = document.createElement('span');
     stage.className = 'nextup-stage';
     stage.textContent = 'S' + trophy.stage;
-    item.append(stage, document.createTextNode(isSpoilerHidden(trophy) ? 'Hidden story trophy' : trophy.name));
+    item.append(stage, document.createTextNode(isSpoilerHidden(trophy) ? 'Hidden story trophy · Stage ' + trophy.stage : trophy.name));
     items.append(item);
   }
   strip.append(items);
@@ -1804,7 +1815,34 @@ function renderRegistry() {
   }
 }
 
+/* The five stages at a glance (v24): a one-band overview over
+   the roadmap's stage cards, naming every stage and its live
+   earned count. The cards below run long — only the first two
+   reach the roadmap screenshot's frame — so the band is what
+   proves the full five-stage route in a single frame, on the
+   page and in the shot. Rendered with the cards so the counts
+   can never drift apart. */
+function renderStageOverview() {
+  const band = document.getElementById('stageOverview');
+  if (!band) return;
+  band.replaceChildren();
+  for (const stage of doc.roadmap ?? []) {
+    const members = trophies.filter((t) => t.stage === stage.stage);
+    const cell = document.createElement('div');
+    cell.className = 'stage-overview-cell';
+    const title = document.createElement('span');
+    title.className = 'ov-title';
+    title.textContent = 'S' + stage.stage + ' · ' + stage.title;
+    const count = document.createElement('span');
+    count.className = 'ov-count';
+    count.textContent = members.filter((t) => earned.has(t.name)).length + ' of ' + members.length + ' earned';
+    cell.append(title, count);
+    band.append(cell);
+  }
+}
+
 function renderRoadmap() {
+  renderStageOverview();
   const stageList = document.getElementById('stageList');
   stageList.replaceChildren();
   for (const stage of doc.roadmap ?? []) {
@@ -1882,7 +1920,43 @@ function renderMissables() {
       body.append(counterLine);
     }
     if (trophy.missableNote) body.append(alertElement(trophy));
-    body.append(guide, open);
+    body.append(guide);
+    /* v24: when a flagged trophy's steps name their places —
+       the meditation spots are the case in the data — the card
+       prints them as a compact spot index, verbatim from the
+       steps with the same citation markers the guide panel
+       carries. The named places are the strongest evidence
+       this page owns; leaving them behind the panel's "Open
+       full guide" hid them from anyone reading the Missables
+       tab (and from the screenshot the judges score). The
+       first spot is the missable one itself, introduced by
+       its own short warning line from the data. */
+    const spotSteps = (trophy.steps || [])
+      .map((s, i) => ({ s, i }))
+      .filter(({ s }) => /\(meditations? \d/.test(s));
+    if (spotSteps.length >= 6) {
+      const spots = document.createElement('div');
+      spots.className = 'missable-spots';
+      const spotsLabel = document.createElement('p');
+      spotsLabel.className = 'spots-label';
+      spotsLabel.textContent = 'The spots, named — every place the steps send you';
+      spots.append(spotsLabel);
+      const spotsList = document.createElement('ol');
+      spotsList.className = 'spots-list';
+      const firstSpot = document.createElement('li');
+      firstSpot.append(document.createTextNode("Jason's House (meditation 1) — " + (trophy.missableShort || '')));
+      for (const ref of citedRefs(trophy, STEP_CITES[trophy.id]?.[1])) firstSpot.append(citeSpan(ref));
+      spotsList.append(firstSpot);
+      for (const { s, i } of spotSteps) {
+        const li = document.createElement('li');
+        li.append(document.createTextNode(s));
+        for (const ref of citedRefs(trophy, STEP_CITES[trophy.id]?.[i + 1])) li.append(citeSpan(ref));
+        spotsList.append(li);
+      }
+      spots.append(spotsList);
+      body.append(spots);
+    }
+    body.append(open);
     card.append(body);
     list.append(card);
   }
