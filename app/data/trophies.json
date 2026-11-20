@@ -2,8 +2,8 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "edition": "Leonida Ledger v23 (2026-11-21) — the registry grows from 7 sources to 23: sixteen more launch-week lists and guides were read in full on 21 November 2026 and are cited where their facts are used (23 sites and 28 pages read in all, counted from the project’s reading ledger). Positive Mental Attitude’s steps now name all ten meditation spots, from PowerPyx’s locations page, corroborated by Beebom and GameTrek. The audit strip reports the trigger count honestly: five trophies have no confirmed trigger — two with no published method at all, and three resting on a single source’s candidate method. Rarity is refreshed from Exophase, read 21 November 2026. The second possibly-missable flag is still not copied: PowerPyx, GTABase, KeenGamer, GTASpotter, GTASnaps and EGamers all name Positive Mental Attitude as the only potentially missable trophy.",
- "pagesRead": 28,
+ "edition": "Leonida Ledger v26 (2026-11-21) — the registry grows from 23 sources to 29: six more sites were read in full on 21 November 2026 (Push Square, Gaming Route, GTAScoop, GuideDistrict, GTA Vibes and Mobalytics), together with 28 further pages across the registry — 56 pages read in all, counted from the project’s reading ledger. The new reading deepens the thin tail: GTAScoop’s meditation page independently names the same ten spots, its challenges page names all 80 Challenges, and Push Square’s 100% checklist corroborates the component counts — except its race-gold figure, which dissents from every other checklist read and is not used. Two of the new lists are derivative and are marked as such (Gaming Route follows Beebom; GuideDistrict is built from Insider Gaming and Outputlag): they back the list itself, never a disputed claim as its sole second source. Rarity is the Exophase snapshot read 21 November 2026.",
+ "pagesRead": 56,
  "rarityNote": "Rarity is the share of Exophase-tracked players who had earned each trophy when the list was read on 21 November 2026, so every figure is a launch-week snapshot that will move fast. Source: Exophase, Grand Theft Auto VI (PSN) trophy list.",
  "roadmapMeta": {
   "heading": "Trophy roadmap — the platinum at a glance",
@@ -20,6 +20,7 @@
    {"label": "Free roam after the story", "value": "Yes — but there is no mission replay"},
    {"label": "Cheats", "value": "Expected to block saving and trophy progress in the session they are used in"},
    {"label": "Manual saves", "value": "15 slots + 1 autosave"},
+   {"label": "Progress counters", "value": "20 tracked"},
    {"label": "Release date", "value": "November 19, 2026"}
   ],
   "sourcesNote": "Roadmap figures from PowerPyx's GTA 6 Trophy Guide & Roadmap, cross-checked with GTABase, Outputlag and KeenGamer (checked 2026-11-20)."
@@ -42,7 +43,7 @@
   {"id": "S5", "name": "PSNProfiles", "title": "GTA VI trophies", "url": "https://psnprofiles.com/trophies/43531-grand-theft-auto-vi", "retrieved": "20 November 2026"},
   {"id": "S6", "name": "Official trophy description", "title": "PlayStation trophy list — no outside guide", "url": null, "retrieved": null},
   {"id": "S7", "name": "KeenGamer", "title": "GTA 6 Trophy Guide & Platinum Roadmap", "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/", "retrieved": "20 November 2026"},
-  {"id": "S8", "name": "TrueAchievements", "title": "Grand Theft Auto VI achievements", "url": "https://www.trueachievements.com/game/Grand-Theft-Auto-VI/achievements", "retrieved": "21 November 2026", "support": "names, grades — full list"},
+  {"id": "S8", "name": "TrueAchievements", "title": "Grand Theft Auto VI achievements", "url": "https://www.trueachievements.com/game/Grand-Theft-Auto-VI/achievements", "retrieved": "21 November 2026", "support": "names, descriptions — full list"},
   {"id": "S9", "name": "GTASpotter", "title": "GTA 6 Trophies and Achievements", "url": "https://gtaspotter.com/en/guides/gta-6-trophies-and-achievements/", "retrieved": "21 November 2026"},
   {"id": "S10", "name": "Beebom", "title": "GTA 6 Meditation Spots Locations", "url": "https://beebom.com/gta-6-meditation-spots-locations/", "retrieved": "21 November 2026"},
   {"id": "S11", "name": "GameTrek", "title": "GTA 6 guide", "url": "https://gmtreks.com/gta6/page/01M7QVDV9V6SV9W03RH60W1P4B", "retrieved": "21 November 2026"},
@@ -57,7 +58,13 @@
   {"id": "S20", "name": "GamesFuze", "title": "GTA 6 Achievements", "url": "https://gamesfuze.com/gta-6-wiki/achievements/", "retrieved": "21 November 2026", "support": "names, grades — full list"},
   {"id": "S21", "name": "Insider Gaming", "title": "Complete GTA 6 Trophy List", "url": "https://insider-gaming.com/complete-gta-6-trophy-list-how-to-get-all-trophies-achievements/", "retrieved": "21 November 2026", "support": "names, grades — full list"},
   {"id": "S22", "name": "Of Zen and Computing", "title": "GTA 6 Trophy List — Trophies and Achievements", "url": "https://www.ofzenandcomputing.com/gta-6-trophy-list-trophies-achievements/", "retrieved": "21 November 2026", "support": "names, grades — full list"},
-  {"id": "S23", "name": "GTA Vice City Hub", "title": "GTA VI Achievements", "url": "https://www.gtavicecityhub.com/achievements", "retrieved": "21 November 2026"}
+  {"id": "S23", "name": "GTA Vice City Hub", "title": "GTA VI Achievements", "url": "https://www.gtavicecityhub.com/achievements", "retrieved": "21 November 2026"},
+  {"id": "S24", "name": "Push Square", "title": "GTA 6 100% completion checklist", "url": "https://www.pushsquare.com/guides/gta-6-100percent-completion-checklist", "retrieved": "21 November 2026"},
+  {"id": "S25", "name": "Gaming Route", "title": "GTA 6 trophy list (after Beebom)", "url": "https://gamingroute.com/gta-6-trophy-list/", "retrieved": "21 November 2026", "support": "names, grades — non-hidden only"},
+  {"id": "S26", "name": "GTAScoop", "title": "GTA 6 trophies and achievements", "url": "https://gtascoop.com/guides/gta-6-trophies-achievements/", "retrieved": "21 November 2026"},
+  {"id": "S27", "name": "GuideDistrict", "title": "GTA 6 trophies and achievements (from Insider Gaming + Outputlag)", "url": "https://guidedistrict.com/en/gta-6/100-percent/trophies-and-achievements/", "retrieved": "21 November 2026", "support": "names, grades — visible only"},
+  {"id": "S28", "name": "GTA Vibes", "title": "GTA 6 trophy list and achievements", "url": "https://www.gtavibes.com/guides/gta-6-trophy-list-achievements", "retrieved": "21 November 2026", "support": "names, unlocks — full list"},
+  {"id": "S29", "name": "Mobalytics", "title": "Grand Theft Auto 6 — all trophies", "url": "https://mobalytics.gg/gamebase/guides/grand-theft-auto-6-all-trophies", "retrieved": "21 November 2026", "support": "names, descriptions — full list"}
  ],
  "roadmap": [
   {"stage": 1, "title": "Chapter 1 — play, and save", "text": "Finish the opening mission and Chapter 1, beat Cal at fishing, finish one arcade game, and do the balcony meditation at Jason's house while it is available. Make a manual save at the start of the chapter: there is no mission replay, so a chapter-start save is your only way back."},
@@ -102,7 +109,25 @@
     {"ref": "S2", "note": "platinum time ~200 hours; no online / difficulty / medal trophies"},
     {"ref": "S3", "note": "roadmap: ~200h, 1 playthrough, hardest A Long Road"},
     {"ref": "S4", "note": "roadmap: ~200h, 1 playthrough, hardest A Long Road"},
-    {"ref": "S7", "note": "earn every other trophy"}
+    {"ref": "S7", "note": "earn every other trophy"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S19", "note": "difficulty, time, missable consensus"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -124,7 +149,22 @@
     {"ref": "S2", "note": "Gone Fishing is the opening mission"},
     {"ref": "S3", "note": "automatic story trophy; unlocks after Gone Fishing"},
     {"ref": "S4", "note": "Gone Fishing, one of the first Chapter 1 missions"},
-    {"ref": "S7", "note": "complete Gone Fishing"}
+    {"ref": "S7", "note": "complete Gone Fishing"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -146,7 +186,22 @@
     {"ref": "S2", "note": "balcony meditation is Chapter 1 only; chapter trophies can pop at the next chapter's start"},
     {"ref": "S3", "note": "automatic story trophy; unlocks after Chapter 1"},
     {"ref": "S4", "note": "pops after the first Chapter 2 mission"},
-    {"ref": "S7", "note": "complete Chapter 1"}
+    {"ref": "S7", "note": "complete Chapter 1"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -168,7 +223,22 @@
     {"ref": "S2", "note": "switching opens in Chapter 2; garages unlock after Daily Driver; Scooter Bros opens with Moses"},
     {"ref": "S3", "note": "automatic story trophy; unlocks after Chapter 2"},
     {"ref": "S4", "note": "awarded as Chapter 3 begins, after Welcome to Vice City"},
-    {"ref": "S7", "note": "complete Chapter 2"}
+    {"ref": "S7", "note": "complete Chapter 2"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -190,7 +260,22 @@
     {"ref": "S2", "note": "Yago race is time-sensitive; Snap Gun comes from Yasmani's Jewelry Jobs"},
     {"ref": "S3", "note": "automatic story trophy; unlocks after Chapter 3"},
     {"ref": "S4", "note": "arrives after the first two Chapter 4 missions"},
-    {"ref": "S7", "note": "complete Chapter 3"}
+    {"ref": "S7", "note": "complete Chapter 3"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -212,7 +297,22 @@
     {"ref": "S2", "note": "bank vaults unlock through That's Where The Money Is, near the end of Chapter 4"},
     {"ref": "S3", "note": "automatic story trophy; unlocks after Chapter 4"},
     {"ref": "S4", "note": "finishing Chapter 4; can't be missed"},
-    {"ref": "S7", "note": "complete Chapter 4"}
+    {"ref": "S7", "note": "complete Chapter 4"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -234,7 +334,22 @@
     {"ref": "S2", "note": "no mission replay or New Game Plus; 100% checklist appears after the story"},
     {"ref": "S3", "note": "automatic story trophy; unlocks after the final mission"},
     {"ref": "S4", "note": "finish the last mission; free roam carries on"},
-    {"ref": "S7", "note": "finish the final story mission"}
+    {"ref": "S7", "note": "finish the final story mission"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -256,7 +371,22 @@
     {"ref": "S3", "note": "automatic story trophy; unlocks after Breakfast Run"},
     {"ref": "S4", "note": "Breakfast Run, a Chapter 2 mission"},
     {"ref": "S6", "note": "official description names the mission"},
-    {"ref": "S7", "note": "complete Breakfast Run"}
+    {"ref": "S7", "note": "complete Breakfast Run"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -278,7 +408,22 @@
     {"ref": "S3", "note": "automatic story trophy; unlocks after The Cartel Heist"},
     {"ref": "S4", "note": "The Cartel Heist, a Chapter 3 mission"},
     {"ref": "S6", "note": "official description names the mission"},
-    {"ref": "S7", "note": "complete The Cartel Heist"}
+    {"ref": "S7", "note": "complete The Cartel Heist"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -300,7 +445,22 @@
     {"ref": "S3", "note": "automatic story trophy; unlocks after Child's Play"},
     {"ref": "S4", "note": "Child's Play, a Chapter 4 mission"},
     {"ref": "S6", "note": "official description names the mission"},
-    {"ref": "S7", "note": "complete Child's Play"}
+    {"ref": "S7", "note": "complete Child's Play"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -322,7 +482,22 @@
     {"ref": "S3", "note": "automatic story trophy; unlocks after Headliners"},
     {"ref": "S4", "note": "Headliners, a Chapter 4 mission"},
     {"ref": "S6", "note": "official description names the mission"},
-    {"ref": "S7", "note": "complete Headliners"}
+    {"ref": "S7", "note": "complete Headliners"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -344,7 +519,22 @@
     {"ref": "S3", "note": "automatic story trophy; unlocks after VCIA Takedown"},
     {"ref": "S4", "note": "VCIA Takedown, a Chapter 4 mission"},
     {"ref": "S6", "note": "official description names the mission"},
-    {"ref": "S7", "note": "complete VCIA Takedown"}
+    {"ref": "S7", "note": "complete VCIA Takedown"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -367,7 +557,22 @@
     {"ref": "S4", "note": "Operation Savage Glory, a Chapter 5 mission"},
     {"ref": "S6", "note": "official description names the mission"},
     {"ref": "S7", "note": "complete Operation Savage Glory"},
-    {"ref": "S16", "note": "Operation Savage Glory is a Chapter 5 mission"}
+    {"ref": "S16", "note": "Operation Savage Glory is a Chapter 5 mission"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -392,7 +597,25 @@
     {"ref": "S4", "note": "100%: all robberies, 8 vaults, 39 ops; 70/80 challenges, 300 stunts"},
     {"ref": "S7", "note": "100% completion via the in-game checklist"},
     {"ref": "S9", "note": "the 80 challenges, named by group"},
-    {"ref": "S23", "note": "100% checklist table: 39 operations, 8 of 8 vaults, 200 vehicles, 100 animals, 15 meditations"}
+    {"ref": "S23", "note": "100% checklist table: 39 operations, 8 of 8 vaults, 200 vehicles, 100 animals, 15 meditations"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S11", "note": "collectibles overview — every checklist family counted"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S19", "note": "difficulty, time, missable consensus"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S24", "note": "100% checklist — every component count"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   }
 ,
@@ -416,7 +639,26 @@
     {"ref": "S2", "note": "what counts as a stunt; 100% needs 300"},
     {"ref": "S3", "note": "250/397 stunts: 130 jumps, 202 under-bridge, 40 knife, 25 base"},
     {"ref": "S4", "note": "250/397 stunts: 130 jumps, 202 under-bridge, 40 knife, 25 base"},
-    {"ref": "S7", "note": "250 unique stunts"}
+    {"ref": "S7", "note": "250 unique stunts"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S11", "note": "stunt guide — 397 = 130/202/40/25; 250 for the trophy"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "100% checklist — 300 of 397 stunts"},
+    {"ref": "S18", "note": "100% checklist — the stunt counts"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — 300 of 397 stunts"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -443,7 +685,23 @@
     {"ref": "S7", "note": "try all nine activity types"},
     {"ref": "S12", "note": "progress counter: 0 of 9 activity types"},
     {"ref": "S15", "note": "the nine activity types, named"},
-    {"ref": "S17", "note": "the nine activity types, named"}
+    {"ref": "S17", "note": "the nine activity types, named"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S18", "note": "100% checklist — the nine activity types"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — the nine activity types"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -468,7 +726,24 @@
     {"ref": "S4", "note": "42 golds across 12 ranges"},
     {"ref": "S7", "note": "all 42 Shooting Range Gold Medals"},
     {"ref": "S16", "note": "42 challenges across 12 ranges"},
-    {"ref": "S17", "note": "42 challenges across 12 ranges"}
+    {"ref": "S17", "note": "42 challenges across 12 ranges"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — 42 range golds"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -491,7 +766,25 @@
     {"ref": "S2", "note": "14 Top Fun drone race locations"},
     {"ref": "S3", "note": "14 locations; one win per location"},
     {"ref": "S4", "note": "14 locations; one win per location"},
-    {"ref": "S7", "note": "win a Drone Race at all 14 locations"}
+    {"ref": "S7", "note": "win a Drone Race at all 14 locations"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "100% checklist — 14 drone locations, 3 courses each"},
+    {"ref": "S18", "note": "trophies around 100% — 14 drone locations"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — 42 drone races"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -514,7 +807,24 @@
     {"ref": "S3", "note": "40 races in total"},
     {"ref": "S4", "note": "20 different races; 40 to choose from"},
     {"ref": "S6", "note": "official description states the goal"},
-    {"ref": "S7", "note": "win 20 different races"}
+    {"ref": "S7", "note": "win 20 different races"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -536,7 +846,24 @@
     {"ref": "S2", "note": "fishing challenge against Cal; checklist places it in Chapter 1"},
     {"ref": "S3", "note": "Cal texts after Feng Shui"},
     {"ref": "S4", "note": "Cal texts after Feng Shui (Ch.1); purple icon"},
-    {"ref": "S7", "note": "defeat Cal in a fishing challenge"}
+    {"ref": "S7", "note": "defeat Cal in a fishing challenge"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -558,7 +885,25 @@
     {"ref": "S2", "note": "checklist places an arcade game in Chapter 1"},
     {"ref": "S3", "note": "4 arcade games"},
     {"ref": "S4", "note": "3 home TV games + Bang For Your Buck"},
-    {"ref": "S7", "note": "complete any one arcade game"}
+    {"ref": "S7", "note": "complete any one arcade game"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "Key Lento walkthrough — Bang For Your Buck at The Rusty Anchor"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -580,7 +925,22 @@
     {"ref": "S2", "note": "Andy's questline is Lucia-only; finales stay open after the credits; Andy's strand does not count toward Strangers & Freaks"},
     {"ref": "S3", "note": "Andy, 5 quests, Lucia-only, Chapter 3"},
     {"ref": "S4", "note": "5 quests named; Lucia-only, Chapter 3"},
-    {"ref": "S7", "note": "complete Andy's final mission"}
+    {"ref": "S7", "note": "complete Andy's final mission"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -603,7 +963,24 @@
     {"ref": "S3", "note": "Kenton, 7 shipwrecks"},
     {"ref": "S4", "note": "7 shipwrecks; KR icon Key Lento; metal detector"},
     {"ref": "S7", "note": "complete Kenton's final mission"},
-    {"ref": "S15", "note": "KR icon and 7 shipwrecks; the strand returns after Chapter 1"}
+    {"ref": "S15", "note": "KR icon and 7 shipwrecks; the strand returns after Chapter 1"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S11", "note": "underwater guide — the 7 Kenton sets sit inside the 33 discoveries"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — underwater discoveries"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -626,7 +1003,22 @@
     {"ref": "S3", "note": "Billy, 5 quests"},
     {"ref": "S4", "note": "5 jobs from Thrillbilly Mudclub; Hometown Heroes last"},
     {"ref": "S7", "note": "complete Billy's final mission"},
-    {"ref": "S16", "note": "five jobs at the Thrillbilly Mudclub"}
+    {"ref": "S16", "note": "five jobs at the Thrillbilly Mudclub"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -651,7 +1043,25 @@
     {"ref": "S2", "note": "Andy, Billy and Tyrone strands do not count; Yago race is time-sensitive"},
     {"ref": "S3", "note": "Kirk, Kyle, Yago, Pilot Pete confirmed"},
     {"ref": "S4", "note": "Kirk, Kyle, Yago, Pilot Pete count; rest unconfirmed"},
-    {"ref": "S7", "note": "8 qualifying stranger strands"}
+    {"ref": "S7", "note": "8 qualifying stranger strands"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "trophies around 100% — 8 strands"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — stranger strands"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -674,7 +1084,23 @@
     {"ref": "S3", "note": "Randy's 16-car wishlist"},
     {"ref": "S4", "note": "Wish List: 16 sports cars, RK garage, WAiNK scan"},
     {"ref": "S7", "note": "complete Randy's final mission"},
-    {"ref": "S15", "note": "the 16-car wish list opens in Chapter 3"}
+    {"ref": "S15", "note": "the 16-car wish list opens in Chapter 3"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — Randy’s wish list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -697,7 +1123,22 @@
     {"ref": "S3", "note": "Tyrone, synthetic labs"},
     {"ref": "S4", "note": "Jason-only; labs after Here, Kitty Kitty (Ch.3)"},
     {"ref": "S7", "note": "complete Tyrone's final mission"},
-    {"ref": "S15", "note": "the synthetic labs; Jason-only from Chapter 3"}
+    {"ref": "S15", "note": "the synthetic labs; Jason-only from Chapter 3"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -728,7 +1169,22 @@
     {"ref": "S10", "note": "the same ten meditation spots, independently listed"},
     {"ref": "S11", "note": "meditation spots corroborated; Down to Earth is Chapter 1 mission 20"},
     {"ref": "S18", "note": "possibly one missable: this trophy"},
-    {"ref": "S19", "note": "only this trophy flagged potentially missable"}
+    {"ref": "S19", "note": "only this trophy flagged potentially missable"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — 15 of 18 meditations"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -751,7 +1207,23 @@
     {"ref": "S3", "note": "Bret; which animal triggers it unconfirmed"},
     {"ref": "S4", "note": "Bret's quests after Coffee Break (Ch.2); 15 Target Decks"},
     {"ref": "S7", "note": "hunt a unique animal for Bret"},
-    {"ref": "S15", "note": "Jason-only from Chapter 2; 15 Target Decks for 100%"}
+    {"ref": "S15", "note": "Jason-only from Chapter 2; 15 Target Decks for 100%"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "Bret tip — a clean shot keeps the animal pristine"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — 15 of 15 Target Decks"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -774,7 +1246,26 @@
     {"ref": "S3", "note": "any 3 sets; links its card guide"},
     {"ref": "S4", "note": "any 3 sets; Collections shows progress"},
     {"ref": "S6", "note": "official description states the goal"},
-    {"ref": "S7", "note": "three full Collectible Card sets"}
+    {"ref": "S7", "note": "three full Collectible Card sets"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S11", "note": "card sets guide — 18 sets, 480 cards"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "trophies around 100% — 3 sets"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist + Key Lento card locations"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   }
 ,
@@ -800,7 +1291,26 @@
     {"ref": "S4", "note": "100 spots: hold Up, then R1/RB"},
     {"ref": "S6", "note": "official description states the goal"},
     {"ref": "S7", "note": "WAiNK app at 100 locations"},
-    {"ref": "S16", "note": "31 landmarks, 35 curiosities, 23 sculptures and the No Flusher tags"}
+    {"ref": "S16", "note": "31 landmarks, 35 curiosities, 23 sculptures and the No Flusher tags"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S11", "note": "WAiNK guide — 112 = 31 landmarks, 35 curiosities, 23 sculptures, 23 tags"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "Key Lento walkthrough — named WAiNK scan locations"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -823,7 +1333,25 @@
     {"ref": "S2", "note": "Challenges live under Progress > Challenges; 100% needs 70 of 80"},
     {"ref": "S3", "note": "80 challenges, 50 needed"},
     {"ref": "S4", "note": "50 of 80; Progress > Challenges ticks them"},
-    {"ref": "S7", "note": "complete 50 Challenges"}
+    {"ref": "S7", "note": "complete 50 Challenges"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — 70 of 80 challenges"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "all 80 challenges named, with requirements"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -846,7 +1374,23 @@
     {"ref": "S3", "note": "after Coffee Break; train tunnel method"},
     {"ref": "S4", "note": "call partner (Right, Triangle/Y); train tunnel, Ambrosia"},
     {"ref": "S7", "note": "escape a four-star Wanted Level with your partner"},
-    {"ref": "S17", "note": "the train tunnel north of Ambrosia shakes off the heat"}
+    {"ref": "S17", "note": "the train tunnel north of Ambrosia shakes off the heat"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -871,7 +1415,22 @@
     {"ref": "S7", "note": "rob three shops consecutively with your partner"},
     {"ref": "S15", "note": "the three jewelry stores in north Vice City"},
     {"ref": "S17", "note": "three jewelry stores close together; the pop follows the third"},
-    {"ref": "S18", "note": "rob a fourth store if the trophy has not popped"}
+    {"ref": "S18", "note": "rob a fourth store if the trophy has not popped"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -894,7 +1453,26 @@
     {"ref": "S2", "note": "WAiNK scan counts as discovering; 100% needs 200 of 277 models"},
     {"ref": "S3", "note": "557 vehicles; WAiNK scan counts; 200 for 100%"},
     {"ref": "S4", "note": "scan 100 vehicles; 200 base models for 100%"},
-    {"ref": "S7", "note": "discover 100 vehicles"}
+    {"ref": "S7", "note": "discover 100 vehicles"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S11", "note": "WAiNK guide — the same app scans vehicles, 200 of 277"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "trophies around 100% — scan 100 vehicles"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — vehicle scans"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -917,7 +1495,24 @@
     {"ref": "S2", "note": "Combat Focus is L3 + R3 while aiming; assault rifle; Adrenaline extends Focus"},
     {"ref": "S3", "note": "Combat Focus L3+R3; 5 enemies"},
     {"ref": "S4", "note": "fill Focus first; gang thugs count, cops don't"},
-    {"ref": "S7", "note": "five enemies in one Combat Focus"}
+    {"ref": "S7", "note": "five enemies in one Combat Focus"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -940,7 +1535,21 @@
     {"ref": "S3", "note": "big plane at terminal E3/E4, VCIA; fly 1 km"},
     {"ref": "S4", "note": "boarding-bridge jets only; gates E3/E4 easiest"},
     {"ref": "S7", "note": "steal a departing passenger aircraft at VCIA"},
-    {"ref": "S17", "note": "a jet at gates E3 and E4; the trophy pops about 1 km out"}
+    {"ref": "S17", "note": "a jet at gates E3 and E4; the trophy pops about 1 km out"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -964,7 +1573,22 @@
     {"ref": "S4", "note": "tanks at the south end of Mile Zero Air Station"},
     {"ref": "S7", "note": "steal a Rhino tank and use it in combat"},
     {"ref": "S15", "note": "Rhino tanks at Mile Zero Air Station"},
-    {"ref": "S16", "note": "Mile Zero Air Station"}
+    {"ref": "S16", "note": "Mile Zero Air Station"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -988,7 +1612,23 @@
     {"ref": "S4", "note": "Snap Gun on the back door; safe-code note"},
     {"ref": "S7", "note": "rob a jewelry store undetected"},
     {"ref": "S16", "note": "the Snap Gun comes from Yasmani's Chapter 3 job"},
-    {"ref": "S18", "note": "the back door and Snap Gun; find the safe code; empty the safe unseen"}
+    {"ref": "S18", "note": "the back door and Snap Gun; find the safe code; empty the safe unseen"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1013,7 +1653,24 @@
     {"ref": "S4", "note": "vaults via That's Where The Money Is…; $205k max each"},
     {"ref": "S7", "note": "rob five bank vaults and escape"},
     {"ref": "S15", "note": "vaults open through the Chapter 4 optional mission; a vault means 4 stars"},
-    {"ref": "S18", "note": "the Chapter 4 optional mission opens the vaults; escape on a fast bike"}
+    {"ref": "S18", "note": "the Chapter 4 optional mission opens the vaults; escape on a fast bike"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — 8 of 8 vaults"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1035,7 +1692,24 @@
     {"ref": "S2", "note": "pops only after leaving the red heat zone"},
     {"ref": "S3", "note": "vault counts; armored truck"},
     {"ref": "S4", "note": "vault counts with an escape; or sticky-bomb a truck"},
-    {"ref": "S7", "note": "rob an armored truck and escape"}
+    {"ref": "S7", "note": "rob an armored truck and escape"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1060,7 +1734,23 @@
     {"ref": "S5", "note": "PSN count: 52 areas"},
     {"ref": "S6", "note": "official description states the goal"},
     {"ref": "S7", "note": "explore all of Leonida; full map"},
-    {"ref": "S12", "note": "progress counter: 0 of 52 areas"}
+    {"ref": "S12", "note": "progress counter: 0 of 52 areas"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1084,7 +1774,24 @@
     {"ref": "S3", "note": "9 gangs, 39 illegal operations"},
     {"ref": "S4", "note": "yellow map icons; Progress > Gangs counts"},
     {"ref": "S7", "note": "rob an Illegal Operation of each of the nine gangs"},
-    {"ref": "S12", "note": "progress counter: 0 of 9 gangs"}
+    {"ref": "S12", "note": "progress counter: 0 of 9 gangs"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — gang operations"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1108,7 +1815,22 @@
     {"ref": "S2", "note": "one of five hidden trophies with no confirmed trigger yet"},
     {"ref": "S3", "note": "Ocean View Rooftop Bar; Apple Martini at the bar"},
     {"ref": "S4", "note": "cocktail with an Ocean Beach view; steps unconfirmed"},
-    {"ref": "S7", "note": "trigger still being confirmed"}
+    {"ref": "S7", "note": "trigger still being confirmed"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1132,7 +1854,22 @@
     {"ref": "S2", "note": "one of five hidden trophies with no confirmed trigger yet"},
     {"ref": "S3", "note": "blue Banshee, south Vice City showroom; Key Cloner first"},
     {"ref": "S4", "note": "crash a car out through a showroom window"},
-    {"ref": "S7", "note": "exact method still unconfirmed"}
+    {"ref": "S7", "note": "exact method still unconfirmed"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   }
 ,
@@ -1155,7 +1892,22 @@
     {"ref": "S2", "note": "Kingpin Bowling; three valuables; Sticky Bomb for the safe; operation returns if incomplete"},
     {"ref": "S3", "note": "Kingpin Bowling; 3 valuables; sticky bombs"},
     {"ref": "S4", "note": "watch SE office, shotgun NE table, safe NE hall"},
-    {"ref": "S7", "note": "three key valuables at the bowling alley"}
+    {"ref": "S7", "note": "three key valuables at the bowling alley"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1178,7 +1930,21 @@
     {"ref": "S3", "note": "max Strength, both characters"},
     {"ref": "S4", "note": "fitness clubs; training one trains the other"},
     {"ref": "S7", "note": "maximize Strength for both Jason and Lucia"},
-    {"ref": "S17", "note": "the partner trains alongside; progress counts for both"}
+    {"ref": "S17", "note": "the partner trains alongside; progress counts for both"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1202,7 +1968,21 @@
     {"ref": "S3", "note": "500 criminal-profile actions"},
     {"ref": "S4", "note": "500 actions; Irredeemable profile is permanent"},
     {"ref": "S7", "note": "500 actions affecting your Criminal Profile"},
-    {"ref": "S12", "note": "progress counter: 0 of 500 actions"}
+    {"ref": "S12", "note": "progress counter: 0 of 500 actions"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "trophy list — the 500-action counter"},
+    {"ref": "S18", "note": "trophy list — the 500-action counter"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1225,7 +2005,22 @@
     {"ref": "S2", "note": "one of five hidden trophies with no confirmed trigger yet"},
     {"ref": "S3", "note": "'currently unknown'; Payday Loans theory"},
     {"ref": "S4", "note": "second attempt; exact steps not confirmed"},
-    {"ref": "S7", "note": "unconfirmed unlock method"}
+    {"ref": "S7", "note": "unconfirmed unlock method"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1249,7 +2044,22 @@
     {"ref": "S2", "note": "one of five hidden trophies with no confirmed trigger yet"},
     {"ref": "S3", "note": "UFO easter egg: Starlet Motel road, after 2AM, alone"},
     {"ref": "S4", "note": "a strange event or Easter egg in Leonida"},
-    {"ref": "S7", "note": "unconfirmed unlock method"}
+    {"ref": "S7", "note": "unconfirmed unlock method"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1272,7 +2082,22 @@
     {"ref": "S2", "note": "one of five hidden trophies with no confirmed trigger yet"},
     {"ref": "S3", "note": "'currently unknown'; motorcycle-kick theory"},
     {"ref": "S4", "note": "melee drive-by; exact steps not confirmed"},
-    {"ref": "S7", "note": "precise method still being confirmed"}
+    {"ref": "S7", "note": "precise method still being confirmed"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1295,7 +2120,24 @@
     {"ref": "S2", "note": "marked bills from bank and payday loan jobs; laundered via contacts; cumulative total"},
     {"ref": "S3", "note": "Dye Pack Jammer after Credit Check (Ch.3)"},
     {"ref": "S4", "note": "Yasmani pays the most for marked bills"},
-    {"ref": "S7", "note": "launder $250,000 in Marked Bills"}
+    {"ref": "S7", "note": "launder $250,000 in Marked Bills"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1318,7 +2160,24 @@
     {"ref": "S2", "note": "cumulative across every kind of shop"},
     {"ref": "S3", "note": "$100k across shops"},
     {"ref": "S4", "note": "guns, car mods, tattoos fastest"},
-    {"ref": "S7", "note": "spend $100,000 across shops"}
+    {"ref": "S7", "note": "spend $100,000 across shops"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1344,7 +2203,23 @@
     {"ref": "S7", "note": "all eight purchasable garage properties"},
     {"ref": "S12", "note": "progress counter: 0 of 8 garages"},
     {"ref": "S15", "note": "8 garages; the real-estate app arrives in Chapter 2"},
-    {"ref": "S18", "note": "8 garages for about $160,000; story garages do not count"}
+    {"ref": "S18", "note": "8 garages for about $160,000; story garages do not count"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S24", "note": "100% checklist — the eight garages"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   },
   {
@@ -1368,7 +2243,24 @@
     {"ref": "S3", "note": "Scooter Bros app after Moses (Ch.2)"},
     {"ref": "S4", "note": "respray then register; Pay 'n' Spray from Ch.3"},
     {"ref": "S7", "note": "register 10 vehicles via Scooter Bros"},
-    {"ref": "S16", "note": "Moses hands over the Scooter Bros app in Chapter 2"}
+    {"ref": "S16", "note": "Moses hands over the Scooter Bros app in Chapter 2"},
+    {"ref": "S8", "note": "name, description — full list"},
+    {"ref": "S9", "note": "name, grade, conditions — full list"},
+    {"ref": "S10", "note": "name, grade, description — full list"},
+    {"ref": "S12", "note": "name, description, progress counters — full list"},
+    {"ref": "S13", "note": "name, grade — full list"},
+    {"ref": "S14", "note": "name, grade — full list"},
+    {"ref": "S17", "note": "name, grade, conditions — full list"},
+    {"ref": "S18", "note": "name, grade, requirements — full list"},
+    {"ref": "S20", "note": "name, grade — full list"},
+    {"ref": "S21", "note": "name, grade, description — full list"},
+    {"ref": "S22", "note": "name, grade — full list"},
+    {"ref": "S23", "note": "name — full list"},
+    {"ref": "S25", "note": "name, grade, description — after Beebom’s list"},
+    {"ref": "S26", "note": "name, grade, unlock — full list"},
+    {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
+    {"ref": "S28", "note": "name, unlock — full list"},
+    {"ref": "S29", "note": "name, description — full list"}
    ]
   }
  ]
