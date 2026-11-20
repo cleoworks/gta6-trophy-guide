@@ -393,11 +393,22 @@ function formatRarity(trophy) {
    (about thirty characters at the row's text size) instead,
    with an ellipsis of its own: the reader still sees whole
    words, never a word sawn in half. Short descriptions render
-   untouched. */
-function rowDescription(text) {
+   untouched.
+   v19: a counted row passes a tighter budget (clipLimit: 24
+   characters, 17 for the money counters). The row pill now
+   shows the bare fraction (rowCounterReadout), which frees
+   most of the line, and the clip makes the rest fit — still
+   at a word boundary, still never mid-word. */
+function rowDescription(text, clipLimit) {
   const rest = text.slice(40);
   const cut = rest.search(/[,—–]|\s-\s/);
   if (cut >= 0) return text.slice(0, 40 + cut).trimEnd();
+  if (clipLimit && text.length > clipLimit) {
+    const clipped = text.slice(0, clipLimit);
+    const space = clipped.lastIndexOf(' ');
+    if (space >= 10) return clipped.slice(0, space) + '…';
+    return clipped.trimEnd() + '…';
+  }
   if (text.length > 34) {
     const clipped = text.slice(0, 30);
     const space = clipped.lastIndexOf(' ');
@@ -642,13 +653,26 @@ function formatMoney(value) {
   return '$' + value.toLocaleString('en-US');
 }
 
-/* The compact row form: "9/18 meditation spots", or with dollars for
-   the two money counters. */
+/* The panel form: "9/18 meditation spots", or with dollars for
+   the two money counters. The guide panel and the missable
+   card's Progress line carry this full labelled readout. */
 function counterReadout(trophy) {
   const c = trophy.counter;
   const value = counterValue(trophy);
   if (c.money) return formatMoney(value) + ' of ' + formatMoney(c.total) + ' ' + c.label;
   return value + '/' + c.total + ' ' + c.label;
+}
+
+/* The row pill's form (v19): the bare fraction — "23/100",
+   "$0/$250,000". In the row, the unit label cost the
+   description its line (the widest pills left it no room at
+   all); the fraction alone still reads at a glance beside the
+   trophy's name, and the panel keeps the labelled form. */
+function rowCounterReadout(trophy) {
+  const c = trophy.counter;
+  const value = counterValue(trophy);
+  if (c.money) return formatMoney(value) + '/' + formatMoney(c.total);
+  return value + '/' + c.total;
 }
 
 function setCounter(trophy, delta) {
@@ -746,7 +770,13 @@ function trophyRow(trophy) {
   }
   const desc = document.createElement('div');
   desc.className = 'trophy-desc';
-  desc.textContent = hidden ? 'Earn this story trophy to reveal its name and description.' : rowDescription(trophy.description);
+  /* v19: the masked placeholder is the short form — the full
+     sentence could never fit the row's description box, so it
+     clipped mid-word on every masked row. A counted row passes
+     its clip budget (17 for money counters, else 24). */
+  desc.textContent = hidden
+    ? 'Earn this trophy to reveal it.'
+    : rowDescription(trophy.description, trophy.counter ? (trophy.counter.money ? 17 : 24) : 0);
   if (trophy.counter) {
     // The live counter rides on the description line as a pill, so a
     // counted row is the same height as every other row (v14 row
@@ -756,7 +786,7 @@ function trophyRow(trophy) {
     sub.append(desc);
     const pill = document.createElement('span');
     pill.className = 'counter-pill' + (counterValue(trophy) >= trophy.counter.total ? ' complete' : '');
-    pill.textContent = counterReadout(trophy);
+    pill.textContent = rowCounterReadout(trophy);
     sub.append(pill);
     text.append(name, sub);
   } else {

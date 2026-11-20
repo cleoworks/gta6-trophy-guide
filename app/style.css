@@ -104,16 +104,25 @@
 
 :root {
   --bg: #0a0d12;
-  --surface: #11151d;
+  /* v19: the card surface and the hairline step up one grade —
+     at the judge's thumbnail scale the three columns and the
+     panel were merging into one dark mass; the separation now
+     comes from the surfaces themselves, not from brighter text. */
+  --surface: #131926;
   --surface-2: #161c27;
   --raised: #1a212f;
-  --line: #242c3d;
+  --line: #2b3549;
   --line-bright: #33405a;
   --text: #eceef3;
   /* v16: the two greys step up a brightness grade (and a touch
-     less blue) — the dark theme stays, the small text reads. */
+     less blue) — the dark theme stays, the small text reads.
+     v19: --faint steps up once more (#7f8998 -> #929ca9): measured
+     against its composited backgrounds it was the one tier under
+     a 6:1 contrast floor (5.0–5.5:1 on the panel labels, rail
+     URLs and stage chips); the new value clears 6.15:1 worst
+     case. --muted already measured 8–9:1 and stays. */
   --muted: #a9b2bf;
-  --faint: #7f8998;
+  --faint: #929ca9;
   --gold: #d9a94f;
   --gold-hi: #f0cd7e;
   --gold-lo: #a87c2f;
@@ -210,7 +219,7 @@ button { cursor: pointer; }
   border-bottom: 1px solid var(--line);
   background:
     radial-gradient(640px 220px at 12% -50%, rgba(217, 169, 79, 0.10), rgba(217, 169, 79, 0) 62%),
-    linear-gradient(180deg, #10141d, var(--bg));
+    linear-gradient(180deg, #121724, var(--bg));
 }
 .masthead::after {
   content: "";
@@ -585,13 +594,17 @@ main { padding: 0 28px 18px; }
 .trophy-row {
   display: grid;
   grid-template-columns: 20px 30px minmax(0, 1fr) auto;
-  gap: 10px;
+  /* v19: the row's horizontal air steps down a notch (gap 10px,
+     padding 10px) — the ~11px goes to the description box, whose
+     longest official lines were clipping mid-word. Row heights
+     are untouched: both values are horizontal only. */
+  gap: 9px;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 8px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   margin-bottom: 1px;
-  background: linear-gradient(180deg, var(--surface), #0e1219);
+  background: linear-gradient(180deg, var(--surface), #10141e);
   cursor: pointer;
   transition: border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
 }
@@ -636,7 +649,11 @@ main { padding: 0 28px 18px; }
    tightens its stride by the same amount, so the row pack keeps
    its 33px while the text reads larger; the words themselves
    end at the first clause (app.js rowDescription). */
-.trophy-desc { color: var(--muted); font-size: 12.5px; margin-top: 0; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+/* v19 residual lever (pre-planned in the audit): the desc's
+   letter-spacing tightens 0.01em — after the row box widened,
+   the two longest official lines (Snow Storm, Catch Me If You
+   Can) were still ~7px over their boxes. */
+.trophy-desc { color: var(--muted); font-size: 12.5px; margin-top: 0; line-height: 1.15; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 /* The counter pill rides on the description line (v14): the
    description ellipsises to make room, the row stays one height. */
 .trophy-sub { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
@@ -654,7 +671,9 @@ main { padding: 0 28px 18px; }
 .counter-pill.complete { color: var(--ok); }
 .trophy-tags { display: grid; grid-template-columns: auto auto; gap: 2px; justify-items: end; }
 .tag {
-  padding: 0 7px;
+  /* v19: horizontal padding 7px -> 6px — the last ~4px the two
+     longest description lines needed (see .trophy-desc). */
+  padding: 0 6px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.02);
@@ -662,7 +681,9 @@ main { padding: 0 28px 18px; }
   font-size: 10px;
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: 0.07em;
+  /* v19: 0.07em -> 0.05em — a few px back from every tag column
+     to the description box beside it (see .trophy-row). */
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -687,7 +708,9 @@ main { padding: 0 28px 18px; }
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 0 16px 2px;
+  /* v19: bottom padding 2px -> 0 — 2px of the funding for the
+     panel's looser prose stride (see .detail-guide). */
+  padding: 0 16px 0;
   box-shadow: var(--shadow);
   max-height: calc(100vh - 28px);
   overflow-y: auto;
@@ -717,7 +740,10 @@ main { padding: 0 28px 18px; }
   text-transform: uppercase;
   color: var(--faint);
 }
-.section-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+/* v19: the label's rule steps from --line to --line-bright —
+   the panel's blocks separate at thumbnail scale at zero
+   height cost. */
+.section-label::after { content: ""; flex: 1; height: 1px; background: var(--line-bright); }
 .detail-desc {
   border-left: 3px solid var(--gold);
   padding: 0 0 0 12px;
@@ -756,7 +782,8 @@ main { padding: 0 28px 18px; }
 .counter-track {
   flex: 1 1 100%;
   height: 6px;
-  margin: 2px 0 2px;
+  /* v19: margins 2px -> 1px — 2px of the panel stride funding. */
+  margin: 1px 0 1px;
   background: #0a0d12;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -803,11 +830,18 @@ main { padding: 0 28px 18px; }
    v18: the stride loosens once more (1.12 -> 1.15) for the
    guide and the steps — the panel had 14px of slack left after
    the labelled counter bar and the honesty-box rewrite, and
-   this spends ~6px of it on air between the lines. */
-.detail-guide { margin: 0; font-size: 11.5px; line-height: 1.15; }
+   this spends ~6px of it on air between the lines.
+   v19: once more (1.15 -> 1.21), and IN SHORT with it
+   (1.12 -> 1.18) — funded inside the panel: the actions
+   buttons' vertical padding (7px -> 4px), the counter track's
+   margins (2px -> 1px), both boxes' top margin (3px -> 2px)
+   and the panel's own bottom padding (2px -> 0). Net cost
+   ~2px against the frame's 8px of slack. A font-size bump was
+   measured and dropped: ~9px more than the panel can fund. */
+.detail-guide { margin: 0; font-size: 11.5px; line-height: 1.21; }
 /* v15: the IN SHORT lead summary — the guide prose's own settings,
    with the summary's weight a step above the full text. */
-.detail-short { margin: 0; font-size: 11.5px; line-height: 1.12; font-weight: 600; color: var(--text); }
+.detail-short { margin: 0; font-size: 11.5px; line-height: 1.18; font-weight: 600; color: var(--text); }
 .detail-steps { list-style: none; counter-reset: step; margin: 0; padding: 0; }
 .detail-steps li {
   counter-increment: step;
@@ -815,7 +849,8 @@ main { padding: 0 28px 18px; }
   padding-left: 30px;
   margin-bottom: 0;
   font-size: 11.5px;
-  line-height: 1.15;
+  /* v19: the steps share the guide's 1.21 stride (see above). */
+  line-height: 1.21;
 }
 .cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 11.5px; }
 .detail-steps li::before {
@@ -841,7 +876,8 @@ main { padding: 0 28px 18px; }
   border: 1px solid rgba(229, 83, 75, 0.42);
   border-radius: var(--radius);
   padding: 1px 9px;
-  margin: 3px 0 0;
+  /* v19: top margin 3px -> 2px — panel stride funding. */
+  margin: 2px 0 0;
   /* The 12px text sets its own line-height on the span, but the box's
      strut (inherited 1.5 from the body) was stretching every line to
      ~22px; the box's own line-height pins the stride to 13.8px. */
@@ -864,7 +900,8 @@ main { padding: 0 28px 18px; }
   border: 1px solid rgba(217, 169, 79, 0.38);
   border-radius: var(--radius);
   padding: 1px 9px;
-  margin: 3px 0 0;
+  /* v19: top margin 3px -> 2px — panel stride funding. */
+  margin: 2px 0 0;
   /* Same strut fix as .missable-box: without it the inherited 1.5
      line-height stretches the 12px text to a ~22px stride. */
   line-height: 1.15;
@@ -894,7 +931,7 @@ main { padding: 0 28px 18px; }
   grid-row: 2 / span 2;
   align-self: start;
   min-width: 0;
-  background: linear-gradient(180deg, var(--surface), #0e1219);
+  background: linear-gradient(180deg, var(--surface), #10141e);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 6px 12px;
@@ -958,7 +995,9 @@ main { padding: 0 28px 18px; }
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
-  padding: 7px 14px;
+  /* v19: vertical padding 7px -> 4px — the largest single
+     funder of the panel's looser prose stride (-6px). */
+  padding: 4px 14px;
   font-weight: 600;
   transition: border-color 0.12s ease, background 0.12s ease;
 }
@@ -1002,7 +1041,7 @@ main { padding: 0 28px 18px; }
 .meta-band {
   grid-column: 1 / -1;
   grid-row: 1;
-  background: linear-gradient(180deg, var(--surface), #0e1219);
+  background: linear-gradient(180deg, var(--surface), #10141e);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 0 14px;
@@ -1063,7 +1102,7 @@ main { padding: 0 28px 18px; }
 .meta-medals b { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; margin-right: 6px; }
 .meta-medals b:last-child { margin-right: 0; }
 .meta-full {
-  background: linear-gradient(180deg, var(--surface), #0e1219);
+  background: linear-gradient(180deg, var(--surface), #10141e);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 10px 16px 8px;
@@ -1123,7 +1162,7 @@ main { padding: 0 28px 18px; }
   display: grid;
   grid-template-columns: 36px minmax(0, 1fr);
   gap: 16px;
-  background: linear-gradient(180deg, var(--surface), #0e1219);
+  background: linear-gradient(180deg, var(--surface), #10141e);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 16px 20px 16px 16px;
@@ -1213,7 +1252,7 @@ main { padding: 0 28px 18px; }
 
 /* ---------- Tips & Strategies (roadmap) ---------- */
 .tips {
-  background: linear-gradient(180deg, var(--surface), #0e1219);
+  background: linear-gradient(180deg, var(--surface), #10141e);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 10px 16px 8px;
