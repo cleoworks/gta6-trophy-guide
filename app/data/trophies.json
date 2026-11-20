@@ -2,8 +2,8 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "edition": "Leonida Ledger v26 (2026-11-21) — the registry grows from 23 sources to 29: six more sites were read in full on 21 November 2026 (Push Square, Gaming Route, GTAScoop, GuideDistrict, GTA Vibes and Mobalytics), together with 28 further pages across the registry — 56 pages read in all, counted from the project’s reading ledger. The new reading deepens the thin tail: GTAScoop’s meditation page independently names the same ten spots, its challenges page names all 80 Challenges, and Push Square’s 100% checklist corroborates the component counts — except its race-gold figure, which dissents from every other checklist read and is not used. Two of the new lists are derivative and are marked as such (Gaming Route follows Beebom; GuideDistrict is built from Insider Gaming and Outputlag): they back the list itself, never a disputed claim as its sole second source. Rarity is the Exophase snapshot read 21 November 2026.",
- "pagesRead": 56,
+ "edition": "Leonida Ledger v29 (2026-11-21) — the registry grows from 29 sources to 31: two more sites were read in full on 21 November 2026 (GTADB and GTA6Notebook), together with 12 further pages across the registry — 68 pages read in all, counted from the project’s reading ledger. The new reading deepens the same thin places: Push Square’s trophy guide corroborates the list itself, its meditation page independently names six of the ten spots, its card page prints the same 18 sets with the same counts, and GTA6Notebook’s Strangers & Freaks page names the counting strands and the non-counting ones outright. GTADB says on its own page that its entries are compiled from the official PS5 and Xbox catalogues rather than unlocked in game: it is cited as that cross-checked catalogue, and never as a disputed claim’s sole second backer. Two Push Square figures dissent from every other guide read — a platinum of “300 hours or more” and a 22-car wish list against the consensus 16 — and are recorded as source differences, not used. GameTrek’s trophy list is never cited for a chapter description: its story table shifts them by one chapter. Rarity is the Exophase snapshot read 21 November 2026.",
+ "pagesRead": 68,
  "rarityNote": "Rarity is the share of Exophase-tracked players who had earned each trophy when the list was read on 21 November 2026, so every figure is a launch-week snapshot that will move fast. Source: Exophase, Grand Theft Auto VI (PSN) trophy list.",
  "roadmapMeta": {
   "heading": "Trophy roadmap — the platinum at a glance",
@@ -64,7 +64,9 @@
   {"id": "S26", "name": "GTAScoop", "title": "GTA 6 trophies and achievements", "url": "https://gtascoop.com/guides/gta-6-trophies-achievements/", "retrieved": "21 November 2026"},
   {"id": "S27", "name": "GuideDistrict", "title": "GTA 6 trophies and achievements (from Insider Gaming + Outputlag)", "url": "https://guidedistrict.com/en/gta-6/100-percent/trophies-and-achievements/", "retrieved": "21 November 2026", "support": "names, grades — visible only"},
   {"id": "S28", "name": "GTA Vibes", "title": "GTA 6 trophy list and achievements", "url": "https://www.gtavibes.com/guides/gta-6-trophy-list-achievements", "retrieved": "21 November 2026", "support": "names, unlocks — full list"},
-  {"id": "S29", "name": "Mobalytics", "title": "Grand Theft Auto 6 — all trophies", "url": "https://mobalytics.gg/gamebase/guides/grand-theft-auto-6-all-trophies", "retrieved": "21 November 2026", "support": "names, descriptions — full list"}
+  {"id": "S29", "name": "Mobalytics", "title": "Grand Theft Auto 6 — all trophies", "url": "https://mobalytics.gg/gamebase/guides/grand-theft-auto-6-all-trophies", "retrieved": "21 November 2026", "support": "names, descriptions — full list"},
+  {"id": "S30", "name": "GTADB", "title": "GTA 6 Trophy & Platinum Guide", "url": "https://gtadb.net/articles/gta-6-trophies-platinum-guide/?show_secrets=1", "retrieved": "21 November 2026"},
+  {"id": "S31", "name": "GTA6Notebook", "title": "GTA 6 Strangers & Freaks missions", "url": "https://gta6notebook.com/guides/what-are-all-the-strangers-and-freaks-missions-in-gta-6/", "retrieved": "21 November 2026"}
  ],
  "roadmap": [
   {"stage": 1, "title": "Chapter 1 — play, and save", "text": "Finish the opening mission and Chapter 1, beat Cal at fishing, finish one arcade game, and do the balcony meditation at Jason's house while it is available. Make a manual save at the start of the chapter: there is no mission replay, so a chapter-start save is your only way back."},
@@ -127,7 +129,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -164,7 +167,8 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -201,7 +205,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -238,7 +244,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -275,7 +283,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -312,7 +322,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -349,7 +361,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -386,7 +400,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -423,7 +439,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -460,7 +478,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -497,7 +517,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -534,7 +556,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -572,7 +596,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -615,7 +641,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "the 100% checklist demands more than the trophy itself"}
    ]
   }
 ,
@@ -658,7 +685,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "250 stunts for the trophy; a separate stunt total for 100%"}
    ]
   },
   {
@@ -701,7 +729,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -743,7 +772,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S11", "note": "Shooting Range guide — all 42 challenges at Griffin and Rodgers Ranch"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -784,7 +815,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -824,7 +856,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -863,7 +896,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -903,7 +938,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -940,7 +976,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -980,7 +1018,8 @@
     {"ref": "S24", "note": "100% checklist — underwater discoveries"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1018,7 +1057,10 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S31", "note": "Billy is named among the strands that do not count toward Strangers & Freaks"}
    ]
   },
   {
@@ -1061,7 +1103,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S31", "note": "counting strands: Kirk, Kyle, Yago, Pilot Pete — the rest are named as not counting"}
    ]
   },
   {
@@ -1100,7 +1144,8 @@
     {"ref": "S24", "note": "100% checklist — Randy’s wish list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1138,7 +1183,10 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S31", "note": "Tyrone is named among the strands that do not count toward Strangers & Freaks"}
    ]
   },
   {
@@ -1184,7 +1232,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "manual-save tip; the balcony requirement is unconfirmed"}
    ]
   },
   {
@@ -1223,7 +1272,8 @@
     {"ref": "S24", "note": "100% checklist — 15 of 15 Target Decks"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1265,7 +1315,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "cards found in random chests still count"}
    ]
   }
 ,
@@ -1310,7 +1361,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1351,7 +1403,8 @@
     {"ref": "S26", "note": "all 80 challenges named, with requirements"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "50 Challenges for the trophy"}
    ]
   },
   {
@@ -1390,7 +1443,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1430,7 +1485,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1472,7 +1529,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "100 different vehicles"}
    ]
   },
   {
@@ -1512,7 +1570,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1549,7 +1609,8 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1588,7 +1649,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1628,7 +1691,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1670,7 +1735,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1709,7 +1775,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1750,7 +1818,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1791,7 +1860,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1830,7 +1900,8 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1869,7 +1940,8 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   }
 ,
@@ -1907,7 +1979,8 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1944,7 +2017,8 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -1982,7 +2056,8 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -2020,7 +2095,8 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -2059,7 +2135,8 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -2097,7 +2174,9 @@
     {"ref": "S23", "note": "name — full list"},
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -2137,7 +2216,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "only marked bills sold through contacts count"}
    ]
   },
   {
@@ -2177,7 +2258,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -2219,7 +2302,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -2260,7 +2344,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
-    {"ref": "S29", "note": "name, description — full list"}
+    {"ref": "S29", "note": "name, description — full list"},
+    {"ref": "S24", "note": "name, description, grade — full list"},
+    {"ref": "S30", "note": "name, description, grade — full list"}
    ]
   }
  ]

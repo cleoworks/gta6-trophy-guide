@@ -862,8 +862,12 @@ main { padding: 0 28px 18px; }
   /* v19: bottom padding 2px -> 0 — 2px of the funding for the
      panel's looser prose stride (see .detail-guide).
      v22: a breath of top padding (6px) and wider sides (18px)
-     for the light theme's larger panel type. */
-  padding: 6px 18px 4px;
+     for the light theme's larger panel type.
+     v29 (completion): top padding 6px -> 0 — 6px of the panel-
+     internal spacing funding that buys back the 6th PMA step
+     (the batch-3 markers lengthened the in-frame steps by
+     18px; see the .missable-box and .detail-meta notes). */
+  padding: 0 18px 4px;
   box-shadow: var(--shadow);
   max-height: calc(100vh - 28px);
   overflow-y: auto;
@@ -906,7 +910,9 @@ main { padding: 0 28px 18px; }
   font-size: 13.5px;
   line-height: 1.4;
 }
-.detail-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0; }
+/* v29 (completion): tag gap 6px -> 2px — 4px of the panel
+   funding for the 6th PMA step (see .detail-col). */
+.detail-meta { display: flex; flex-wrap: wrap; gap: 2px; margin-top: 0; }
 .detail-meta .tag { text-transform: none; letter-spacing: 0.02em; font-size: 12px; font-weight: 600; padding: 0 8px; }
 /* The −/+ progress counter, tied to the Target tag above it.
    v16 wraps a slim progress track under the readout row: the
@@ -1031,9 +1037,11 @@ main { padding: 0 28px 18px; }
   background: var(--danger-tint);
   border: 1px solid rgba(229, 83, 75, 0.42);
   border-radius: var(--radius);
-  padding: 4px 11px;
-  /* v19: top margin 3px -> 2px — panel stride funding. */
-  margin: 2px 0 0;
+  /* v29 (completion): vertical padding 4px -> 2px and the top
+     margin dropped — 6px of the panel funding for the 6th
+     PMA step (see .detail-col). */
+  padding: 2px 11px;
+  margin: 0;
   /* The text sets its own line-height on the span, but the box's
      strut (inherited 1.5 from the body) would stretch every line;
      the box's own line-height pins the stride to the text's. */
