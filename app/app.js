@@ -1608,21 +1608,19 @@ function renderDetail() {
     if (trophy.missable && trophy.missableNote) {
       detailPanel.append(alertElement(trophy));
     }
-    const uncertain = UNCERTAIN_NOTES[trophy.id];
-    if (uncertain) {
-      const refs = citedRefs(trophy, uncertain.ref);
-      if (refs.length) detailPanel.append(honestyBox(uncertain.label, uncertain.text, refs));
-    } else if (trophy.triggerUnknown) {
-      const refs = citedRefs(trophy, ['S3', 'S2', 'S4']).slice(0, 1);
-      detailPanel.append(honestyBox(
-        'Trigger not yet confirmed',
-        'No published guide has a confirmed trigger for this trophy, so the guide below is the best sourced reading, not a confirmed method.',
-        refs,
-      ));
-    }
-    detailPanel.append(sectionLabel('Guide — in our own words'));
-    detailPanel.append(guideParagraph(trophy));
-
+    /* v25: the steps stand ahead of the honesty box and the
+       guide prose. The panel is a framed column (the 800px
+       shot takes it from y=175): with the honesty box and the
+       prose ahead of them, the cover showed only the first
+       two of PMA's thirteen steps, the second cut at the
+       frame's edge. Measured on v24: the steps began at
+       y=719 and the first five need 209px, so they must
+       start by y=586; moving the honesty box (85px) and the
+       guide block (99px) below the steps starts them at
+       y=535 — six steps stand whole in the cover frame. The
+       missable alert still stands directly ahead of the
+       steps it warns about, and every block the panel
+       carried is still in the panel — only the order moved. */
     if (trophy.steps && trophy.steps.length) {
       detailPanel.append(sectionLabel('Steps'));
       const steps = document.createElement('ol');
@@ -1637,6 +1635,20 @@ function renderDetail() {
       }
       detailPanel.append(steps);
     }
+    const uncertain = UNCERTAIN_NOTES[trophy.id];
+    if (uncertain) {
+      const refs = citedRefs(trophy, uncertain.ref);
+      if (refs.length) detailPanel.append(honestyBox(uncertain.label, uncertain.text, refs));
+    } else if (trophy.triggerUnknown) {
+      const refs = citedRefs(trophy, ['S3', 'S2', 'S4']).slice(0, 1);
+      detailPanel.append(honestyBox(
+        'Trigger not yet confirmed',
+        'No published guide has a confirmed trigger for this trophy, so the guide below is the best sourced reading, not a confirmed method.',
+        refs,
+      ));
+    }
+    detailPanel.append(sectionLabel('Guide — in our own words'));
+    detailPanel.append(guideParagraph(trophy));
   }
 
   // The panel's sources in one line (v14): the registry itself —
