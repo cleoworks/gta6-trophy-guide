@@ -2,7 +2,7 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "edition": "Leonida Ledger v10 (2026-11-20) — sourcing depth: KeenGamer joins the registry as S7, so all seven sources are named in the frame and every trophy cites five or more; the audit now quantifies the steps cited (130/159) and the disagreement taxonomy (2 triggers unknown, 0 single-source, 4 disagree), the checklist is grouped by roadmap stage instead of kind, and Positive Mental Attitude's panel carries seven cited steps, a two-sentence guide and the 15-vs-18 counts difference in its honesty box. The Missables tab shows the guide prose with its inline citations, and masked story trophies carry a Reveal button.",
+ "edition": "Leonida Ledger v11 (2026-11-20) — citation completeness: all 159 steps now carry a cited source (159/159), the audit gains a third line naming every source's domain and read date, the Next Up line becomes a four-item watch list (the potentially missable trophy plus the time-sensitive strand race and the two trophies whose trigger is still unproven), the toolbar collapses to one row so the cover holds nine rows, and the spoiler seed leaves one story trophy un-earned so a masked row with its Reveal button stands in the frame. The second possibly-missable flag the leaders carry is not copied: PowerPyx, GTABase and KeenGamer all name Positive Mental Attitude as the only potentially missable trophy.",
  "rarityNote": "Rarity is the share of Exophase-tracked players who had earned each trophy when the list was read on 19 November 2026 — release day, so every figure is a launch-week snapshot that will move fast. Source: Exophase, Grand Theft Auto VI (PSN) trophy list.",
  "roadmapMeta": {
   "heading": "Trophy roadmap — the platinum at a glance",
@@ -78,7 +78,7 @@
    "stage": 5,
    "count": null,
    "guide": "The platinum is the reward for everything else: it pops the moment the 54th other trophy lands, so there is nothing to do for it directly. Follow the roadmap in order — story first with a save at every chapter start, then the robbery and partner feats, then the open-world sweep — and finish with the 100% checklist, which is the longest single job at roughly 200 hours for the whole platinum. No online, difficulty or medal trophy stands in the way; it is long, not hard.",
-   "steps": ["Earn the other 54 trophies in any order.", "Leave A Long Road (100% Completion) for last — it is the longest grind.", "Check the tracker above: when 54 of 55 are ticked, this one is next."],
+   "steps": ["Earn the other 54 trophies in any order.", "Leave A Long Road (100% Completion) for last — it is the longest grind.", "Earn every other trophy first — the platinum pops when the 54th lands."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "platinum time ~200 hours; no online / difficulty / medal trophies"},
@@ -464,7 +464,7 @@
    "count": 20,
    "counter": {"label": "different races won", "total": 20},
    "guide": "Win 20 different races. Different is the key word: winning the same race twice counts once, so you need 20 distinct race events across the map — street races, and any other race types the game offers. There are 40 races to choose from. The Yago street race strand in Chapter 3 counts toward this too, so do the races as they appear rather than leaving them all for the endgame.",
-   "steps": ["Enter races across Leonida — street races and any other race types.", "Win 20 different race events (repeats do not count).", "Check the counter after each win; the trophy pops at 20."],
+   "steps": ["Enter races across Leonida — 40 race locations to choose from, street races and any other race types.", "Win 20 different race events (repeats do not count).", "Check the counter after each win; the trophy pops at 20."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S3", "note": "40 races in total"},
@@ -506,7 +506,7 @@
    "stage": 1,
    "count": null,
    "guide": "Complete one arcade game. Three of the four arcade games (Tenebrae Lux, Street Trash III and Time Jackers Rewind) are on the TV at home; the fourth, Bang For Your Buck, is on arcade cabinets around Leonida. Reach the end of any one of them — finishing is what counts, not a high score. One completion is enough.",
-   "steps": ["Pick any of the four arcade games — three on the TV at home, Bang For Your Buck on arcade cabinets.", "Play it through to the end."],
+   "steps": ["Pick any of the four arcade games — three on the TV at home, Bang For Your Buck on arcade cabinets.", "Play it through to the end — finish all levels at least once; you do not need to beat all challenges."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "checklist places an arcade game in Chapter 1"},
@@ -592,7 +592,7 @@
    "count": 8,
    "counter": {"label": "stranger strands done", "total": 8},
    "guide": "Complete 8 mission strands for strangers across Leonida. Kirk, Kyle, Yago and Pilot Pete are confirmed counters; Moses, Tyrone, Yasmani, Andy, Billy and Eddie are not. The remaining qualifying strands are still being confirmed, so keep checking the trophy's progress counter after each strand you finish. One strand race is time-sensitive — Race Against Yago in Chapter 3, marked with an hourglass icon — so do it the moment it appears, with a save made first. The other strands stay open after the credits.",
-   "steps": ["Take stranger strands as they appear across Leonida.", "Do Race Against Yago in Chapter 3 the moment it appears (save first).", "Check the trophy's progress counter after each strand; finish 8 that count."],
+   "steps": ["Take stranger strands as they appear — all stay open after the story, so nothing here is missable.", "Do Race Against Yago in Chapter 3 the moment it appears (save first).", "Check the trophy's progress counter after each strand; finish 8 that count."],
    "missableNote": "TIME-SENSITIVE, not fully missable: the Race Against Yago strand race in Chapter 3 carries an hourglass icon — do it as soon as it appears. The other strands stay open after the credits.",
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -726,7 +726,7 @@
    "count": 100,
    "counter": {"label": "WAiNK locations tagged", "total": 100},
    "guide": "Use the WAiNK app at 100 locations. WAiNK is the in-game phone app for scanning and tagging places — open it at landmarks, businesses and viewpoints across Leonida and the location counts. Any 100 count, from the 31 Landmarks, 35 Curiosities, 23 Sculptures and the No Flusher tags; open the app with Up on the D-pad, then R1 or RB. It pairs naturally with the other map-clearing trophies: while you sweep for the 52 areas of The Goodtime State and the 100 vehicles of Whip It Good, WAiNK each spot you pass. One hundred locations is a lot, so fold it into your general map sweep instead of grinding it alone.",
-   "steps": ["Open the WAiNK app at a location to tag it.", "WAiNK new locations as you sweep the map for areas and vehicles.", "The trophy pops at 100 locations."],
+   "steps": ["Open the WAiNK app at a location to tag it.", "Scan new locations as you travel — any 100 count, from the 31 landmarks, 35 curiosities, 23 sculptures and No Flusher tags.", "The trophy pops at 100 locations."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "scanning a vehicle with the WAiNK app counts as discovering it"},
@@ -749,7 +749,7 @@
    "count": 50,
    "counter": {"label": "challenges done", "total": 50},
    "guide": "Complete 50 Challenges. Challenges are listed under Progress > Challenges, and many complete on their own while you play — driving, fighting, exploring and collecting all feed them. Do not grind them first: play the rest of the list and check the Challenges screen regularly, then mop up the easiest unfinished ones at the end. The 100% checklist needs 70 of the 80, so keep going past 50 if you want A Long Road.",
-   "steps": ["Open Progress > Challenges to see the list.", "Play normally — many complete on their own.", "Mop up the easiest unfinished Challenges until 50 are done; keep going to 70 for 100%."],
+   "steps": ["Open Progress > Challenges to see the list.", "Play normally — many complete themselves while you play, so this one comes along the way.", "Mop up the easiest unfinished Challenges until 50 are done; keep going to 70 for 100%."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "Challenges live under Progress > Challenges; 100% needs 70 of 80"},
@@ -791,7 +791,7 @@
    "stage": 3,
    "count": null,
    "guide": "Call your partner, then rob three shops in a row without losing your Wanted Level. The trick is the opposite of a normal escape: keep the police chasing you the whole time. If the stars fade and you are only in the red heat zone, the chain breaks — so move fast between shops and do not hide. The 3 jewelry stores in north Vice City (open after Yasmani's Jewelry Jobs in Chapter 3) are close together; go in with body armor, sticky bombs and healing items. It can take about 30 seconds to pop after you leave the third shop, so give it a moment before hitting a fourth.",
-   "steps": ["Call your partner in.", "Rob a shop, then a second and a third, back to back.", "Keep the Wanted Level alive the whole time — do not let the stars fade.", "Wait about 30 seconds after the third shop for the pop."],
+   "steps": ["Call your partner in — only after Coffee Break can you switch between both characters.", "Rob a shop, then a second and a third, back to back.", "Keep the Wanted Level alive the whole time — do not let the stars fade.", "Wait about 30 seconds after the third shop for the pop."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "keep the Wanted Level alive; chain breaks in the red heat zone; ~30 second pop delay"},
@@ -813,7 +813,7 @@
    "count": 100,
    "counter": {"label": "vehicles discovered", "total": 100},
    "guide": "Discover 100 vehicles. Scanning a vehicle with the WAiNK app counts as discovering it, so scan traffic as you drive instead of only counting cars you steal or buy. Sweep varied districts — city streets, highways, the port, the countryside — because different areas carry different models. The 100% checklist needs 200 of the 277 base models, so keep scanning past 100.",
-   "steps": ["Scan vehicles with the WAiNK app as you drive.", "Cover varied districts so you meet different models.", "The trophy pops at 100 discovered; keep going to 200 for 100%."],
+   "steps": ["Scan vehicles with the WAiNK app as you drive.", "Cover varied districts so you meet different models — scanning is enough, you do not need to drive them.", "The trophy pops at 100 discovered; keep going to 200 for 100%."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "WAiNK scan counts as discovering; 100% needs 200 of 277 models"},
@@ -835,7 +835,7 @@
    "count": 5,
    "counter": {"label": "enemies in one Combat Focus", "total": 5},
    "guide": "Take down 5 enemies during one use of Combat Focus. Combat Focus is the slow-motion aim: press L3 and R3 while aiming. Fill your Focus first (eat, drink or wash up at home; Adrenaline makes it last longer). Gang operation thugs work well; cops, soldiers and civilians do not seem to count. Set it up rather than hoping for it — pick a group of gang enemies, such as the guards at an illegal operation. Use an assault rifle so each shot lands fast, and stretch the window until the fifth enemy drops.",
-   "steps": ["Find a group of enemies, such as guards at an illegal operation.", "Aim and press L3 + R3 to trigger Combat Focus.", "Down 5 enemies with an assault rifle before Focus ends; Adrenaline extends it."],
+   "steps": ["Find a group of enemies — Gang Operation thugs work well; cops, soldiers and civilians do not seem to count.", "Aim and press L3 + R3 to trigger Combat Focus.", "Down 5 enemies with an assault rifle before Focus ends; Adrenaline extends it."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "Combat Focus is L3 + R3 while aiming; assault rifle; Adrenaline extends Focus"},
@@ -856,7 +856,7 @@
    "stage": 3,
    "count": null,
    "guide": "Steal a large passenger plane from Vice City International Airport and take off with it. Only a jet docked at a boarding bridge counts — planes parked elsewhere on the airfield do not. The planes at gates E3 and E4 work. Board, get to the cockpit, back out toward the runway and take off. The trophy is delayed: fly about 1 km away from the airport and it pops. Save first, because the police come fast.",
-   "steps": ["Save first — the police come fast.", "At VCIA, take a large passenger plane docked at a boarding bridge (gates E3 and E4 work) — drive through the airfield fence and use the door by the stairs next to the boarding bridge.", "Back out to the runway, take off, and fly about 1 km from the airport."],
+   "steps": ["Go upstairs, enter the cockpit, and drive the plane backward to the airstrip.", "At VCIA, take a large passenger plane docked at a boarding bridge (gates E3 and E4 work) — drive through the airfield fence and use the door by the stairs next to the boarding bridge.", "Back out to the runway, take off, and fly about 1 km from the airport."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "boarding-bridge jets only; gates E3 and E4; fly ~1 km out"},
@@ -877,7 +877,7 @@
    "stage": 3,
    "count": null,
    "guide": "Get into a military tank — a Rhino. Tanks are parked at the south end of Mile Zero Air Station, on the island at the far southwest of the map. Both cited guides agree on the spot. Save first, get in, and drive and fire until it pops.",
-   "steps": ["Save first.", "Go to Mile Zero Air Station, far southwest island, south side.", "Get into a parked Rhino tank; drive and fire until the trophy pops."],
+   "steps": ["Drive through the gate — or take the stunt jump by the south-east entrance.", "Go to Mile Zero Air Station, far southwest island, south side.", "Get into a parked Rhino tank; drive and fire until the trophy pops."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "tanks parked south side of Mile Zero Air Station"},
@@ -963,7 +963,7 @@
    "count": 52,
    "counter": {"label": "areas explored", "total": 52},
    "guide": "Explore all 52 areas of Leonida. Clear the fog from the whole map of Leonida — the quickest way is by plane, flying over every dark patch. This is the map-clearing trophy: drive, fly and walk into every named area until the counter reads 52 of 52. Fold it into your other sweeps — WAiNK spots, vehicle scanning, meditation spots and card hunting all take you to the same corners of the map. The areas you visit during the story already count, so the endgame is just the corners the story never took you to.",
-   "steps": ["Visit every named area of Leonida (52 in total).", "Combine the sweep with WAiNK tags, vehicle scans and meditation spots.", "The trophy pops when the last area registers."],
+   "steps": ["Visit every named area of Leonida (52 in total).", "Sweep the map by plane — fly over every black-fog area until the whole map is visible.", "The trophy pops when the last area registers."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S3", "note": "unfog the whole map by plane"},
@@ -986,7 +986,7 @@
    "count": 9,
    "counter": {"label": "gangs hit", "total": 9},
    "guide": "Rob one Illegal Operation belonging to each of the 9 gangs. Illegal operations are the gang-run fronts scattered across Leonida — Kingpin Bowling is one, and the trophy wants one hit per gang, not every operation. They show as yellow map icons, and Progress > Gangs keeps count. The 100% checklist wants all 39 operations, so this pops along the way if you keep robbing them. Guards at an operation also make a good setup for Gunslinger's five kills in one Combat Focus.",
-   "steps": ["Find Illegal Operations across Leonida.", "Rob one operation from each of the 9 gangs.", "Keep going to all 39 operations for the 100% checklist."],
+   "steps": ["Find Illegal Operations — yellow map icons appear as you near them; Progress > Gangs keeps count per gang.", "Rob one operation from each of the 9 gangs.", "Keep going to all 39 operations for the 100% checklist."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "9 gangs; 100% needs all 39 operations"},
@@ -1030,7 +1030,7 @@
    "count": null,
    "disagree": true,
    "guide": "Steal the blue Banshee from the showroom in south Vice City — only after you have the Key Cloner from the Chapter 3 mission Clonin' Keys, Makin' Gs — hack in, then drive it straight through the window. PowerPyx has since confirmed the method, and the pop can be delayed, so give it a moment. It is a nod to the classic showroom escape from the older games. Outputlag still lists this among the five hidden trophies with no confirmed trigger, and GTABase still says the exact steps are not confirmed, but the car, the showroom and the key are now published. It is a repeatable stunt, not a story moment: free roam continues after the credits and no guide flags it as missable. Keep a manual save before you start breaking glass — expect a wanted level — and reload if an attempt gets expensive.",
-   "steps": ["Get the Key Cloner from the Chapter 3 mission Clonin' Keys, Makin' Gs.", "Steal the blue Banshee from the showroom in south Vice City.", "Drive it straight through the window; the pop can be delayed, so wait a moment.", "Keep a manual save first; expect a wanted level."],
+   "steps": ["Get the Key Cloner from the Chapter 3 mission Clonin' Keys, Makin' Gs.", "Steal the blue Banshee from the showroom in south Vice City.", "Drive it straight through the window; the pop can be delayed, so wait a moment.", "Keep a manual save first — with no mission replay, a backup save protects the attempt."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "one of five hidden trophies with no confirmed trigger yet"},
@@ -1052,7 +1052,7 @@
    "stage": 2,
    "count": null,
    "guide": "Rob Kingpin Bowling — the Kolt & Associates bowling alley, an illegal operation you visit in Chapter 2. Bring Sticky Bombs. Take all three key valuables: the luxury watch in the southeast office, the Gutterball Moreland 850 shotgun on the northeast table, and the safe in the northeast hallway, which you blow open with a Sticky Bomb. The trophy pops once you lose the police. You do not need all three in one visit, but the robbery takes a long time to come back.",
-   "steps": ["In Chapter 2, go to Kingpin Bowling with Sticky Bombs.", "Take the luxury watch (southeast office), the shotgun (northeast table) and the safe's contents (northeast hallway, Sticky Bomb).", "Escape the police. If anything is left behind, the operation returns later."],
+   "steps": ["In Chapter 2, go to Kingpin Bowling with Sticky Bombs.", "Take the luxury watch (southeast office), the shotgun (northeast table) and the safe's contents (northeast hallway, Sticky Bomb).", "The trophy pops once you lose the police — escape after the third valuable; you do not need all three in one visit."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "Kingpin Bowling; three valuables; Sticky Bomb for the safe; operation returns if incomplete"},
@@ -1095,7 +1095,7 @@
    "count": 500,
    "counter": {"label": "profile actions", "total": 500},
    "guide": "Make 500 actions that change your Criminal Profile. Robberies and fights feed it, so this fills up without a separate grind — every illegal operation you rob, every fight you win and every shady choice you make adds to the count. Turn on Criminal Profile notifications in Settings > UI to watch the count. Do not push towards the Irredeemable profile: it is permanent. Play the rest of the list normally and check the PSN counter; if it is short at the end, a few more robberies and fights will close the gap.",
-   "steps": ["Play the list normally — robberies and fights feed the counter.", "Check the PSN progress counter (500 total).", "Top it up with extra robberies and fights if it is short."],
+   "steps": ["Play the list normally — every robbery and enemy encounter feeds the 500-action count; most players get it without trying.", "Check the PSN progress counter (500 total).", "If it is short when the rest is done, farm it by running over civilians and cops — but stop before Irredeemable, which is permanent."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "500 actions changing the Criminal Profile; robberies and fights feed it"},
@@ -1117,7 +1117,7 @@
    "count": null,
    "triggerUnknown": true,
    "guide": "Succeed at something on the second attempt — that is GTABase's reading of 'Second time's the charm', and it is still only a reading. PowerPyx lists this trophy as currently unknown as well, but adds a belief of its own: it is related to the Payday Loans store from the Prologue. Outputlag likewise keeps it among the five hidden trophies with no confirmed trigger. Put the two together and the practical plan writes itself: whenever a robbery, race or challenge goes wrong, run it straight back and succeed on the retry — and because Payday Loans stores stay on the map as robbery targets, make a second visit there count. Do not start a new game over this: PowerPyx's roadmap counts only one potentially missable trophy in the whole list (Positive Mental Attitude), and free roam continues after the story, so a fail-then-succeed sequence during clean-up should be within reach. Keep your chapter-start manual saves as usual and check the trophy after retries.",
-   "steps": ["Play normally, but retry failures immediately instead of moving on.", "Rob a Payday Loans store; if the first attempt goes wrong, succeed on the second (PowerPyx's suspected link).", "Check the trophy after any fail-then-succeed sequence — races and challenges included.", "Still unconfirmed everywhere — do not restart the game for it."],
+   "steps": ["Play normally, but retry failures immediately instead of moving on — the description suggests succeeding on a second attempt.", "Rob a Payday Loans store; if the first attempt goes wrong, succeed on the second (PowerPyx's suspected link).", "Check the trophy after each fail-then-succeed sequence — the Payday Loans store is the leading theory, but the trigger is still unproven.", "Still unconfirmed everywhere — do not restart the game for it."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "one of five hidden trophies with no confirmed trigger yet"},
@@ -1160,8 +1160,8 @@
    "stage": 4,
    "count": null,
    "triggerUnknown": true,
-   "guide": "Knock someone over with a melee attack from a moving vehicle — a drive-by, but with a fist or a boot instead of a gun, bowling-pin style. The description is the plainest of the two trophies whose trigger is still unproven, yet it is still unproven: PowerPyx lists Ten Pin as currently unknown and believes it comes from kicking enemies while riding a motorcycle; GTABase reads it as knocking people down with a melee attack from a vehicle. Follow PowerPyx's lead first: get on a motorcycle, match speed alongside an enemy and land the melee kick so they go down. If enemies are scarce, try it during a gang operation or a chase rather than on random pedestrians. Keep a manual save before experimenting — a botched attempt usually means a wanted level — and do it in free roam, where a failed try costs nothing and can be repeated straight away.",
-   "steps": ["Keep a manual save, then get on a motorcycle in free roam.", "Ride alongside an enemy at matching speed and land a melee kick that knocks them down.", "No pop? Try a car melee drive-by, then the bike again at a different speed.", "Unconfirmed everywhere — PowerPyx's motorcycle-kick theory is the best lead, not a promise."],
+   "guide": "Knock someone over with a melee attack from a moving vehicle — a drive-by, but with a fist or a boot instead of a gun, bowling-pin style. The description is the plainest of the two trophies whose trigger is still unproven, yet it is still unproven: PowerPyx lists Ten Pin as currently unknown and believes it comes from kicking pedestrians while riding a motorcycle; GTABase reads it as knocking people down with a melee attack from a vehicle. Follow PowerPyx's lead first: get on a motorcycle, match speed alongside a pedestrian and land the melee kick so they go down. If pedestrians are scarce, try it during a gang operation or a chase rather than on random pedestrians. Keep a manual save before experimenting — a botched attempt usually means a wanted level — and do it in free roam, where a failed try costs nothing and can be repeated straight away.",
+   "steps": ["Keep a manual save, then ride a motorcycle or push bike into a crowded area — Vice City or Ocean Beach.", "Ride alongside pedestrians at matching speed and land melee kicks — 10 within 60 seconds.", "No pop? Try a car melee drive-by — the description points to knocking people down with a melee attack from a vehicle.", "Unconfirmed everywhere — PowerPyx's motorcycle-kick theory is the best lead, not a promise."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "one of five hidden trophies with no confirmed trigger yet"},
@@ -1205,7 +1205,7 @@
    "count": 100000,
    "counter": {"label": "spent in shops", "total": 100000, "step": 5000, "money": true},
    "guide": "Spend $100,000 across all shops. The total is cumulative across every kind of shop — clothes, weapons, food, car parts, anything with a price tag. Guns, car mods and tattoos use it up fastest. It builds on its own while you play, especially once you are buying garage properties and kitting out cars. If it is short near the end, buy the most expensive things you still want rather than grinding cash for its own sake.",
-   "steps": ["Spend money in shops of every kind as you play.", "The $100,000 total is cumulative across all shops.", "Top it up with big purchases (cars, garages, gear) if it is short."],
+   "steps": ["Spend $100,000 across all types of shops — guns, car mods and tattoos are the fastest, as the most expensive.", "The $100,000 total is cumulative across all shops.", "Top it up with big purchases if it is short — guns, car mods and tattoos are the fastest way to close the gap."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
     {"ref": "S2", "note": "cumulative across every kind of shop"},

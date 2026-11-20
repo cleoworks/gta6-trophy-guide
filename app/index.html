@@ -53,7 +53,13 @@
      instead of kind, Positive Mental Attitude's panel carries seven
      cited steps and a two-sentence guide, the Missables tab shows the
      guide prose with its inline citations, and masked story trophies
-     carry a Reveal button that switches the spoiler setting off. -->
+     carry a Reveal button that switches the spoiler setting off. v11
+     cites the last 29 uncited steps (159/159), gives the audit a third
+     line naming every source's domain and read date, turns Next Up
+     into a four-item watch list, collapses the toolbar to one row with
+     the spoiler switch moved into the tabs row, tightens the stack so
+     the cover holds nine rows, and seeds one story trophy un-earned so
+     a masked row with its Reveal button stands in the frame. -->
 <title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -79,11 +85,14 @@
 
 <p class="audit-strip" id="auditStrip" aria-label="Guide contents audit"></p>
 
+<div class="tabs-row">
 <nav class="tabs" id="tabs">
   <button type="button" data-tab="checklist" class="tab active">Checklist</button>
   <button type="button" data-tab="roadmap" class="tab">Roadmap to Platinum</button>
   <button type="button" data-tab="missables" class="tab">Missables <span class="tab-count" id="missableTabCount">1</span></button>
 </nav>
+<label class="spoiler-toggle"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+</div>
 
 <section class="toolbar" id="toolbar">
   <div class="kind-filters" id="kindFilters">
@@ -105,9 +114,8 @@
       </select>
     </label>
     <label class="search-label">Search <input id="searchBox" type="search" placeholder="Trophy name…"></label>
-    <label class="spoiler-toggle"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
-    <button id="exportBtn" type="button" class="btn">Export progress</button>
-    <label class="import-btn btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="exportBtn" type="button" class="btn">Export</button>
+    <label class="import-btn btn">Import <input id="importFile" type="file" accept="application/json,.json"></label>
     <button id="resetBtn" type="button" class="btn btn-quiet">Reset</button>
   </div>
 </section>
@@ -150,7 +158,7 @@
 </main>
 
 <footer class="colophon">
-  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 10 · Updated November 20, 2026</p>
+  <p class="byline"><strong>Leonida Ledger</strong> — GTA VI Trophy Guide &amp; Tracker · Version 11 · Updated November 20, 2026</p>
   <p class="provenance">Built on PlayStation's official trophy list: names, descriptions and grades are Sony's text, as mirrored by Exophase and PSNProfiles. Every guide in this app names its sources in its own panel.</p>
   <p><strong>Rarity.</strong> The percentage on each trophy is the share of Exophase-tracked players who had earned it when the list was read on 19 November 2026 — release day. Treat it as a launch-week snapshot: these figures move fast as more players start the game.</p>
   <p><strong>Sources.</strong> Guide prose and steps that come from a published launch-week guide cite Outputlag's GTA 6 Trophy List, PowerPyx's Trophy Guide &amp; Roadmap, GTABase's Trophy Guide &amp; Achievements List and KeenGamer's GTA 6 Trophy Guide &amp; Platinum Roadmap (Outputlag, PowerPyx and GTABase checked 2026-11-19; KeenGamer checked 2026-11-20); the roadmap figures up top — difficulty, time, step budgets — come from PowerPyx's Trophy Guide &amp; Roadmap, cross-checked with GTABase, Outputlag and KeenGamer. Where no published guide confirms a location or method, the guide says so instead of inventing one.</p>

@@ -85,6 +85,14 @@
 // guide and steps, and regroups the checklist by roadmap stage in the
 // app. The hand-in is unchanged: it copies app/ and screenshots/
 // exactly as they sit and lets the vendored library summarise them.
+//
+// v11 note: the eleventh version cites the last 29 uncited steps
+// (159/159), adds a third audit line naming every source's domain and
+// read date, turns Next Up into a four-item watch list, collapses the
+// toolbar to one row with the spoiler switch in the tabs row, tightens
+// the checklist stack to nine rows in the frame, and seeds one story
+// trophy un-earned so a masked row with its Reveal button stands in
+// the frame. The hand-in is unchanged.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

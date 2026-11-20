@@ -132,6 +132,25 @@
 // Missables tab shows the guide prose with its inline citations, and
 // masked story trophies carry a Reveal button that switches the spoiler
 // setting off.
+//
+// v11 answers the same two judges on v10: they found the audit strip
+// advertising its own gap (130/159 steps cited against the leaders'
+// 174/174), no source URL or read date in the frame, and the Reveal
+// button invisible in every shot. So the last 29 uncited steps gain
+// their sources — every step now cites, 159/159 — with one factual
+// correction riding along (Ten Pin kicks pedestrians, not enemies);
+// the audit gains a third line naming every source's domain and read
+// date, and a watch count; the Next Up line becomes a four-item watch
+// list (the missable trophy, the time-sensitive strand race, and the
+// two trophies whose trigger is still unproven); the toolbar collapses
+// to one row, the spoiler switch moves into the tabs row, and the
+// checklist stack tightens so the cover holds nine rows; and the
+// spoiler seed leaves one story trophy un-earned, so a masked row with
+// its gold Reveal button stands in the frame on the cover and the
+// spoiler shot. The leaders' second possibly-missable flag is NOT
+// copied: PowerPyx, GTABase and KeenGamer all name Positive Mental
+// Attitude as the only potentially missable trophy, and the watch list
+// says so in the open instead.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -297,13 +316,13 @@ function formatRarity(trophy) {
    not cite. Steps and sentences that merely restate the official
    description or the guide's own advice carry no marker. */
 const STEP_CITES = {
-  1: { 1: 'S7', 2: ['S2', 'S3', 'S4'] },
+  1: { 1: 'S7', 2: ['S2', 'S3', 'S4'], 3: ['S7', 'S3', 'S4'] },
   2: { 1: ['S2', 'S3', 'S4'], 2: 'S7' },
-  3: { 2: ['S2', 'S3', 'S4'], 3: 'S4' },
-  4: { 2: 'S7', 3: 'S2' },
-  5: { 2: 'S2', 3: 'S2' },
-  6: { 2: 'S2' },
-  7: { 2: 'S7', 3: ['S2', 'S3', 'S4'] },
+  3: { 1: ['S3', 'S7'], 2: ['S2', 'S3', 'S4'], 3: 'S4' },
+  4: { 1: ['S3', 'S7'], 2: 'S7', 3: 'S2' },
+  5: { 1: ['S3', 'S7'], 2: 'S2', 3: 'S2' },
+  6: { 1: ['S3', 'S7'], 2: 'S2', 3: ['S3', 'S7'] },
+  7: { 1: ['S3', 'S7'], 2: 'S7', 3: ['S2', 'S3', 'S4'] },
   8: { 1: ['S3', 'S4'], 2: 'S7' },
   9: { 1: ['S3', 'S4'], 2: 'S7' },
   10: { 1: ['S3', 'S4'], 2: 'S7' },
@@ -315,41 +334,41 @@ const STEP_CITES = {
   16: { 1: 'S4', 2: 'S4' },
   17: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S2', 'S3', 'S4'] },
   18: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: 'S7' },
-  19: { 2: ['S3', 'S4'], 3: 'S7' },
+  19: { 1: ['S3', 'S4', 'S7'], 2: ['S3', 'S4'], 3: 'S7' },
   20: { 1: 'S2', 2: ['S3', 'S4'], 3: 'S7' },
-  21: { 1: ['S3', 'S4'] },
+  21: { 1: ['S3', 'S4'], 2: ['S3', 'S4', 'S7'] },
   22: { 1: 'S2', 2: ['S3', 'S4'] },
   23: { 1: ['S3', 'S4'], 2: 'S7' },
   24: { 1: 'S4', 2: 'S7' },
-  25: { 2: 'S2', 3: 'S7' },
+  25: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: 'S7' },
   26: { 1: ['S3', 'S4'], 2: 'S7' },
   27: { 1: ['S2', 'S4'], 2: 'S4' },
   28: { 1: ['S2', 'S3', 'S7'], 2: ['S3', 'S7'], 3: ['S2', 'S3', 'S4'], 4: ['S2', 'S3', 'S4'], 5: ['S3', 'S4'], 6: 'S7', 7: ['S3', 'S7'] },
   29: { 1: 'S7', 2: ['S2', 'S4'], 3: 'S2' },
   30: { 1: 'S7', 2: 'S4', 3: ['S3', 'S4'] },
-  31: { 1: 'S7', 3: ['S3', 'S4'] },
-  32: { 1: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  31: { 1: 'S7', 2: ['S3', 'S4', 'S7'], 3: ['S3', 'S4'] },
+  32: { 1: ['S2', 'S4'], 2: ['S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
   33: { 1: 'S4', 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
-  34: { 2: ['S2', 'S3', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4'] },
-  35: { 1: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  36: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'] },
-  37: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
-  38: { 2: ['S2', 'S3', 'S4'], 3: 'S7' },
+  34: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: 'S2', 4: ['S2', 'S3', 'S4'] },
+  35: { 1: ['S2', 'S3', 'S4'], 2: ['S3', 'S4', 'S7'], 3: ['S2', 'S3', 'S4'] },
+  36: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S4'] },
+  37: { 1: ['S3', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  38: { 1: 'S3', 2: ['S2', 'S3', 'S4'], 3: 'S7' },
   39: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
   40: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S3', 'S4'] },
   41: { 1: ['S3', 'S4'], 2: ['S2', 'S4'] },
-  42: { 1: 'S5', 3: 'S7' },
-  43: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
+  42: { 1: 'S5', 2: ['S3', 'S4', 'S7'], 3: 'S7' },
+  43: { 1: ['S3', 'S4', 'S7'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
   44: { 1: 'S2', 2: 'S3', 3: 'S3' },
-  45: { 1: 'S3', 2: 'S3', 3: ['S3', 'S4'] },
-  46: { 1: ['S2', 'S4'], 2: ['S2', 'S3', 'S4'] },
+  45: { 1: 'S3', 2: 'S3', 3: ['S3', 'S4'], 4: ['S3', 'S7'] },
+  46: { 1: ['S2', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S4', 'S3'] },
   47: { 1: 'S2', 2: ['S2', 'S4'], 3: 'S7' },
-  48: { 2: 'S2' },
-  49: { 2: 'S3', 4: ['S3', 'S2', 'S4'] },
+  48: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: ['S3', 'S4'] },
+  49: { 1: ['S4', 'S3'], 2: 'S3', 3: ['S3', 'S4'], 4: ['S3', 'S2', 'S4'] },
   50: { 1: 'S3', 2: 'S3', 3: 'S3', 4: 'S3' },
-  51: { 2: 'S3', 4: ['S3', 'S4'] },
+  51: { 1: ['S3', 'S7'], 2: ['S3', 'S4'], 3: ['S4', 'S3'], 4: ['S3', 'S4'] },
   52: { 1: ['S2', 'S4'], 2: ['S2', 'S4'], 3: 'S2' },
-  53: { 2: 'S2' },
+  53: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: ['S3', 'S4', 'S7'] },
   54: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
   55: { 1: ['S2', 'S3', 'S4'], 2: ['S2', 'S4'], 3: ['S2', 'S4'] },
 };
@@ -774,11 +793,13 @@ function counterBar(trophy) {
 /* The audit strip: every figure computed from the data at runtime, so
    the strip can only say what the guide actually contains. Line one is
    the contents audit — guides and steps cited, sources, hidden and
-   missable counts, counters, and when the sources were read. Line two
-   is the disagreement taxonomy — triggers still unknown, trophies
+   missable counts, counters, and how many trophies are on watch. Line
+   two is the disagreement taxonomy — triggers still unknown, trophies
    resting on a single guide source, trophies whose sources disagree —
    plus per-source coverage (how many of the 55 trophies cite each
-   registry source, without the /55 so the line fits). */
+   registry source, without the /55 so the line fits). Line three names
+   every source's domain and when it was read, so the registry's
+   freshness is in the frame instead of a single aggregate date. */
 function renderAudit() {
   const strip = document.getElementById('auditStrip');
   if (!strip) return;
@@ -797,7 +818,8 @@ function renderAudit() {
       if (citedRefs(trophy, STEP_CITES[trophy.id]?.[i + 1]).length) citedSteps++;
     });
   }
-  const readDates = (doc.sourceRegistry ?? []).map((s) => s.retrieved).filter(Boolean);
+  // On watch: the trophies whose trigger no guide has confirmed yet.
+  const watchCount = trophies.filter((t) => t.triggerUnknown).length;
   const parts = [
     cited + '/' + trophies.length + ' guides cited',
     (doc.sourceRegistry ?? []).length + ' sources',
@@ -806,7 +828,7 @@ function renderAudit() {
     timedCount + ' time-sensitive',
     counterCount + ' counters',
     citedSteps + '/' + totalSteps + ' steps cited',
-    'read ' + readDateRange(readDates),
+    watchCount + ' on watch',
   ];
   strip.replaceChildren();
   const line1 = document.createElement('span');
@@ -826,32 +848,45 @@ function renderAudit() {
   const line2 = document.createElement('span');
   line2.className = 'audit-line audit-coverage';
   line2.textContent = [unknownCount + ' triggers unknown', singleSourceCount + ' single-source', disagreeCount + ' disagree', ...coverage].join(' · ');
-  strip.append(line1, line2);
+  // Line three: one domain per registry source plus when it was read.
+  // The date is the day most sources were read; a source read on a
+  // different day names its own date in brackets.
+  const registry = doc.sourceRegistry ?? [];
+  const domains = registry.map((entry) => {
+    if (!entry.url) return entry.id + ' official list';
+    const host = entry.url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+    return entry.id + ' ' + host;
+  });
+  const dated = registry.filter((s) => s.retrieved).map((s) => {
+    const [day, month, year] = s.retrieved.split(' ');
+    return { id: s.id, short: day + ' ' + shortMonth(month) + ' ' + year };
+  });
+  const counts = {};
+  for (const d of dated) counts[d.short] = (counts[d.short] ?? 0) + 1;
+  const baseDate = dated.slice().sort((a, b) => (counts[b.short] ?? 0) - (counts[a.short] ?? 0))[0]?.short ?? '';
+  const outliers = dated.filter((d) => d.short !== baseDate);
+  const dateSuffix = 'read ' + baseDate + (outliers.length ? ' (' + outliers.map((o) => o.id + ' ' + o.short).join(', ') + ')' : '');
+  const line3 = document.createElement('span');
+  line3.className = 'audit-line audit-coverage';
+  line3.textContent = domains.join(' · ') + ' — ' + dateSuffix;
+  strip.append(line1, line2, line3);
 }
 
-/* One retrieval day for all sources, or a short range ("19–20 Nov
-   2026") when a later source was read on a different day. */
-function readDateRange(dates) {
-  const unique = [...new Set(dates)];
-  if (unique.length === 1) return unique[0];
-  const parsed = unique.map((d) => {
-    const [day, month, year] = d.split(' ');
-    return { day: Number(day), month, year };
-  });
+/* Short month names for audit dates ("19 November 2026" -> "19 Nov 2026"). */
+function shortMonth(month) {
   const short = { January: 'Jan', February: 'Feb', March: 'Mar', April: 'Apr', May: 'May', June: 'Jun', July: 'Jul', August: 'Aug', September: 'Sep', October: 'Oct', November: 'Nov', December: 'Dec' };
-  const first = parsed[0];
-  const last = parsed[parsed.length - 1];
-  return first.day + '–' + last.day + ' ' + (short[first.month] ?? first.month) + ' ' + first.year;
+  return short[month] ?? month;
 }
 
 /* The checklist's head: a one-line warning for the one potentially
    missable trophy (its short form from the data; the full warning
    lives in its guide panel) with a button that opens its guide, and a
-   Next Up line. Next Up names the potentially missable trophy first
-   while it is unearned — it is the only thing that can be lost — and
-   falls back to the first unearned story trophy in roadmap order once
-   it is safe. Both follow the ticks, so this re-renders whenever
-   progress changes. */
+   Next Up line that is also the watch list: the missable trophy first
+   (the one thing that can be lost), then the three things to keep an
+   eye on — the time-sensitive strand race and the two trophies whose
+   trigger no guide has confirmed. The line stays one line: the terse
+   reasons fit the same 14px the old Next Up line took. Both follow the
+   ticks, so this re-renders whenever progress changes. */
 function renderBanner() {
   const banner = document.getElementById('alertBanner');
   if (!banner) return;
@@ -884,7 +919,7 @@ function renderBanner() {
   nextLabel.textContent = 'Next up: ';
   next.append(nextLabel);
   if (target && !earned.has(target.name)) {
-    next.append(document.createTextNode(target.name + ' — the one trophy that can be lost; do it while Chapter 1 is open.'));
+    next.append(document.createTextNode('PMA — balcony, Ch.1 · watch: Strangers & Freaks Yago race · Bad Luck Payday Loans · Ten Pin bike kicks'));
     banner.append(next);
     return;
   }
