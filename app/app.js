@@ -1275,6 +1275,30 @@ function markerRefs(trophy) {
   return refs;
 }
 
+/* The per-guide citation summary (v32): the panel's own form of
+   the per-guide source rail the leading guides print on their
+   covers. N is the marker union above — the sources in this
+   trophy's sources[] that a reader can see citing its text.
+   M counts this trophy's cited claim units with exactly
+   renderAudit's definitions: a step, a guide sentence (split
+   exactly as the audit splits) or the IN SHORT summary counts
+   once when its citation-table entry survives the subset check
+   against the trophy's own sources. Both figures are computed
+   from the same tables the audit strip reads, so the line can
+   only say what the guide actually contains. */
+function guideCiteStats(trophy) {
+  let claims = 0;
+  (trophy.steps ?? []).forEach((_, i) => {
+    if (citedRefs(trophy, STEP_CITES[trophy.id]?.[i + 1]).length) claims++;
+  });
+  const sentences = [...(trophy.guide ?? '').matchAll(/[^.!?]+[.!?]+["']?\s*/g)];
+  sentences.forEach((_, i) => {
+    if (citedRefs(trophy, GUIDE_CITES[trophy.id]?.[i + 1]).length) claims++;
+  });
+  if (trophy.short && citedRefs(trophy, SHORT_CITES[trophy.id]).length) claims++;
+  return { sources: markerRefs(trophy).size, claims };
+}
+
 /* The audit strip: every figure computed from the data at runtime, so
    the strip can only say what the guide actually contains. v14 merges
    the strip into ONE line: the contents audit (guides and steps
@@ -1658,6 +1682,19 @@ function renderDetail() {
     if (trophy.missable && trophy.missableNote) {
       detailPanel.append(alertElement(trophy));
     }
+    /* v32: the per-guide citation line stands directly ahead of
+       the steps it summarises (ahead of the guide prose when a
+       trophy has no steps) — the panel's answer to the leaders'
+       per-guide source rails, counted from the app's own
+       citation tables by guideCiteStats. An eyebrow extension
+       was measured first and wrapped to two lines in the
+       banner's 356px text box, so the line stands on its own. */
+    const citeStats = guideCiteStats(trophy);
+    const citeLine = document.createElement('div');
+    citeLine.className = 'guide-cite-line';
+    citeLine.textContent = 'For this guide · ' + citeStats.sources + ' sources · ' + citeStats.claims + ' claims cited';
+    const hasSteps = Boolean(trophy.steps && trophy.steps.length);
+    if (hasSteps) detailPanel.append(citeLine);
     /* v25: the steps stand ahead of the honesty box and the
        guide prose. The panel is a framed column (the 800px
        shot takes it from y=175): with the honesty box and the
@@ -1671,7 +1708,7 @@ function renderDetail() {
        missable alert still stands directly ahead of the
        steps it warns about, and every block the panel
        carried is still in the panel — only the order moved. */
-    if (trophy.steps && trophy.steps.length) {
+    if (hasSteps) {
       detailPanel.append(sectionLabel('Steps'));
       const steps = document.createElement('ol');
       steps.className = 'detail-steps';
@@ -1697,6 +1734,7 @@ function renderDetail() {
         refs,
       ));
     }
+    if (!hasSteps) detailPanel.append(citeLine);
     detailPanel.append(sectionLabel('Guide — in our own words'));
     detailPanel.append(guideParagraph(trophy));
   }
