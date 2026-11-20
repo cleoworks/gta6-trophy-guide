@@ -14,3 +14,4 @@ node_modules/
 .headless-profile/
 # v9 repair note: re-applied under recording #13 (01a1f5c3); see README.
 # v10 note: built under recording #14 (01a1f5d9); see README.
+# v10 repair note: re-applied under recording #16 (01a1f63d); see README.

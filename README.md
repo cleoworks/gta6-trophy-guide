@@ -122,3 +122,4 @@ MIT — see [LICENSE](LICENSE).
 
 v10 (2026-11-20): built under recording #14; KeenGamer joins as S7, stage grouping, PMA panel rebuilt.
 v9 (recorded re-apply, 2026-11-20): re-applied in-session under recording #13 after #12 died before any edit; content identical to a6ab0ca.
+v10 (recorded re-apply, 2026-11-20): re-applied in-session under recording #16 after #15 died in a service restart; content identical to 865510f.
