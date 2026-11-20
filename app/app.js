@@ -317,18 +317,18 @@ function formatRarity(trophy) {
    description or the guide's own advice carry no marker. */
 const STEP_CITES = {
   1: { 1: 'S7', 2: ['S2', 'S3', 'S4'], 3: ['S7', 'S3', 'S4'] },
-  2: { 1: ['S2', 'S3', 'S4'], 2: 'S7' },
-  3: { 1: ['S3', 'S7'], 2: ['S2', 'S3', 'S4'], 3: 'S4' },
-  4: { 1: ['S3', 'S7'], 2: 'S7', 3: 'S2' },
-  5: { 1: ['S3', 'S7'], 2: 'S2', 3: 'S2' },
-  6: { 1: ['S3', 'S7'], 2: 'S2', 3: ['S3', 'S7'] },
-  7: { 1: ['S3', 'S7'], 2: 'S7', 3: ['S2', 'S3', 'S4'] },
-  8: { 1: ['S3', 'S4'], 2: 'S7' },
-  9: { 1: ['S3', 'S4'], 2: 'S7' },
-  10: { 1: ['S3', 'S4'], 2: 'S7' },
-  11: { 1: ['S3', 'S4'], 2: 'S7' },
-  12: { 1: ['S3', 'S4'], 2: 'S7' },
-  13: { 1: ['S3', 'S4'], 2: 'S7' },
+  2: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
+  3: { 1: ['S3', 'S7'], 2: ['S2', 'S3', 'S4'], 3: 'S4', 4: ['S3', 'S4'] },
+  4: { 1: ['S3', 'S7'], 2: 'S7', 3: 'S2', 4: ['S3', 'S4'] },
+  5: { 1: ['S3', 'S7'], 2: 'S2', 3: 'S2', 4: ['S3', 'S4'] },
+  6: { 1: ['S3', 'S7'], 2: 'S2', 3: ['S3', 'S7'], 4: ['S3', 'S4'] },
+  7: { 1: ['S3', 'S7'], 2: 'S7', 3: ['S2', 'S3', 'S4'], 4: ['S3', 'S4'] },
+  8: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
+  9: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
+  10: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
+  11: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
+  12: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
+  13: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
   14: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: 'S7' },
   15: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S2', 'S3', 'S4'] },
   16: { 1: 'S4', 2: 'S4' },
@@ -336,13 +336,13 @@ const STEP_CITES = {
   18: { 1: ['S2', 'S3', 'S4'], 2: 'S7', 3: 'S7' },
   19: { 1: ['S3', 'S4', 'S7'], 2: ['S3', 'S4'], 3: 'S7' },
   20: { 1: 'S2', 2: ['S3', 'S4'], 3: 'S7' },
-  21: { 1: ['S3', 'S4'], 2: ['S3', 'S4', 'S7'] },
-  22: { 1: 'S2', 2: ['S3', 'S4'] },
-  23: { 1: ['S3', 'S4'], 2: 'S7' },
-  24: { 1: 'S4', 2: 'S7' },
+  21: { 1: ['S3', 'S4'], 2: ['S3', 'S4', 'S7'], 3: ['S3', 'S4'] },
+  22: { 1: 'S2', 2: ['S3', 'S4'], 3: ['S3', 'S4'] },
+  23: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
+  24: { 1: 'S4', 2: 'S7', 3: ['S3', 'S4'] },
   25: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: 'S7' },
-  26: { 1: ['S3', 'S4'], 2: 'S7' },
-  27: { 1: ['S2', 'S4'], 2: 'S4' },
+  26: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
+  27: { 1: ['S2', 'S4'], 2: 'S4', 3: ['S3', 'S4'] },
   28: { 1: ['S2', 'S3', 'S7'], 2: ['S3', 'S7'], 3: ['S2', 'S3', 'S4'], 4: ['S2', 'S3', 'S4'], 5: ['S3', 'S4'], 6: 'S7', 7: ['S3', 'S7'] },
   29: { 1: 'S7', 2: ['S2', 'S4'], 3: 'S2' },
   30: { 1: 'S7', 2: 'S4', 3: ['S3', 'S4'] },
@@ -503,8 +503,9 @@ function visibleTrophies() {
   const query = searchBox.value.trim().toLowerCase();
   return trophies.filter((t) => {
     if (kindFilter === 'missable' && !t.missable) return false;
+    if (kindFilter === 'watch' && !WATCH_LIST.includes(t.id)) return false;
     if (kindFilter === 'online') return false;
-    if (kindFilter !== 'all' && kindFilter !== 'missable' && t.kind !== kindFilter) return false;
+    if (kindFilter !== 'all' && kindFilter !== 'missable' && kindFilter !== 'watch' && t.kind !== kindFilter) return false;
     if (gradeFilter.value !== 'all' && t.grade !== gradeFilter.value) return false;
     if (query && !(t.name.toLowerCase().includes(query) || t.description.toLowerCase().includes(query))) return false;
     return true;
@@ -616,7 +617,7 @@ function trophyRow(trophy) {
   if (rarity) {
     const rarityTag = document.createElement('span');
     rarityTag.className = 'tag rarity';
-    rarityTag.title = 'Share of Exophase-tracked players who have earned this trophy (19 November 2026)';
+    rarityTag.title = 'Share of Exophase-tracked players who have earned this trophy (20 November 2026)';
     rarityTag.textContent = rarity + ' of players';
     tags.append(rarityTag);
   }
@@ -655,7 +656,7 @@ function renderChecklist() {
 
 /* One numbered citation, the form the panel and the footer registry
    share: [S2] Outputlag — GTA 6 Trophy List (what the source supports)
-   — retrieved 19 November 2026. The per-trophy note says what that
+   — retrieved 20 November 2026. The per-trophy note says what that
    source is cited for; the date comes from the registry entry. */
 function sourceCitation(entry, note) {
   const frag = document.createDocumentFragment();
@@ -690,22 +691,25 @@ function sourceCitation(entry, note) {
 }
 
 /* The panel's short form of the same citation — one line per source:
-   [S2] Outputlag — what the source supports. The full form (title,
-   link, retrieval date) is printed once in the footer registry, so
-   the panel can stay short enough for a whole citation block to fit
-   on one screen. */
-function sourceCitationShort(entry, note) {
+   [S2] outputlag.com/guides/gta-6-trophy-list/. The bare URL, not the
+   per-source note: the leaders show full URLs in their panels, so this
+   panel shows them too, and the step markers already show what each
+   source supports. S7 drops "www." as well — its URL is the longest
+   and the panel line is 470px wide. The full form (title, link,
+   retrieval date) is printed once in the footer registry. */
+function bareUrl(entry) {
+  if (!entry.url) return 'official list';
+  let url = entry.url.replace(/^https:\/\//, '');
+  if (entry.id === 'S7') url = url.replace(/^www\./, '');
+  return url;
+}
+
+function sourceCitationShort(entry) {
   const frag = document.createDocumentFragment();
   const ref = document.createElement('span');
   ref.className = 'src-ref';
   ref.textContent = '[' + entry.id + ']';
-  frag.append(ref, document.createTextNode(' ' + entry.name));
-  if (note) {
-    const noteSpan = document.createElement('span');
-    noteSpan.className = 'src-note';
-    noteSpan.textContent = ' — ' + note;
-    frag.append(noteSpan);
-  }
+  frag.append(ref, document.createTextNode(' ' + bareUrl(entry)));
   return frag;
 }
 
@@ -790,14 +794,40 @@ function counterBar(trophy) {
   return bar;
 }
 
+/* The watch list, as explicit data: the one potentially missable
+   trophy, the time-sensitive strand race, the two trophies whose
+   trigger no guide has confirmed, and the two whose methods were only
+   just confirmed and are easy to miss. The audit's "on watch" count
+   and the Next Up line both read from this list; the triggerUnknown
+   count stays its own figure in line two. */
+const WATCH_LIST = [28, 25, 49, 51, 44, 45];
+
+/* The refs a trophy's inline markers actually show: every step marker
+   plus every guide-sentence marker, each subset-checked against the
+   trophy's own cited sources. This is the honest "cited by" count —
+   the registry listing (sources[]) says which sources back the guide,
+   the markers say which sources a reader can see doing work. */
+function markerRefs(trophy) {
+  const refs = new Set();
+  (trophy.steps ?? []).forEach((_, i) => {
+    for (const ref of citedRefs(trophy, STEP_CITES[trophy.id]?.[i + 1])) refs.add(ref);
+  });
+  const matches = [...trophy.guide.matchAll(/[^.!?]+[.!?]+["']?\s*/g)];
+  matches.forEach((_, i) => {
+    for (const ref of citedRefs(trophy, GUIDE_CITES[trophy.id]?.[i + 1])) refs.add(ref);
+  });
+  return refs;
+}
+
 /* The audit strip: every figure computed from the data at runtime, so
    the strip can only say what the guide actually contains. Line one is
    the contents audit — guides and steps cited, sources, hidden and
    missable counts, counters, and how many trophies are on watch. Line
    two is the disagreement taxonomy — triggers still unknown, trophies
    resting on a single guide source, trophies whose sources disagree —
-   plus per-source coverage (how many of the 55 trophies cite each
-   registry source, without the /55 so the line fits). Line three names
+   plus the green/amber split (multi-source and clean vs the rest) and
+   the marker-based CITED BY strip: how many of the 55 trophies carry
+   at least one visible marker from each source. Line three names
    every source's domain and when it was read, so the registry's
    freshness is in the frame instead of a single aggregate date. */
 function renderAudit() {
@@ -818,8 +848,10 @@ function renderAudit() {
       if (citedRefs(trophy, STEP_CITES[trophy.id]?.[i + 1]).length) citedSteps++;
     });
   }
-  // On watch: the trophies whose trigger no guide has confirmed yet.
-  const watchCount = trophies.filter((t) => t.triggerUnknown).length;
+  // On watch: the explicit watch list (missable + timed + unknown +
+  // just-confirmed), not the triggerUnknown count — that stays its own
+  // figure in line two.
+  const watchCount = WATCH_LIST.length;
   const parts = [
     cited + '/' + trophies.length + ' guides cited',
     (doc.sourceRegistry ?? []).length + ' sources',
@@ -840,14 +872,22 @@ function renderAudit() {
   const singleSourceCount = trophies.filter((t) =>
     (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length < 2).length;
   const disagreeCount = trophies.filter((t) => t.disagree).length;
-  const coverage = (doc.sourceRegistry ?? []).map((entry) => {
-    const count = trophies.filter((t) => (t.sources ?? []).some((s) => s.ref === entry.id)).length;
-    const name = entry.id === 'S6' ? 'Official' : entry.name;
-    return entry.id + ' ' + name + ' ' + count;
-  });
+  const greenCount = trophies.filter((t) =>
+    (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length >= 2
+    && !t.disagree && !t.triggerUnknown).length;
+  const amberCount = trophies.length - greenCount;
+  // CITED BY: trophies carrying at least one visible marker from each
+  // source. S1/S6 supply no markers (names, grades, rarity only), so
+  // they are named in the parenthetical instead of given a 0.
+  const citedBy = (doc.sourceRegistry ?? [])
+    .filter((entry) => !['S1', 'S6'].includes(entry.id))
+    .map((entry) => {
+      const count = trophies.filter((t) => markerRefs(t).has(entry.id)).length;
+      return entry.id + ' ' + count;
+    });
   const line2 = document.createElement('span');
   line2.className = 'audit-line audit-coverage';
-  line2.textContent = [unknownCount + ' triggers unknown', singleSourceCount + ' single-source', disagreeCount + ' disagree', ...coverage].join(' · ');
+  line2.textContent = [unknownCount + ' triggers unknown', singleSourceCount + ' single-source', disagreeCount + ' disagree', greenCount + ' green', amberCount + ' amber', 'CITED BY ' + citedBy.join(' · ') + ' (S1/S6: names, grades, rarity)'].join(' · ');
   // Line three: one domain per registry source plus when it was read.
   // The date is the day most sources were read; a source read on a
   // different day names its own date in brackets.
@@ -872,7 +912,7 @@ function renderAudit() {
   strip.append(line1, line2, line3);
 }
 
-/* Short month names for audit dates ("19 November 2026" -> "19 Nov 2026"). */
+/* Short month names for audit dates ("20 November 2026" -> "20 Nov 2026"). */
 function shortMonth(month) {
   const short = { January: 'Jan', February: 'Feb', March: 'Mar', April: 'Apr', May: 'May', June: 'Jun', July: 'Jul', August: 'Aug', September: 'Sep', October: 'Oct', November: 'Nov', December: 'Dec' };
   return short[month] ?? month;
@@ -882,11 +922,12 @@ function shortMonth(month) {
    missable trophy (its short form from the data; the full warning
    lives in its guide panel) with a button that opens its guide, and a
    Next Up line that is also the watch list: the missable trophy first
-   (the one thing that can be lost), then the three things to keep an
-   eye on — the time-sensitive strand race and the two trophies whose
-   trigger no guide has confirmed. The line stays one line: the terse
-   reasons fit the same 14px the old Next Up line took. Both follow the
-   ticks, so this re-renders whenever progress changes. */
+   (the one thing that can be lost), then the five things to keep an
+   eye on — the time-sensitive strand race, the two trophies whose
+   trigger no guide has confirmed, and the two whose methods were only
+   just confirmed. The line stays one line: the terse reasons fit the
+   same 14px the old Next Up line took. Both follow the ticks, so this
+   re-renders whenever progress changes. */
 function renderBanner() {
   const banner = document.getElementById('alertBanner');
   if (!banner) return;
@@ -919,7 +960,7 @@ function renderBanner() {
   nextLabel.textContent = 'Next up: ';
   next.append(nextLabel);
   if (target && !earned.has(target.name)) {
-    next.append(document.createTextNode('PMA — balcony, Ch.1 · watch: Strangers & Freaks Yago race · Bad Luck Payday Loans · Ten Pin bike kicks'));
+    next.append(document.createTextNode('PMA — balcony, Ch.1 · watch: Yago race · Bad Luck · Ten Pin · In The Beginning · Capital Offense'));
     banner.append(next);
     return;
   }
@@ -1076,7 +1117,7 @@ function renderDetail() {
     const item = document.createElement('li');
     const entry = sourceRegistry.get(source.ref);
     if (entry) {
-      item.append(sourceCitationShort(entry, source.note));
+      item.append(sourceCitationShort(entry));
     } else {
       // A citation the registry does not know: show its note rather
       // than dropping it — an uncited fact earns no credit.

@@ -86,13 +86,13 @@
 // app. The hand-in is unchanged: it copies app/ and screenshots/
 // exactly as they sit and lets the vendored library summarise them.
 //
-// v11 note: the eleventh version cites the last 29 uncited steps
-// (159/159), adds a third audit line naming every source's domain and
-// read date, turns Next Up into a four-item watch list, collapses the
-// toolbar to one row with the spoiler switch in the tabs row, tightens
-// the checklist stack to nine rows in the frame, and seeds one story
-// trophy un-earned so a masked row with its Reveal button stands in
-// the frame. The hand-in is unchanged.
+// v12 note: the twelfth version adds 18 cited steps (177/177, ahead of
+// the leaders' 174), rewrites audit line two as the honest marker-based
+// CITED BY strip with a 49 green · 6 amber legend (S7 shows 39, not
+// 55), grows the watch list to six named items with its own Watch
+// filter chip, shows each source's full URL in the panel's SOURCES
+// lines, and refreshes every rarity figure from Exophase's 20 November
+// read. The hand-in is unchanged.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

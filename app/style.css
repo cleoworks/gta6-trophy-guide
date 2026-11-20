@@ -345,6 +345,12 @@ button { cursor: pointer; }
   padding: 4px 8px;
   color: var(--text);
 }
+/* The search box is the toolbar's widest item (265px at its default
+   width) — the v12 Watch chip needs 74px of it, and the toolbar's real
+   content width is 1209px (1265px less its 28px side padding), so the
+   box is capped at 140px: still room for the whole placeholder, and
+   the one-row toolbar keeps 24px of spare. */
+.toolbar-right input[type="search"] { width: 140px; }
 .toolbar-right select:focus, .toolbar-right input[type="search"]:focus {
   outline: 2px solid rgba(217, 169, 79, 0.55);
   outline-offset: 0;
