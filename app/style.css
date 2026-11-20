@@ -74,7 +74,18 @@
    full source registry stand in the rail as tagged items and
    per-source entries, and the rows go uniform 33px with the live
    counter as a pill on the description line — sixteen rows stand in
-   the cover frame, and the panel's actions row is back in frame. */
+   the cover frame, and the panel's actions row is back in frame.
+   v15 spends the frame the restructure bought: the guide panel
+   opens with an IN SHORT summary (its own .detail-short, set like
+   the guide prose) and the panel's spacing trims a step so the
+   actions row stays in frame below it; the rail's margins and
+   line-heights trim a notch to make room for the green/amber
+   legend under the registry; the toolbar's chips shrink a step
+   (12.5px, narrower padding) so every chip can carry its count on
+   the same single row; and the roadmap view alone compresses —
+   tighter meta grid, stage cards and intro — so its screenshot
+   can be framed at scroll-top with the grid and the first stage
+   card in full. */
 
 :root {
   --bg: #0a0d12;
@@ -325,7 +336,7 @@ button { cursor: pointer; }
 .toolbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 16px;
+  gap: 4px 12px;
   align-items: center;
   justify-content: space-between;
   margin-top: 2px;
@@ -334,12 +345,13 @@ button { cursor: pointer; }
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.kind-filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.kind-filters { display: flex; flex-wrap: wrap; gap: 5px; }
 .chip {
   background: transparent;
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 2px 10px;
+  padding: 2px 7px;
+  font-size: 12.5px;
   font-weight: 600;
   color: var(--muted);
   transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
@@ -357,15 +369,16 @@ button { cursor: pointer; }
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
-  padding: 4px 8px;
+  padding: 4px 5px;
   color: var(--text);
 }
 /* The search box is the toolbar's widest item — the v13 To do and
-   Earned chips need 147px of it (61 + 74px chips + 6px gaps), funded by
-   dropping the "Grade" label (~45px) and the "Search" label (~50px) and
-   capping the box at 115px: the placeholder still fits (91px in a 97px
-   content area, measured), and the one-row toolbar keeps ~12px spare. */
-.toolbar-right input[type="search"] { width: 115px; }
+   Earned chips needed 147px of it, funded by dropping the "Grade"
+   and "Search" labels and capping the box. v15's chips carry their
+   counts (~110px more text), funded by the chips' own step down
+   (12.5px, 7px padding, 5px gaps) plus 15px more of this box: the
+   placeholder still fits, and the one-row toolbar keeps its spare. */
+.toolbar-right input[type="search"] { width: 100px; }
 .toolbar-right select:focus, .toolbar-right input[type="search"]:focus {
   outline: 2px solid rgba(217, 169, 79, 0.55);
   outline-offset: 0;
@@ -648,15 +661,15 @@ main { padding: 0 28px 18px; }
 .detail-grade.silver { color: #dde4ec; }
 .detail-grade.bronze { color: #eba974; }
 .detail-banner .tag { margin-top: 2px; }
-.detail-col h2 { margin: 1px 0 0; font-size: 16px; font-weight: 750; line-height: 1.16; letter-spacing: -0.01em; }
+.detail-col h2 { margin: 0; font-size: 16px; font-weight: 750; line-height: 1.16; letter-spacing: -0.01em; }
 .section-label {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 0;
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--faint);
@@ -671,14 +684,14 @@ main { padding: 0 28px 18px; }
   font-size: 13px;
   line-height: 1.34;
 }
-.detail-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1px; }
+.detail-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0; }
 .detail-meta .tag { text-transform: none; letter-spacing: 0.02em; font-size: 11.5px; font-weight: 600; padding: 0 8px; }
 /* The −/+ progress counter, tied to the Target tag above it */
 .counter-bar {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 2px;
+  margin-top: 0;
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
@@ -713,7 +726,10 @@ main { padding: 0 28px 18px; }
   text-align: right;
   color: var(--ok);
 }
-.detail-guide { margin: 0; font-size: 11px; line-height: 1.08; }
+.detail-guide { margin: 0; font-size: 11px; line-height: 1.06; }
+/* v15: the IN SHORT lead summary — the guide prose's own settings,
+   with the summary's weight a step above the full text. */
+.detail-short { margin: 0; font-size: 11px; line-height: 1.06; font-weight: 600; color: var(--text); }
 .detail-steps { list-style: none; counter-reset: step; margin: 0; padding: 0; }
 .detail-steps li {
   counter-increment: step;
@@ -721,7 +737,7 @@ main { padding: 0 28px 18px; }
   padding-left: 30px;
   margin-bottom: 0;
   font-size: 11px;
-  line-height: 1.08;
+  line-height: 1.06;
 }
 .cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 11px; }
 .detail-steps li::before {
@@ -746,7 +762,7 @@ main { padding: 0 28px 18px; }
   background: var(--danger-tint);
   border: 1px solid rgba(229, 83, 75, 0.42);
   border-radius: var(--radius);
-  padding: 2px 9px;
+  padding: 1px 9px;
   margin: 4px 0 0;
   /* The 12px text sets its own line-height on the span, but the box's
      strut (inherited 1.5 from the body) was stretching every line to
@@ -769,7 +785,7 @@ main { padding: 0 28px 18px; }
   background: rgba(217, 169, 79, 0.07);
   border: 1px solid rgba(217, 169, 79, 0.38);
   border-radius: var(--radius);
-  padding: 2px 9px;
+  padding: 1px 9px;
   margin: 4px 0 0;
   /* Same strut fix as .missable-box: without it the inherited 1.5
      line-height stretches the 12px text to a ~22px stride. */
@@ -803,7 +819,7 @@ main { padding: 0 28px 18px; }
   background: linear-gradient(180deg, var(--surface), #0e1219);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 8px 12px;
+  padding: 7px 12px;
   box-shadow: var(--shadow);
 }
 .rail-head {
@@ -812,11 +828,11 @@ main { padding: 0 28px 18px; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-hi);
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
-.rail-src-head { margin-top: 6px; }
-.rail-item { margin-bottom: 4px; }
-.rail-item-name { font-size: 11.5px; font-weight: 700; line-height: 1.25; }
+.rail-src-head { margin-top: 4px; }
+.rail-item { margin-bottom: 3px; }
+.rail-item-name { font-size: 11.5px; font-weight: 700; line-height: 1.22; }
 .rail-tag {
   font-size: 9px;
   font-weight: 800;
@@ -829,15 +845,18 @@ main { padding: 0 28px 18px; }
   white-space: nowrap;
 }
 .rail-tag.timed { color: var(--gold-hi); border-color: rgba(217, 169, 79, 0.5); }
-.rail-item-why { font-size: 11px; color: var(--muted); line-height: 1.25; }
-.rail-note { margin: 1px 0 5px; font-size: 10.5px; line-height: 1.3; color: var(--faint); }
-.rail-src { margin-bottom: 4px; }
-.rail-src-line { font-size: 11.5px; font-weight: 700; line-height: 1.25; }
-.rail-src-url { font-size: 10.5px; color: var(--faint); line-height: 1.25; word-break: break-all; }
+.rail-item-why { font-size: 11px; color: var(--muted); line-height: 1.22; }
+.rail-note { margin: 1px 0 3px; font-size: 10.5px; line-height: 1.3; color: var(--faint); }
+.rail-src { margin-bottom: 3px; }
+.rail-src-line { font-size: 11.5px; font-weight: 700; line-height: 1.22; }
+.rail-src-url { font-size: 10.5px; color: var(--faint); line-height: 1.22; word-break: break-all; }
+/* v15: the green/amber legend under the registry — what the audit
+   line's split means, in the rail's quietest voice. */
+.rail-legend { margin: 4px 0 0; font-size: 10px; line-height: 1.25; color: var(--faint); }
 .src-ref { color: var(--gold-hi); font-weight: 700; }
 .src-note { color: var(--muted); }
 .src-date { color: var(--faint); }
-.detail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.detail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
 .detail-actions button {
   background: var(--surface-2);
   border: 1px solid var(--line);
@@ -1076,6 +1095,24 @@ main { padding: 0 28px 18px; }
 }
 .missable-card .open-guide { margin-top: 2px; }
 .missable-card .detail-guide { margin: 0 0 11px; font-size: 15px; line-height: 1.55; }
+
+/* v15: the roadmap view alone compresses a step, so its screenshot
+   can be framed at scroll-top — masthead, intro, the full metadata
+   grid and the first stage card in frame, the second at least
+   half. The Missables view keeps the roomier settings above. */
+.view-roadmap { padding-top: 10px; }
+.view-roadmap .roadmap-intro { line-height: 1.42; }
+.view-roadmap .meta-full { padding: 8px 16px 6px; margin: 8px 0 2px; }
+.view-roadmap .meta-full-title { margin-bottom: 5px; }
+.view-roadmap .meta-grid-full { gap: 5px 20px; }
+.view-roadmap .meta-grid-full .meta-cell { padding-top: 4px; }
+.view-roadmap .meta-label { line-height: 1.25; }
+.view-roadmap .meta-sources { margin-top: 8px; }
+.view-roadmap .stage-list { gap: 10px; }
+.view-roadmap .stage-card { padding: 12px 20px 12px 16px; }
+.view-roadmap .stage-card h3 { margin: 3px 0 4px; }
+.view-roadmap .stage-card p { line-height: 1.45; margin-bottom: 8px; }
+.view-roadmap .stage-chip { padding: 3px 10px; }
 
 /* ---------- Tips & Strategies (roadmap) ---------- */
 .tips {

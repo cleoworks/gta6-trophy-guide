@@ -78,6 +78,7 @@
    "stage": 5,
    "count": null,
    "guide": "The platinum is the reward for everything else: it pops the moment the 54th other trophy lands, so there is nothing to do for it directly. Follow the roadmap in order — story first with a save at every chapter start, then the robbery and partner feats, then the open-world sweep — and finish with the 100% checklist, which is the longest single job at roughly 200 hours for the whole platinum. No online, difficulty or medal trophy stands in the way; it is long, not hard.",
+   "short": "The platinum pops on its own when the 54th other trophy lands — there is nothing to do for it directly. Follow the roadmap in order and leave the 100% checklist for last; the whole run takes roughly 200 hours.",
    "steps": ["Earn the other 54 trophies in any order.", "Leave A Long Road (100% Completion) for last — it is the longest grind.", "Earn every other trophy first — the platinum pops when the 54th lands."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -99,6 +100,7 @@
    "stage": 1,
    "count": null,
    "guide": "Gone Fishing is one of the first missions of Chapter 1, so this is the first trophy most players will earn: play through it and the trophy pops when it ends. It is unmissable — you cannot pass the opening without finishing it — and it also teaches the fishing you will need later to beat Cal in a fishing challenge.",
+   "short": "Finish Gone Fishing, the opening mission of Chapter 1 — the trophy pops when it ends and cannot be missed.",
    "steps": ["Start a new game and play the opening mission, Gone Fishing.", "Finish the mission; the trophy pops at its end.", "Gone Fishing is the first main mission of Chapter 1, and the trophy is automatic — it cannot be missed."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -120,6 +122,7 @@
    "stage": 1,
    "count": null,
    "guide": "Play through Chapter 1 to its end. Before you leave the chapter, do the one thing in it that never comes back: the balcony meditation at Jason's house, which counts toward Positive Mental Attitude. Make a manual save at the start of Chapter 1 and keep it until that trophy pops, since there is no mission replay. It pops once you have played the first mission of Chapter 2, so do not worry if it is a beat late.",
+   "short": "Play Chapter 1 to its end — the trophy pops a beat late, after the first mission of Chapter 2. Before the chapter closes, do the balcony meditation at Jason's house: it never comes back.",
    "steps": ["Make a manual save at the start of Chapter 1.", "Do the balcony meditation at Jason's house while the chapter is still open (see Positive Mental Attitude).", "Finish the chapter's missions; the trophy pops at the chapter's end.", "It pops after the first mission of Chapter 2, What's in the Bag? — not at the last mission of Chapter 1."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -141,6 +144,7 @@
    "stage": 2,
    "count": null,
    "guide": "Play through Chapter 2 to its end. It is awarded as Chapter 3 begins, after Welcome to Vice City. This is the chapter where character switching opens up, so most of the list starts opening here: partner trophies, the Scooter Bros app, the Vice City Real Estate app and the Kingpin Bowling robbery all become available around now. Make a manual save at the chapter's start, as with every chapter, and work the side content that appears instead of rushing past it.",
+   "short": "Play Chapter 2 to its end; the trophy lands as Chapter 3 begins. The chapter opens character switching, the apps and new side content — work it as it appears instead of rushing past.",
    "steps": ["Make a manual save at the start of Chapter 2.", "Play the chapter's missions in order.", "Try the newly unlocked switching, apps and side content as it appears.", "It pops as Chapter 3 begins, after the first mission, Welcome to Vice City."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -162,6 +166,7 @@
    "stage": 2,
    "count": null,
    "guide": "Play through Chapter 3 to its end. It arrives after the first two missions of Chapter 4, Ocean Beach and Another Life. Two things in this chapter deserve attention while you are here: the Snap Gun arrives with the mission Yasmani's Jewelry Jobs, which opens jewelry store robberies for Sneakthief, and the street race against Yago is time-sensitive — do it the moment it appears, with a save made first, because it feeds a stranger strand that counts toward Strangers & Freaks. Save at the chapter's start as usual.",
+   "short": "Play Chapter 3 to its end — the trophy pops after the first two missions of Chapter 4. While you are here, the Yago street race is time-sensitive: run it the moment it appears, save first.",
    "steps": ["Make a manual save at the start of Chapter 3.", "Do Race Against Yago as soon as it appears (save first).", "Play the chapter through, including Yasmani's Jewelry Jobs.", "It pops after the first two missions of Chapter 4, Ocean Beach and Another Life."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -183,6 +188,7 @@
    "stage": 2,
    "count": null,
    "guide": "Play through Chapter 4 to its end. It cannot be missed. Near the end of this chapter the optional mission That's Where The Money Is unlocks bank vaults, which is the gateway to Maximum Withdrawal and the robbery trophies around it — do that mission before the finale if it is offered. Keep an untouched manual save from just before the final mission: with no mission replay, that save is your only way back to it.",
+   "short": "Play Chapter 4 to its end; the trophy pops after the final mission and cannot be missed. Do the optional That's Where The Money Is when it appears — it unlocks the bank vaults.",
    "steps": ["Make a manual save at the start of Chapter 4.", "Do the optional mission That's Where The Money Is when it appears.", "Keep an untouched save from just before the final mission, then finish the chapter.", "It pops after the final mission of Chapter 4, Starting From Zero — an automatic story trophy, it cannot be missed."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -204,6 +210,7 @@
    "stage": 2,
    "count": null,
    "guide": "Finish the final mission and this gold trophy pops. It is the only gold tied to the story, and the gate to everything after it: the 100% checklist only appears under Progress > Stats > 100% Completion once the story is done, though work you did earlier still counts toward it. Free roam carries on after the credits, so you can clean up everything else on this list after them. Before you start the finale, make the untouched manual save the save rules call for — there is no mission replay and no New Game Plus, so that save is the only way to revisit the ending.",
+   "short": "Finish the final mission, Starting From Zero, and this gold pops. Make an untouched manual save first — there is no mission replay — then the 100% checklist opens for the endgame.",
    "steps": ["Make an untouched manual save just before the final mission.", "Play and finish the final mission.", "After the credits, open Progress > Stats > 100% Completion to start the endgame.", "The final mission is Starting From Zero — how you play it doesn't matter, there are no mission medals."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -225,6 +232,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the story mission Breakfast Run. Breakfast Run is a Chapter 2 mission. Like every named mission trophy, it pops when the mission ends, so the only way to miss it is to stop playing the story — and with no mission replay, a chapter-start manual save is your safety net if a run goes wrong.",
+   "short": "Complete Breakfast Run, a Chapter 2 story mission — the trophy pops when the mission ends and there is no way to miss it. Keep a chapter-start manual save anyway; there is no mission replay.",
    "steps": ["Play the story until Breakfast Run appears.", "Complete the mission; the trophy pops at its end.", "Breakfast Run unlocks in Chapter 2 and the trophy pops when you finish it — there is no way to miss it."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -246,6 +254,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the story mission The Cartel Heist. The Cartel Heist is a Chapter 3 mission. It pops when the mission ends, as the named mission trophies do. Keep the chapter-start manual save habit: there is no mission replay, so if anything about the run goes wrong the save is the only way back.",
+   "short": "Complete The Cartel Heist, a Chapter 3 story mission — the trophy pops at its end and cannot be missed.",
    "steps": ["Play the story until The Cartel Heist appears.", "Complete the mission; the trophy pops at its end.", "The Cartel Heist is a Chapter 3 story mission — automatic, it cannot be missed."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -267,6 +276,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the story mission Child's Play. Child's Play is a Chapter 4 mission. It pops when the mission ends. The usual rule applies: keep a manual save at the start of the chapter you are in, because there is no mission replay to fall back on.",
+   "short": "Complete Child's Play, a Chapter 4 story mission — the trophy pops at its end. Keep a manual save from the chapter's start; there is no mission replay.",
    "steps": ["Play the story until Child's Play appears.", "Complete the mission; the trophy pops at its end.", "Child's Play is a Chapter 4 story mission — automatic, it cannot be missed."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -288,6 +298,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the story mission Headliners. Headliners is a Chapter 4 mission. It pops when the mission ends. Keep a manual save at the start of the chapter, since there is no mission replay.",
+   "short": "Complete Headliners, a Chapter 4 story mission — the trophy pops at its end and cannot be missed.",
    "steps": ["Play the story until Headliners appears.", "Complete the mission; the trophy pops at its end.", "Headliners is a Chapter 4 story mission — automatic, it cannot be missed."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -309,6 +320,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the story mission VCIA Takedown. VCIA Takedown is a Chapter 4 mission. It pops when the mission ends. The mission's name points at Vice City International Airport, the same airport where the free-roam trophy Catch Me If You Can is earned — but the mission itself is story, so just play it when it comes. Keep a chapter-start manual save, as there is no mission replay.",
+   "short": "Complete VCIA Takedown, a Chapter 4 story mission — the trophy pops at its end and cannot be missed.",
    "steps": ["Play the story until VCIA Takedown appears.", "Complete the mission; the trophy pops at its end.", "VCIA Takedown is a Chapter 4 story mission — automatic, it cannot be missed."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -330,6 +342,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the story mission Operation Savage Glory. Operation Savage Glory is a Chapter 5 mission. It pops when the mission ends. Keep a manual save at the start of the chapter, since there is no mission replay.",
+   "short": "Complete Operation Savage Glory, a Chapter 5 story mission — the trophy pops at its end and cannot be missed.",
    "steps": ["Play the story until Operation Savage Glory appears.", "Complete the mission; the trophy pops at its end.", "Operation Savage Glory is a Chapter 5 story mission — automatic, it cannot be missed."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -352,6 +365,7 @@
    "count": null,
    "counter": {"label": "completion percent", "total": 100},
    "guide": "Reach 100% completion — the second gold, and the longest single job in the game. The checklist only appears after the story, under Progress > Stats > 100% Completion, but work done earlier still counts. Its bars sit above the individual trophies: all robberies including the 8 bank vaults and 39 gang operations, underwater discoveries, every Shooting Range gold, all drone races and Bret's 15 Target Decks — plus 100 optional missions, 200 of the 277 vehicle scans, 100 of the 255 animal studies, 15 of the 18 meditations, 70 of the 80 Challenges, 300 stunts and 100 WAiNK scans. Do the story first, then grind the checklist in the open world; expect the whole platinum to take around 200 hours, most of it here.",
+   "short": "Reach 100% completion — the longest job in the game, and most of the platinum's roughly 200 hours. The checklist opens after the story under Progress > Stats, but earlier work already counts toward it.",
    "steps": ["Finish the story, then open Progress > Stats > 100% Completion.", "Clear every line of the checklist — stunts, Challenges, vaults, vehicles, operations.", "The trophy pops at 100%; the platinum follows with it."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -375,6 +389,7 @@
    "count": 250,
    "counter": {"label": "stunts", "total": 250},
    "guide": "Complete 250 stunts. Any 250 of the 397 stunts count, in any mix: 130 stunt jumps, 202 flights under bridges, 40 knife-edge flights and 25 base jumps. Flying under bridges is the quickest way to rack them up, and the optional challenge on each stunt is not needed. Progress > Activities > Stunts shows your count, and the map can show every Stunt Spot. The counter runs from the start of the game, so stunts you pull while playing the story already count. Do not stop at 250: the 100% checklist needs 300, so keep going past the pop if you want A Long Road.",
+   "short": "Complete 250 stunts — any mix of jumps, under-bridge flights, knife-edge flights and base jumps. Under-bridge flights are the quickest; keep going to 300 afterwards for the 100% checklist.",
    "steps": ["Pull stunts as you play — jumps, under-bridge flights, knife flights, base jumps.", "Watch the counter; the trophy pops at 250.", "Keep going to 300 for the 100% checklist.", "Under the Bridges are the quickest — 202 of them; track each category by region under Progress > Activities > Stunts (R3).", "The challenges on stunt map icons aren't required — performing the stunt once counts as completed."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -397,6 +412,7 @@
    "count": 9,
    "counter": {"label": "activity types tried", "total": 9},
    "guide": "Try each of the 9 activity types once. The nine are fishing, hunting, golf, a shooting range, pool, basketball (sink one basket), an arcade game, winning a race, and a stunt. Progress > Activities shows what is left. This is a sampler, not a grind: one taste of each, and it pops as soon as the ninth type is tried — most players will clear it by accident while chasing the other activity trophies.",
+   "short": "Try each of the 9 activity types once — fishing, hunting, golf, a shooting range, pool, basketball, an arcade game, a race win and a stunt. It pops when the ninth type is tried.",
    "steps": ["Try one of each of the 9 types: fishing, hunting, golf, shooting range, pool, basketball, arcade game, a race win, a stunt.", "Check Progress > Activities for what is left; fill the gaps with a single quick session each."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -420,6 +436,7 @@
    "count": 42,
    "counter": {"label": "shooting-range golds", "total": 42},
    "guide": "Earn a gold medal in all 42 Shooting Range challenges, spread across 12 shooting ranges. This is a skill trophy, not a grind: each challenge has its own gold threshold, so replay a challenge until the medal turns gold and move on. Bring your best aim and a steady trigger finger; there is no difficulty trophy in the game, so the ranges are the same for everyone. Ranges also raise your Focus level, which helps with Gunslinger.",
+   "short": "Earn gold in all 42 Shooting Range challenges across the 12 ranges. Each challenge has its own gold threshold — replay it until the medal turns gold, then move on.",
    "steps": ["Find a shooting range (there are 12).", "Play each challenge and chase the gold medal threshold.", "Replay any challenge that lands silver or bronze until all 42 are gold."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -442,6 +459,7 @@
    "count": 14,
    "counter": {"label": "drone races won", "total": 14},
    "guide": "Win a Top Fun Drone Race at all 14 locations. One win per location is enough — you do not need to win every race a location offers, just one at each of the 14. Fly the drone courses cleanly and learn each course's turns; a win at a location you have already won does not advance the counter, so track which locations are left in this tracker.",
+   "short": "Win a Top Fun Drone Race at all 14 locations — one win per location is enough. A repeat win at a location you have already won does not advance the counter.",
    "steps": ["Find the Top Fun Drone Race locations across Leonida (14 in total).", "Win at least one race at each location.", "The trophy pops when the 14th location is won."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -464,6 +482,7 @@
    "count": 20,
    "counter": {"label": "different races won", "total": 20},
    "guide": "Win 20 different races. Different is the key word: winning the same race twice counts once, so you need 20 distinct race events across the map — street races, and any other race types the game offers. There are 40 races to choose from. The Yago street race strand in Chapter 3 counts toward this too, so do the races as they appear rather than leaving them all for the endgame.",
+   "short": "Win 20 different races — repeats count once, so you need 20 distinct events from the 40 on offer. The Chapter 3 Yago race counts too, so run races as they appear.",
    "steps": ["Enter races across Leonida — 40 race locations to choose from, street races and any other race types.", "Win 20 different race events (repeats do not count).", "Check the counter after each win; the trophy pops at 20."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -485,6 +504,7 @@
    "stage": 1,
    "count": null,
    "guide": "Beat Cal in a fishing challenge. Fishing is taught in the opening mission Gone Fishing, so you will already know the basics: cast, hook, reel in without snapping the line. After the Chapter 1 mission Feng Shui, Cal texts you and marks a fishing spot with a purple icon — play through his fishing quests and beat him in the challenge. Win the challenge and the trophy pops.",
+   "short": "Beat Cal in a fishing challenge. Fishing is taught in the opening mission; after Feng Shui in Chapter 1, Cal texts you a marked spot — play his quests and win the challenge.",
    "steps": ["Learn fishing in the opening mission, Gone Fishing.", "Take the fishing challenge against Cal.", "Beat him; the trophy pops on the win."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -506,6 +526,7 @@
    "stage": 1,
    "count": null,
    "guide": "Complete one arcade game. Three of the four arcade games (Tenebrae Lux, Street Trash III and Time Jackers Rewind) are on the TV at home; the fourth, Bang For Your Buck, is on arcade cabinets around Leonida. Reach the end of any one of them — finishing is what counts, not a high score. One completion is enough.",
+   "short": "Finish any one of the four arcade games — three are on the TV at home, Bang For Your Buck is on cabinets around Leonida. Reaching the end counts; a high score does not.",
    "steps": ["Pick any of the four arcade games — three on the TV at home, Bang For Your Buck on arcade cabinets.", "Play it through to the end — finish all levels at least once; you do not need to beat all challenges.", "The four games are Tenebrae Lux, Street Trash III, Time Jackers Rewind and Bang For Your Buck — you can start as early as Chapter 1, and they stay doable after the story."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -527,6 +548,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the final mission of Andy's questline. Andy's strand is Lucia-only, and like the other side-story finales it stays available after the credits, so there is no rush and no missable risk — play the strand when it appears and finish its last mission. His five quests start in Chapter 3, when he texts Lucia an address in Belville: Climbing the Cellerichain, Pay the Cellerica Fee, Peach, Read the Label and Puff Puff Pass — the last one awards the trophy. Note that Andy's strand does not count toward Strangers & Freaks, which tracks different strands.",
+   "short": "Finish Andy's five-quest strand, which starts in Chapter 3 when he texts Lucia an address in Belville — the last quest, Puff Puff Pass, awards the trophy. It is Lucia-only and stays open after the credits.",
    "steps": ["Play as Lucia and follow Andy's questline when it appears.", "Do all five in order, through to Puff Puff Pass.", "The strand starts automatically in Chapter 3 — Andy calls Lucia and texts her home address in Belville; it is Lucia-only."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -548,6 +570,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the final mission of Kenton's questline. Kenton (green KR icon, Key Lento) hires you in Chapter 1 to recover treasure from 7 shipwrecks: dive at the purple chest markers and use the metal detector to dig it up. He disappears after Chapter 1 and texts Jason again later, so you can finish it then; track it under Progress > Collections > Kenton's Treasures. The side-story finales stay available after the credits, so play the strand when it appears and finish its last mission at your own pace.",
+   "short": "Finish Kenton's strand: dive the 7 shipwrecks at the purple chest markers in Chapter 1, then complete his final mission when he texts Jason again later.",
    "steps": ["In Chapter 1, take Kenton's strand (KR icon, Key Lento) and dive the 7 shipwrecks.", "Complete its missions through to the final one.", "Track it under Progress > Characters > Kenton Rees — if he goes quiet after Chapter 1, he returns in Chapter 2–3 (call Brian as Jason to speed it up)."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -569,6 +592,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the final mission of Billy's questline. Billy's five jobs start at the Thrillbilly Mudclub in Kelly County after the Chapter 2 mission Coffee Break; the fifth, Hometown Heroes, unlocks the trophy. The side-story finales stay available after the credits, so play the strand when it appears and finish its last mission at your own pace. Billy's strand does not count toward Strangers & Freaks — it has its own trophy, this one — so do not expect the Strangers counter to move for it.",
+   "short": "Finish Billy's five jobs from the Thrillbilly Mudclub, starting after Coffee Break in Chapter 2 — the fifth, Hometown Heroes, unlocks the trophy.",
    "steps": ["After Coffee Break (Chapter 2), start Billy's jobs at the Thrillbilly Mudclub in Kelly County.", "Complete its missions through to the final one.", "The strand is five jobs in order — Thrillbillies, Twist Wrist Smash Grab, Mall Rats, The Impaler, Hometown Heroes."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -592,6 +616,7 @@
    "count": 8,
    "counter": {"label": "stranger strands done", "total": 8},
    "guide": "Complete 8 mission strands for strangers across Leonida. Kirk, Kyle, Yago and Pilot Pete are confirmed counters; Moses, Tyrone, Yasmani, Andy, Billy and Eddie are not. The remaining qualifying strands are still being confirmed, so keep checking the trophy's progress counter after each strand you finish. One strand race is time-sensitive — Race Against Yago in Chapter 3, marked with an hourglass icon — so do it the moment it appears, with a save made first. The other strands stay open after the credits.",
+   "short": "Complete 8 stranger strands — Kirk, Kyle, Yago and Pilot Pete are confirmed to count, so check the counter after each strand. One strand is timed: do Race Against Yago in Chapter 3 the moment it appears, save first; the rest stay open after the credits.",
    "steps": ["Take stranger strands as they appear — all stay open after the story, so nothing here is missable.", "Do Race Against Yago in Chapter 3 the moment it appears (save first).", "Check the trophy's progress counter after each strand; finish 8 that count."],
    "missableNote": "TIME-SENSITIVE, not fully missable: the Race Against Yago strand race in Chapter 3 carries an hourglass icon — do it as soon as it appears. The other strands stay open after the credits.",
    "sources": [
@@ -614,6 +639,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the final mission of Randy's questline. Randy's Wish List opens after the Chapter 3 mission that gets you the Key Cloner (Clonin' Keys, Makin' Gs): deliver the 16 sports cars on his list to his garage in west Vice City (RK icon). Scan cars with the WAiNK app to see if they are on the list; hotel driveways around Vice Beach and Ocean Beach are the best places to look, and cars in better condition pay more. The side-story finales stay available after the credits, so play the strand when it appears and finish its last mission at your own pace.",
+   "short": "Finish Randy's strand: once the Key Cloner mission opens his Wish List in Chapter 3, deliver the 16 sports cars to his garage in west Vice City.",
    "steps": ["After the Key Cloner mission in Chapter 3, open Randy's Wish List and deliver the 16 sports cars to his garage in west Vice City.", "Complete its missions through to the final one.", "Track the list under Map > Robberies > Randy's Wish List — scan a car with WAiNK to check it, and deliver it in good condition for more pay."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -635,6 +661,7 @@
    "stage": 2,
    "count": null,
    "guide": "Complete the final mission of Tyrone's questline. After Here, Kitty Kitty in Chapter 3, Tyrone has you destroy the synthetic labs marked in purple around Vice City; once enough are gone, his last job (Shut Down the Labs) awards the trophy. Tyrone's strand is Jason-only, and like the other side-story finales it stays available after the credits, so there is no rush. Tyrone's strand does not count toward Strangers & Freaks — it has its own trophy, this one.",
+   "short": "Finish Tyrone's Jason-only strand: destroy the synthetic labs marked in purple around Vice City, then complete his last job, Shut Down the Labs.",
    "steps": ["Play as Jason and follow Tyrone's questline when it appears.", "Destroy the synthetic labs, then complete his last job, Shut Down the Labs.", "The strand starts after Chapter 3's Here, Kitty Kitty and is Jason-only — labs show as purple markers in Vice City."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -658,6 +685,7 @@
    "disagree": true,
    "counter": {"label": "meditation spots", "total": 18},
    "guide": "Meditate at all 18 spots across Leonida — they show as purple icons when you are close — and bring your partner every time, since meditating together counts twice. Only 15 of the 18 spots count toward the 100% checklist — the trophy itself needs all 18.",
+   "short": "Meditate at all 18 spots, partner alongside — together counts twice. The Chapter 1 balcony meditation at Jason's house, the morning after Down to Earth, is the one spot that can be lost.",
    "steps": ["In Chapter 1, the morning after Down to Earth, find Lucia in the kitchen at Jason's house and follow her to the balcony.", "Accept the balcony meditation before leaving Chapter 1 — the only currently identified potentially missable interaction.", "Keep a Chapter 1 manual save until the trophy pops.", "Meditate at every other spot (18 total), bringing your partner so outdoor spots count twice.", "The last meditation needs both leads playable, which opens after Coffee Break in Chapter 2.", "Check Progress > Stats > 100% Completion as you go — the checklist counts 15 of the 18 spots.", "Counts differ: the trophy needs all 18 spots, while the 100% checklist stops at 15."],
    "missableNote": "The balcony at Jason's house opens the morning after Down to Earth and closes when Chapter 1 ends — do it in Chapter 1.",
    "missableShort": "Jason's-house balcony, morning after Down to Earth",
@@ -681,6 +709,7 @@
    "stage": 2,
    "count": null,
    "guide": "Hunt a unique animal for Bret. Bret's hunting quests start after Coffee Break in Chapter 2: he texts Jason, and Veteran Hunted in Lummox County kicks things off. Hunt the animals on his Target Decks (purple icons) and bring them back as Jason. A clean head or heart shot keeps the carcass pristine, which is what a hunt like this wants. Which animal triggers the trophy is not confirmed yet, and the 100% checklist needs all 15 Target Decks anyway. The questline stays available after the credits, so take it at your pace.",
+   "short": "Hunt one of Bret's Target Deck animals as Jason and bring it back — a clean head or heart shot keeps the carcass pristine. Which animal triggers the trophy is not confirmed yet.",
    "steps": ["Play as Jason and follow Bret's hunting questline.", "Hunt the animals on his Target Decks (purple icons) and bring them back as Jason.", "Make a clean head or heart shot to keep the carcass pristine."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -703,6 +732,7 @@
    "count": 3,
    "counter": {"label": "card sets completed", "total": 3},
    "guide": "Complete 3 Collectible Card sets. Cards are a pure collectible hunt: find them across Leonida and finish three whole sets, card by card. PowerPyx publishes a card-location guide; use the in-game collection screen to see which cards each set still needs, sweep the map methodically, and tick sets off here as you complete them.",
+   "short": "Complete 3 full Collectible Card sets. PowerPyx publishes a card-location guide — sweep the map methodically and use the collection screen to see what each set still needs.",
    "steps": ["Find collectible cards across Leonida.", "Open the collection screen to see which cards each set still needs.", "Complete 3 full sets."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -726,6 +756,7 @@
    "count": 100,
    "counter": {"label": "WAiNK locations tagged", "total": 100},
    "guide": "Use the WAiNK app at 100 locations. WAiNK is the in-game phone app for scanning and tagging places — open it at landmarks, businesses and viewpoints across Leonida and the location counts. Any 100 count, from the 31 Landmarks, 35 Curiosities, 23 Sculptures and the No Flusher tags; open the app with Up on the D-pad, then R1 or RB. It pairs naturally with the other map-clearing trophies: while you sweep for the 52 areas of The Goodtime State and the 100 vehicles of Whip It Good, WAiNK each spot you pass. One hundred locations is a lot, so fold it into your general map sweep instead of grinding it alone.",
+   "short": "Tag 100 locations with the WAiNK app — landmarks, curiosities, sculptures and No Flusher tags all count. Fold it into your map sweep rather than grinding it alone.",
    "steps": ["Open the WAiNK app at a location to tag it.", "Scan new locations as you travel — any 100 count, from the 31 landmarks, 35 curiosities, 23 sculptures and No Flusher tags.", "The trophy pops at 100 locations."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -749,6 +780,7 @@
    "count": 50,
    "counter": {"label": "challenges done", "total": 50},
    "guide": "Complete 50 Challenges. Challenges are listed under Progress > Challenges, and many complete on their own while you play — driving, fighting, exploring and collecting all feed them. Do not grind them first: play the rest of the list and check the Challenges screen regularly, then mop up the easiest unfinished ones at the end. The 100% checklist needs 70 of the 80, so keep going past 50 if you want A Long Road.",
+   "short": "Complete 50 Challenges from Progress > Challenges. Most fill in as you play the rest of the list — mop up the easiest leftovers at the end, and keep going to 70 for 100%.",
    "steps": ["Open Progress > Challenges to see the list.", "Play normally — many complete themselves while you play, so this one comes along the way.", "Mop up the easiest unfinished Challenges until 50 are done; keep going to 70 for 100%."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -770,6 +802,7 @@
    "stage": 3,
    "count": null,
    "guide": "With your partner beside you, build a 4-star Wanted Level and then lose it completely. Call your partner (hold Right on the D-pad, then Triangle or Y) — possible once both characters are together, after Coffee Break in Chapter 2. The train tunnel north of Ambrosia in Kelly County shakes off cops and helicopters well. The easiest honest route is a bank vault job: vaults give you a 4-star Wanted Level straight away, and escaping one with your partner also earns this. Note the timing — it only pops once you have left the red heat zone, not just the flashing search area — so keep driving until the stars are fully gone.",
+   "short": "With your partner beside you, build a 4-star Wanted Level and lose it completely — it pops only once you leave the red heat zone. A bank vault job hands you the 4 stars at once.",
    "steps": ["Bring your partner — call them with Right on the D-pad, then Triangle or Y (switching opens in Chapter 2).", "Build a 4-star Wanted Level — a bank vault job does it at once.", "Escape until the stars clear completely and you are out of the red heat zone.", "The easiest escape is the train tunnel north of Ambrosia — cops struggle on the tracks and the helicopter can't see you."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -791,6 +824,7 @@
    "stage": 3,
    "count": null,
    "guide": "Call your partner, then rob three shops in a row without losing your Wanted Level. The trick is the opposite of a normal escape: keep the police chasing you the whole time. If the stars fade and you are only in the red heat zone, the chain breaks — so move fast between shops and do not hide. The 3 jewelry stores in north Vice City (open after Yasmani's Jewelry Jobs in Chapter 3) are close together; go in with body armor, sticky bombs and healing items. It can take about 30 seconds to pop after you leave the third shop, so give it a moment before hitting a fourth.",
+   "short": "Rob 3 shops back-to-back with your partner without losing your Wanted Level — keep the police chasing the whole time. The 3 jewelry stores in north Vice City make a clean run.",
    "steps": ["Call your partner in — only after Coffee Break can you switch between both characters.", "Rob a shop, then a second and a third, back to back.", "Keep the Wanted Level alive the whole time — do not let the stars fade.", "Wait about 30 seconds after the third shop for the pop.", "The 3 jewelry stores in north Vice City (after Chapter 3's Yasmani's Jewelry Jobs) make a clean run — rob a couple of items in each, and break the back-room safe with sticky bombs."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -813,6 +847,7 @@
    "count": 100,
    "counter": {"label": "vehicles discovered", "total": 100},
    "guide": "Discover 100 vehicles. Scanning a vehicle with the WAiNK app counts as discovering it, so scan traffic as you drive instead of only counting cars you steal or buy. Sweep varied districts — city streets, highways, the port, the countryside — because different areas carry different models. The 100% checklist needs 200 of the 277 base models, so keep scanning past 100.",
+   "short": "Discover 100 vehicles by scanning traffic with the WAiNK app as you drive — scanning counts, you do not need to drive them. Sweep varied districts for different models.",
    "steps": ["Scan vehicles with the WAiNK app as you drive.", "Cover varied districts so you meet different models — scanning is enough, you do not need to drive them.", "The trophy pops at 100 discovered; keep going to 200 for 100%."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -835,6 +870,7 @@
    "count": 5,
    "counter": {"label": "enemies in one Combat Focus", "total": 5},
    "guide": "Take down 5 enemies during one use of Combat Focus. Combat Focus is the slow-motion aim: press L3 and R3 while aiming. Fill your Focus first (eat, drink or wash up at home; Adrenaline makes it last longer). Gang operation thugs work well; cops, soldiers and civilians do not seem to count. Set it up rather than hoping for it — pick a group of gang enemies, such as the guards at an illegal operation. Use an assault rifle so each shot lands fast, and stretch the window until the fifth enemy drops.",
+   "short": "Take down 5 enemies in one use of Combat Focus (L3 + R3 while aiming). Gang operation thugs count; cops, soldiers and civilians do not seem to — fill your Focus first and use an assault rifle.",
    "steps": ["Find a group of enemies — Gang Operation thugs work well; cops, soldiers and civilians do not seem to count.", "Aim and press L3 + R3 to trigger Combat Focus.", "Down 5 enemies with an assault rifle before Focus ends; Adrenaline extends it.", "Focus has 4 levels (Touchpad > Jason & Lucia > Focus) — raise it with Shooting Range, golf, pool and fishing, and the trophy gets easier."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -856,6 +892,7 @@
    "stage": 3,
    "count": null,
    "guide": "Steal a large passenger plane from Vice City International Airport and take off with it. Only a jet docked at a boarding bridge counts — planes parked elsewhere on the airfield do not. The planes at gates E3 and E4 work. Board, get to the cockpit, back out toward the runway and take off. The trophy is delayed: fly about 1 km away from the airport and it pops. Save first, because the police come fast.",
+   "short": "Steal a large passenger plane docked at a boarding bridge at VCIA — gates E3 and E4 work — take off and fly about 1 km away; the trophy pops late.",
    "steps": ["Go upstairs, enter the cockpit, and drive the plane backward to the airstrip.", "At VCIA, take a large passenger plane docked at a boarding bridge (gates E3 and E4 work) — drive through the airfield fence and use the door by the stairs next to the boarding bridge.", "Back out to the runway, take off, and fly about 1 km from the airport."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -877,6 +914,7 @@
    "stage": 3,
    "count": null,
    "guide": "Get into a military tank — a Rhino. Tanks are parked at the south end of Mile Zero Air Station, on the island at the far southwest of the map. Both cited guides agree on the spot. Save first, get in, and drive and fire until it pops.",
+   "short": "Get into a Rhino tank at Mile Zero Air Station, on the island at the far southwest of the map, and drive and fire until it pops. Save first.",
    "steps": ["Drive through the gate — or take the stunt jump by the south-east entrance.", "Go to Mile Zero Air Station, far southwest island, south side.", "Get into a parked Rhino tank; drive and fire until the trophy pops.", "Mile Zero sits on Goose Key, at the bottom of the Keys — save first, then drive and fire."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -898,6 +936,7 @@
    "stage": 3,
    "count": null,
    "guide": "Rob a jewelry store without being detected. First get the Snap Gun: the Chapter 3 mission Yasmani's Jewelry Jobs gives it to you and opens jewelry store robberies. Go to a store's locked back door and use the Snap Gun on it — kicking the door in sets off the alarm. Inside the back room, find the note with the safe code, open the safe, and leave without being seen. Richardson Jewelry & Diamonds in Vice City is a good target. If someone spots you, reload rather than push on.",
+   "short": "Rob a jewelry store unseen: get the Snap Gun from Yasmani's Jewelry Jobs in Chapter 3, use it on the locked back door — never kick it in — then find the safe-code note, open the safe and leave.",
    "steps": ["Do Yasmani's Jewelry Jobs in Chapter 3 to get the Snap Gun.", "Use the Snap Gun on a jewelry store's locked back door — never kick it in.", "Find the safe-code note, open the safe, leave unseen.", "In the backroom, destroy the security footage and disable the alarm as well as looting the safe."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -920,6 +959,7 @@
    "count": 5,
    "counter": {"label": "bank vaults robbed", "total": 5},
    "guide": "Rob 5 bank vaults and escape. Vaults unlock through That's Where The Money Is, an optional mission near the end of Chapter 4: tail an armored security van to a large bank and get into the vault while the guard has it open. You cannot carry all the bags alone, so bring your partner. Each vault job gives you a 4-star Wanted Level straight away, so escaping one with your partner also earns Hot Together. Each vault pays up to $205,000, and Yasmani sells van tips for $10,000. Escape on a fast bike, then switch vehicles. The 100% checklist needs all eight vaults, so keep going past five.",
+   "short": "Rob 5 bank vaults and escape — bring your partner, because you cannot carry all the bags alone. Vaults unlock through That's Where The Money Is near the end of Chapter 4; the checklist wants all 8.",
    "steps": ["Do That's Where The Money Is near the end of Chapter 4.", "Bring your partner — you cannot carry all the bags alone.", "Tail the armored van, enter the vault, escape; repeat for 5 vaults (8 for 100%).", "After the mission, Yasmani sells security-van tips for $10,000 (once you've done his 2 Payday Loan jobs) — vans then show as purple icons."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -941,6 +981,7 @@
    "stage": 3,
    "count": null,
    "guide": "Rob an armored truck and escape — or rob a bank vault (see Maximum Withdrawal), which counts as long as you then escape the red heat zone or reach a Pay 'n' Spray. Before vaults open, box in a road armored truck, put a sticky bomb on its back doors, blow them open and get away. Like Hot Together, this only pops once you have left the red heat zone, not just the flashing search area, so keep moving until the Wanted Level is fully gone before you relax.",
+   "short": "Rob an armored truck and escape — or rob a bank vault, which also counts. It pops only once you are out of the red heat zone and the stars have fully cleared.",
    "steps": ["Rob a bank vault (counts, with an escape) or box in a road armored truck and sticky-bomb its back doors.", "Escape until you are out of the red heat zone and the stars clear."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -963,6 +1004,7 @@
    "count": 52,
    "counter": {"label": "areas explored", "total": 52},
    "guide": "Explore all 52 areas of Leonida. Clear the fog from the whole map of Leonida — the quickest way is by plane, flying over every dark patch. This is the map-clearing trophy: drive, fly and walk into every named area until the counter reads 52 of 52. Fold it into your other sweeps — WAiNK spots, vehicle scanning, meditation spots and card hunting all take you to the same corners of the map. The areas you visit during the story already count, so the endgame is just the corners the story never took you to.",
+   "short": "Explore all 52 areas of Leonida — clear the fog from the whole map, quickest by plane over every dark patch. Areas visited during the story already count.",
    "steps": ["Visit every named area of Leonida (52 in total).", "Sweep the map by plane — fly over every black-fog area until the whole map is visible.", "The trophy pops when the last area registers."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -986,6 +1028,7 @@
    "count": 9,
    "counter": {"label": "gangs hit", "total": 9},
    "guide": "Rob one Illegal Operation belonging to each of the 9 gangs. Illegal operations are the gang-run fronts scattered across Leonida — Kingpin Bowling is one, and the trophy wants one hit per gang, not every operation. They show as yellow map icons, and Progress > Gangs keeps count. The 100% checklist wants all 39 operations, so this pops along the way if you keep robbing them. Guards at an operation also make a good setup for Gunslinger's five kills in one Combat Focus.",
+   "short": "Rob one Illegal Operation belonging to each of the 9 gangs — they show as yellow map icons and Progress > Gangs keeps count. All 39 operations are needed for 100%, so this pops along the way.",
    "steps": ["Find Illegal Operations — yellow map icons appear as you near them; Progress > Gangs keeps count per gang.", "Rob one operation from each of the 9 gangs.", "Keep going to all 39 operations for the 100% checklist."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1008,6 +1051,7 @@
    "count": null,
    "disagree": true,
    "guide": "Go to the Ocean View Rooftop Bar on Ocean Beach, buy an Apple Martini and drink it standing next to the bar — PowerPyx has since confirmed the method. Outputlag still lists this among the five hidden trophies with no confirmed trigger, and GTABase still says the exact steps are not confirmed, but the bar, the drink and the spot are now published. The story reaches Ocean Beach in Chapter 4 and free roam continues after the credits, so treat this as a clean-up job. Nothing published flags it as missable — the only possibly missable trophy in the list is Positive Mental Attitude — so there is no clock on it.",
+   "short": "Buy an Apple Martini at the Ocean View Rooftop Bar on Ocean Beach and drink it standing next to the bar. PowerPyx has confirmed the method; two other guides still list the trigger as unconfirmed.",
    "steps": ["Reach Ocean Beach in Vice City (the story takes you there in Chapter 4; free roam works too).", "Go to the Ocean View Rooftop Bar and buy an Apple Martini.", "Drink it standing next to the bar; the trophy pops."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1030,6 +1074,7 @@
    "count": null,
    "disagree": true,
    "guide": "Steal the blue Banshee from the showroom in south Vice City — only after you have the Key Cloner from the Chapter 3 mission Clonin' Keys, Makin' Gs — hack in, then drive it straight through the window. PowerPyx has since confirmed the method, and the pop can be delayed, so give it a moment. It is a nod to the classic showroom escape from the older games. Outputlag still lists this among the five hidden trophies with no confirmed trigger, and GTABase still says the exact steps are not confirmed, but the car, the showroom and the key are now published. It is a repeatable stunt, not a story moment: free roam continues after the credits and no guide flags it as missable. Keep a manual save before you start breaking glass — expect a wanted level — and reload if an attempt gets expensive.",
+   "short": "Steal the blue Banshee from the showroom in south Vice City and drive it through the window — you need the Key Cloner from Chapter 3 first. PowerPyx has confirmed the method; the pop can be delayed.",
    "steps": ["Get the Key Cloner from the Chapter 3 mission Clonin' Keys, Makin' Gs.", "Steal the blue Banshee from the showroom in south Vice City.", "Drive it straight through the window; the pop can be delayed, so wait a moment.", "Keep a manual save first — with no mission replay, a backup save protects the attempt."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1052,6 +1097,7 @@
    "stage": 2,
    "count": null,
    "guide": "Rob Kingpin Bowling — the Kolt & Associates bowling alley, an illegal operation you visit in Chapter 2. Bring Sticky Bombs. Take all three key valuables: the luxury watch in the southeast office, the Gutterball Moreland 850 shotgun on the northeast table, and the safe in the northeast hallway, which you blow open with a Sticky Bomb. The trophy pops once you lose the police. You do not need all three in one visit, but the robbery takes a long time to come back.",
+   "short": "Rob Kingpin Bowling in Chapter 2 and take all three key valuables — the luxury watch, the Gutterball Moreland 850 shotgun and the safe, blown open with a Sticky Bomb. The trophy pops once you lose the police.",
    "steps": ["In Chapter 2, go to Kingpin Bowling with Sticky Bombs.", "Take the luxury watch (southeast office), the shotgun (northeast table) and the safe's contents (northeast hallway, Sticky Bomb).", "The trophy pops once you lose the police — escape after the third valuable; you do not need all three in one visit."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1073,6 +1119,7 @@
    "stage": 4,
    "count": null,
    "guide": "Get Jason and Lucia both to maximum Strength. Buy a gym membership and train with your partner there — the partner trains alongside you, so both characters build Strength together. Work out at fitness clubs (Map > Activities); check Jason and Lucia > Strength in the pause menu. After the story you can also train at home. This is a slow stat grind rather than a single event: keep training sessions regular between other jobs until both characters max out, and the trophy pops.",
+   "short": "Get Jason and Lucia both to maximum Strength: buy a gym membership and train with your partner — the partner trains alongside, so both build Strength together.",
    "steps": ["Buy a gym membership.", "Train with your partner at the gym — both build Strength together.", "Keep training until both Jason and Lucia reach maximum Strength.", "Check Strength under Touchpad > Jason & Lucia > scroll to 'Strength' (heart icon)."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1095,6 +1142,7 @@
    "count": 500,
    "counter": {"label": "profile actions", "total": 500},
    "guide": "Make 500 actions that change your Criminal Profile. Robberies and fights feed it, so this fills up without a separate grind — every illegal operation you rob, every fight you win and every shady choice you make adds to the count. Turn on Criminal Profile notifications in Settings > UI to watch the count. Do not push towards the Irredeemable profile: it is permanent. Play the rest of the list normally and check the PSN counter; if it is short at the end, a few more robberies and fights will close the gap.",
+   "short": "Make 500 actions that change your Criminal Profile — robberies and fights feed it, so it fills in as you play. Turn on Criminal Profile notifications in Settings > UI to watch the count, and stop short of the permanent Irredeemable profile.",
    "steps": ["Play the list normally — every robbery and enemy encounter feeds the 500-action count; most players get it without trying.", "Check the PSN progress counter (500 total).", "If it is short when the rest is done, farm it by running over civilians and cops — but stop before Irredeemable, which is permanent.", "Turn on Criminal Profile notifications (Settings > UI > HUD Notifications) — a demon face shows whenever an action counts."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1117,6 +1165,7 @@
    "count": null,
    "triggerUnknown": true,
    "guide": "Succeed at something on the second attempt — that is GTABase's reading of 'Second time's the charm', and it is still only a reading. PowerPyx lists this trophy as currently unknown as well, but adds a belief of its own: it is related to the Payday Loans store from the Prologue. Outputlag likewise keeps it among the five hidden trophies with no confirmed trigger. Put the two together and the practical plan writes itself: whenever a robbery, race or challenge goes wrong, run it straight back and succeed on the retry — and because Payday Loans stores stay on the map as robbery targets, make a second visit there count. Do not start a new game over this: PowerPyx's roadmap counts only one potentially missable trophy in the whole list (Positive Mental Attitude), and free roam continues after the story, so a fail-then-succeed sequence during clean-up should be within reach. Keep your chapter-start manual saves as usual and check the trophy after retries.",
+   "short": "No confirmed trigger yet. The leading reading is succeeding at something on the second attempt — so retry failures straight away, and make a second visit to a Payday Loans store count.",
    "steps": ["Play normally, but retry failures immediately instead of moving on — the description suggests succeeding on a second attempt.", "Rob a Payday Loans store; if the first attempt goes wrong, succeed on the second (PowerPyx's suspected link).", "Check the trophy after each fail-then-succeed sequence — the Payday Loans store is the leading theory, but the trigger is still unproven.", "Still unconfirmed everywhere — do not restart the game for it."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1139,6 +1188,7 @@
    "count": null,
    "disagree": true,
    "guide": "This is the UFO easter egg, and PowerPyx has since confirmed the method. At night, after 2AM, go alone to the road northwest of the Starlet Motel in Kelly County and watch for a blinking car; follow the path it marks into the woods, where a UFO drops an abducted woman. Talk to her, offer to help, then go back to her car. Outputlag still lists this among the five hidden trophies with no confirmed trigger, and GTABase still expects only a strange event or Easter egg somewhere in Leonida — but the place, the time and the sequence are now published. Free roam continues after the credits and nothing flags this trophy as missable, so it belongs to the clean-up stage.",
+   "short": "The UFO easter egg, confirmed by PowerPyx: after 2AM, go alone to the road northwest of the Starlet Motel in Kelly County, follow the blinking car's path into the woods, and help the woman the UFO drops.",
    "steps": ["At night after 2AM, go alone to the road northwest of the Starlet Motel in Kelly County.", "Watch for the blinking car and follow the path into the woods.", "When the UFO drops the abducted woman, talk to her and offer to help.", "Go back to her car to finish the encounter."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1161,6 +1211,7 @@
    "count": null,
    "triggerUnknown": true,
    "guide": "Knock someone over with a melee attack from a moving vehicle — a drive-by, but with a fist or a boot instead of a gun, bowling-pin style. The description is the plainest of the two trophies whose trigger is still unproven, yet it is still unproven: PowerPyx lists Ten Pin as currently unknown and believes it comes from kicking pedestrians while riding a motorcycle; GTABase reads it as knocking people down with a melee attack from a vehicle. Follow PowerPyx's lead first: get on a motorcycle, match speed alongside a pedestrian and land the melee kick so they go down. If pedestrians are scarce, try it during a gang operation or a chase rather than on random pedestrians. Keep a manual save before experimenting — a botched attempt usually means a wanted level — and do it in free roam, where a failed try costs nothing and can be repeated straight away.",
+   "short": "Trigger still unproven. The best lead is PowerPyx's: ride a motorcycle alongside pedestrians at matching speed and land melee kicks so they go down — GTABase reads it as a melee attack from a vehicle.",
    "steps": ["Keep a manual save, then ride a motorcycle or push bike into a crowded area — Vice City or Ocean Beach.", "Ride alongside pedestrians at matching speed and land melee kicks — 10 within 60 seconds.", "No pop? Try a car melee drive-by — the description points to knocking people down with a melee attack from a vehicle.", "Unconfirmed everywhere — PowerPyx's motorcycle-kick theory is the best lead, not a promise."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1183,6 +1234,7 @@
    "count": 250000,
    "counter": {"label": "laundered", "total": 250000, "step": 5000, "money": true},
    "guide": "Earn $250,000 by laundering Marked Bills through your contacts. The Dye Pack Jammer comes from Credit Check (Meet Raul's Crew) in Chapter 3. Marked bills come from bank and payday loan jobs, and you clean them by selling them to your contacts. Yasmani in Vice City pays the most for marked bills. The $250,000 total is cumulative, so every vault and payday job adds to it — it builds alongside Maximum Withdrawal and the other robbery trophies. Keep laundering after each job instead of letting bills pile up.",
+   "short": "Launder $250,000 of Marked Bills through your contacts — bills come from bank and payday loan jobs, and Yasmani in Vice City pays the most. You need the Dye Pack Jammer from Chapter 3's Credit Check first.",
    "steps": ["Do bank and payday loan jobs to earn Marked Bills.", "Sell the bills to your contacts to launder them — Yasmani in Vice City pays the most.", "Repeat until $250,000 has been laundered in total.", "You need the Dye Pack Jammer first — it unlocks from Chapter 3's Credit Check (Meet Raul's Crew)."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1205,6 +1257,7 @@
    "count": 100000,
    "counter": {"label": "spent in shops", "total": 100000, "step": 5000, "money": true},
    "guide": "Spend $100,000 across all shops. The total is cumulative across every kind of shop — clothes, weapons, food, car parts, anything with a price tag. Guns, car mods and tattoos use it up fastest. It builds on its own while you play, especially once you are buying garage properties and kitting out cars. If it is short near the end, buy the most expensive things you still want rather than grinding cash for its own sake.",
+   "short": "Spend $100,000 across all shops — the total is cumulative, and guns, car mods and tattoos burn through it fastest. It builds on its own as you play; top it up with big purchases if it is short.",
    "steps": ["Spend $100,000 across all types of shops — guns, car mods and tattoos are the fastest, as the most expensive.", "The $100,000 total is cumulative across all shops.", "Top it up with big purchases if it is short — guns, car mods and tattoos are the fastest way to close the gap."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1227,6 +1280,7 @@
    "count": 8,
    "counter": {"label": "garages bought", "total": 8},
    "guide": "Buy all 8 garage properties. They are bought through the Vice City Real Estate app, which unlocks after the Chapter 2 mission Daily Driver. Together they cost about $160,000 — and garages the story gives you do not count, so you need all eight bought ones. Buy them as your money allows, and remember each registered Scooter Bros vehicle needs a free garage space, so buy garages before you finish On the Spot.",
+   "short": "Buy all 8 garage properties through the Vice City Real Estate app — about $160,000 in total, and story-given garages do not count. The app unlocks after the Chapter 2 mission Daily Driver.",
    "steps": ["Finish the Chapter 2 mission Daily Driver to unlock the Real Estate app.", "Buy the 8 garages (about $160,000 in total).", "Story-given garages do not count — all 8 must be bought."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},
@@ -1249,6 +1303,7 @@
    "count": 10,
    "counter": {"label": "vehicles registered", "total": 10},
    "guide": "Register 10 vehicles to the Scooter Bros app. The Chapter 2 mission Moses opens the app: take a stolen car to Moses, choose Respray, then Register. At first Moses only takes cars without trackers; from Chapter 3 you can also register cars with a standard tracker at Pay 'n' Spray. Each car needs a free garage space, so buy garages first (see Little Boxes) — ten registrations, not ten keepers. Each registration costs money, so use cheap cars and bikes.",
+   "short": "Register 10 vehicles to the Scooter Bros app: take a stolen car to Moses, choose Respray, then Register. Each car needs a free garage space, so buy garages first and use cheap cars and bikes.",
    "steps": ["Do the Chapter 2 mission Moses to open the Scooter Bros app.", "Take a stolen car to Moses, choose Respray, then Register (or use Pay 'n' Spray from Chapter 3).", "Keep a free garage space per car; register 10 vehicles.", "Start with cheap low-end cars and bikes — registering costs money, and Moses only takes tracker-free cars at first (Standard Trackers from Chapter 3)."],
    "sources": [
     {"ref": "S1", "note": "official name, description, grade"},

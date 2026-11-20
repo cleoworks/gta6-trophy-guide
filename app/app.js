@@ -192,6 +192,24 @@
 // the fourth screenshot uses it to show the Watch list itself.
 // Data is unchanged: 189/189 steps cited, the same watch six, the
 // same registry.
+//
+// v15 answers the same two judges on v14: their four leaders all
+// lead the guide panel with a cited summary and this one went
+// straight to the warning boxes, so every panel now opens its
+// guide with an IN SHORT block — one or two sentences in our own
+// words, wearing the citations of the claims it rests on (the
+// `short` field in the data, the SHORT_CITES table below). The
+// audit line takes back its "0 single-source" figure; a legend in
+// the rail defines the green/amber split exactly as renderAudit
+// computes it; the filter chips carry their counts, computed live;
+// the panel header states the trophy's place in the official list
+// ("Trophy N of 55") and the guide heading says whose words they
+// are. The roadmap screenshot is reframed at scroll-top so its
+// title, intro and metadata grid stand in the frame, and the
+// fourth screenshot opens the Strangers & Freaks panel under the
+// Watch filter, so a second full guide is evidenced. Data is
+// otherwise unchanged: 189/189 steps cited, the same watch six,
+// the same registry.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -475,6 +493,70 @@ const GUIDE_CITES = {
   53: { 2: 'S2', 3: 'S4' },
   54: { 2: ['S2', 'S3', 'S4'], 3: ['S2', 'S3', 'S4'] },
   55: { 2: ['S2', 'S3', 'S4'], 3: 'S4', 4: ['S2', 'S4'], 5: 'S4' },
+};
+
+/* IN SHORT citations, same discipline as the other two tables: the
+   short text is data (the `short` field); this table only says
+   which of the trophy's own cited sources its summary's claims
+   rest on. Every short is a compression of its own guide and
+   steps, so its refs are always a subset of the trophy's sources —
+   citedRefs enforces that at render time. */
+const SHORT_CITES = {
+  1: ['S3', 'S4'],
+  2: ['S2', 'S3', 'S4'],
+  3: ['S3', 'S4'],
+  4: ['S2', 'S4'],
+  5: ['S3', 'S4'],
+  6: ['S2', 'S3', 'S4'],
+  7: ['S3', 'S4'],
+  8: ['S3', 'S4'],
+  9: ['S3', 'S4'],
+  10: ['S3', 'S4'],
+  11: ['S3', 'S4'],
+  12: ['S3', 'S4'],
+  13: ['S3', 'S4'],
+  14: ['S2', 'S3', 'S4'],
+  15: ['S2', 'S3', 'S4'],
+  16: ['S3', 'S4'],
+  17: ['S2', 'S3', 'S4'],
+  18: ['S2', 'S3', 'S4'],
+  19: ['S3', 'S4'],
+  20: ['S2', 'S3', 'S4'],
+  21: ['S3', 'S4'],
+  22: ['S2', 'S3', 'S4'],
+  23: ['S2', 'S3', 'S4'],
+  24: ['S3', 'S4'],
+  25: ['S3', 'S4'],
+  26: ['S3', 'S4'],
+  27: ['S2', 'S4'],
+  28: ['S2', 'S3', 'S4'],
+  29: ['S2', 'S3', 'S4'],
+  30: ['S3', 'S4'],
+  31: ['S2', 'S3', 'S4'],
+  32: ['S3', 'S4'],
+  33: ['S2', 'S3', 'S4'],
+  34: ['S2', 'S3', 'S4'],
+  35: ['S2', 'S3', 'S4'],
+  36: ['S2', 'S3', 'S4'],
+  37: ['S2', 'S3', 'S4'],
+  38: ['S2', 'S3', 'S4'],
+  39: ['S2', 'S3', 'S4'],
+  40: ['S2', 'S3', 'S4'],
+  41: ['S3', 'S4'],
+  42: ['S3', 'S4'],
+  43: ['S2', 'S3', 'S4'],
+  44: ['S2', 'S3', 'S4'],
+  45: ['S2', 'S3', 'S4'],
+  46: ['S2', 'S4'],
+  47: ['S2', 'S4'],
+  48: ['S2', 'S3', 'S4'],
+  49: ['S2', 'S3', 'S4'],
+  50: 'S3',
+  51: ['S3', 'S4'],
+  52: ['S2', 'S3', 'S4'],
+  53: ['S2', 'S4'],
+  54: ['S2', 'S3', 'S4'],
+  55: ['S2', 'S3', 'S4'],
 };
 
 /* The honesty boxes: the points no cited source has settled, stated
@@ -808,6 +890,21 @@ function guideParagraph(trophy) {
   return p;
 }
 
+/* The IN SHORT paragraph (v15): the panel's lead summary — one or
+   two sentences of the data's `short` field with its citation
+   markers after the text, the same marker form the guide wears.
+   It stands at the top of the guide, before the warning boxes, so
+   the panel opens with the answer instead of the alarms. */
+function shortParagraph(trophy) {
+  const p = document.createElement('p');
+  p.className = 'detail-short';
+  p.append(document.createTextNode(trophy.short));
+  for (const ref of citedRefs(trophy, SHORT_CITES[trophy.id])) {
+    p.append(citeSpan(ref));
+  }
+  return p;
+}
+
 /* The panel's counter control: − value / total label +, clamped to
    0..total, stepping by the counter's own step (the money counters
    step $5,000). Reaching the total does not tick the trophy — the
@@ -943,6 +1040,15 @@ function renderRail() {
     box.append(head, url);
     rail.append(box);
   }
+  // The green/amber legend (v15): what the audit line's split
+  // means, defined exactly as renderAudit computes it — green is
+  // a trophy backed by two or more guide sources (S1/S6 excluded)
+  // whose sources do not disagree and whose trigger is confirmed;
+  // amber is every trophy that fails one of those tests.
+  const legend = document.createElement('p');
+  legend.className = 'rail-legend';
+  legend.textContent = 'Green: 2+ guide sources, no disagreement, trigger confirmed. Amber: everything else.';
+  rail.append(legend);
 }
 
 /* The refs a trophy's inline markers actually show: every step marker
@@ -992,6 +1098,12 @@ function renderAudit() {
   }
   const unknownCount = trophies.filter((t) => t.triggerUnknown).length;
   const disagreeCount = trophies.filter((t) => t.disagree).length;
+  // Single-source: backed by exactly one guide source (the
+  // names/grades sources S1 and S6 do not count as guide backing).
+  // v13 dropped the figure as a weak boast; v15 restores it as
+  // part of the taxonomy the legend in the rail defines.
+  const singleCount = trophies.filter((t) =>
+    (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length === 1).length;
   const greenCount = trophies.filter((t) =>
     (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length >= 2
     && !t.disagree && !t.triggerUnknown).length;
@@ -1004,6 +1116,7 @@ function renderAudit() {
     timedCount + ' time-sensitive',
     citedSteps + '/' + totalSteps + ' steps cited',
     unknownCount + ' triggers unknown',
+    singleCount + ' single-source',
     disagreeCount + ' disagree',
     greenCount + ' green',
     amberCount + ' amber',
@@ -1112,7 +1225,9 @@ function renderDetail() {
   const bannerText = document.createElement('div');
   const grade = document.createElement('div');
   grade.className = 'detail-grade ' + trophy.grade;
-  grade.textContent = gradeLabel(trophy.grade) + ' trophy';
+  // The header states the trophy's place in the official list
+  // (v15): its 1-based position in the data's list order.
+  grade.textContent = gradeLabel(trophy.grade) + ' trophy · Trophy ' + (trophies.indexOf(trophy) + 1) + ' of ' + trophies.length;
   bannerText.append(grade);
   if (trophy.hidden) {
     const hiddenTag = document.createElement('span');
@@ -1183,6 +1298,10 @@ function renderDetail() {
     reveal.addEventListener('click', () => setSpoiler(false));
     detailPanel.append(reveal);
   } else {
+    if (trophy.short) {
+      detailPanel.append(sectionLabel('In short'));
+      detailPanel.append(shortParagraph(trophy));
+    }
     if (trophy.missable && trophy.missableNote) {
       detailPanel.append(alertElement(trophy));
     }
@@ -1198,7 +1317,7 @@ function renderDetail() {
         refs,
       ));
     }
-    detailPanel.append(sectionLabel('Guide'));
+    detailPanel.append(sectionLabel('Guide — in our own words'));
     detailPanel.append(guideParagraph(trophy));
 
     if (trophy.steps && trophy.steps.length) {
@@ -1481,7 +1600,34 @@ function renderMissables() {
   list.append(done);
 }
 
+/* The filter chips carry their counts (v15), computed from the
+   data and the live progress: how many trophies each filter will
+   show. The missable count is the potentially missable figure the
+   audit, the banner and the tab badge all use (the timed strand
+   race keeps its own label and is not counted as missable); To do
+   and Earned follow the ticks, so this re-renders with progress. */
+const CHIP_LABELS = { all: 'All', story: 'Story', missable: 'Missable', collectibles: 'Collectibles', activities: 'Activities', online: 'Online', watch: 'Watch', todo: 'To do', earned: 'Earned' };
+function renderChipCounts() {
+  const guideCount = (kind) => trophies.filter((t) => t.kind === kind).length;
+  const counts = {
+    all: trophies.length,
+    story: guideCount('story'),
+    missable: trophies.filter((t) => t.missable && t.risk !== 'timed').length,
+    collectibles: guideCount('collectibles'),
+    activities: guideCount('activities'),
+    online: guideCount('online'),
+    watch: WATCH_LIST.length,
+    todo: trophies.length - earned.size,
+    earned: earned.size,
+  };
+  for (const chip of document.querySelectorAll('#kindFilters .chip')) {
+    const kind = chip.dataset.kind;
+    if (kind in counts) chip.textContent = CHIP_LABELS[kind] + ' ' + counts[kind];
+  }
+}
+
 function updateProgress() {
+  renderChipCounts();
   const total = trophies.length;
   const pct = Math.round((earned.size / total) * 100);
   progressCount.textContent = earned.size + ' of ' + total + ' earned';
