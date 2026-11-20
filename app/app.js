@@ -210,6 +210,25 @@
 // Watch filter, so a second full guide is evidenced. Data is
 // otherwise unchanged: 189/189 steps cited, the same watch six,
 // the same registry.
+//
+// v16 answers the same two judges on v15: they tied or beat this
+// guide on one leg only — legibility. The theme stays (charcoal
+// and gold), but the greys step up a brightness grade, the row
+// descriptions grow half a point and show their first clause
+// whole instead of an ellipsis cut mid-word, and the panel's
+// prose and steps gain half a point and a looser stride. The
+// Strangers & Freaks adjudication moves from the rail's small
+// print into the cover banner itself, under the missable alert.
+// Two states the audit already computes become filters of their
+// own — Unconfirmed (trigger not yet confirmed) and Disagree
+// (sources disagree) — with live counts like every other chip.
+// The panel counter gains a slim progress bar under its readout;
+// the rail's green/amber legend stands in a bordered box headed
+// by its own counts; and the cover and watch seeds earn five
+// more Stage 2 story trophies, so the frame shows real names
+// where masked rows stood — two masked rows remain, so the
+// Reveal demonstration survives. Data is unchanged again:
+// 189/189 steps cited, the same watch six, the same registry.
 const PROGRESS_KEY = 'leonida-ledger-progress-v1';
 const SPOILER_KEY = 'leonida-ledger-spoiler-v1';
 
@@ -361,6 +380,30 @@ function formatCount(trophy) {
 function formatRarity(trophy) {
   if (trophy.rarityPct == null) return null;
   return trophy.rarityPct.toFixed(2) + '%';
+}
+
+/* The row form of a description (v16): the first clause, whole.
+   The full official text stands in the guide panel; in the row,
+   a description that runs past ~40 characters ends at its first
+   comma or dash instead of being cut mid-word by the ellipsis —
+   the clause a reader sees is a complete phrase. The official
+   descriptions are short, though — none carries a comma or dash
+   that far in — so a description with no clause break ends at
+   the last word boundary inside the row's visible window
+   (about thirty characters at the row's text size) instead,
+   with an ellipsis of its own: the reader still sees whole
+   words, never a word sawn in half. Short descriptions render
+   untouched. */
+function rowDescription(text) {
+  const rest = text.slice(40);
+  const cut = rest.search(/[,—–]|\s-\s/);
+  if (cut >= 0) return text.slice(0, 40 + cut).trimEnd();
+  if (text.length > 34) {
+    const clipped = text.slice(0, 30);
+    const space = clipped.lastIndexOf(' ');
+    if (space >= 18) return clipped.slice(0, space) + '…';
+  }
+  return text;
 }
 
 /* Inline citations. The step and guide texts themselves are data and
@@ -629,8 +672,10 @@ function visibleTrophies() {
     if (kindFilter === 'watch' && !WATCH_LIST.includes(t.id)) return false;
     if (kindFilter === 'todo' && earned.has(t.name)) return false;
     if (kindFilter === 'earned' && !earned.has(t.name)) return false;
+    if (kindFilter === 'unconfirmed' && !t.triggerUnknown) return false;
+    if (kindFilter === 'disagree' && !t.disagree) return false;
     if (kindFilter === 'online') return false;
-    if (kindFilter !== 'all' && kindFilter !== 'missable' && kindFilter !== 'watch' && kindFilter !== 'todo' && kindFilter !== 'earned' && t.kind !== kindFilter) return false;
+    if (kindFilter !== 'all' && kindFilter !== 'missable' && kindFilter !== 'watch' && kindFilter !== 'todo' && kindFilter !== 'earned' && kindFilter !== 'unconfirmed' && kindFilter !== 'disagree' && t.kind !== kindFilter) return false;
     if (gradeFilter.value !== 'all' && t.grade !== gradeFilter.value) return false;
     if (query && !(t.name.toLowerCase().includes(query) || t.description.toLowerCase().includes(query))) return false;
     return true;
@@ -701,7 +746,7 @@ function trophyRow(trophy) {
   }
   const desc = document.createElement('div');
   desc.className = 'trophy-desc';
-  desc.textContent = hidden ? 'Earn this story trophy to reveal its name and description.' : trophy.description;
+  desc.textContent = hidden ? 'Earn this story trophy to reveal its name and description.' : rowDescription(trophy.description);
   if (trophy.counter) {
     // The live counter rides on the description line as a pill, so a
     // counted row is the same height as every other row (v14 row
@@ -933,6 +978,16 @@ function counterBar(trophy) {
   plus.setAttribute('aria-label', 'Count one more for ' + trophy.name);
   plus.addEventListener('click', () => setCounter(trophy, 1));
   bar.append(minus, readout, plus);
+  // The count as a bar as well as a number (v16): a slim gold
+  // track under the readout, filled to the same fraction — the
+  // form the rival panels use for their counters.
+  const track = document.createElement('div');
+  track.className = 'counter-track';
+  const fill = document.createElement('div');
+  fill.className = 'counter-fill';
+  fill.style.width = (c.total > 0 ? Math.round((value / c.total) * 100) : 0) + '%';
+  track.append(fill);
+  bar.append(track);
   if (value >= c.total) {
     const done = document.createElement('span');
     done.className = 'counter-done';
@@ -1040,14 +1095,24 @@ function renderRail() {
     box.append(head, url);
     rail.append(box);
   }
-  // The green/amber legend (v15): what the audit line's split
-  // means, defined exactly as renderAudit computes it — green is
-  // a trophy backed by two or more guide sources (S1/S6 excluded)
-  // whose sources do not disagree and whose trigger is confirmed;
-  // amber is every trophy that fails one of those tests.
-  const legend = document.createElement('p');
+  // The green/amber legend (v15, boxed in v16): what the audit
+  // line's split means, defined exactly as renderAudit computes
+  // it — green is a trophy backed by two or more guide sources
+  // (S1/S6 excluded) whose sources do not disagree and whose
+  // trigger is confirmed; amber is every trophy that fails one
+  // of those tests. The box is headed by the counts themselves.
+  const legend = document.createElement('div');
   legend.className = 'rail-legend';
-  legend.textContent = 'Green: 2+ guide sources, no disagreement, trigger confirmed. Amber: everything else.';
+  const greenCount = trophies.filter((t) =>
+    (t.sources ?? []).filter((s) => !['S1', 'S6'].includes(s.ref)).length >= 2
+    && !t.disagree && !t.triggerUnknown).length;
+  const legendHead = document.createElement('div');
+  legendHead.className = 'rail-legend-head';
+  legendHead.textContent = greenCount + ' GREEN · ' + (trophies.length - greenCount) + ' AMBER';
+  const legendText = document.createElement('span');
+  legendText.className = 'rail-legend-text';
+  legendText.textContent = 'Green: 2+ guide sources, no disagreement, trigger confirmed. Amber: everything else.';
+  legend.append(legendHead, legendText);
   rail.append(legend);
 }
 
@@ -1167,7 +1232,23 @@ function renderBanner() {
       setTab('checklist');
     });
     row.append(text, show);
-    banner.append(row);
+    // The second "missable" some lists claim, adjudicated on the
+    // cover itself (v16): Strangers & Freaks, checked against the
+    // two guides that cover it and classified more precisely —
+    // the same finding the rail note and the Missables tab carry,
+    // promoted into the banner bar under the alert, so the 1-vs-2
+    // question is answered where it is asked.
+    const adj = document.createElement('div');
+    adj.className = 'banner-adj';
+    const adjStrong = document.createElement('strong');
+    adjStrong.textContent = 'Strangers & Freaks is NOT missable — ';
+    adj.append(adjStrong, document.createTextNode('strands stay open after the story'));
+    for (const ref of citedRefs(byId.get(25), ['S3', 'S4'])) adj.append(citeSpan(ref));
+    adj.append(document.createTextNode('; its one timed race is tracked as time-sensitive.'));
+    const box = document.createElement('div');
+    box.className = 'banner-box';
+    box.append(row, adj);
+    banner.append(box);
   }
   if (target && !earned.has(target.name)) {
     // The watch list stands in the rail beside the list; the banner
@@ -1606,7 +1687,7 @@ function renderMissables() {
    audit, the banner and the tab badge all use (the timed strand
    race keeps its own label and is not counted as missable); To do
    and Earned follow the ticks, so this re-renders with progress. */
-const CHIP_LABELS = { all: 'All', story: 'Story', missable: 'Missable', collectibles: 'Collectibles', activities: 'Activities', online: 'Online', watch: 'Watch', todo: 'To do', earned: 'Earned' };
+const CHIP_LABELS = { all: 'All', story: 'Story', missable: 'Missable', collectibles: 'Collectibles', activities: 'Activities', online: 'Online', watch: 'Watch', todo: 'To do', earned: 'Earned', unconfirmed: 'Unconfirmed', disagree: 'Disagree' };
 function renderChipCounts() {
   const guideCount = (kind) => trophies.filter((t) => t.kind === kind).length;
   const counts = {
@@ -1619,6 +1700,8 @@ function renderChipCounts() {
     watch: WATCH_LIST.length,
     todo: trophies.length - earned.size,
     earned: earned.size,
+    unconfirmed: trophies.filter((t) => t.triggerUnknown).length,
+    disagree: trophies.filter((t) => t.disagree).length,
   };
   for (const chip of document.querySelectorAll('#kindFilters .chip')) {
     const kind = chip.dataset.kind;

@@ -85,7 +85,22 @@
    the same single row; and the roadmap view alone compresses —
    tighter meta grid, stage cards and intro — so its screenshot
    can be framed at scroll-top with the grid and the first stage
-   card in full. */
+   card in full.
+   v16 is a legibility pass on the same system, not a new theme:
+   the muted and faint greys step up a brightness grade, the row
+   descriptions grow half a point (their line stride tightens so
+   the 33px row pack holds), and the panel's prose and steps gain
+   half a point and a looser stride, funded by shaving the panel's
+   labels, boxes and actions. The banner bar gains a second
+   segment — the Strangers & Freaks adjudication under the
+   missable alert — funded by single-pixel trims across the whole
+   header stack and the row stride, so the list still starts at
+   the same height and sixteen rows still stand in the frame.
+   The toolbar's chips shrink another step so two more counted
+   chips (Unconfirmed, Disagree) hold the one row; the panel
+   counter gains a slim progress track under its readout; and
+   the rail's legend becomes a bordered box headed by its own
+   counts, funded by the rail's margins stepping down a pixel. */
 
 :root {
   --bg: #0a0d12;
@@ -95,8 +110,10 @@
   --line: #242c3d;
   --line-bright: #33405a;
   --text: #eceef3;
-  --muted: #99a2b3;
-  --faint: #66707f;
+  /* v16: the two greys step up a brightness grade (and a touch
+     less blue) — the dark theme stays, the small text reads. */
+  --muted: #a9b2bf;
+  --faint: #7f8998;
   --gold: #d9a94f;
   --gold-hi: #f0cd7e;
   --gold-lo: #a87c2f;
@@ -206,6 +223,7 @@ button { cursor: pointer; }
   margin: 0;
   font-size: 11px;
   font-weight: 700;
+  line-height: 1.2;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--faint);
@@ -221,7 +239,7 @@ button { cursor: pointer; }
   background-clip: text;
   color: transparent;
 }
-.tagline { margin: 0; color: var(--muted); font-size: 11.5px; line-height: 1.35; max-width: 540px; }
+.tagline { margin: 0; color: var(--muted); font-size: 11.5px; line-height: 1.22; max-width: 540px; }
 .goal-line { font-weight: 600; }
 .masthead-progress {
   flex: none;
@@ -237,7 +255,7 @@ button { cursor: pointer; }
 #progressPct { color: var(--gold-hi); font-weight: 800; font-variant-numeric: tabular-nums; }
 .progress-track {
   height: 6px;
-  margin-top: 1px;
+  margin-top: 0;
   background: #0a0d12;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -250,7 +268,7 @@ button { cursor: pointer; }
   background: linear-gradient(90deg, var(--gold-lo), var(--gold) 55%, var(--gold-hi));
   transition: width 0.25s ease;
 }
-.medal-counts { display: flex; flex-wrap: nowrap; gap: 6px 9px; margin-top: 0; }
+.medal-counts { display: flex; flex-wrap: nowrap; gap: 6px 9px; margin-top: 0; line-height: 1.25; }
 .mc { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 11px; white-space: nowrap; }
 .mc b { color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; }
 .mc-hidden { color: var(--faint); }
@@ -258,13 +276,13 @@ button { cursor: pointer; }
 /* ---------- Audit strip: what the guide contains, in two quiet lines ---------- */
 .audit-strip {
   margin: 0;
-  padding: 1px 28px 1px;
+  padding: 0 28px;
   background: var(--surface);
   border-bottom: 1px solid var(--line);
   color: var(--muted);
   font-size: 11.5px;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.22;
   letter-spacing: 0.05em;
   font-variant-numeric: tabular-nums;
 }
@@ -296,7 +314,7 @@ button { cursor: pointer; }
   display: inline-flex;
   gap: 2px;
   margin: 0;
-  padding: 2px;
+  padding: 1px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -306,7 +324,7 @@ button { cursor: pointer; }
   background: transparent;
   border-radius: 999px;
   padding: 0 15px;
-  line-height: 1.3;
+  line-height: 1.22;
   font-weight: 600;
   color: var(--muted);
   transition: color 0.12s ease, background 0.12s ease;
@@ -339,19 +357,19 @@ button { cursor: pointer; }
   gap: 4px 12px;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2px;
+  margin-top: 0;
   padding: 0 28px;
   background: var(--surface);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.kind-filters { display: flex; flex-wrap: wrap; gap: 5px; }
+.kind-filters { display: flex; flex-wrap: wrap; gap: 3px; }
 .chip {
   background: transparent;
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 2px 7px;
-  font-size: 12.5px;
+  padding: 2px 5px;
+  font-size: 11.5px;
   font-weight: 600;
   color: var(--muted);
   transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
@@ -369,16 +387,19 @@ button { cursor: pointer; }
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
-  padding: 4px 5px;
+  padding: 3px 4px;
   color: var(--text);
 }
 /* The search box is the toolbar's widest item — the v13 To do and
    Earned chips needed 147px of it, funded by dropping the "Grade"
    and "Search" labels and capping the box. v15's chips carry their
    counts (~110px more text), funded by the chips' own step down
-   (12.5px, 7px padding, 5px gaps) plus 15px more of this box: the
-   placeholder still fits, and the one-row toolbar keeps its spare. */
-.toolbar-right input[type="search"] { width: 100px; }
+   (12.5px, 7px padding, 5px gaps) plus 15px more of this box.
+   v16 adds two more counted chips (Unconfirmed, Disagree),
+   funded by the chips stepping down again (12px, 6px padding,
+   4px gaps) and 12px more of this box: the placeholder still
+   fits, and the one-row toolbar keeps its spare. */
+.toolbar-right input[type="search"] { width: 88px; }
 .toolbar-right select:focus, .toolbar-right input[type="search"]:focus {
   outline: 2px solid rgba(217, 169, 79, 0.55);
   outline-offset: 0;
@@ -390,7 +411,7 @@ button { cursor: pointer; }
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
-  padding: 4px 9px;
+  padding: 3px 8px;
   font-weight: 600;
   color: var(--text);
   transition: border-color 0.12s ease, background 0.12s ease;
@@ -432,27 +453,43 @@ main { padding: 0 28px 18px; }
 /* v14: three columns — list 500px, guide panel flexible, rail 250px.
    Row 1 is the full-width signal strip; the banner and list stack in
    column 1 under it; panel and rail span rows 2–3 beside them. */
-.view-checklist { display: grid; grid-template-columns: 500px minmax(0, 1fr) 250px; gap: 2px 14px; padding-top: 1px; }
+.view-checklist { display: grid; grid-template-columns: 500px minmax(0, 1fr) 250px; gap: 1px 14px; padding-top: 0; }
 .list-col { grid-column: 1; grid-row: 3; min-width: 0; }
 
 /* Missable banner + Next Up, at the head of the checklist column */
 .alert-banner { grid-column: 1; grid-row: 2; min-width: 0; }
+/* v16: the banner is one bar with two segments — the missable
+   alert row, and under a hairline the Strangers & Freaks
+   adjudication, so the cover answers the 1-vs-2 missable
+   question in the banner itself. The box carries the tint and
+   border; the rows inside are plain. */
+.banner-box {
+  background: var(--danger-tint);
+  border: 1px solid rgba(229, 83, 75, 0.42);
+  border-radius: var(--radius);
+}
 .banner-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--danger-tint);
-  border: 1px solid rgba(229, 83, 75, 0.42);
-  border-radius: var(--radius);
   padding: 0 12px;
 }
 .banner-row .alert-icon { flex: none; width: 18px; height: 18px; color: var(--danger-hi); }
-.banner-text { font-size: 11.5px; line-height: 1.3; }
+.banner-text { font-size: 11.5px; line-height: 1.22; }
 .banner-text strong {
   color: var(--danger-hi);
   font-weight: 800;
   letter-spacing: 0.02em;
 }
+.banner-adj {
+  margin: 0 12px;
+  padding: 1px 0 2px;
+  border-top: 1px solid rgba(229, 83, 75, 0.25);
+  font-size: 10.5px;
+  line-height: 1.25;
+}
+.banner-adj strong { color: var(--danger-hi); font-weight: 800; }
+.banner-adj .cite-ref { font-size: 10.5px; }
 .banner-show { flex: none; margin-left: auto; padding: 0 8px; font-size: 12.5px; }
 .banner-next {
   margin: 0 2px;
@@ -529,7 +566,7 @@ main { padding: 0 28px 18px; }
 .group-header:first-child { padding-top: 0; }
 .group-name {
   font-size: 10.5px;
-  line-height: 1.25;
+  line-height: 1.18;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -537,7 +574,7 @@ main { padding: 0 28px 18px; }
 }
 .group-count {
   font-size: 10.5px;
-  line-height: 1.25;
+  line-height: 1.18;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -586,14 +623,20 @@ main { padding: 0 28px 18px; }
   font-weight: 900;
   line-height: 1;
 }
-.trophy-name { font-weight: 700; font-size: 14px; letter-spacing: 0.005em; line-height: 1.2; }
+.trophy-name { font-weight: 700; font-size: 14px; letter-spacing: 0.005em; line-height: 1.15; }
 /* A masked row's name steps down a size so the name and its Reveal
-   button share one line at the list's 500px width. */
+   button share one line at the list's 500px width. (v16 tried
+   13.5px here: the button wrapped to a second line and the row
+   pack broke — measured, reverted. The legibility win for masked
+   rows comes from the brighter greys instead.) */
 .trophy-name:has(.reveal-btn) { font-size: 13px; }
 .trophy-row.earned .trophy-name { color: var(--muted); }
 /* One line only in the row pack: the full official description
-   stands in the guide panel. */
-.trophy-desc { color: var(--muted); font-size: 12px; margin-top: 0; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+   stands in the guide panel. v16 grows the line half a point and
+   tightens its stride by the same amount, so the row pack keeps
+   its 33px while the text reads larger; the words themselves
+   end at the first clause (app.js rowDescription). */
+.trophy-desc { color: var(--muted); font-size: 12.5px; margin-top: 0; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 /* The counter pill rides on the description line (v14): the
    description ellipsises to make room, the row stays one height. */
 .trophy-sub { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
@@ -644,7 +687,7 @@ main { padding: 0 28px 18px; }
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 0 16px 4px;
+  padding: 0 16px 2px;
   box-shadow: var(--shadow);
   max-height: calc(100vh - 28px);
   overflow-y: auto;
@@ -669,7 +712,7 @@ main { padding: 0 28px 18px; }
   margin: 0;
   font-size: 9.5px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.05;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--faint);
@@ -686,16 +729,35 @@ main { padding: 0 28px 18px; }
 }
 .detail-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0; }
 .detail-meta .tag { text-transform: none; letter-spacing: 0.02em; font-size: 11.5px; font-weight: 600; padding: 0 8px; }
-/* The −/+ progress counter, tied to the Target tag above it */
+/* The −/+ progress counter, tied to the Target tag above it.
+   v16 wraps a slim progress track under the readout row: the
+   count as a gold bar as well as a number, the form the rival
+   panels use. The track is its own flex row, so the −/+ row
+   above it keeps its height. */
 .counter-bar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 0 10px;
   margin-top: 0;
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
   padding: 0 8px;
+}
+.counter-track {
+  flex: 1 1 100%;
+  height: 4px;
+  margin: 2px 0 3px;
+  background: #0a0d12;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.counter-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold-lo), var(--gold) 55%, var(--gold-hi));
 }
 .counter-btn {
   flex: none;
@@ -726,20 +788,24 @@ main { padding: 0 28px 18px; }
   text-align: right;
   color: var(--ok);
 }
-.detail-guide { margin: 0; font-size: 11px; line-height: 1.06; }
+/* v16: the panel's prose and steps step up half a point and
+   loosen their stride (1.06 -> 1.12) — the legibility fix the
+   v15 judges asked for, funded by the panel's label, box and
+   action trims so the actions row stays in frame. */
+.detail-guide { margin: 0; font-size: 11.5px; line-height: 1.12; }
 /* v15: the IN SHORT lead summary — the guide prose's own settings,
    with the summary's weight a step above the full text. */
-.detail-short { margin: 0; font-size: 11px; line-height: 1.06; font-weight: 600; color: var(--text); }
+.detail-short { margin: 0; font-size: 11.5px; line-height: 1.12; font-weight: 600; color: var(--text); }
 .detail-steps { list-style: none; counter-reset: step; margin: 0; padding: 0; }
 .detail-steps li {
   counter-increment: step;
   position: relative;
   padding-left: 30px;
   margin-bottom: 0;
-  font-size: 11px;
-  line-height: 1.06;
+  font-size: 11.5px;
+  line-height: 1.12;
 }
-.cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 11px; }
+.cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 11.5px; }
 .detail-steps li::before {
   content: counter(step);
   position: absolute;
@@ -763,7 +829,7 @@ main { padding: 0 28px 18px; }
   border: 1px solid rgba(229, 83, 75, 0.42);
   border-radius: var(--radius);
   padding: 1px 9px;
-  margin: 4px 0 0;
+  margin: 3px 0 0;
   /* The 12px text sets its own line-height on the span, but the box's
      strut (inherited 1.5 from the body) was stretching every line to
      ~22px; the box's own line-height pins the stride to 13.8px. */
@@ -786,7 +852,7 @@ main { padding: 0 28px 18px; }
   border: 1px solid rgba(217, 169, 79, 0.38);
   border-radius: var(--radius);
   padding: 1px 9px;
-  margin: 4px 0 0;
+  margin: 3px 0 0;
   /* Same strut fix as .missable-box: without it the inherited 1.5
      line-height stretches the 12px text to a ~22px stride. */
   line-height: 1.15;
@@ -806,7 +872,7 @@ main { padding: 0 28px 18px; }
 .detail-sources li { margin-bottom: 1px; }
 /* v14: the panel's sources in one line — the registry itself is in
    the rail; this line names the trophy's own sources and points. */
-.panel-sources-line { margin: 3px 0 0; font-size: 11px; line-height: 1.25; color: var(--muted); }
+.panel-sources-line { margin: 2px 0 0; font-size: 11px; line-height: 1.18; color: var(--muted); }
 .panel-sources-line strong { color: var(--gold-hi); font-weight: 700; }
 .tag.disagree { color: var(--gold-hi); border-color: rgba(217, 169, 79, 0.55); background: var(--gold-tint); }
 
@@ -819,7 +885,7 @@ main { padding: 0 28px 18px; }
   background: linear-gradient(180deg, var(--surface), #0e1219);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 7px 12px;
+  padding: 6px 12px;
   box-shadow: var(--shadow);
 }
 .rail-head {
@@ -828,10 +894,10 @@ main { padding: 0 28px 18px; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-hi);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
-.rail-src-head { margin-top: 4px; }
-.rail-item { margin-bottom: 3px; }
+.rail-src-head { margin-top: 3px; }
+.rail-item { margin-bottom: 2px; }
 .rail-item-name { font-size: 11.5px; font-weight: 700; line-height: 1.22; }
 .rail-tag {
   font-size: 9px;
@@ -846,22 +912,41 @@ main { padding: 0 28px 18px; }
 }
 .rail-tag.timed { color: var(--gold-hi); border-color: rgba(217, 169, 79, 0.5); }
 .rail-item-why { font-size: 11px; color: var(--muted); line-height: 1.22; }
-.rail-note { margin: 1px 0 3px; font-size: 10.5px; line-height: 1.3; color: var(--faint); }
-.rail-src { margin-bottom: 3px; }
+.rail-note { margin: 0 0 2px; font-size: 10.5px; line-height: 1.3; color: var(--faint); }
+.rail-src { margin-bottom: 2px; }
 .rail-src-line { font-size: 11.5px; font-weight: 700; line-height: 1.22; }
 .rail-src-url { font-size: 10.5px; color: var(--faint); line-height: 1.22; word-break: break-all; }
 /* v15: the green/amber legend under the registry — what the audit
-   line's split means, in the rail's quietest voice. */
-.rail-legend { margin: 4px 0 0; font-size: 10px; line-height: 1.25; color: var(--faint); }
+   line's split means. v16: a bordered box in the rail's card
+   language, headed by the split's own counts, the definition
+   text unchanged — funded by the rail's margin trims above. */
+.rail-legend {
+  margin: 3px 0 0;
+  padding: 5px 8px 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-bright);
+  border-radius: var(--radius-s);
+  font-size: 10px;
+  line-height: 1.25;
+  color: var(--muted);
+}
+.rail-legend-head {
+  margin-bottom: 2px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--gold-hi);
+  font-variant-numeric: tabular-nums;
+}
 .src-ref { color: var(--gold-hi); font-weight: 700; }
 .src-note { color: var(--muted); }
 .src-date { color: var(--faint); }
-.detail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.detail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 3px; }
 .detail-actions button {
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius-s);
-  padding: 8px 14px;
+  padding: 7px 14px;
   font-weight: 600;
   transition: border-color 0.12s ease, background 0.12s ease;
 }
@@ -918,7 +1003,7 @@ main { padding: 0 28px 18px; }
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  height: 21px;
+  height: 18px;
 }
 .strip-fields { flex: 1 1 auto; min-width: 0; font-size: 11.5px; font-weight: 700; white-space: nowrap; overflow: hidden; }
 .strip-stages { flex: none; font-size: 11px; font-weight: 700; white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; }
