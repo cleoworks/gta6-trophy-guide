@@ -2,8 +2,8 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "edition": "Leonida Ledger v29 (2026-11-21) — the registry grows from 29 sources to 31: two more sites were read in full on 21 November 2026 (GTADB and GTA6Notebook), together with 12 further pages across the registry — 68 pages read in all, counted from the project’s reading ledger. The new reading deepens the same thin places: Push Square’s trophy guide corroborates the list itself, its meditation page independently names six of the ten spots, its card page prints the same 18 sets with the same counts, and GTA6Notebook’s Strangers & Freaks page names the counting strands and the non-counting ones outright. GTADB says on its own page that its entries are compiled from the official PS5 and Xbox catalogues rather than unlocked in game: it is cited as that cross-checked catalogue, and never as a disputed claim’s sole second backer. Two Push Square figures dissent from every other guide read — a platinum of “300 hours or more” and a 22-car wish list against the consensus 16 — and are recorded as source differences, not used. GameTrek’s trophy list is never cited for a chapter description: its story table shifts them by one chapter. Rarity is the Exophase snapshot read 21 November 2026.",
- "pagesRead": 68,
+ "edition": "Leonida Ledger v31 (2026-11-21) — the registry grows from 31 sources to 39: eight more sites were read in full on 21 November 2026 (games.gg, Radio Times, HowToVideoGame, Game8, GameRant, Polygon, Dexerto and AltChar), together with 15 further pages across the registry — 81 pages read in all, counted from the project’s reading ledger. The largest single change: games.gg publishes a complete method for Let’s Go Bowling — the three Kingpin Bowling valuables, the Sticky Bomb for the safe and the pop after the escape — so the guide’s thinnest method row is now cited to a page that prints the method in full. Game8’s Chapter 1 walkthrough flags which opening missions count toward Strangers & Freaks, a third named backer for the counting verdict, and PowerPyx’s full walkthrough names Tyrone’s last job outright. Two more sites were read but are not in this registry: PlayStation Universe credits its cheat list to Insider Gaming, and a lookalike domain compiles its list from other sites — both read, and deliberately cited for nothing. Radio Times is never cited for a specific cheat code: its cheat page swaps two codes against every other list read. AltChar credits its codes to PowerPyx and corroborates only the claim that cheats disable trophies and saving. The cheat unlock requirements split the sources into two camps — finish the story, or earn the unlock in play — and are recorded as a source difference, not used. GameRant and Radio Times both count 91 story missions. Rarity is the Exophase snapshot read 21 November 2026.",
+ "pagesRead": 81,
  "rarityNote": "Rarity is the share of Exophase-tracked players who had earned each trophy when the list was read on 21 November 2026, so every figure is a launch-week snapshot that will move fast. Source: Exophase, Grand Theft Auto VI (PSN) trophy list.",
  "roadmapMeta": {
   "heading": "Trophy roadmap — the platinum at a glance",
@@ -66,7 +66,15 @@
   {"id": "S28", "name": "GTA Vibes", "title": "GTA 6 trophy list and achievements", "url": "https://www.gtavibes.com/guides/gta-6-trophy-list-achievements", "retrieved": "21 November 2026", "support": "names, unlocks — full list"},
   {"id": "S29", "name": "Mobalytics", "title": "Grand Theft Auto 6 — all trophies", "url": "https://mobalytics.gg/gamebase/guides/grand-theft-auto-6-all-trophies", "retrieved": "21 November 2026", "support": "names, descriptions — full list"},
   {"id": "S30", "name": "GTADB", "title": "GTA 6 Trophy & Platinum Guide", "url": "https://gtadb.net/articles/gta-6-trophies-platinum-guide/?show_secrets=1", "retrieved": "21 November 2026"},
-  {"id": "S31", "name": "GTA6Notebook", "title": "GTA 6 Strangers & Freaks missions", "url": "https://gta6notebook.com/guides/what-are-all-the-strangers-and-freaks-missions-in-gta-6/", "retrieved": "21 November 2026"}
+  {"id": "S31", "name": "GTA6Notebook", "title": "GTA 6 Strangers & Freaks missions", "url": "https://gta6notebook.com/guides/what-are-all-the-strangers-and-freaks-missions-in-gta-6/", "retrieved": "21 November 2026"},
+  {"id": "S32", "name": "Games.gg", "title": "Complete GTA 6 Trophy List", "url": "https://games.gg/grand-theft-auto-vi/guides/complete-grand-theft-auto-6-trophy-list/", "retrieved": "21 November 2026"},
+  {"id": "S33", "name": "Radio Times", "title": "GTA 6 Trophies and Achievements List", "url": "https://www.radiotimes.com/technology/gaming/gta-6-trophies-achievements-list/", "retrieved": "21 November 2026"},
+  {"id": "S34", "name": "HowToVideoGame", "title": "GTA 6 Trophies", "url": "https://howtovideogame.com/gta-6-trophies/", "retrieved": "21 November 2026"},
+  {"id": "S35", "name": "Game8", "title": "GTA 6 Chapter 1 Walkthrough", "url": "https://game8.co/games/gta-6/archives/638816", "retrieved": "21 November 2026"},
+  {"id": "S36", "name": "GameRant", "title": "GTA 6 Main Story Missions and Chapters List", "url": "https://gamerant.com/gta-6-main-story-missions-chapters-list/", "retrieved": "21 November 2026"},
+  {"id": "S37", "name": "Polygon", "title": "GTA 6 Cheat Codes List and Unlocks", "url": "https://www.polygon.com/gta-6-cheat-codes-list-unlock/", "retrieved": "21 November 2026", "support": "cheat restrictions — self-tested on PS5"},
+  {"id": "S38", "name": "Dexerto", "title": "GTA 6 Cheat Codes", "url": "https://www.dexerto.com/wikis/gta-6/cheat-codes/", "retrieved": "21 November 2026", "support": "cheat codes and restrictions"},
+  {"id": "S39", "name": "AltChar", "title": "GTA VI Cheats List", "url": "https://www.altchar.com/guides/gta-vi-cheats-list-every-code-unlock-requirement-and-how-to-use-them-aRfDb4o7avIJ", "retrieved": "21 November 2026", "support": "cheat restrictions, corroboration — codes credited to PowerPyx"}
  ],
  "roadmap": [
   {"stage": 1, "title": "Chapter 1 — play, and save", "text": "Finish the opening mission and Chapter 1, beat Cal at fishing, finish one arcade game, and do the balcony meditation at Jason's house while it is available. Make a manual save at the start of the chapter: there is no mission replay, so a chapter-start save is your only way back."},
@@ -480,7 +488,8 @@
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
     {"ref": "S24", "note": "name, description, grade — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S36", "note": "Child’s Play is a Chapter 4 mission"}
    ]
   },
   {
@@ -519,7 +528,8 @@
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
     {"ref": "S24", "note": "name, description, grade — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S36", "note": "Headliners is a Chapter 4 mission"}
    ]
   },
   {
@@ -558,7 +568,8 @@
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
     {"ref": "S24", "note": "name, description, grade — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S36", "note": "VCIA Takedown is a Chapter 4 mission"}
    ]
   },
   {
@@ -774,7 +785,8 @@
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
     {"ref": "S11", "note": "Shooting Range guide — all 42 challenges at Griffin and Rodgers Ranch"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S34", "note": "42 Shooting Range golds"}
    ]
   },
   {
@@ -1019,7 +1031,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S32", "note": "Kenton’s route — 7 shipwrecks, purple chest markers, back in Chapters 2–3"}
    ]
   },
   {
@@ -1105,7 +1118,8 @@
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
     {"ref": "S30", "note": "name, description, grade — full list"},
-    {"ref": "S31", "note": "counting strands: Kirk, Kyle, Yago, Pilot Pete — the rest are named as not counting"}
+    {"ref": "S31", "note": "counting strands: Kirk, Kyle, Yago, Pilot Pete — the rest are named as not counting"},
+    {"ref": "S35", "note": "Chapter 1 flags — Kirk’s missions count toward Strangers & Freaks"}
    ]
   },
   {
@@ -1316,7 +1330,8 @@
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "cards found in random chests still count"}
+    {"ref": "S30", "note": "cards found in random chests still count"},
+    {"ref": "S32", "note": "the card sets, and the smallest three-set route — 54 cards"}
    ]
   }
 ,
@@ -1404,7 +1419,9 @@
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "50 Challenges for the trophy"}
+    {"ref": "S30", "note": "50 Challenges for the trophy"},
+    {"ref": "S32", "note": "50 Challenges for the trophy; 70 of 80 for 100%"},
+    {"ref": "S34", "note": "50 of the 80 Challenges for the trophy, 70 for 100%"}
    ]
   },
   {
@@ -1610,7 +1627,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S32", "note": "a jet docked at a boarding bridge, gates E3 and E4; the pop lands about 1 km out"}
    ]
   },
   {
@@ -1777,7 +1795,10 @@
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
     {"ref": "S24", "note": "name, description, grade — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S32", "note": "name, description, grade — full list"},
+    {"ref": "S33", "note": "name, description, grade — full list"},
+    {"ref": "S34", "note": "name, description — 43-trophy list"}
    ]
   },
   {
@@ -1861,7 +1882,8 @@
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S32", "note": "Kingpin Bowling robbed in full — one of the gangs’ illegal operations"}
    ]
   },
   {
@@ -1901,7 +1923,10 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S32", "note": "name, description, grade — full list"},
+    {"ref": "S33", "note": "name, description, grade — full list"},
+    {"ref": "S36", "note": "Ocean Beach is Chapter 4’s first mission — story context"}
    ]
   },
   {
@@ -1980,7 +2005,9 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S32", "note": "Kingpin Bowling method in full — the three valuables, Sticky Bombs for the safe, the pop after the escape"},
+    {"ref": "S33", "note": "name, description, grade — full list"}
    ]
   },
   {
@@ -2018,7 +2045,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S32", "note": "maximum Strength for both — train together at a fitness club"}
    ]
   },
   {
@@ -2057,7 +2085,8 @@
     {"ref": "S26", "note": "name, grade, unlock — full list"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S34", "note": "Criminal Profile actions count to 500"}
    ]
   },
   {
@@ -2303,7 +2332,8 @@
     {"ref": "S27", "note": "name, grade, unlock — after Insider Gaming"},
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S32", "note": "8 garages for about $160,000 in all; the Real Estate app opens after Daily Driver"}
    ]
   },
   {
@@ -2346,7 +2376,9 @@
     {"ref": "S28", "note": "name, unlock — full list"},
     {"ref": "S29", "note": "name, description — full list"},
     {"ref": "S24", "note": "name, description, grade — full list"},
-    {"ref": "S30", "note": "name, description, grade — full list"}
+    {"ref": "S30", "note": "name, description, grade — full list"},
+    {"ref": "S32", "note": "Scooter Bros through the mission Moses — respray, then register"},
+    {"ref": "S36", "note": "Moses is a Chapter 2 mission"}
    ]
   }
  ]
