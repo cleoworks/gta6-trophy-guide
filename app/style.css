@@ -745,10 +745,18 @@ main { padding: 0 28px 18px; }
   border-radius: var(--radius-s);
   padding: 0 8px;
 }
+.counter-label {
+  flex: none;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  color: var(--gold-hi);
+  white-space: nowrap;
+}
 .counter-track {
   flex: 1 1 100%;
-  height: 4px;
-  margin: 2px 0 3px;
+  height: 6px;
+  margin: 2px 0 2px;
   background: #0a0d12;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -791,8 +799,12 @@ main { padding: 0 28px 18px; }
 /* v16: the panel's prose and steps step up half a point and
    loosen their stride (1.06 -> 1.12) — the legibility fix the
    v15 judges asked for, funded by the panel's label, box and
-   action trims so the actions row stays in frame. */
-.detail-guide { margin: 0; font-size: 11.5px; line-height: 1.12; }
+   action trims so the actions row stays in frame.
+   v18: the stride loosens once more (1.12 -> 1.15) for the
+   guide and the steps — the panel had 14px of slack left after
+   the labelled counter bar and the honesty-box rewrite, and
+   this spends ~6px of it on air between the lines. */
+.detail-guide { margin: 0; font-size: 11.5px; line-height: 1.15; }
 /* v15: the IN SHORT lead summary — the guide prose's own settings,
    with the summary's weight a step above the full text. */
 .detail-short { margin: 0; font-size: 11.5px; line-height: 1.12; font-weight: 600; color: var(--text); }
@@ -803,7 +815,7 @@ main { padding: 0 28px 18px; }
   padding-left: 30px;
   margin-bottom: 0;
   font-size: 11.5px;
-  line-height: 1.12;
+  line-height: 1.15;
 }
 .cite-ref { color: var(--gold-hi); font-weight: 700; font-size: 11.5px; }
 .detail-steps li::before {

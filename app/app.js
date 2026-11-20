@@ -442,7 +442,7 @@ const STEP_CITES = {
   22: { 1: 'S2', 2: ['S3', 'S4'], 3: ['S3', 'S4'] },
   23: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
   24: { 1: 'S4', 2: 'S7', 3: ['S3', 'S4'] },
-  25: { 1: ['S3', 'S4', 'S7'], 2: 'S2', 3: 'S7' },
+  25: { 1: ['S3', 'S4', 'S7'], 2: ['S3', 'S4'], 3: ['S3', 'S4'], 4: 'S2', 5: 'S7', 6: 'S7' },
   26: { 1: ['S3', 'S4'], 2: 'S7', 3: ['S3', 'S4'] },
   27: { 1: ['S2', 'S4'], 2: 'S4', 3: ['S3', 'S4'] },
   28: { 1: ['S2', 'S3', 'S7'], 2: ['S3', 'S7'], 3: ['S2', 'S3', 'S4'], 4: ['S2', 'S3', 'S4'], 5: ['S3', 'S4'], 6: 'S7', 7: ['S3', 'S7'] },
@@ -614,7 +614,7 @@ const UNCERTAIN_NOTES = {
   28: {
     label: 'Not pinned down yet',
     ref: ['S3', 'S4', 'S7'],
-    text: 'Whether the Chapter 1 spot is strictly required is open — the counts differ: the trophy needs 18 spots, the 100% checklist stops at 15. Do it anyway.',
+    text: 'Whether the Chapter 1 spot is strictly required is open — the trophy needs 18 spots, the 100% checklist only 15, so missing it cannot cost you A Long Road. Do it anyway.',
   },
 };
 
@@ -960,6 +960,14 @@ function counterBar(trophy) {
   const value = counterValue(trophy);
   const bar = document.createElement('div');
   bar.className = 'counter-bar';
+  // v18: the bar carries its name — a small YOUR COUNT label in
+  // the control row, the caption the rival panels print over
+  // their bars — so the control reads as a labelled tracker,
+  // not an anonymous −/+ widget.
+  const label = document.createElement('span');
+  label.className = 'counter-label';
+  label.textContent = 'YOUR COUNT';
+  bar.append(label);
   const minus = document.createElement('button');
   minus.type = 'button';
   minus.className = 'counter-btn';
@@ -978,9 +986,10 @@ function counterBar(trophy) {
   plus.setAttribute('aria-label', 'Count one more for ' + trophy.name);
   plus.addEventListener('click', () => setCounter(trophy, 1));
   bar.append(minus, readout, plus);
-  // The count as a bar as well as a number (v16): a slim gold
-  // track under the readout, filled to the same fraction — the
-  // form the rival panels use for their counters.
+  // The count as a bar as well as a number (v16): a gold track
+  // under the readout, filled to the same fraction — the form
+  // the rival panels use for their counters. v18 thickens the
+  // track (4px -> 6px) so the fill registers at a glance.
   const track = document.createElement('div');
   track.className = 'counter-track';
   const fill = document.createElement('div');
