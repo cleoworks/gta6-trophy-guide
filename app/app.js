@@ -1327,12 +1327,24 @@ function renderAudit() {
     amberCount + ' amber',
   ];
   strip.replaceChildren();
-  const line = document.createElement('span');
-  line.className = 'audit-line';
+  // v28: the same computed line, presented on TWO lines at a
+  // larger size (see .audit-strip in style.css) — the pattern
+  // the leading guides use, whose audit figures survive the
+  // shrink to a contact sheet while a 10.5px hairline turned
+  // to grey texture. Line one carries the contents and claims
+  // figures; line two carries the steps figure and the
+  // disagreement taxonomy. The figures and their computation
+  // are unchanged — joined with ' · ' the two lines read
+  // exactly as the one line did.
+  const line1 = document.createElement('span');
+  line1.className = 'audit-line';
   const label = document.createElement('strong');
   label.textContent = 'AUDIT';
-  line.append(label, document.createTextNode(' · ' + parts.join(' · ')));
-  strip.append(line);
+  line1.append(label, document.createTextNode(' · ' + parts.slice(0, 7).join(' · ')));
+  const line2 = document.createElement('span');
+  line2.className = 'audit-line';
+  line2.textContent = parts.slice(7).join(' · ');
+  strip.append(line1, line2);
 }
 
 /* Short month names for audit dates ("20 November 2026" -> "20 Nov 2026"). */
